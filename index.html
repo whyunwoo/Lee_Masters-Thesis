@@ -39,14 +39,15 @@
     var timeline = [];
 
     // capture url params
-    var urlvar = JSON.stringify(jsPsych.data.urlVariables());
+    // var urlvar = JSON.stringify(jsPsych.data.urlVariables());
 
     // group assignment
     var group = jsPsych.randomization.randomInt(1, 14);
     var svList = groups[group - 1];
 
     // add global data variables
-    jsPsych.data.addProperties(Object.assign({}, urlVar, { group: group }));
+    // jsPsych.data.addProperties(Object.assign({}, urlVar, { group: group }));
+    jsPsych.data.addProperties({ group: group });
 
     /* init connection with pavlovia.org */
     var pavlovia_init = {
