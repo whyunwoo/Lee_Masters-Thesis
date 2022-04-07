@@ -39,7 +39,7 @@
     var timeline = [];
 
     // capture url params
-    var urlvar = jsPsych.data.urlVariables();
+    var urlvar = JSON.stringify(jsPsych.data.urlVariables());
 
     // group assignment
     var group = jsPsych.randomization.randomInt(1, 14);
