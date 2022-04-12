@@ -39,7 +39,7 @@
     var jsPsych = initJsPsych({
         use_webaudio: false,
         on_finish: function () {
-            window.location = "https://sites.lsa.umich.edu/misl/";
+            window.location.assign("https://sites.lsa.umich.edu/misl/");
         }
     });
 
@@ -567,8 +567,8 @@
 
     timeline.push(demogForm);
     timeline.push(endSurveyDebrief);
-    timeline.push(endStudy);
     timeline.push(pavlovia_finish);
+    timeline.push(endStudy);
 
     /* start the experiment */
     jsPsych.run(timeline);
