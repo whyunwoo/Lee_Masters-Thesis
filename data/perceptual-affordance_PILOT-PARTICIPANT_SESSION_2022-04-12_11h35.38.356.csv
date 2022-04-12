@@ -1,0 +1,92 @@
+"task","trial_type","trial_index","time_elapsed","internal_node_id","group","width","height","webaudio","browser","browser_version","mobile","os","fullscreen","vsync_rate","webcam","microphone","success","timeout","failed_images","failed_audio","failed_video","rt","stimulus","response","accuracy","name","place_id","lat","lng","culture","loc1","loc2","loct","address","loc_id_prev","angle","loc_id"
+"pavlovia-init","pavlovia","0","761","0.0-0.0","10","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
+"browser-check","browser-check","1","1558","0.0-1.0","10","1455","758","true","chrome","100.0.4896","false","Mac OS","true","75.72","true","true","","","","","","","","","","","","","","","","","","","","",""
+"","preload","2","1573","0.0-2.0","10","","","","","","","","","","","","true","false","[]","[]","[]","","","","","","","","","","","","","","","",""
+"instructions","html-button-response","3","13392","0.0-3.0","10","","","","","","","","","","","","","","","","","11819","
+        <div class=""text-container"">
+            <h1>Welcome to the study!</h1>
+            
+            <div class=""text-left"">
+                <p>
+                    In this study, we are interested in how people think about different Google Street View images. Google Street View takes pictures of streets used for Google Earth and Google Maps. You’ll see Google Street View images of different places and answer some questions about each one.
+                </p>
+            </div>
+            
+            <img src='
+            https://maps.googleapis.com/maps/api/streetview?size=640x320
+            &location=37.783631,-122.432766
+            &heading=80
+            &pitch=2
+            &fov=100
+            &radius=150
+            &key=AIzaSyC2OxRDg6qlzZDj7j0UAD2XyE0qWokLvvs
+            &source=outdoor'>
+        
+            <br>
+        <br>
+    ","0","","","","","","","","","","","","",""
+"instructions","html-button-response","4","14997","0.0-4.0","10","","","","","","","","","","","","","","","","","1297","
+        <style>
+            img.small {
+            max-width: 100px;
+            }
+            li {
+            text-indent: 40px;
+            }
+        </style>
+
+        <div class=""text-container text-left"">
+            <p>For each picture, we’d like your impressions of the scene:</p>
+            
+            <hr>
+                Are there <b>clear, distinct boundaries</b> between objects in the scene, or are the <b>boundaries ambiguous or unclear</b>?
+                
+                <li>clear, distinct boundaries: <img class=""small"" src=""assets/img/ambiguous-low.png""></li>
+                <li>ambiguous or unclear boundaries: <img class=""small"" src=""assets/img/ambiguous-high.png""></li>
+            <hr>
+            <br>
+                Are there <b>only a few different objects</b> in the scene, or is there <b>a large number</b>?
+            <br><br>
+            <hr>
+                Are only <b>a few parts</b> of the scene <b>invisible or obscured</b>, or are <b>many parts invisible or obscured</b>?
+                
+                <li>a few parts invisible or obscured: <img class=""small"" src=""assets/img/invisible-low.png""></li>
+                <li>many parts invisible or obscured: <img class=""small"" src=""assets/img/invisible-high.png""></li>
+            <hr>
+            <br>
+                Does the scene look <b>organized</b> or <b>chaotic</b> to you?
+            <br><br>
+            <hr>
+            
+            <p>
+                There are no right or wrong answers: we are interested in <b>your</b> impression. Note that some images might have individual buildings or faces blurred for privacy. Please ignore these when making your judgments.
+            </p>
+        </div>
+        <br>
+    ","0","","","","","","","","","","","","",""
+"instructions","html-button-response","5","15781","0.0-5.0","10","","","","","","","","","","","","","","","","","782","
+        <div class=""text-container text-left"">
+            <p>Please make sure you are doing this study in an area where you can focus and complete the survey in one sitting.</p>
+
+            <p>Don’t spend too much time on any one picture, and, again go with your gut impression!</p>
+            
+            <p>The study should take about 30 minutes. We’ll let you know when you’re halfway through.</p>
+        </div>
+            
+        <h3>Ready? Click next to get started!</h3>
+        <br>
+    ","0","","","","","","","","","","","","",""
+"trial","survey","6","17104","0.0-6.0","10","","","","","","","","","","","","","","","","","1278","","{""P0_Q0"":null,""ambiguous"":null,""objects"":null,""invisible"":null,""chaos"":null}","[]","Nearby location of Chelsea House Victorian Inn (us_chl_htl_a_high1)","ChIJrSMrxwHMPIgRw8h_aIwPHas","42.3194142","-84.0203567","US","CHL","CHL","HTL","310 N Main St Suite 202A, Chelsea, MI 48118, USA","us_chl_htl_b_high1","90","us_chl_htl_b_high1_90"
+"trial","survey","7","18133","0.0-7.0","10","","","","","","","","","","","","","","","","","1018","","{""P0_Q0"":null,""ambiguous"":null,""objects"":null,""invisible"":null,""chaos"":null}","[]","Nearby location of Kirihara Higashi Elementary School (jp_hik_sch_a_2)","ChIJ44W9Gy96AWARDa0LDoFiGi8","35.1236331","136.0869352","JP","HIK","HIK","SCH","1379 Tsuchidachō, Omihachiman, Shiga 523-0082, Japan","jp_hik_sch_b_2","270","jp_hik_sch_b_2_270"
+"attention-check","survey","8","19366","0.0-8.0","10","","","","","","","","","","","","","","","","","1226","","{""P0_Q0"":null,""ambiguous"":null,""objects"":null,""invisible"":null,""chaos"":null}","[]","","","","","","","","","","","",""
+"half-way","html-button-response","9","20397","0.0-9.0","10","","","","","","","","","","","","","","","","","1030","
+            <h3>You are now half way through the study.</h3>
+            <p>Please take a quick, 15-second break before you continue.</p>
+            <img src='assets/img/countdown-15.gif'>
+            <p>The study will automatically advance forward after the countdown is complete. However, you may click ""Next"" to advance forward now if you wish.</p>
+        ","0","","","","","","","","","","","","",""
+"trial","survey","10","21726","0.0-10.0","10","","","","","","","","","","","","","","","","","1321","","{""P0_Q0"":null,""ambiguous"":null,""objects"":null,""invisible"":null,""chaos"":null}","[]","Nearby location of United States Postal Service (us_nyc-p_pos_a_3)","ChIJe2q9KVpDwokRU6MLLhMmHvo","40.6168044","-73.9301797","US","NYC","PER","POS","Parking lot, 2187 Flatbush Ave, Brooklyn, NY 11234, USA","us_nyc-p_pos_b_3","180","us_nyc-p_pos_b_3_180"
+"trial","survey","11","22820","0.0-11.0","10","","","","","","","","","","","","","","","","","1087","","{""P0_Q0"":null,""ambiguous"":null,""objects"":null,""invisible"":null,""chaos"":null}","[]","Nearby location of United States Postal Service (us_nyc-p_pos_a_2)","ChIJLSVr_e-JwokR4naG8qzZU4M","40.769638","-73.735929","US","NYC","PER","POS","252-02 Northern Blvd, Flushing, NY 11362, USA","us_nyc-p_pos_b_2","270","us_nyc-p_pos_b_2_270"
+"demographics","survey-html-form","12","23826","0.0-12.0","10","","","","","","","","","","","","","","","","","1004","","{""age"":"""",""gender-self-describe"":"""",""zipcode"":""""}","","","","","","","","","","","","",""
+"end-survey","survey-text","13","24666","0.0-13.0","10","","","","","","","","","","","","","","","","","836","","{""Q0"":""""}","","","","","","","","","","","","",""
+"end-survey","html-button-response","14","26171","0.0-14.0","10","","","","","","","","","","","","","","","","","null","<p>Thanks for participating! Please do not close this browser tab until you are redirected.</p>","null","","","","","","","","","","","","",""
