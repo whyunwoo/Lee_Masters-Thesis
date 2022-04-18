@@ -39,6 +39,9 @@
     // jsPsych
     var jsPsych = initJsPsych({
         use_webaudio: false,
+        on_finish: function () {
+            window.open("https://sites.lsa.umich.edu/misl/", "_blank");
+        }
     });
 
     // Prolific Integration
@@ -150,7 +153,7 @@
         </div>
     `
 
-    var consentForm = {
+    var consent = {
         type: jsPsychHtmlButtonResponse,
         stimulus: consentHTML,
         data: {
@@ -623,40 +626,20 @@
         ]
     };
 
-    /* end study screen based on consent */
-    function endStudy(consent) {
-        if (consent == 1) {
-            var endStudyHTML = `
-                </h3>Thanks for participating! Your response has been saved.</h3>
-                <p>After you have been redirected, you can safely close this window.</p>
-            `;
-            var duration = 2000;
-        } else {
-            var endStudyHTML = `
-                </h3>You have declined the informed consent form.</h3>
-                <p>Please exit this window and return this study on Prolific.</p>
-            `;
-            var duration = null;
-        }
+    var endStudyHTML = `
+        </h3>Thanks for participating! Your response has been saved.</h3>
+        <p>After you have been redirected, you can safely close this window.</p>
+    `;
 
-        function redirect(consent) {
-            if (consent) {
-                window.open("https://sites.lsa.umich.edu/misl/", "_blank");
-            }
-        };
-
-        var endStudy = {
-            type: jsPsychHtmlButtonResponse,
-            data: {
-                task: 'end-survey'
-            },
-            stimulus: endStudyHTML,
-            choices: [],
-            trial_duration: duration,
-            on_finish: redirect(consent)
-        }
-        return endStudy;
-    };
+    var endStudy = {
+        type: jsPsychHtmlButtonResponse,
+        data: {
+            task: 'end-survey'
+        },
+        stimulus: endStudyHTML,
+        choices: [],
+        trial_duration: 2000
+    }
 
     /* finish connection with pavlovia.org */
     var pavlovia_finish = {
@@ -666,6 +649,7 @@
         },
         command: "finish",
         participantId: pavlovia_id
+        // participantId: 'TEST-SUBJECT'
     };
 
     ////////* EXECUTING TIMELINE *////////
@@ -695,24 +679,31 @@
     main_timeline.push(demogForm);
     main_timeline.push(endSurveyDebrief);
 
-    // check consent condition
-    var consent = true;
-
-    var consent_condition = {
+    // Conditional for consent
+    var consented = {
         timeline: main_timeline,
         conditional_function: function () {
-            var data = jsPsych.data.get().last(1).values()[0];
-            consent = data.response == 1;
+            // get the data from the previous trial,
+            // and check which key was pressed
+            var data = jsPsych.data.get().last(2).values()[0];
             console.log(data.response);
-            return consent;
+            if (data.response == 0) {
+                // declined -> disqualified participant
+                endStudyHTML = `
+                    </h3>You have declined the informed consent form.</h3>
+                    <p>Please exit this window and return this study on Prolific.</p>
+                `;
+                return false;
+            } else {
+                // accepted -> continue
+                return true;
+            }
         }
     };
-
     timeline.push(pavlovia_init);
-    timeline.push(consentForm);
-    // timeline.push(consent_condition);
+    timeline.push(consented);
     timeline.push(pavlovia_finish);
-    // timeline.push(endStudy(consent));
+    timeline.push(endStudy);
 
     /* start the experiment */
     jsPsych.run(timeline);
