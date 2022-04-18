@@ -632,7 +632,7 @@
             <p>After you have been redirected, you can safely close this window.</p>
         `,
         choices: [],
-        trial_duration: 2000,
+        trial_duration: 2500,
         on_finish: function () {
             window.open("https://sites.lsa.umich.edu/misl/", "_blank");
         }
@@ -670,7 +670,7 @@
     main_timeline.push(intro3);
 
     // Push trials
-    var shuffledList = jsPsych.randomization.shuffle(Object.keys(svList)).slice(0, 4);
+    var shuffledList = jsPsych.randomization.shuffle(Object.keys(svList));
     shuffledList.splice(shuffledList.length / 2, 0, "half-way");
     shuffledList.splice(shuffledList.length / 2, 0, "attention-check");
 
