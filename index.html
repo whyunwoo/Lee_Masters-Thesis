@@ -622,38 +622,32 @@
     };
 
     /* end study screen based on consent */
-    function endStudy(consent) {
-        if (consent == 1) {
-            var endStudyHTML = `
-                </h3>Thanks for participating! Your response has been saved.</h3>
-                <p>After you have been redirected, you can safely close this window.</p>
-            `;
-            var duration = 2000;
-        } else {
-            var endStudyHTML = `
-                </h3>You have declined the informed consent form.</h3>
-                <p>Please exit this window and return this study on Prolific.</p>
-            `;
-            var duration = null;
+    var endStudy = {
+        type: jsPsychHtmlButtonResponse,
+        data: {
+            task: 'end-survey'
+        },
+        stimulus: `
+            </h3>Thanks for participating! Your response has been saved.</h3>
+            <p>After you have been redirected, you can safely close this window.</p>
+        `,
+        choices: [],
+        trial_duration: 2000,
+        on_finish: function () {
+            window.open("https://sites.lsa.umich.edu/misl/", "_blank");
         }
+    };
 
-        function redirect(consent) {
-            if (consent) {
-                window.open("https://sites.lsa.umich.edu/misl/", "_blank");
-            }
-        };
-
-        var endStudy = {
-            type: jsPsychHtmlButtonResponse,
-            data: {
-                task: 'end-survey'
-            },
-            stimulus: endStudyHTML,
-            choices: [],
-            trial_duration: duration,
-            on_finish: redirect(consent)
-        }
-        return endStudy;
+    var endStudyNoConsent = {
+        type: jsPsychHtmlButtonResponse,
+        data: {
+            task: 'end-survey'
+        },
+        stimulus: `
+            </h3>You have declined the informed consent form.</h3>
+            <p>Please exit this window and return this study on Prolific.</p>
+        `,
+        choices: []
     };
 
     /* finish connection with pavlovia.org */
@@ -694,7 +688,7 @@
     main_timeline.push(endSurveyDebrief);
 
     // check consent condition
-    var consent = true;
+    var consent = null;
 
     var consent_condition = {
         timeline: main_timeline,
@@ -706,11 +700,19 @@
         }
     };
 
+    var no_consent_condition = {
+        timeline: [endStudyNoConsent],
+        conditional_function: function () {
+            return !consent;
+        }
+    };
+
     timeline.push(pavlovia_init);
     timeline.push(consentForm);
     timeline.push(consent_condition);
     timeline.push(pavlovia_finish);
-    timeline.push(endStudy(consent));
+    timeline.push(no_consent_condition);
+    timeline.push(endStudy);
 
     /* start the experiment */
     jsPsych.run(timeline);
