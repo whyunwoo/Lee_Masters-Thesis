@@ -7,8 +7,7 @@
 
     <!--Javascript Files-->
     <script src="lib/vendors/jspsych-7.1.2/jspsych.js"></script>
-    <!-- <script src="lib/jspsych-7-pavlovia-2022.1.1.js"></script> -->
-    <script src="assets/scripts/jspaych-pavlovia.js"></script>
+    <script src="lib/jspsych-7-pavlovia-2022.1.1.js"></script>
     <script src="assets/scripts/groups.js"></script>
 
     <!--jsPsych Plugins-->
@@ -656,7 +655,6 @@
     ////////* EXECUTING TIMELINE *////////
     var main_timeline = [];
 
-    main_timeline.push(pavlovia_init);
     main_timeline.push(browserCheck);
     main_timeline.push(preload);
     main_timeline.push(intro1);
@@ -702,6 +700,7 @@
             }
         }
     };
+    timeline.push(pavlovia_init);
     timeline.push(consented);
     timeline.push(pavlovia_finish);
     timeline.push(endStudy);
