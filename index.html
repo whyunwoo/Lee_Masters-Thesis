@@ -653,9 +653,7 @@
             stimulus: endStudyHTML,
             choices: [],
             trial_duration: duration,
-            on_finish: function () {
-                redirect(consent);
-            }
+            on_finish: redirect(consent)
         }
         return endStudy;
     };
@@ -702,7 +700,7 @@
 
     var consent_condition = {
         timeline: main_timeline,
-        conditional_function: function(){
+        conditional_function: function () {
             var data = jsPsych.data.get().last(1).values()[0];
             consent = data.response == 1;
             console.log(data.response);
@@ -712,10 +710,10 @@
 
     timeline.push(pavlovia_init);
     timeline.push(consentForm);
-    timeline.push(consent_condition);
+    // timeline.push(consent_condition);
     timeline.push(pavlovia_finish);
-    timeline.push(endStudy(consent));
-   
+    // timeline.push(endStudy(consent));
+
     /* start the experiment */
     jsPsych.run(timeline);
 
