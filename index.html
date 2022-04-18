@@ -669,38 +669,46 @@
     };
 
     ////////* EXECUTING TIMELINE *////////
-    timeline.push(pavlovia_init);
+    var main_timeline = [];
 
-    // conditional timeline
-    var consent = jsPsych.data.get().last(2).values()[0] == 1;
-    console.log(data.response);
+    main_timeline.push(browserCheck);
+    main_timeline.push(preload);
+    main_timeline.push(intro1);
+    main_timeline.push(intro2);
+    main_timeline.push(intro3);
 
-    if (consent) {
-        timeline.push(browserCheck);
-        timeline.push(preload);
-        timeline.push(intro1);
-        timeline.push(intro2);
-        timeline.push(intro3);
+    // Push trials
+    var shuffledList = jsPsych.randomization.shuffle(Object.keys(svList)).slice(0, 4);
+    shuffledList.splice(shuffledList.length / 2, 0, "half-way");
+    shuffledList.splice(shuffledList.length / 2, 0, "attention-check");
 
-        // Push trials
-        var shuffledList = jsPsych.randomization.shuffle(Object.keys(svList)).slice(0, 4);
-        shuffledList.splice(shuffledList.length / 2, 0, "half-way");
-        shuffledList.splice(shuffledList.length / 2, 0, "attention-check");
-
-        for (loc of shuffledList) {
-            if (loc == 'half-way') {
-                timeline.push(half_way);
-            } else if (loc == 'attention-check') {
-                timeline.push(attention_check);
-            } else {
-                timeline.push(newTrial(loc));
-            }
-        };
-
-        timeline.push(demogForm);
-        timeline.push(endSurveyDebrief);
+    for (loc of shuffledList) {
+        if (loc == 'half-way') {
+            main_timeline.push(half_way);
+        } else if (loc == 'attention-check') {
+            main_timeline.push(attention_check);
+        } else {
+            main_timeline.push(newTrial(loc));
+        }
     };
-    
+
+    main_timeline.push(demogForm);
+    main_timeline.push(endSurveyDebrief);
+
+    // check consent condition
+    var consent = true;
+    var consent_condition = {
+        timeline: main_timeline,
+        conditional_function: function(){
+            consent = jsPsych.data.get().last(2).values()[0] == 1;
+            console.log(data.response);
+            return consent;
+        }
+    };
+
+    timeline.push(pavlovia_init);
+    timeline.push(consentForm);
+    timeline.push(consent_condition);
     timeline.push(pavlovia_finish);
     timeline.push(endStudy(consent));
    
