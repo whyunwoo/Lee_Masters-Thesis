@@ -700,12 +700,11 @@
     var consent_condition = {
         timeline: main_timeline,
         conditional_function: function(){
-            consent = jsPsych.data.get().last(2).values()[0] == 1;
+            consent = jsPsych.data.get().last(1).values()[0] == 1;
             console.log(data.response);
             return consent;
         }
     };
-
     timeline.push(pavlovia_init);
     timeline.push(consentForm);
     timeline.push(consent_condition);
