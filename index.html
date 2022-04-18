@@ -36,12 +36,16 @@
     // const API_KEY = "AIzaSyCktc4Ble5kxzMmWAG7Nar5yBCOD2NjkSw"; // SpacePerception
     const API_KEY = 'AIzaSyC2OxRDg6qlzZDj7j0UAD2XyE0qWokLvvs'; // Space Sampling - Student
 
+    function redirect(consent) {
+        if (consent) {
+            window.open("https://sites.lsa.umich.edu/misl/", "_blank");
+        }
+    };
+
     // jsPsych
     var jsPsych = initJsPsych({
         use_webaudio: false,
-        on_finish: function () {
-            window.open("https://sites.lsa.umich.edu/misl/", "_blank");
-        }
+        on_finish: redirect(consent)
     });
 
     // Prolific Integration
@@ -626,20 +630,33 @@
         ]
     };
 
-    var endStudyHTML = `
-        </h3>Thanks for participating! Your response has been saved.</h3>
-        <p>After you have been redirected, you can safely close this window.</p>
-    `;
+    /* end study screen based on consent */
+    function endStudy(consent) {
+        if (consent == 1) {
+            var endStudyHTML = `
+                </h3>Thanks for participating! Your response has been saved.</h3>
+                <p>After you have been redirected, you can safely close this window.</p>
+            `;
+            var duration = 2000;
+        } else {
+            var endStudyHTML = `
+                </h3>You have declined the informed consent form.</h3>
+                <p>Please exit this window and return this study on Prolific.</p>
+            `;
+            var duration = null;
+        }
 
-    var endStudy = {
-        type: jsPsychHtmlButtonResponse,
-        data: {
-            task: 'end-survey'
-        },
-        stimulus: endStudyHTML,
-        choices: [],
-        trial_duration: 2000
-    }
+        var endStudy = {
+            type: jsPsychHtmlButtonResponse,
+            data: {
+                task: 'end-survey'
+            },
+            stimulus: endStudyHTML,
+            choices: [],
+            trial_duration: duration
+        }
+        return endStudy;
+    };
 
     /* finish connection with pavlovia.org */
     var pavlovia_finish = {
@@ -649,62 +666,44 @@
         },
         command: "finish",
         participantId: pavlovia_id
-        // participantId: 'TEST-SUBJECT'
     };
 
     ////////* EXECUTING TIMELINE *////////
-    var main_timeline = [];
-
-    main_timeline.push(browserCheck);
-    main_timeline.push(preload);
-    main_timeline.push(intro1);
-    main_timeline.push(intro2);
-    main_timeline.push(intro3);
-
-    // Push trials
-    var shuffledList = jsPsych.randomization.shuffle(Object.keys(svList)).slice(0, 4);
-    shuffledList.splice(shuffledList.length / 2, 0, "half-way");
-    shuffledList.splice(shuffledList.length / 2, 0, "attention-check");
-
-    for (loc of shuffledList) {
-        if (loc == 'half-way') {
-            main_timeline.push(half_way);
-        } else if (loc == 'attention-check') {
-            main_timeline.push(attention_check);
-        } else {
-            main_timeline.push(newTrial(loc));
-        }
-    };
-
-    main_timeline.push(demogForm);
-    main_timeline.push(endSurveyDebrief);
-
-    // Conditional for consent
-    var consented = {
-        timeline: main_timeline,
-        conditional_function: function () {
-            // get the data from the previous trial,
-            // and check which key was pressed
-            var data = jsPsych.data.get().last(2).values()[0];
-            console.log(data.response);
-            if (data.response == 0) {
-                // declined -> disqualified participant
-                endStudyHTML = `
-                    </h3>You have declined the informed consent form.</h3>
-                    <p>Please exit this window and return this study on Prolific.</p>
-                `;
-                return false;
-            } else {
-                // accepted -> continue
-                return true;
-            }
-        }
-    };
     timeline.push(pavlovia_init);
-    timeline.push(consented);
-    timeline.push(pavlovia_finish);
-    timeline.push(endStudy);
 
+    // conditional timeline
+    var consent = jsPsych.data.get().last(2).values()[0] == 1;
+    console.log(data.response);
+
+    if (consent) {
+        timeline.push(browserCheck);
+        timeline.push(preload);
+        timeline.push(intro1);
+        timeline.push(intro2);
+        timeline.push(intro3);
+
+        // Push trials
+        var shuffledList = jsPsych.randomization.shuffle(Object.keys(svList)).slice(0, 4);
+        shuffledList.splice(shuffledList.length / 2, 0, "half-way");
+        shuffledList.splice(shuffledList.length / 2, 0, "attention-check");
+
+        for (loc of shuffledList) {
+            if (loc == 'half-way') {
+                timeline.push(half_way);
+            } else if (loc == 'attention-check') {
+                timeline.push(attention_check);
+            } else {
+                timeline.push(newTrial(loc));
+            }
+        };
+
+        timeline.push(demogForm);
+        timeline.push(endSurveyDebrief);
+    };
+    
+    timeline.push(pavlovia_finish);
+    timeline.push(endStudy(consent));
+   
     /* start the experiment */
     jsPsych.run(timeline);
 
