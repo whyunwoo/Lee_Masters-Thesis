@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="https://unpkg.com/@jspsych/plugin-survey@0.1.1/css/survey.css">
     <link rel="stylesheet" href="assets/css/jsPsych-padding.css">
     <link rel="stylesheet" href="assets/css/jsPsych-text-edits.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-alert.css">
 </head>
 
 <body></body>
@@ -32,8 +33,8 @@
     /* VARIABLES */
 
     // Google API
-    // const API_KEY = "AIzaSyCktc4Ble5kxzMmWAG7Nar5yBCOD2NjkSw";
-    const API_KEY = 'AIzaSyC2OxRDg6qlzZDj7j0UAD2XyE0qWokLvvs';
+    // const API_KEY = "AIzaSyCktc4Ble5kxzMmWAG7Nar5yBCOD2NjkSw"; // SpacePerception
+    const API_KEY = 'AIzaSyC2OxRDg6qlzZDj7j0UAD2XyE0qWokLvvs'; // Space Sampling - Student
 
     // jsPsych
     var jsPsych = initJsPsych({
@@ -57,16 +58,15 @@
     // timeline 
     var timeline = [];
 
-    // capture url params
-    // var urlvar = JSON.stringify(jsPsych.data.urlVariables());
-
     // group assignment
     var group = jsPsych.randomization.randomInt(1, 14);
     var svList = groups[group - 1];
 
     // add global data variables
-    // jsPsych.data.addProperties(Object.assign({}, urlVar, { group: group }));
     jsPsych.data.addProperties({ group: group });
+
+    // create pavlovia participant ID
+    var pavlovia_id = 'c-' + group + '_p-' + subject_id + '_s-' + session_id;
 
     /* init connection with pavlovia.org */
     var pavlovia_init = {
@@ -85,6 +85,84 @@
         },
         minimum_width: 700
     };
+
+    /* Consent Form */
+    const consentHTML = `
+        <div style="font-size: 80%; max-width:700px">
+            <h2>Informed Consent</h2><br>
+        
+            <div style="text-align: left">
+            <h3>Streetscape Perceptions</h3>
+            <b>HUM00189138</b>
+            <br><hr>
+        
+            <h4>DESCRIPTION</h4>
+            <p>
+                In this study, you will view Google Street View images. You will then answer questions about your impressions of the streetscapes presented in those images.
+            </p><br>
+        
+            <h4>TIME INVOLVEMENT</h4>
+            <p>Your participation will take approximately 30 minutes.</p><br>
+        
+            <h4>RISKS AND BENEFITS</h4>
+            <p>
+                The risks associated with this study are minimal. The benefits which may reasonably be expected to result from this study are none.  We cannot and do not guarantee or promise that you will receive any benefits from this study. 
+            </p><br>
+        
+            <h4>PAYMENTS</h4>
+            <p>You will be paid <b>$5.00</b> for your participation.</p><br>
+        
+            <h4>SUBJECT'S RIGHTS</h4>
+            <p>
+                If you have read this form and have decided to participate in this project, please understand your participation is voluntary and you have the right to withdraw your consent or discontinue participation at any time without penalty or loss of benefits to which you are otherwise entitled.  The alternative is not to participate.  You have the right to refuse to answer particular questions.  
+            </p>
+        
+            <p>
+                Your individual privacy will be maintained in all published and written data resulting from the study. Your responses will be kept confidential: you are given a participant code, and no one, not even the research team, can match that code with your identity. Your collected information may also be shared with other researchers as part of our dataset.
+            </p><br>
+        
+            <h4>CONTACT INFORMATION</h4>
+            <p>
+                Questions: If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Nicholas Camp, npcamp@umich.edu, (443) 851-6783.
+            </p>
+        
+            <p>
+                If you have questions about your rights as a research participant, or wish to obtain information, ask questions or discuss any concerns about this study with someone other than the researcher(s), please contact the following:
+                <br><br>
+        
+                University of Michigan<br>
+                Health Sciences and Behavioral Sciences Institutional Review Board
+                (IRB-HSBS)<br>
+                2800 Plymouth Road <br>
+                Building 520, Room 1169 <br>
+                Ann Arbor, MI 48109-2800 <br>
+                Telephone: 734-936-0933 or toll free (866) 936-0933 <br>
+                Fax: 734-936-1852 <br />
+                E-mail: irbhsbs@umich.edu <br>
+            </p>
+        
+            <p>
+                You can also contact the University of Michigan Compliance Hotline at 1-866-990-0111. You may also print this consent form to keep.
+            </p>
+            <br>
+        
+            <div class="alert alert-warning"><b>
+                Do you consent to participate in this study? If you consent to participate in this study, please click “yes”. If you select "no", you will be directed out of the survey.
+            </b></div>
+            </div>
+        </div>
+    `
+
+    var consent = {
+        type: jsPsychHtmlButtonResponse,
+        stimulus: consentHTML,
+        data: {
+            task: 'consent'
+        },
+        choices: ['Decline and exit', 'Accept and continue'],
+    };
+
+    timeline.push(consent);
 
     // preload
     var preload = {
@@ -518,12 +596,27 @@
         choices: ['Next'],
     };
 
+    const debriefHTML = `
+        <h3>Thank you for participating in the study!</h3>
+        
+        <div style="text-align: left; max-width: 700px; font-size: 80%">
+            <p>
+                In this study, we were interested in how environments in different places influence perception. Specifically, we want to know how complex the environment appears in different cities around the world. You rated images from different cities in the United States and Japan; your answers will help us understand these differences in the physical environment. 
+            </p>
+        
+            <p>
+                If you have further questions about the study or your participation, please contact the protocol director at npcamp@umich.edu. 
+            </p>
+        </div>
+    `
+
     /* END OF STUDY */
     var endSurveyDebrief = {
         type: jsPsychSurveyText,
         data: {
             task: 'end-survey'
         },
+        preamble: debriefHTML,
         questions: [
             {
                 prompt: 'Do you have any comments on the study you’d like to share?',
@@ -538,10 +631,7 @@
         data: {
             task: 'end-survey'
         },
-        stimulus: `
-            </h3>Thanks for participating! Your response has been saved.</h3>
-            <p>After you have been redirected, you can safely close this window.</p>
-        `,
+        stimulus: endStudyHTML,
         choices: [],
         trial_duration: 2000
     }
@@ -553,16 +643,18 @@
             task: 'pavlovia-finish'
         },
         command: "finish",
-        participantId: subject_id
+        participantId: pavlovia_id
     };
 
-    /* timeline */
-    timeline.push(pavlovia_init);
-    timeline.push(browserCheck);
-    timeline.push(preload);
-    timeline.push(intro1);
-    timeline.push(intro2);
-    timeline.push(intro3);
+    ////////* EXECUTING TIMELINE *////////
+    var main_timeline = [];
+
+    main_timeline.push(pavlovia_init);
+    main_timeline.push(browserCheck);
+    main_timeline.push(preload);
+    main_timeline.push(intro1);
+    main_timeline.push(intro2);
+    main_timeline.push(intro3);
 
     // Push trials
     var shuffledList = jsPsych.randomization.shuffle(Object.keys(svList)).slice(0, 4);
@@ -571,16 +663,43 @@
 
     for (loc of shuffledList) {
         if (loc == 'half-way') {
-            timeline.push(half_way);
+            main_timeline.push(half_way);
         } else if (loc == 'attention-check') {
-            timeline.push(attention_check);
+            main_timeline.push(attention_check);
         } else {
-            timeline.push(newTrial(loc));
+            main_timeline.push(newTrial(loc));
         }
     };
 
-    timeline.push(demogForm);
-    timeline.push(endSurveyDebrief);
+    main_timeline.push(demogForm);
+    main_timeline.push(endSurveyDebrief);
+
+    // Conditional for consent
+    var consented = {
+        timeline: main_timeline,
+        conditional_function: function () {
+            // get the data from the previous trial,
+            // and check which key was pressed
+            var data = jsPsych.data.get().last(1).values()[0];
+            console.log(data.response);
+            if (data.response == 0) {
+                // declined -> disqualified participant
+                var endStudyHTML = `
+                    </h3>You have declined the informed consent form.</h3>
+                    <p>Please exit this window and return this study on Prolific.</p>
+                `;
+                return false;
+            } else {
+                // accepted -> continue
+                var endStudyHTML = `
+                    </h3>Thanks for participating! Your response has been saved.</h3>
+                    <p>After you have been redirected, you can safely close this window.</p>
+                `;
+                return true;
+            }
+        }
+    };
+    timeline.push(consented);
     timeline.push(pavlovia_finish);
     timeline.push(endStudy);
 
