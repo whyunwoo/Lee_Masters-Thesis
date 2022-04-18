@@ -596,6 +596,7 @@
         choices: ['Next'],
     };
 
+    /* END OF STUDY */
     const debriefHTML = `
         <h3>Thank you for participating in the study!</h3>
         
@@ -610,7 +611,6 @@
         </div>
     `
 
-    /* END OF STUDY */
     var endSurveyDebrief = {
         type: jsPsychSurveyText,
         data: {
@@ -625,6 +625,11 @@
             }
         ]
     };
+
+    var endStudyHTML = `
+        </h3>Thanks for participating! Your response has been saved.</h3>
+        <p>After you have been redirected, you can safely close this window.</p>
+    `;
 
     var endStudy = {
         type: jsPsychHtmlButtonResponse,
@@ -684,17 +689,13 @@
             console.log(data.response);
             if (data.response == 0) {
                 // declined -> disqualified participant
-                var endStudyHTML = `
+                endStudyHTML = `
                     </h3>You have declined the informed consent form.</h3>
                     <p>Please exit this window and return this study on Prolific.</p>
                 `;
                 return false;
             } else {
                 // accepted -> continue
-                var endStudyHTML = `
-                    </h3>Thanks for participating! Your response has been saved.</h3>
-                    <p>After you have been redirected, you can safely close this window.</p>
-                `;
                 return true;
             }
         }
