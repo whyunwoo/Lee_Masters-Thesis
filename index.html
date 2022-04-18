@@ -685,7 +685,7 @@
         conditional_function: function () {
             // get the data from the previous trial,
             // and check which key was pressed
-            var data = jsPsych.data.get().last(1).values()[0];
+            var data = jsPsych.data.get().last(2).values()[0];
             console.log(data.response);
             if (data.response == 0) {
                 // declined -> disqualified participant
