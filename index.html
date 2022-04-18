@@ -703,7 +703,8 @@
     var consent_condition = {
         timeline: main_timeline,
         conditional_function: function(){
-            consent = jsPsych.data.get().last(1).values()[0] == 1;
+            var data = jsPsych.data.get().last(1).values()[0];
+            consent = data.response == 1;
             console.log(data.response);
             return consent;
         }
@@ -713,7 +714,7 @@
     timeline.push(consentForm);
     timeline.push(consent_condition);
     timeline.push(pavlovia_finish);
-    // timeline.push(endStudy(consent));
+    timeline.push(endStudy(consent));
    
     /* start the experiment */
     jsPsych.run(timeline);
