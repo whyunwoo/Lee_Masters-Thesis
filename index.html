@@ -591,6 +591,41 @@
         choices: ['Next'],
     };
 
+    var demogForm2 = {
+        type: jsPsychSurvey,
+        data: {
+            task: 'demographics'
+        },
+        pages: [[
+            {
+                type: 'html',
+                prompt: `
+                    <style>
+                        div.sv_body {
+                            max-width: 700px;
+                        }
+                        .sv_main.sv_default_css .sv_container {
+                            color: #000000;
+                        }
+                        input.sv_prev_btn {
+                            display: none;
+                        }
+                    </style>
+                `,
+            }, {
+                type: 'multi-choice',
+                prompt: 'Have you ever spent more than 1 year out side of the United States?',
+                options: ['Yes', 'No'],
+                name: 'outsideUS',
+            }, {
+                type: 'text',
+                prompt: 'If yes, how long have you spent outside of the US? (Round to nearest year)',
+                name: 'outsideUS_years',
+                validation: '\d+'
+            }, 
+        ]]
+    };
+
     /* END OF STUDY */
     const debriefHTML = `
         <h3>Thank you for participating in the study!</h3>
@@ -670,7 +705,7 @@
     main_timeline.push(intro3);
 
     // Push trials
-    var shuffledList = jsPsych.randomization.shuffle(Object.keys(svList));
+    var shuffledList = jsPsych.randomization.shuffle(Object.keys(svList)).slice(0,4);
     shuffledList.splice(shuffledList.length / 2, 0, "half-way");
     shuffledList.splice(shuffledList.length / 2, 0, "attention-check");
 
