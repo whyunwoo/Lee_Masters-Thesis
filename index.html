@@ -710,7 +710,7 @@
     main_timeline.push(intro3);
 
     // Push trials
-    var shuffledList = jsPsych.randomization.shuffle(Object.keys(svList)).slice(0,2);
+    var shuffledList = jsPsych.randomization.shuffle(Object.keys(svList));
     shuffledList.splice(shuffledList.length / 2, 0, "half-way");
     shuffledList.splice(shuffledList.length / 2, 0, "attention-check");
 
