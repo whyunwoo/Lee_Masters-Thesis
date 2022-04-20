@@ -667,13 +667,15 @@
         },
         stimulus: `
             <h3>Thanks for participating! Your response has been saved.</h3>
-            <p>After you have been redirected, you can safely close this window.</p>
+            
+            <div class="alert alert-warning"><b>
+                <p>Please enter the following completion code on Prolific:</p>
+                <h3>1DC94F05</h3>
+            </b></div>
+
+            <p>You may safely close this window afterwards.</p>
         `,
         choices: [],
-        trial_duration: 2500,
-        on_finish: function () {
-            window.open("https://app.prolific.co/submissions/complete?cc=1DC94F05", "_blank");
-        }
     };
 
     var endStudyNoConsent = {
@@ -708,7 +710,7 @@
     main_timeline.push(intro3);
 
     // Push trials
-    var shuffledList = jsPsych.randomization.shuffle(Object.keys(svList));
+    var shuffledList = jsPsych.randomization.shuffle(Object.keys(svList)).slice(0,2);
     shuffledList.splice(shuffledList.length / 2, 0, "half-way");
     shuffledList.splice(shuffledList.length / 2, 0, "attention-check");
 
