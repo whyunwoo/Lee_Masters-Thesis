@@ -1,0 +1,214 @@
+"task","trial_type","trial_index","time_elapsed","internal_node_id","subject_id","study_id","session_id","group","rt","stimulus","response","width","height","webaudio","browser","browser_version","mobile","os","fullscreen","vsync_rate","webcam","microphone","success","timeout","failed_images","failed_audio","failed_video","accuracy","name","place_id","lat","lng","culture","loc1","loc2","loct","address","loc_id_prev","angle","loc_id"
+"pavlovia-init","pavlovia","0","1187","0.0-0.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
+"consent","html-button-response","1","275057","0.0-1.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","273869","
+        <div style=""font-size: 80%; max-width:700px"">
+            <h2>Informed Consent</h2><br>
+        
+            <div style=""text-align: left"">
+            <h3>Streetscape Perceptions</h3>
+            <b>HUM00189138</b>
+            <br><hr>
+        
+            <h4>DESCRIPTION</h4>
+            <p>
+                In this study, you will view Google Street View images. You will then answer questions about your impressions of the streetscapes presented in those images.
+            </p><br>
+        
+            <h4>TIME INVOLVEMENT</h4>
+            <p>Your participation will take approximately 30 minutes.</p><br>
+        
+            <h4>RISKS AND BENEFITS</h4>
+            <p>
+                The risks associated with this study are minimal. The benefits which may reasonably be expected to result from this study are none.  We cannot and do not guarantee or promise that you will receive any benefits from this study. 
+            </p><br>
+        
+            <h4>PAYMENTS</h4>
+            <p>You will be paid <b>$5.00</b> for your participation.</p><br>
+        
+            <h4>SUBJECT'S RIGHTS</h4>
+            <p>
+                If you have read this form and have decided to participate in this project, please understand your participation is voluntary and you have the right to withdraw your consent or discontinue participation at any time without penalty or loss of benefits to which you are otherwise entitled.  The alternative is not to participate.  You have the right to refuse to answer particular questions.  
+            </p>
+        
+            <p>
+                Your individual privacy will be maintained in all published and written data resulting from the study. Your responses will be kept confidential: you are given a participant code, and no one, not even the research team, can match that code with your identity. Your collected information may also be shared with other researchers as part of our dataset.
+            </p><br>
+        
+            <h4>CONTACT INFORMATION</h4>
+            <p>
+                Questions: If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Nicholas Camp, npcamp@umich.edu, (443) 851-6783.
+            </p>
+        
+            <p>
+                If you have questions about your rights as a research participant, or wish to obtain information, ask questions or discuss any concerns about this study with someone other than the researcher(s), please contact the following:
+                <br><br>
+        
+                University of Michigan<br>
+                Health Sciences and Behavioral Sciences Institutional Review Board
+                (IRB-HSBS)<br>
+                2800 Plymouth Road <br>
+                Building 520, Room 1169 <br>
+                Ann Arbor, MI 48109-2800 <br>
+                Telephone: 734-936-0933 or toll free (866) 936-0933 <br>
+                Fax: 734-936-1852 <br />
+                E-mail: irbhsbs@umich.edu <br>
+            </p>
+        
+            <p>
+                You can also contact the University of Michigan Compliance Hotline at 1-866-990-0111. You may also print this consent form to keep.
+            </p>
+            <br>
+        
+            <div class=""alert alert-warning""><b>
+                Do you consent to participate in this study? If you consent to participate in this study, please click “Accept and continue.”
+            </b></div>
+            </div>
+        </div>
+    ","1","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
+"browser-check","browser-check","2","275476","0.0-2.0-0.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","","","","1280","644","true","firefox","99.0.0","false","Windows 10","true","145.28","true","true","","","","","","","","","","","","","","","","","",""
+"","preload","3","276751","0.0-2.0-1.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","","","","","","","","","","","","","","","true","false","[]","[]","[]","","","","","","","","","","","","",""
+"instructions","html-button-response","4","296708","0.0-2.0-2.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","19957","
+        <div class=""text-container"">
+            <h1>Welcome to the study!</h1>
+            
+            <div class=""text-left"">
+                <p>
+                    In this study, we are interested in how people think about different Google Street View images. Google Street View takes pictures of streets used for Google Earth and Google Maps. You’ll see Google Street View images of different places and answer some questions about each one.
+                </p>
+            </div>
+            
+            <img src='
+            https://maps.googleapis.com/maps/api/streetview?size=640x320
+            &location=37.783631,-122.432766
+            &heading=80
+            &pitch=2
+            &fov=100
+            &radius=150
+            &key=AIzaSyC2OxRDg6qlzZDj7j0UAD2XyE0qWokLvvs
+            &source=outdoor'>
+        
+            <br>
+        <br>
+    ","0","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
+"instructions","html-button-response","5","344104","0.0-2.0-3.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","47093","
+        <style>
+            img.small {
+            max-width: 100px;
+            }
+            li {
+            text-indent: 40px;
+            }
+        </style>
+
+        <div class=""text-container text-left"">
+            <p>For each picture, we’d like your impressions of the scene:</p>
+            
+            <hr>
+                Are there <b>clear, distinct boundaries</b> between objects in the scene, or are the <b>boundaries ambiguous or unclear</b>?
+                
+                <li>clear, distinct boundaries: <img class=""small"" src=""assets/img/ambiguous-low.png""></li>
+                <li>ambiguous or unclear boundaries: <img class=""small"" src=""assets/img/ambiguous-high.png""></li>
+            <hr>
+            <br>
+                Are there <b>only a few different objects</b> in the scene, or is there <b>a large number</b>?
+            <br><br>
+            <hr>
+                Are only <b>a few parts</b> of the scene <b>invisible or obscured</b>, or are <b>many parts invisible or obscured</b>?
+                
+                <li>a few parts invisible or obscured: <img class=""small"" src=""assets/img/invisible-low.png""></li>
+                <li>many parts invisible or obscured: <img class=""small"" src=""assets/img/invisible-high.png""></li>
+            <hr>
+            <br>
+                Does the scene look <b>organized</b> or <b>chaotic</b> to you?
+            <br><br>
+            <hr>
+            
+            <p>
+                There are no right or wrong answers: we are interested in <b>your</b> impression. Note that some images might have individual buildings or faces blurred for privacy. Please ignore these when making your judgments.
+            </p>
+        </div>
+        <br>
+    ","0","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
+"instructions","html-button-response","6","353548","0.0-2.0-4.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","9442","
+        <div class=""text-container text-left"">
+            <p>Please make sure you are doing this study in an area where you can focus and complete the survey in one sitting.</p>
+
+            <p>Don’t spend too much time on any one picture, and, again go with your gut impression!</p>
+            
+            <p>The study should take about 30 minutes. We’ll let you know when you’re halfway through.</p>
+        </div>
+            
+        <h3>Ready? Click next to get started!</h3>
+        <br>
+    ","0","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
+"trial","survey","7","424875","0.0-2.0-5.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","71290","","{""P0_Q0"":null,""ambiguous"":3,""objects"":5,""invisible"":3,""chaos"":3}","","","","","","","","","","","","","","","","","[]","Oizumi Daini Elementary School","ChIJOT0Kk9nuGGARlr5-SQA1DDo","35.744542","139.573028","JP","TOK","PER","SCH","4-chōme-29-11 Minamiōizumi, Nerima City, Tokyo 178-0064, Japan","jp_tok-p_sch_a_6","0","jp_tok-p_sch_a_6_0"
+"trial","survey","8","449050","0.0-2.0-6.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","24160","","{""P0_Q0"":null,""ambiguous"":2,""objects"":4,""invisible"":3,""chaos"":2}","","","","","","","","","","","","","","","","","[]","Nearby location of Bell Tower Hotel (us_arb_htl_a_high2)","ChIJuS95eUCuPIgRE9IqLokaozs","42.280115","-83.7411408","US","ARB","ARB","HTL","200 S State St, Ann Arbor, MI 48104, USA","us_arb_htl_b_high2","90","us_arb_htl_b_high2_90"
+"trial","survey","9","502988","0.0-2.0-7.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","53920","","{""P0_Q0"":null,""ambiguous"":3,""objects"":5,""invisible"":4,""chaos"":3}","","","","","","","","","","","","","","","","","[]","Nearby location of United States Postal Service (us_nyc-c_pos_a_8)","ChIJEcOl7cBZwokREHeZNl9a5Q0","40.7424383","-74.007802","US","NYC","CTR","POS","60 10th Ave, New York, NY 10014, USA","us_nyc-c_pos_b_8","180","us_nyc-c_pos_b_8_180"
+"trial","survey","10","539325","0.0-2.0-8.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","36326","","{""P0_Q0"":null,""ambiguous"":5,""objects"":5,""invisible"":4,""chaos"":3}","","","","","","","","","","","","","","","","","[]","Nearby location of Tokyo High Court Post Office (jp_tok-c_pos_a_1)","ChIJX7W2HiiLGGARCTbu8qla3Mw","35.6737726","139.7542634","JP","TOK","CTR","POS","1 Hibiyakoen, Chiyoda City, Tokyo 100-0012, Japan","jp_tok-c_pos_b_1","180","jp_tok-c_pos_b_1_180"
+"trial","survey","11","558974","0.0-2.0-9.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","19639","","{""P0_Q0"":null,""ambiguous"":1,""objects"":5,""invisible"":1,""chaos"":1}","","","","","","","","","","","","","","","","","[]","Mitchell Elementary School","ChIJQYKjOkevPIgRNBcgyKyYsfs","42.2369664","-83.6929474","US","ARB","ARB","SCH","3550 Pittsview Dr, Ann Arbor, MI 48108, USA","us_arb_sch_a_4","90","us_arb_sch_a_4_90"
+"trial","survey","12","588286","0.0-2.0-10.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","29303","","{""P0_Q0"":null,""ambiguous"":3,""objects"":4,""invisible"":3,""chaos"":3}","","","","","","","","","","","","","","","","","[]","United States Postal Service","ChIJHz5qxfxEwokRJQRRKHqw9JQ","40.6054665","-73.9794117","US","NYC","PER","POS","1714 W 6th St Ste 1, Brooklyn, NY 11223, USA","us_nyc-p_pos_a_6","180","us_nyc-p_pos_a_6_180"
+"trial","survey","13","631356","0.0-2.0-11.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","43061","","{""P0_Q0"":null,""ambiguous"":1,""objects"":5,""invisible"":1,""chaos"":2}","","","","","","","","","","","","","","","","","[]","Nearby location of Adachi Asahicho Post Office (jp_tok-p_pos_a_4)","ChIJhXM9R1KOGGAR7zoOSZK_VIU","35.7480131","139.8100604","JP","TOK","PER","POS","Japan, 〒120-0026 Tokyo, Adachi City, Senjuasahichō, 22−９ コーポ山田","jp_tok-p_pos_b_4","90","jp_tok-p_pos_b_4_90"
+"trial","survey","14","647618","0.0-2.0-12.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","16253","","{""P0_Q0"":null,""ambiguous"":2,""objects"":3,""invisible"":1,""chaos"":1}","","","","","","","","","","","","","","","","","[]","Nearby location of Hotel Kaito (jp_hik_htl_a_low2)","ChIJK566KTuSAWARF4Kp9393J_4","35.3976612","136.0302169","JP","HIK","HIK","HTL","Japan, 〒520-1631 Shiga, Takashima, Imazuchō Nakoji, 2-chōme−６−３２","jp_hik_htl_b_low2","90","jp_hik_htl_b_low2_90"
+"trial","survey","15","671555","0.0-2.0-13.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","23927","","{""P0_Q0"":null,""ambiguous"":4,""objects"":4,""invisible"":4,""chaos"":4}","","","","","","","","","","","","","","","","","[]","Nearby location of Wave Preparatory Elementary School (us_nyc-p_sch_a_4)","ChIJTRYCJ69owokRpkzkKnXhZN4","40.5983625","-73.7567706","US","NYC","PER","SCH","4-16 Beach 22nd St, Far Rockaway, NY 11691, USA","us_nyc-p_sch_b_4","90","us_nyc-p_sch_b_4_90"
+"trial","survey","16","681906","0.0-2.0-14.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","10343","","{""P0_Q0"":null,""ambiguous"":2,""objects"":4,""invisible"":2,""chaos"":2}","","","","","","","","","","","","","","","","","[]","Nearby location of Chelsea House Victorian Inn (us_chl_htl_a_high1)","ChIJrSMrxwHMPIgRw8h_aIwPHas","42.3194142","-84.0203567","US","CHL","CHL","HTL","310 N Main St Suite 202A, Chelsea, MI 48118, USA","us_chl_htl_b_high1","90","us_chl_htl_b_high1_90"
+"trial","survey","17","697252","0.0-2.0-15.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","15336","","{""P0_Q0"":null,""ambiguous"":3,""objects"":5,""invisible"":1,""chaos"":3}","","","","","","","","","","","","","","","","","[]","United States Postal Service","ChIJbQAKGJ_0wokRvPFLNOncKdM","40.8535365","-73.8674033","US","NYC","PER","POS","2100 White Plains Rd FRNT 3, Bronx, NY 10462, USA","us_nyc-p_pos_a_5","180","us_nyc-p_pos_a_5_180"
+"trial","survey","18","753034","0.0-2.0-16.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","55774","","{""P0_Q0"":null,""ambiguous"":3,""objects"":5,""invisible"":4,""chaos"":3}","","","","","","","","","","","","","","","","","[]","Nearby location of INTERCONTINENTAL THE STRINGS (jp_tok-c_htl_a_mid2)","ChIJAb1kM0WKGGARue_1-lZ6ilo","35.6290559","139.7422638","JP","TOK","CTR","HTL","2-chōme-2-2-14 Kōnan, Minato City, Tokyo 108-0075, Japan","jp_tok-c_htl_b_mid2","90","jp_tok-c_htl_b_mid2_90"
+"trial","survey","19","782886","0.0-2.0-17.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","29842","","{""P0_Q0"":null,""ambiguous"":3,""objects"":5,""invisible"":4,""chaos"":3}","","","","","","","","","","","","","","","","","[]","Shinshuku Elementary School","ChIJM1VHO19gGGARYHbYkz0tS8E","35.5572368","139.7158925","JP","TOK","PER","SCH","1-chōme-5-1 Kamatahonchō, Ota City, Tokyo 144-0053, Japan","jp_tok-p_sch_a_2","0","jp_tok-p_sch_a_2_0"
+"trial","survey","20","820867","0.0-2.0-18.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","37972","","{""P0_Q0"":null,""ambiguous"":1,""objects"":1,""invisible"":1,""chaos"":1}","","","","","","","","","","","","","","","","","[]","Nearby location of Fairfield Inn and Suites by Marriott New York Manhattan Times Square (us_nyc-c_htl_a_mid1)","ChIJt_ncpFJYwokRykJpalw_bYU","40.7575246","-73.994055","US","NYC","CTR","HTL","405 W 40th St, New York, NY 10018, USA","us_nyc-c_htl_b_mid1","180","us_nyc-c_htl_b_mid1_180"
+"trial","survey","21","855320","0.0-2.0-19.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","34445","","{""P0_Q0"":null,""ambiguous"":3,""objects"":5,""invisible"":3,""chaos"":3}","","","","","","","","","","","","","","","","","[]","BASIS Independent Manhattan","ChIJcxgyLyf2wokRA7fDLLpP4Co","40.7945131","-73.9660392","US","NYC","CTR","SCH","795 Columbus Ave, New York, NY 10025, USA","us_nyc-c_sch_a_1","0","us_nyc-c_sch_a_1_0"
+"trial","survey","22","867293","0.0-2.0-20.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","11951","","{""P0_Q0"":null,""ambiguous"":2,""objects"":2,""invisible"":2,""chaos"":2}","","","","","","","","","","","","","","","","","[]","Kirihara Higashi Elementary School","ChIJpavbTi56AWARRkSsYgXqutM","35.122484","136.087719","JP","HIK","HIK","SCH","175 Tsuchidachō, Omihachiman, Shiga 523-0082, Japan","jp_hik_sch_a_2","180","jp_hik_sch_a_2_180"
+"trial","survey","23","909821","0.0-2.0-21.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","42515","","{""P0_Q0"":null,""ambiguous"":3,""objects"":3,""invisible"":3,""chaos"":3}","","","","","","","","","","","","","","","","","[]","Nearby location of The Westin Tokyo (jp_tok-p_htl_a_high2)","ChIJrVZsu8CLGGARMYSk3wOv6Fk","35.6401336","139.7167882","JP","TOK","PER","HTL","Japan, 〒141-0021 Tokyo, Shinagawa City, Kamiōsaki, 2-chōme−3−３０ イトーピア長者丸ＩＤＥＡ","jp_tok-p_htl_b_high2","180","jp_tok-p_htl_b_high2_180"
+"trial","survey","24","921000","0.0-2.0-22.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","11160","","{""P0_Q0"":null,""ambiguous"":1,""objects"":2,""invisible"":2,""chaos"":2}","","","","","","","","","","","","","","","","","[]","Tokyo Marriott Hotel","MCTYOMCM","35.62207","139.73696","JP","TOK","PER","HTL","4-7-36 KITASHINAGAWA SHINAGAWA, TOKYO 140-0001","jp_tok-p_htl_a_high1","0","jp_tok-p_htl_a_high1_0"
+"trial","survey","25","933145","0.0-2.0-23.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","12132","","{""P0_Q0"":null,""ambiguous"":4,""objects"":5,""invisible"":4,""chaos"":4}","","","","","","","","","","","","","","","","","[]","Nearby location of Tokyo Marriott Hotel (jp_tok-p_htl_a_high1)","ChIJsyQuX16KGGARNJl4U-sZQG0","35.620812","139.7355647","JP","TOK","PER","HTL","Japan, 〒140-0001 Tokyo, Shinagawa City, Kitashinagawa, 4-chōme−6−１７ セレソ御殿山","jp_tok-p_htl_b_high1","270","jp_tok-p_htl_b_high1_270"
+"trial","survey","26","947719","0.0-2.0-24.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","14564","","{""P0_Q0"":null,""ambiguous"":1,""objects"":5,""invisible"":3,""chaos"":2}","","","","","","","","","","","","","","","","","[]","Tokyo High Court Post Office","ChIJ8YHhS_OLGGARiMJcBz0Ip60","35.6752316","139.753074","JP","TOK","CTR","POS","1-chōme-1-4 Kasumigaseki, Chiyoda City, Tokyo 100-0013, Japan","jp_tok-c_pos_a_1","90","jp_tok-c_pos_a_1_90"
+"trial","survey","27","957558","0.0-2.0-25.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","9817","","{""P0_Q0"":null,""ambiguous"":2,""objects"":5,""invisible"":2,""chaos"":2}","","","","","","","","","","","","","","","","","[]","United States Postal Service","ChIJbSwe0opYwokRPnmsjLkkilA","40.8276833","-73.9365073","US","NYC","CTR","POS","99 Macombs Pl, New York, NY 10039, USA","us_nyc-c_pos_a_3","0","us_nyc-c_pos_a_3_0"
+"trial","survey","28","1019371","0.0-2.0-26.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","61792","","{""P0_Q0"":null,""ambiguous"":3,""objects"":5,""invisible"":4,""chaos"":3}","","","","","","","","","","","","","","","","","[]","Nearby location of Katsushika Higashishinkoiwa Post Office (jp_tok-p_pos_a_6)","ChIJa0TdeweGGGAR0TN6A1BsN_Y","35.7240323","139.8620652","JP","TOK","PER","POS","3-chōme-15-6 Higashishinkoiwa, Katsushika City, Tokyo 124-0023, Japan","jp_tok-p_pos_b_6","0","jp_tok-p_pos_b_6_0"
+"trial","survey","29","1029455","0.0-2.0-27.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","10064","","{""P0_Q0"":null,""ambiguous"":2,""objects"":1,""invisible"":2,""chaos"":2}","","","","","","","","","","","","","","","","","[]","Hotel JAL City Tokyo Toyosu","NKTYOHJC","35.68408","139.80885","JP","TOK","PER","HTL","6 4 20 TOYOSU KOTO KU, TOKYO 1350061","jp_tok-p_htl_a_mid1","0","jp_tok-p_htl_a_mid1_0"
+"trial","survey","30","1036452","0.0-2.0-28.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","6984","","{""P0_Q0"":null,""ambiguous"":5,""objects"":5,""invisible"":5,""chaos"":5}","","","","","","","","","","","","","","","","","[]","William O'Shea Campus","ChIJ2WLCL4lYwokRRLWnWyx-j_M","40.7810152","-73.9779047","US","NYC","CTR","SCH","100 W 77th St, New York, NY 10024, USA","us_nyc-c_sch_a_6","270","us_nyc-c_sch_a_6_270"
+"trial","survey","31","1079126","0.0-2.0-29.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","42663","","{""P0_Q0"":null,""ambiguous"":3,""objects"":5,""invisible"":2,""chaos"":4}","","","","","","","","","","","","","","","","","[]","HOTEL ALLAMANDA AOYAMA","FGTYOHAA","35.67122","139.71765","JP","TOK","CTR","HTL","2-7-13 KITA AOYAMA MINATO-KU, TOKYO 107 0061","jp_tok-c_htl_a_high1","90","jp_tok-c_htl_a_high1_90"
+"trial","survey","32","1102677","0.0-2.0-30.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","23528","","{""P0_Q0"":null,""ambiguous"":3,""objects"":5,""invisible"":4,""chaos"":3}","","","","","","","","","","","","","","","","","[]","Nearby location of PS 146 Anna M. Short School (us_nyc-c_sch_a_5)","ChIJ2YTRCqpYwokRoILxg84fVx0","40.788425","-73.9404164","US","NYC","CTR","SCH","416 E 105th St, New York, NY 10029, USA","us_nyc-c_sch_b_5","270","us_nyc-c_sch_b_5_270"
+"trial","survey","33","1137378","0.0-2.0-31.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","34682","","{""P0_Q0"":null,""ambiguous"":4,""objects"":5,""invisible"":3,""chaos"":3}","","","","","","","","","","","","","","","","","[]","Nearby location of United States Postal Service (us_nyc-c_pos_a_8)","ChIJEcOl7cBZwokREHeZNl9a5Q0","40.7424383","-74.007802","US","NYC","CTR","POS","60 10th Ave, New York, NY 10014, USA","us_nyc-c_pos_b_8","270","us_nyc-c_pos_b_8_270"
+"trial","survey","34","1150942","0.0-2.0-32.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","13551","","{""P0_Q0"":null,""ambiguous"":2,""objects"":4,""invisible"":2,""chaos"":2}","","","","","","","","","","","","","","","","","[]","TownePlace Suites by Marriott Ann Arbor","TOARBTPT","42.23796","-83.74932","US","ARB","ARB","HTL","1301 BRIARWOOD CIRCLE DR, ANN ARBOR, MI 48108","us_arb_htl_a_mid1","180","us_arb_htl_a_mid1_180"
+"trial","survey","35","1172996","0.0-2.0-33.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","22034","","{""P0_Q0"":null,""ambiguous"":3,""objects"":5,""invisible"":5,""chaos"":3}","","","","","","","","","","","","","","","","","[]","Nearby location of Hotel JAL City Tokyo Toyosu (jp_tok-p_htl_a_mid1)","ChIJhxfMYB-JGGARzU1jFMgKRZ8","35.684968","139.8100484","JP","TOK","PER","HTL","1-chōme-1-7 Sarue, Koto City, Tokyo 135-0003, Japan","jp_tok-p_htl_b_mid1","90","jp_tok-p_htl_b_mid1_90"
+"trial","survey","36","1217656","0.0-2.0-34.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","44648","","{""P0_Q0"":null,""ambiguous"":4,""objects"":4,""invisible"":4,""chaos"":4}","","","","","","","","","","","","","","","","","[]","Nearby location of Tyler school (us_nyc-p_sch_a_3)","ChIJ_YUu76b0wokR2szNWwZJrq8","40.85244","-73.8576424","US","NYC","PER","SCH","1038 Neill Ave, Bronx, NY 10461, USA","us_nyc-p_sch_b_3","0","us_nyc-p_sch_b_3_0"
+"half-way","html-button-response","37","1222613","0.0-2.0-35.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","4955","
+            <h3>You are now half way through the study.</h3>
+            <p>Please take a quick, 15-second break before you continue.</p>
+            <img src='assets/img/countdown-15.gif'>
+            <p>The study will automatically advance forward after the countdown is complete. However, you may click ""Next"" to advance forward now if you wish.</p>
+        ","0","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
+"attention-check","survey","38","1227985","0.0-2.0-36.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","5337","","{""P0_Q0"":null,""ambiguous"":null,""objects"":null,""invisible"":null,""chaos"":null}","","","","","","","","","","","","","","","","","[]","","","","","","","","","","","",""
+"trial","survey","39","1262103","0.0-2.0-37.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","34104","","{""P0_Q0"":null,""ambiguous"":2,""objects"":5,""invisible"":2,""chaos"":2}","","","","","","","","","","","","","","","","","[]","Guidepost Montessori at Museum Mile","ChIJM_EqNF5ZwokRqGSOTYl-ARs","40.7764017","-73.9629479","US","NYC","CTR","SCH","12 E 79th St, New York, NY 10075, USA","us_nyc-c_sch_a_7","270","us_nyc-c_sch_a_7_270"
+"trial","survey","40","1274255","0.0-2.0-38.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","12140","","{""P0_Q0"":null,""ambiguous"":2,""objects"":5,""invisible"":3,""chaos"":2}","","","","","","","","","","","","","","","","","[]","Hilton New York JFK Airport, NY","HHJFK153","40.66771","-73.79584","US","NYC","PER","HTL","144 02 135TH AVENUE, JAMAICA, NY 11436","us_nyc-p_htl_a_mid2","270","us_nyc-p_htl_a_mid2_270"
+"trial","survey","41","1286832","0.0-2.0-39.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","12558","","{""P0_Q0"":null,""ambiguous"":3,""objects"":5,""invisible"":4,""chaos"":3}","","","","","","","","","","","","","","","","","[]","Nearby location of Wave Preparatory Elementary School (us_nyc-p_sch_a_4)","ChIJTRYCJ69owokRpkzkKnXhZN4","40.5983625","-73.7567706","US","NYC","PER","SCH","4-16 Beach 22nd St, Far Rockaway, NY 11691, USA","us_nyc-p_sch_b_4","270","us_nyc-p_sch_b_4_270"
+"trial","survey","42","1299889","0.0-2.0-40.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","13043","","{""P0_Q0"":null,""ambiguous"":4,""objects"":4,""invisible"":4,""chaos"":4}","","","","","","","","","","","","","","","","","[]","Nearby location of ORCHARD STREET HOTEL (us_nyc-c_htl_a_low1)","ChIJ8TquxYZZwokRPgCEBRlBnXM","40.7198222","-73.9898421","US","NYC","CTR","HTL","130 Allen St, New York, NY 10002, USA","us_nyc-c_htl_b_low1","270","us_nyc-c_htl_b_low1_270"
+"trial","survey","43","1367569","0.0-2.0-41.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","67668","","{""P0_Q0"":null,""ambiguous"":5,""objects"":5,""invisible"":5,""chaos"":5}","","","","","","","","","","","","","","","","","[]","Nearby location of THOMPSON CENTRAL PARK - NEW YORK (us_nyc-c_htl_a_high2)","ChIJO4JkSfdYwokRIlgrbHiZhtk","40.7652312","-73.9775167","US","NYC","CTR","HTL","116 W 58th St, New York, NY 10019, USA","us_nyc-c_htl_b_high2","90","us_nyc-c_htl_b_high2_90"
+"trial","survey","44","1376694","0.0-2.0-42.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","9102","","{""P0_Q0"":null,""ambiguous"":5,""objects"":5,""invisible"":5,""chaos"":5}","","","","","","","","","","","","","","","","","[]","Nearby location of The Hoxton Williamsburg (us_nyc-p_htl_a_high2)","ChIJyY4VgmdZwokRJvRjPQxu5_w","40.7197786","-73.9599015","US","NYC","PER","HTL","131 Wythe Ave, Brooklyn, NY 11249, USA","us_nyc-p_htl_b_high2","90","us_nyc-p_htl_b_high2_90"
+"trial","survey","45","1429068","0.0-2.0-43.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","52362","","{""P0_Q0"":null,""ambiguous"":5,""objects"":5,""invisible"":4,""chaos"":5}","","","","","","","","","","","","","","","","","[]","Nearby location of Toshima Minami-Nagasaki Post Office (jp_tok-c_pos_a_4)","ChIJW9I5jqnyGGAR4LJcH4_S0to","35.725497","139.6854672","JP","TOK","CTR","POS","4-chōme-29-3 Minaminagasaki, Toshima City, Tokyo 171-0052, Japan","jp_tok-c_pos_b_4","0","jp_tok-c_pos_b_4_0"
+"trial","survey","46","1450705","0.0-2.0-44.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","21617","","{""P0_Q0"":null,""ambiguous"":5,""objects"":5,""invisible"":5,""chaos"":4}","","","","","","","","","","","","","","","","","[]","Yonehara Shiritsu Yonehara Elementary School","ChIJaQYSoWQrAmARNFmF-erxUY4","35.31424","136.280753","JP","HIK","HIK","SCH","307 Irie, Maibara, Shiga 521-0003, Japan","jp_hik_sch_a_1","0","jp_hik_sch_a_1_0"
+"trial","survey","47","1466653","0.0-2.0-45.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","15934","","{""P0_Q0"":null,""ambiguous"":2,""objects"":3,""invisible"":3,""chaos"":3}","","","","","","","","","","","","","","","","","[]","Nearby location of Nakano Shirasagi Post Office (jp_tok-p_pos_a_3)","ChIJAX-SVZHtGGARmipALMOfEzw","35.7202777","139.6350482","JP","TOK","PER","POS","T&Ns, 2-chōme-37-3 Shirasagi, Nakano City, Tokyo 165-0035, Japan","jp_tok-p_pos_b_3","0","jp_tok-p_pos_b_3_0"
+"trial","survey","48","1482178","0.0-2.0-46.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","15503","","{""P0_Q0"":null,""ambiguous"":2,""objects"":4,""invisible"":3,""chaos"":2}","","","","","","","","","","","","","","","","","[]","Nearby location of Comfort Inn JFK Airport (us_nyc-p_htl_a_low2)","ChIJ8dO9l21nwokRghi6bJiuq5c","40.6671742","-73.806723","US","NYC","PER","HTL","133-38 135th Ave, Queens, NY 11420, USA","us_nyc-p_htl_b_low2","90","us_nyc-p_htl_b_low2_90"
+"trial","survey","49","1502265","0.0-2.0-47.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","20074","","{""P0_Q0"":null,""ambiguous"":3,""objects"":3,""invisible"":3,""chaos"":3}","","","","","","","","","","","","","","","","","[]","Nearby location of 3rd Haketa Elementary School (jp_tok-p_sch_a_1)","ChIJj82HZcOPGGARdlxKpMVK0K8","35.7349985","139.787222","JP","TOK","PER","SCH","Japan, 〒116-0002 Tokyo, Arakawa City, Arakawa, 1-chōme−26−１ ＮＴＴ ビル 本館1階","jp_tok-p_sch_b_1","0","jp_tok-p_sch_b_1_0"
+"trial","survey","50","1525707","0.0-2.0-48.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","23428","","{""P0_Q0"":null,""ambiguous"":3,""objects"":4,""invisible"":3,""chaos"":3}","","","","","","","","","","","","","","","","","[]","Ryōgoku Post Office","ChIJ-792HbOOGGARe1sZkDax64U","35.6954419","139.7857167","JP","TOK","CTR","POS","2-chōme-27-12 Higashinihonbashi, Chuo City, Tokyo 103-0004, Japan","jp_tok-c_pos_a_5","270","jp_tok-c_pos_a_5_270"
+"trial","survey","51","1535616","0.0-2.0-49.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","9898","","{""P0_Q0"":null,""ambiguous"":4,""objects"":5,""invisible"":5,""chaos"":4}","","","","","","","","","","","","","","","","","[]","Nearby location of Courtyard by Marriott New York Manhattan Fifth Avenue (us_nyc-c_htl_a_mid2)","ChIJ5Yg_sQBZwokRHhiGwRT771k","40.750592","-73.982198","US","NYC","CTR","HTL","6 E 38th St, New York, NY 10016, USA","us_nyc-c_htl_b_mid2","270","us_nyc-c_htl_b_mid2_270"
+"trial","survey","52","1547645","0.0-2.0-50.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","12009","","{""P0_Q0"":null,""ambiguous"":1,""objects"":1,""invisible"":1,""chaos"":1}","","","","","","","","","","","","","","","","","[]","USPS Bayside Carrier Annex","ChIJKfnG5OFhwokRDpTOYU_3G4g","40.7633707","-73.7662444","US","NYC","PER","POS","41-29 216th St, Bayside, NY 11361, USA","us_nyc-p_pos_a_1","90","us_nyc-p_pos_a_1_90"
+"trial","survey","53","1582243","0.0-2.0-51.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","34585","","{""P0_Q0"":null,""ambiguous"":5,""objects"":3,""invisible"":4,""chaos"":4}","","","","","","","","","","","","","","","","","[]","Minami-Ikebukuro Post Office","ChIJZ0rDTmiNGGARmRNW8DDznoU","35.7271243","139.7133376","JP","TOK","CTR","POS","2-chōme-24-1 Minamiikebukuro, Toshima City, Tokyo 171-0022, Japan","jp_tok-c_pos_a_6","180","jp_tok-c_pos_a_6_180"
+"trial","survey","54","1593082","0.0-2.0-52.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","10828","","{""P0_Q0"":null,""ambiguous"":2,""objects"":2,""invisible"":3,""chaos"":2}","","","","","","","","","","","","","","","","","[]","Nearby location of Setagaya Okamoto Post Office (jp_tok-p_pos_a_1)","ChIJAVgBafjzGGAR0HytC8xomug","35.6274419","139.618016","JP","TOK","PER","POS","1-chōme-37-3 Okamoto, Setagaya City, Tokyo 157-0076, Japan","jp_tok-p_pos_b_1","90","jp_tok-p_pos_b_1_90"
+"trial","survey","55","1600852","0.0-2.0-53.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","7747","","{""P0_Q0"":null,""ambiguous"":2,""objects"":2,""invisible"":2,""chaos"":2}","","","","","","","","","","","","","","","","","[]","Nearby location of Sakata Elementary School (jp_hik_sch_a_4)","ChIJBzK5RHYsAmARdmisGXiOTX0","35.3390583","136.2876793","JP","HIK","HIK","SCH","528 Ukano, Maibara, Shiga 521-0062, Japan","jp_hik_sch_b_4","270","jp_hik_sch_b_4_270"
+"trial","survey","56","1618345","0.0-2.0-54.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","17471","","{""P0_Q0"":null,""ambiguous"":2,""objects"":2,""invisible"":2,""chaos"":1}","","","","","","","","","","","","","","","","","[]","Nearby location of Days Inn by Wyndham Ann Arbor (us_arb_htl_a_low2)","ChIJMyKc2S2vPIgRmaoMJQDyUQ0","42.251289","-83.682438","US","ARB","ARB","HTL","2489 Gross Rd, Ann Arbor, MI 48108, USA","us_arb_htl_b_low2","90","us_arb_htl_b_low2_90"
+"trial","survey","57","1656273","0.0-2.0-55.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","37915","","{""P0_Q0"":null,""ambiguous"":5,""objects"":4,""invisible"":3,""chaos"":4}","","","","","","","","","","","","","","","","","[]","Sandy Hook CenTer","ChIJdzryqpZZwokRskdUpqxDvaI","40.7330008","-74.0005218","US","NYC","CTR","SCH","136 Waverly Pl, New York, NY 10014, USA","us_nyc-c_sch_a_4","0","us_nyc-c_sch_a_4_0"
+"trial","survey","58","1670132","0.0-2.0-56.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","13840","","{""P0_Q0"":null,""ambiguous"":2,""objects"":5,""invisible"":5,""chaos"":4}","","","","","","","","","","","","","","","","","[]","Sandy Hook CenTer","ChIJdzryqpZZwokRskdUpqxDvaI","40.7330008","-74.0005218","US","NYC","CTR","SCH","136 Waverly Pl, New York, NY 10014, USA","us_nyc-c_sch_a_4","270","us_nyc-c_sch_a_4_270"
+"trial","survey","59","1687961","0.0-2.0-57.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","17807","","{""P0_Q0"":null,""ambiguous"":3,""objects"":5,""invisible"":4,""chaos"":4}","","","","","","","","","","","","","","","","","[]","Sakata Elementary School","ChIJVW6XQ3csAmARmDgDxmrtsD8","35.33759","136.289157","JP","HIK","HIK","SCH","508 Ukano, Maibara, Shiga 521-0062, Japan","jp_hik_sch_a_4","270","jp_hik_sch_a_4_270"
+"trial","survey","60","1714139","0.0-2.0-58.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","26165","","{""P0_Q0"":null,""ambiguous"":4,""objects"":5,""invisible"":4,""chaos"":4}","","","","","","","","","","","","","","","","","[]","Tokyo Marriott Hotel","MCTYOMCM","35.62207","139.73696","JP","TOK","PER","HTL","4-7-36 KITASHINAGAWA SHINAGAWA, TOKYO 140-0001","jp_tok-p_htl_a_high1","180","jp_tok-p_htl_a_high1_180"
+"trial","survey","61","1741767","0.0-2.0-59.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","27616","","{""P0_Q0"":null,""ambiguous"":4,""objects"":4,""invisible"":5,""chaos"":4}","","","","","","","","","","","","","","","","","[]","Manually Updated Jittered SV for Nearby location of Hotel Villa Fontaine Nihombashi-Hakozaki (jp_tok-c_htl_a_low1) (jp_tok-c_htl_b_low1)","ChIJcZnDxKeJGGARHOldLPKzIl8","35.682421","139.78596","JP","TOK","CTR","HTL","2-chōme-2 Nihonbashikakigarachō, Chuo City, Tokyo 103-0014, Japan","jp_tok-c_htl_b_low1","180","jp_tok-c_htl_b_low1_180"
+"trial","survey","62","1758975","0.0-2.0-60.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","17186","","{""P0_Q0"":null,""ambiguous"":4,""objects"":4,""invisible"":3,""chaos"":4}","","","","","","","","","","","","","","","","","[]","Nearby location of THOMPSON CENTRAL PARK - NEW YORK (us_nyc-c_htl_a_high2)","ChIJO4JkSfdYwokRIlgrbHiZhtk","40.7652312","-73.9775167","US","NYC","CTR","HTL","116 W 58th St, New York, NY 10019, USA","us_nyc-c_htl_b_high2","0","us_nyc-c_htl_b_high2_0"
+"trial","survey","63","1769939","0.0-2.0-61.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","10951","","{""P0_Q0"":null,""ambiguous"":5,""objects"":5,""invisible"":5,""chaos"":5}","","","","","","","","","","","","","","","","","[]","Fairfield Inn and Suites by Marriott New York Manhattan Times Square","FNNYCFIF","40.75652","-73.99247","US","NYC","CTR","HTL","330 WEST 40TH STREET, NEW YORK, NY 10018","us_nyc-c_htl_a_mid1","270","us_nyc-c_htl_a_mid1_270"
+"trial","survey","64","1825662","0.0-2.0-62.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","55710","","{""P0_Q0"":null,""ambiguous"":3,""objects"":5,""invisible"":4,""chaos"":4}","","","","","","","","","","","","","","","","","[]","Marunouchi Center Bldg. Post Office","ChIJEXvU5PiLGGARr5EAERW7XhI","35.6836406","139.7655925","JP","TOK","CTR","POS","1-chōme-6-1 Marunouchi, Chiyoda City, Tokyo 100-0005, Japan","jp_tok-c_pos_a_8","270","jp_tok-c_pos_a_8_270"
+"trial","survey","65","1852909","0.0-2.0-63.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","27227","","{""P0_Q0"":null,""ambiguous"":2,""objects"":4,""invisible"":3,""chaos"":3}","","","","","","","","","","","","","","","","","[]","Kanponoyado Hikone","ChIJlbdbLicrAmARI9pD-bcXKlg","35.2872369","136.2493256","JP","HIK","HIK","HTL","3759 Matsubarachō, Hikone, Shiga 522-0002, Japan","jp_hik_htl_a_mid1","0","jp_hik_htl_a_mid1_0"
+"trial","survey","66","1871966","0.0-2.0-64.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","19037","","{""P0_Q0"":null,""ambiguous"":2,""objects"":5,""invisible"":4,""chaos"":3}","","","","","","","","","","","","","","","","","[]","HOTEL ALLAMANDA AOYAMA","FGTYOHAA","35.67122","139.71765","JP","TOK","CTR","HTL","2-7-13 KITA AOYAMA MINATO-KU, TOKYO 107 0061","jp_tok-c_htl_a_high1","180","jp_tok-c_htl_a_high1_180"
+"trial","survey","67","1879861","0.0-2.0-65.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","7883","","{""P0_Q0"":null,""ambiguous"":5,""objects"":5,""invisible"":4,""chaos"":5}","","","","","","","","","","","","","","","","","[]","Nearby location of Mandarin Oriental New York (us_nyc-c_htl_a_ultra1)","ChIJDTV9gfVYwokR4yg_rfSKw3M","40.7700712","-73.9843251","US","NYC","CTR","HTL","77 Columbus Ave, New York, NY 10023, USA","us_nyc-c_htl_b_ultra1","180","us_nyc-c_htl_b_ultra1_180"
+"trial","survey","68","1887259","0.0-2.0-66.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","7387","","{""P0_Q0"":null,""ambiguous"":3,""objects"":5,""invisible"":4,""chaos"":4}","","","","","","","","","","","","","","","","","[]","Marunouchi Center Bldg. Post Office","ChIJEXvU5PiLGGARr5EAERW7XhI","35.6836406","139.7655925","JP","TOK","CTR","POS","1-chōme-6-1 Marunouchi, Chiyoda City, Tokyo 100-0005, Japan","jp_tok-c_pos_a_8","90","jp_tok-c_pos_a_8_90"
+"trial","survey","69","1908267","0.0-2.0-67.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","20997","","{""P0_Q0"":null,""ambiguous"":4,""objects"":4,""invisible"":5,""chaos"":4}","","","","","","","","","","","","","","","","","[]","Nearby location of Hikoneatohoteru (jp_hik_htl_a_low1)","ChIJc83wWVfUA2ARvLpBq3jM4k4","35.2381105","136.2567336","JP","HIK","HIK","HTL","Green Hill Takamiya Park, 1780 Takamiyachō, Hikone, Shiga 522-0201, Japan","jp_hik_htl_b_low1","180","jp_hik_htl_b_low1_180"
+"demographics","survey-html-form","70","1927862","0.0-2.0-68.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","19594","","{""age"":""32"",""gender"":""male"",""gender-self-describe"":"""",""zipcode"":""33330""}","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
+"demographics","survey","71","1932378","0.0-2.0-69.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","4495","","{""P0_Q0"":null,""outsideUS"":""No"",""outsideUS_years"":""""}","","","","","","","","","","","","","","","","","[]","","","","","","","","","","","",""
+"end-survey","survey-text","72","1944501","0.0-2.0-70.0","566c9284d408ea000519c6d7","626166b218b78fee4e9d8d4c","626187156109b9f6b7ff692b","11","12117","","{""Q0"":""None.""}","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
