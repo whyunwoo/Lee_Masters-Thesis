@@ -1,0 +1,143 @@
+"task","trial_type","trial_index","time_elapsed","internal_node_id","subject_id","study_id","session_id","group","rt","stimulus","response","width","height","webaudio","browser","browser_version","mobile","os","fullscreen","vsync_rate","webcam","microphone","success","timeout","failed_images","failed_audio","failed_video"
+"pavlovia-init","pavlovia","0","1197","0.0-0.0","587418895c17910001ea4e75","626166b218b78fee4e9d8d4d","626183ff77e77be7db0d1fd2","16","","","","","","","","","","","","","","","","","","",""
+"consent","html-button-response","1","98478","0.0-1.0","587418895c17910001ea4e75","626166b218b78fee4e9d8d4d","626183ff77e77be7db0d1fd2","16","97283","
+        <div style=""font-size: 80%; max-width:700px"">
+            <h2>Informed Consent</h2><br>
+        
+            <div style=""text-align: left"">
+            <h3>Streetscape Perceptions</h3>
+            <b>HUM00189138</b>
+            <br><hr>
+        
+            <h4>DESCRIPTION</h4>
+            <p>
+                In this study, you will view Google Street View images. You will then answer questions about your impressions of the streetscapes presented in those images.
+            </p><br>
+        
+            <h4>TIME INVOLVEMENT</h4>
+            <p>Your participation will take approximately 30 minutes.</p><br>
+        
+            <h4>RISKS AND BENEFITS</h4>
+            <p>
+                The risks associated with this study are minimal. The benefits which may reasonably be expected to result from this study are none.  We cannot and do not guarantee or promise that you will receive any benefits from this study. 
+            </p><br>
+        
+            <h4>PAYMENTS</h4>
+            <p>You will be paid <b>$5.00</b> for your participation.</p><br>
+        
+            <h4>SUBJECT'S RIGHTS</h4>
+            <p>
+                If you have read this form and have decided to participate in this project, please understand your participation is voluntary and you have the right to withdraw your consent or discontinue participation at any time without penalty or loss of benefits to which you are otherwise entitled.  The alternative is not to participate.  You have the right to refuse to answer particular questions.  
+            </p>
+        
+            <p>
+                Your individual privacy will be maintained in all published and written data resulting from the study. Your responses will be kept confidential: you are given a participant code, and no one, not even the research team, can match that code with your identity. Your collected information may also be shared with other researchers as part of our dataset.
+            </p><br>
+        
+            <h4>CONTACT INFORMATION</h4>
+            <p>
+                Questions: If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Nicholas Camp, npcamp@umich.edu, (443) 851-6783.
+            </p>
+        
+            <p>
+                If you have questions about your rights as a research participant, or wish to obtain information, ask questions or discuss any concerns about this study with someone other than the researcher(s), please contact the following:
+                <br><br>
+        
+                University of Michigan<br>
+                Health Sciences and Behavioral Sciences Institutional Review Board
+                (IRB-HSBS)<br>
+                2800 Plymouth Road <br>
+                Building 520, Room 1169 <br>
+                Ann Arbor, MI 48109-2800 <br>
+                Telephone: 734-936-0933 or toll free (866) 936-0933 <br>
+                Fax: 734-936-1852 <br />
+                E-mail: irbhsbs@umich.edu <br>
+            </p>
+        
+            <p>
+                You can also contact the University of Michigan Compliance Hotline at 1-866-990-0111. You may also print this consent form to keep.
+            </p>
+            <br>
+        
+            <div class=""alert alert-warning""><b>
+                Do you consent to participate in this study? If you consent to participate in this study, please click “Accept and continue.”
+            </b></div>
+            </div>
+        </div>
+    ","1","","","","","","","","","","","","","","","",""
+"browser-check","browser-check","2","99605","0.0-2.0-0.0","587418895c17910001ea4e75","626166b218b78fee4e9d8d4d","626183ff77e77be7db0d1fd2","16","","","","1181","703","true","firefox","99.0.0","false","Mac OS","true","60.79","true","true","","","","",""
+"","preload","3","100521","0.0-2.0-1.0","587418895c17910001ea4e75","626166b218b78fee4e9d8d4d","626183ff77e77be7db0d1fd2","16","","","","","","","","","","","","","","","true","false","[]","[]","[]"
+"instructions","html-button-response","4","1880584","0.0-2.0-2.0","587418895c17910001ea4e75","626166b218b78fee4e9d8d4d","626183ff77e77be7db0d1fd2","16","1780135","
+        <div class=""text-container"">
+            <h1>Welcome to the study!</h1>
+            
+            <div class=""text-left"">
+                <p>
+                    In this study, we are interested in how people think about different Google Street View images. Google Street View takes pictures of streets used for Google Earth and Google Maps. You’ll see Google Street View images of different places and answer some questions about each one.
+                </p>
+            </div>
+            
+            <img src='
+            https://maps.googleapis.com/maps/api/streetview?size=640x320
+            &location=37.783631,-122.432766
+            &heading=80
+            &pitch=2
+            &fov=100
+            &radius=150
+            &key=AIzaSyC2OxRDg6qlzZDj7j0UAD2XyE0qWokLvvs
+            &source=outdoor'>
+        
+            <br>
+        <br>
+    ","0","","","","","","","","","","","","","","","",""
+"instructions","html-button-response","5","1928636","0.0-2.0-3.0","587418895c17910001ea4e75","626166b218b78fee4e9d8d4d","626183ff77e77be7db0d1fd2","16","47746","
+        <style>
+            img.small {
+            max-width: 100px;
+            }
+            li {
+            text-indent: 40px;
+            }
+        </style>
+
+        <div class=""text-container text-left"">
+            <p>For each picture, we’d like your impressions of the scene:</p>
+            
+            <hr>
+                Are there <b>clear, distinct boundaries</b> between objects in the scene, or are the <b>boundaries ambiguous or unclear</b>?
+                
+                <li>clear, distinct boundaries: <img class=""small"" src=""assets/img/ambiguous-low.png""></li>
+                <li>ambiguous or unclear boundaries: <img class=""small"" src=""assets/img/ambiguous-high.png""></li>
+            <hr>
+            <br>
+                Are there <b>only a few different objects</b> in the scene, or is there <b>a large number</b>?
+            <br><br>
+            <hr>
+                Are only <b>a few parts</b> of the scene <b>invisible or obscured</b>, or are <b>many parts invisible or obscured</b>?
+                
+                <li>a few parts invisible or obscured: <img class=""small"" src=""assets/img/invisible-low.png""></li>
+                <li>many parts invisible or obscured: <img class=""small"" src=""assets/img/invisible-high.png""></li>
+            <hr>
+            <br>
+                Does the scene look <b>organized</b> or <b>chaotic</b> to you?
+            <br><br>
+            <hr>
+            
+            <p>
+                There are no right or wrong answers: we are interested in <b>your</b> impression. Note that some images might have individual buildings or faces blurred for privacy. Please ignore these when making your judgments.
+            </p>
+        </div>
+        <br>
+    ","0","","","","","","","","","","","","","","","",""
+"instructions","html-button-response","6","1933154","0.0-2.0-4.0","587418895c17910001ea4e75","626166b218b78fee4e9d8d4d","626183ff77e77be7db0d1fd2","16","4514","
+        <div class=""text-container text-left"">
+            <p>Please make sure you are doing this study in an area where you can focus and complete the survey in one sitting.</p>
+
+            <p>Don’t spend too much time on any one picture, and, again go with your gut impression!</p>
+            
+            <p>The study should take about 30 minutes. We’ll let you know when you’re halfway through.</p>
+        </div>
+            
+        <h3>Ready? Click next to get started!</h3>
+        <br>
+    ","0","","","","","","","","","","","","","","","",""
