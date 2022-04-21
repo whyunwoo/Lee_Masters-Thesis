@@ -1,0 +1,159 @@
+"task","trial_type","trial_index","time_elapsed","internal_node_id","subject_id","study_id","session_id","group","rt","stimulus","response","width","height","webaudio","browser","browser_version","mobile","os","fullscreen","vsync_rate","webcam","microphone","success","timeout","failed_images","failed_audio","failed_video","accuracy","name","place_id","lat","lng","culture","loc1","loc2","loct","address","loc_id_prev","angle","loc_id"
+"pavlovia-init","pavlovia","0","1580","0.0-0.0","5ae2641f5cd05500015ece71","626166b218b78fee4e9d8d4d","62617893e0ee039db3c0564f","4","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
+"consent","html-button-response","1","17029","0.0-1.0","5ae2641f5cd05500015ece71","626166b218b78fee4e9d8d4d","62617893e0ee039db3c0564f","4","15445","
+        <div style=""font-size: 80%; max-width:700px"">
+            <h2>Informed Consent</h2><br>
+        
+            <div style=""text-align: left"">
+            <h3>Streetscape Perceptions</h3>
+            <b>HUM00189138</b>
+            <br><hr>
+        
+            <h4>DESCRIPTION</h4>
+            <p>
+                In this study, you will view Google Street View images. You will then answer questions about your impressions of the streetscapes presented in those images.
+            </p><br>
+        
+            <h4>TIME INVOLVEMENT</h4>
+            <p>Your participation will take approximately 30 minutes.</p><br>
+        
+            <h4>RISKS AND BENEFITS</h4>
+            <p>
+                The risks associated with this study are minimal. The benefits which may reasonably be expected to result from this study are none.  We cannot and do not guarantee or promise that you will receive any benefits from this study. 
+            </p><br>
+        
+            <h4>PAYMENTS</h4>
+            <p>You will be paid <b>$5.00</b> for your participation.</p><br>
+        
+            <h4>SUBJECT'S RIGHTS</h4>
+            <p>
+                If you have read this form and have decided to participate in this project, please understand your participation is voluntary and you have the right to withdraw your consent or discontinue participation at any time without penalty or loss of benefits to which you are otherwise entitled.  The alternative is not to participate.  You have the right to refuse to answer particular questions.  
+            </p>
+        
+            <p>
+                Your individual privacy will be maintained in all published and written data resulting from the study. Your responses will be kept confidential: you are given a participant code, and no one, not even the research team, can match that code with your identity. Your collected information may also be shared with other researchers as part of our dataset.
+            </p><br>
+        
+            <h4>CONTACT INFORMATION</h4>
+            <p>
+                Questions: If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Nicholas Camp, npcamp@umich.edu, (443) 851-6783.
+            </p>
+        
+            <p>
+                If you have questions about your rights as a research participant, or wish to obtain information, ask questions or discuss any concerns about this study with someone other than the researcher(s), please contact the following:
+                <br><br>
+        
+                University of Michigan<br>
+                Health Sciences and Behavioral Sciences Institutional Review Board
+                (IRB-HSBS)<br>
+                2800 Plymouth Road <br>
+                Building 520, Room 1169 <br>
+                Ann Arbor, MI 48109-2800 <br>
+                Telephone: 734-936-0933 or toll free (866) 936-0933 <br>
+                Fax: 734-936-1852 <br />
+                E-mail: irbhsbs@umich.edu <br>
+            </p>
+        
+            <p>
+                You can also contact the University of Michigan Compliance Hotline at 1-866-990-0111. You may also print this consent form to keep.
+            </p>
+            <br>
+        
+            <div class=""alert alert-warning""><b>
+                Do you consent to participate in this study? If you consent to participate in this study, please click “Accept and continue.”
+            </b></div>
+            </div>
+        </div>
+    ","1","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
+"browser-check","browser-check","2","18033","0.0-2.0-0.0","5ae2641f5cd05500015ece71","626166b218b78fee4e9d8d4d","62617893e0ee039db3c0564f","4","","","","1536","762","true","chrome","100.0.4896","false","Chrome OS","true","61.08","true","true","","","","","","","","","","","","","","","","","",""
+"","preload","3","19700","0.0-2.0-1.0","5ae2641f5cd05500015ece71","626166b218b78fee4e9d8d4d","62617893e0ee039db3c0564f","4","","","","","","","","","","","","","","","true","false","[]","[]","[]","","","","","","","","","","","","",""
+"instructions","html-button-response","4","31980","0.0-2.0-2.0","5ae2641f5cd05500015ece71","626166b218b78fee4e9d8d4d","62617893e0ee039db3c0564f","4","12274","
+        <div class=""text-container"">
+            <h1>Welcome to the study!</h1>
+            
+            <div class=""text-left"">
+                <p>
+                    In this study, we are interested in how people think about different Google Street View images. Google Street View takes pictures of streets used for Google Earth and Google Maps. You’ll see Google Street View images of different places and answer some questions about each one.
+                </p>
+            </div>
+            
+            <img src='
+            https://maps.googleapis.com/maps/api/streetview?size=640x320
+            &location=37.783631,-122.432766
+            &heading=80
+            &pitch=2
+            &fov=100
+            &radius=150
+            &key=AIzaSyC2OxRDg6qlzZDj7j0UAD2XyE0qWokLvvs
+            &source=outdoor'>
+        
+            <br>
+        <br>
+    ","0","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
+"instructions","html-button-response","5","80306","0.0-2.0-3.0","5ae2641f5cd05500015ece71","626166b218b78fee4e9d8d4d","62617893e0ee039db3c0564f","4","48021","
+        <style>
+            img.small {
+            max-width: 100px;
+            }
+            li {
+            text-indent: 40px;
+            }
+        </style>
+
+        <div class=""text-container text-left"">
+            <p>For each picture, we’d like your impressions of the scene:</p>
+            
+            <hr>
+                Are there <b>clear, distinct boundaries</b> between objects in the scene, or are the <b>boundaries ambiguous or unclear</b>?
+                
+                <li>clear, distinct boundaries: <img class=""small"" src=""assets/img/ambiguous-low.png""></li>
+                <li>ambiguous or unclear boundaries: <img class=""small"" src=""assets/img/ambiguous-high.png""></li>
+            <hr>
+            <br>
+                Are there <b>only a few different objects</b> in the scene, or is there <b>a large number</b>?
+            <br><br>
+            <hr>
+                Are only <b>a few parts</b> of the scene <b>invisible or obscured</b>, or are <b>many parts invisible or obscured</b>?
+                
+                <li>a few parts invisible or obscured: <img class=""small"" src=""assets/img/invisible-low.png""></li>
+                <li>many parts invisible or obscured: <img class=""small"" src=""assets/img/invisible-high.png""></li>
+            <hr>
+            <br>
+                Does the scene look <b>organized</b> or <b>chaotic</b> to you?
+            <br><br>
+            <hr>
+            
+            <p>
+                There are no right or wrong answers: we are interested in <b>your</b> impression. Note that some images might have individual buildings or faces blurred for privacy. Please ignore these when making your judgments.
+            </p>
+        </div>
+        <br>
+    ","0","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
+"instructions","html-button-response","6","102849","0.0-2.0-4.0","5ae2641f5cd05500015ece71","626166b218b78fee4e9d8d4d","62617893e0ee039db3c0564f","4","22536","
+        <div class=""text-container text-left"">
+            <p>Please make sure you are doing this study in an area where you can focus and complete the survey in one sitting.</p>
+
+            <p>Don’t spend too much time on any one picture, and, again go with your gut impression!</p>
+            
+            <p>The study should take about 30 minutes. We’ll let you know when you’re halfway through.</p>
+        </div>
+            
+        <h3>Ready? Click next to get started!</h3>
+        <br>
+    ","0","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""
+"trial","survey","7","189581","0.0-2.0-5.0","5ae2641f5cd05500015ece71","626166b218b78fee4e9d8d4d","62617893e0ee039db3c0564f","4","86541","","{""P0_Q0"":null,""ambiguous"":3,""objects"":4,""invisible"":3,""chaos"":2}","","","","","","","","","","","","","","","","","[]","Nearby location of United States Postal Service (us_nyc-p_pos_a_5)","ChIJAxFT_p70wokRYeihFIw0wFU","40.8546215","-73.8685765","US","NYC","PER","POS","625 Lydig Ave, Bronx, NY 10462, USA","us_nyc-p_pos_b_5","180","us_nyc-p_pos_b_5_180"
+"trial","survey","8","333468","0.0-2.0-6.0","5ae2641f5cd05500015ece71","626166b218b78fee4e9d8d4d","62617893e0ee039db3c0564f","4","143816","","{""P0_Q0"":null,""ambiguous"":2,""objects"":4,""invisible"":3,""chaos"":2}","","","","","","","","","","","","","","","","","[]","Nearby location of びわ湖畔リゾート 白浜荘 (jp_hik_htl_a_mid2)","ChIJR-fdOL6aAWARRx-bTY1d8b8","35.3062783","136.038326","JP","HIK","HIK","HTL","2315-3 Adogawachō Shimoogawa, Takashima, Shiga 520-1223, Japan","jp_hik_htl_b_mid2","180","jp_hik_htl_b_mid2_180"
+"trial","survey","9","365136","0.0-2.0-7.0","5ae2641f5cd05500015ece71","626166b218b78fee4e9d8d4d","62617893e0ee039db3c0564f","4","31616","","{""P0_Q0"":null,""ambiguous"":2,""objects"":4,""invisible"":3,""chaos"":2}","","","","","","","","","","","","","","","","","[]","Nearby location of P.S. 020 John Bowne (us_nyc-p_sch_a_5)","ChIJ-7aNoRZgwokRFC2hF6Idg2E","40.7572054","-73.8229217","US","NYC","PER","SCH","14231 Franklin Ave, Queens, NY 11355, USA","us_nyc-p_sch_b_5","180","us_nyc-p_sch_b_5_180"
+"trial","survey","10","392467","0.0-2.0-8.0","5ae2641f5cd05500015ece71","626166b218b78fee4e9d8d4d","62617893e0ee039db3c0564f","4","27285","","{""P0_Q0"":null,""ambiguous"":2,""objects"":3,""invisible"":3,""chaos"":2}","","","","","","","","","","","","","","","","","[]","Hotel Route-Inn Nagahama Inter","ChIJmQLsstAuAmARAC8tYd9WWwc","35.3970578","136.2947216","JP","TOR","TOR","HTL","Japan, 〒526-0804 Shiga, Nagahama, Kanōchō, 字上角田884-1","jp_tor_htl_a_low1","180","jp_tor_htl_a_low1_180"
+"trial","survey","11","432919","0.0-2.0-9.0","5ae2641f5cd05500015ece71","626166b218b78fee4e9d8d4d","62617893e0ee039db3c0564f","4","40411","","{""P0_Q0"":null,""ambiguous"":1,""objects"":4,""invisible"":2,""chaos"":2}","","","","","","","","","","","","","","","","","[]","Mercer Hotel","WVNYCMER","40.72603","-73.99856","US","NYC","CTR","HTL","147 MERCER STREET , NEW YORK, NY 10012","us_nyc-c_htl_a_ultra2","0","us_nyc-c_htl_a_ultra2_0"
+"trial","survey","12","461637","0.0-2.0-10.0","5ae2641f5cd05500015ece71","626166b218b78fee4e9d8d4d","62617893e0ee039db3c0564f","4","28664","","{""P0_Q0"":null,""ambiguous"":1,""objects"":3,""invisible"":2,""chaos"":2}","","","","","","","","","","","","","","","","","[]","Hotel Villa Fontaine Nihombashi-Hakozaki","HSTYOASY","35.68042","139.78604","JP","TOK","CTR","HTL","20-10, NIHOMBASHI-HAKOZAKI-CHO, TOKYO 103-0015","jp_tok-c_htl_a_low1","0","jp_tok-c_htl_a_low1_0"
+"trial","survey","13","506925","0.0-2.0-11.0","5ae2641f5cd05500015ece71","626166b218b78fee4e9d8d4d","62617893e0ee039db3c0564f","4","45243","","{""P0_Q0"":null,""ambiguous"":2,""objects"":3,""invisible"":4,""chaos"":2}","","","","","","","","","","","","","","","","","[]","Yonehara Shiritsu Yonehara Elementary School","ChIJaQYSoWQrAmARNFmF-erxUY4","35.31424","136.280753","JP","HIK","HIK","SCH","307 Irie, Maibara, Shiga 521-0003, Japan","jp_hik_sch_a_1","90","jp_hik_sch_a_1_90"
+"trial","survey","14","531444","0.0-2.0-12.0","5ae2641f5cd05500015ece71","626166b218b78fee4e9d8d4d","62617893e0ee039db3c0564f","4","24473","","{""P0_Q0"":null,""ambiguous"":1,""objects"":3,""invisible"":4,""chaos"":2}","","","","","","","","","","","","","","","","","[]","Kakezuka Elementary School","ChIJLYvCVhSLGGARQZ0PUiBKWkg","35.6443992","139.714528","JP","TOK","CTR","SCH","4-chōme-21-10 Ebisu, Shibuya City, Tokyo 150-0013, Japan","jp_tok-c_sch_a_4","180","jp_tok-c_sch_a_4_180"
+"trial","survey","15","560500","0.0-2.0-13.0","5ae2641f5cd05500015ece71","626166b218b78fee4e9d8d4d","62617893e0ee039db3c0564f","4","29012","","{""P0_Q0"":null,""ambiguous"":1,""objects"":2,""invisible"":1,""chaos"":1}","","","","","","","","","","","","","","","","","[]","The Pearl NYC","XTLGATPH","40.76144","-73.98553","US","NYC","CTR","HTL","233 W 49TH ST, NEW YORK, NY 10019","us_nyc-c_htl_a_high1","180","us_nyc-c_htl_a_high1_180"
+"trial","survey","16","689385","0.0-2.0-14.0","5ae2641f5cd05500015ece71","626166b218b78fee4e9d8d4d","62617893e0ee039db3c0564f","4","128844","","{""P0_Q0"":null,""ambiguous"":1,""objects"":3,""invisible"":3,""chaos"":2}","","","","","","","","","","","","","","","","","[]","Manually Updated Jittered SV for Nearby location of Marunouchi Center Bldg. Post Office (jp_tok-c_pos_a_8) (jp_tok-c_pos_b_8)","ChIJnUcMGviLGGAROCgXeJNX4xg","35.685418","139.762932","JP","TOK","CTR","POS","1-chōme-1 Ōtemachi, Chiyoda City, Tokyo 100-0004, Japan","jp_tok-c_pos_b_8","0","jp_tok-c_pos_b_8_0"
+"trial","survey","17","729264","0.0-2.0-15.0","5ae2641f5cd05500015ece71","626166b218b78fee4e9d8d4d","62617893e0ee039db3c0564f","4","39839","","{""P0_Q0"":null,""ambiguous"":1,""objects"":2,""invisible"":2,""chaos"":1}","","","","","","","","","","","","","","","","","[]","Hotel Villa Fontaine Nihombashi-Hakozaki","HSTYOASY","35.68042","139.78604","JP","TOK","CTR","HTL","20-10, NIHOMBASHI-HAKOZAKI-CHO, TOKYO 103-0015","jp_tok-c_htl_a_low1","90","jp_tok-c_htl_a_low1_90"
+"trial","survey","18","768949","0.0-2.0-16.0","5ae2641f5cd05500015ece71","626166b218b78fee4e9d8d4d","62617893e0ee039db3c0564f","4","39641","","{""P0_Q0"":null,""ambiguous"":1,""objects"":3,""invisible"":2,""chaos"":1}","","","","","","","","","","","","","","","","","[]","Tokyo High Court Post Office","ChIJ8YHhS_OLGGARiMJcBz0Ip60","35.6752316","139.753074","JP","TOK","CTR","POS","1-chōme-1-4 Kasumigaseki, Chiyoda City, Tokyo 100-0013, Japan","jp_tok-c_pos_a_1","0","jp_tok-c_pos_a_1_0"
+"trial","survey","19","837952","0.0-2.0-17.0","5ae2641f5cd05500015ece71","626166b218b78fee4e9d8d4d","62617893e0ee039db3c0564f","4","68962","","{""P0_Q0"":null,""ambiguous"":1,""objects"":2,""invisible"":2,""chaos"":1}","","","","","","","","","","","","","","","","","[]","レジーナリゾートびわ湖長浜","ChIJJ5e4VxopAmAR65mu8Uxdxg0","35.3785745","136.2594856","JP","HIK","HIK","HTL","4-22 Kōenchō, Nagahama, Shiga 526-0065, Japan","jp_hik_htl_a_high2","0","jp_hik_htl_a_high2_0"
+"trial","survey","20","880714","0.0-2.0-18.0","5ae2641f5cd05500015ece71","626166b218b78fee4e9d8d4d","62617893e0ee039db3c0564f","4","42713","","{""P0_Q0"":null,""ambiguous"":2,""objects"":2,""invisible"":2,""chaos"":2}","","","","","","","","","","","","","","","","","[]","United States Postal Service","ChIJESBBoWz2wokRc5NBjEpQTow","40.8112416","-73.9532884","US","NYC","CTR","POS","365 W 125th St Ste 2A, New York, NY 10027, USA","us_nyc-c_pos_a_1","270","us_nyc-c_pos_a_1_270"
+"trial","survey","21","969528","0.0-2.0-19.0","5ae2641f5cd05500015ece71","626166b218b78fee4e9d8d4d","62617893e0ee039db3c0564f","4","88768","","{""P0_Q0"":null,""ambiguous"":2,""objects"":2,""invisible"":2,""chaos"":2}","","","","","","","","","","","","","","","","","[]","Nearby location of Minami-Ikebukuro Post Office (jp_tok-c_pos_a_6)","ChIJYSTPzWmNGGARuevXlN7s3ko","35.7261522","139.7122633","JP","TOK","CTR","POS","3-chōme-13-20 Minamiikebukuro, Toshima City, Tokyo 171-0022, Japan","jp_tok-c_pos_b_6","90","jp_tok-c_pos_b_6_90"
+"trial","survey","22","998978","0.0-2.0-20.0","5ae2641f5cd05500015ece71","626166b218b78fee4e9d8d4d","62617893e0ee039db3c0564f","4","29404","","{""P0_Q0"":null,""ambiguous"":2,""objects"":2,""invisible"":2,""chaos"":2}","","","","","","","","","","","","","","","","","[]","Yonehara Shiritsu Yonehara Elementary School","ChIJaQYSoWQrAmARNFmF-erxUY4","35.31424","136.280753","JP","HIK","HIK","SCH","307 Irie, Maibara, Shiga 521-0003, Japan","jp_hik_sch_a_1","270","jp_hik_sch_a_1_270"
