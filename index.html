@@ -8,7 +8,8 @@
     <!--Javascript Files-->
     <script src="lib/vendors/jspsych-7.1.2/jspsych.js"></script>
     <script src="lib/jspsych-7-pavlovia-2022.1.1.js"></script>
-    <script src="assets/scripts/groups.js"></script>
+    <!--<script src="assets/scripts/groups.js"></script>-->
+    <script src="assets/scripts/groups copy.js>"></script>
 
     <!--jsPsych Plugins-->
     <script src="lib/vendors/jspsych-7.1.2/plugin-browser-check.js"></script>
@@ -56,7 +57,9 @@
     var timeline = [];
 
     // group assignment
-    var group = jsPsych.randomization.randomInt(1, 16);
+    //var group = jsPsych.randomization.randomInt(1, 16);
+    //var svList = groups[group - 1];
+    var group = jsPsych.randomization.randomInt(1, 6);
     var svList = groups[group - 1];
 
     // add global data variables
@@ -220,20 +223,20 @@
      * @param {Number} height   height of the returning image
      * @return an html string of an `img` tag with all above parameters
      */
-    function getSVLoc(location, heading, pitch, fov, width = svWidth, height = svHeight) {
-        var imgTag = `
-            <img src='
-            https://maps.googleapis.com/maps/api/streetview?size=${width}x${height}
-            &location=${location}
-            &heading=${heading}
-            &pitch=${pitch}
-            &fov=${fov}
-            &radius=150
-            &key=${API_KEY}
-            &source=outdoor'>
-        `
-        return imgTag
-    };
+    //function getSVLoc(location, heading, pitch, fov, width = svWidth, height = svHeight) {
+    //    var imgTag = `
+    //        <img src='
+    //        https://maps.googleapis.com/maps/api/streetview?size=${width}x${height}
+    //        &location=${location}
+    //        &heading=${heading}
+    //        &pitch=${pitch}
+    //        &fov=${fov}
+    //        &radius=150
+    //        &key=${API_KEY}
+    //        &source=outdoor'>
+    //    `
+    //    return imgTag
+    //};
 
 
     ////////* EXPERIMENT */////////
@@ -335,12 +338,12 @@
 
     // function to generate new trial with location info
     function newTrial(loc) {
-        var locData = svList[loc];
-        var locLat = locData['lat'];
-        var locLng = locData['lng'];
-        var locHeading = locData['angle']
-        locData['loc_id'] = loc;
-        delete locData['exclude'];
+        //var locData = svList[loc];
+        //var locLat = locData['lat'];
+        //var locLng = locData['lng'];
+        //var locHeading = locData['angle']
+        //locData['loc_id'] = loc;
+        //delete locData['exclude'];
 
         var trialNew = {
             type: jsPsychSurvey,
@@ -368,7 +371,7 @@
                         </style>
 
                         <p>Take a look at the following landscape from Google Street View</p>
-                        ${getSVCoord(locLat, locLng, locHeading)}
+                        ${getSVCoord(locLat, locLng, locHeading)}   
                         <h3>In this image, ...</h3>
                     `,
                 }, {
