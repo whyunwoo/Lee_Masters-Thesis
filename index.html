@@ -42,7 +42,7 @@
     /* VARIABLES */
 
     // Google API
-    // const API_KEY = "AIzaSyCktc4Ble5kxzMmWAG7Nar5yBCOD2NjkSw"; // SpacePerception
+     const API_KEY = "AIzaSyCktc4Ble5kxzMmWAG7Nar5yBCOD2NjkSw"; // SpacePerception
     //const API_KEY = 'AIzaSyC2OxRDg6qlzZDj7j0UAD2XyE0qWokLvvs'; // Space Sampling - Student
 
     // jsPsych
@@ -66,12 +66,19 @@
 
     // group assignment
     //var group = jsPsych.randomization.randomInt(1, 16);
-    //var svList = groups[group - 1];
-    var group = jsPsych.randomization.randomInt(1, 6);
-    var svList = groups[group - 1];
-
+    var group = jsPsych.randomization.randomInt(1, 6); 
+    var svList = []
+    for (let condition = 1; condition <= 6; ++condition){
+        var stimuli_that_match_condition = []
+        for (key in groups){
+            if (condition == groups[key]){
+                stimuli_that_match_condition.push(groups[key]);
+            }
+        }
+        svList.push(stimuli_that_match_condition);
+    }
     // add global data variables
-    jsPsych.data.addProperties({ group: group });
+    jsPsych.data.addProperties({ groups: groups });
 
     // create pavlovia participant ID
     //var pavlovia_id = 'c-' + group + '_p-' + subject_id + '_s-' + session_id;
@@ -217,6 +224,8 @@
         `
         return imgTag
     };
+    
+    
 
     /**
      * A function to get street view image using address or location name.
@@ -355,7 +364,7 @@
 
         var trialNew = {
             type: jsPsychSurvey,
-            data: Object.assign({}, locData, { 'task': 'trial' }),
+            //data: Object.assign({}, locData, { 'task': 'trial' }),
             pages: [[
                 {
                     type: 'html',
@@ -379,7 +388,7 @@
                         </style>
 
                         <p>Take a look at the following landscape from Google Street View</p>
-                        ${getSVCoord(locLat, locLng, locHeading)}   
+                        <img src = '${svList}'>
                         <h3>In this image, ...</h3>
                     `,
                 }, {
@@ -395,7 +404,7 @@
                         { value: 4 },
                         { value: 5 }
                     ],
-                    required: true
+                    required: false
                 }, {
                     type: 'likert',
                     prompt: "how many different objects do there seem to be?",
@@ -409,7 +418,7 @@
                         { value: 4 },
                         { value: 5 }
                     ],
-                    required: true
+                    required: false
                 }, {
                     type: 'likert',
                     prompt: "to what degree do there seem to be parts of the scene that are invisible?",
@@ -423,7 +432,7 @@
                         { value: 4 },
                         { value: 5 }
                     ],
-                    required: true
+                    required: false
                 }, {
                     type: 'likert',
                     prompt: "to what degree is the scene either organized or chaotic?",
@@ -437,7 +446,7 @@
                         { value: 4 },
                         { value: 5 }
                     ],
-                    required: true
+                    required: false
                 }
             ]],
             button_label_finish: 'Continue'
@@ -717,8 +726,8 @@
     main_timeline.push(browserCheck);
     main_timeline.push(preload);
     main_timeline.push(intro1);
-    main_timeline.push(intro2);
-    main_timeline.push(intro3);
+    //main_timeline.push(intro2);
+    //main_timeline.push(intro3);
 
     // Push trials
     var shuffledList = jsPsych.randomization.shuffle(Object.keys(svList));
