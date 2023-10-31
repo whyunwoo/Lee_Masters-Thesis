@@ -9,7 +9,7 @@
     <script src="lib/vendors/jspsych-7.1.2/jspsych.js"></script>
     <script src="lib/jspsych-7-pavlovia-2022.1.1.js"></script>
     <!--<script src="assets/scripts/groups.js"></script>-->
-    <script src="assets/scripts/groups copy.js>"></script>
+    <script src="assets/scripts/groups2.js"></script>
 
     <!--jsPsych Plugins-->
     <script src="lib/vendors/jspsych-7.1.2/plugin-browser-check.js"></script>
@@ -35,7 +35,7 @@
 
     // Google API
     // const API_KEY = "AIzaSyCktc4Ble5kxzMmWAG7Nar5yBCOD2NjkSw"; // SpacePerception
-    const API_KEY = 'AIzaSyC2OxRDg6qlzZDj7j0UAD2XyE0qWokLvvs'; // Space Sampling - Student
+    //const API_KEY = 'AIzaSyC2OxRDg6qlzZDj7j0UAD2XyE0qWokLvvs'; // Space Sampling - Student
 
     // jsPsych
     var jsPsych = initJsPsych({
@@ -66,16 +66,16 @@
     jsPsych.data.addProperties({ group: group });
 
     // create pavlovia participant ID
-    var pavlovia_id = 'c-' + group + '_p-' + subject_id + '_s-' + session_id;
+    //var pavlovia_id = 'c-' + group + '_p-' + subject_id + '_s-' + session_id;
 
     /* init connection with pavlovia.org */
-    var pavlovia_init = {
-        type: jsPsychPavlovia,
-        data: {
-            task: 'pavlovia-init'
-        },
-        command: "init"
-    };
+    //var pavlovia_init = {
+    //    type: jsPsychPavlovia,
+    //    data: {
+    //        task: 'pavlovia-init'
+    //    },
+    //    command: "init"
+    //};
 
     // browser check
     var browserCheck = {
@@ -694,14 +694,14 @@
     };
 
     /* finish connection with pavlovia.org */
-    var pavlovia_finish = {
-        type: jsPsychPavlovia,
-        data: {
-            task: 'pavlovia-finish'
-        },
-        command: "finish",
-        participantId: pavlovia_id
-    };
+    //var pavlovia_finish = {
+    //    type: jsPsychPavlovia,
+    //    data: {
+    //        task: 'pavlovia-finish'
+    //    },
+    //    command: "finish",
+    //    participantId: pavlovia_id
+    //};
 
     ////////* EXECUTING TIMELINE *////////
     var main_timeline = [];
@@ -751,10 +751,10 @@
         }
     };
 
-    timeline.push(pavlovia_init);
+    //timeline.push(pavlovia_init);
     timeline.push(consentForm);
     timeline.push(consent_condition);
-    timeline.push(pavlovia_finish);
+    //timeline.push(pavlovia_finish);
     timeline.push(no_consent_condition);
     timeline.push(endStudy);
 
