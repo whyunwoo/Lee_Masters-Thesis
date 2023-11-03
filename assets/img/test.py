@@ -11,9 +11,10 @@ try:
         groups = {}
 
         for row in csv_reader:
-            group_key = row['\ufeffgroup']
+            group_key = row['picture']
             entry = {
-                "name": row['picture'],
+                "group": row['\ufeffgroup'],
+                "picture": row['picture'],
                 "Condition": row['Condition'],
                 "size": row['size'],
                 "culture": row['culture'],
@@ -22,11 +23,8 @@ try:
                 "street": row['street'],
                 "back": row['back']
             }
-            if group_key in groups:
-                groups[group_key][row['picture']] = entry
-            else:
-                groups[group_key] = {row['picture']: entry}
-
+            groups[group_key] = entry
+            
     output_json_path = '/Users/arajo/Documents/01. Project/perceptual-affordance-orig.stim/assets/scripts/test.json'  # Specify the full path to the desired directory and filename
     output_json = json.dumps(groups, indent=2)
 
