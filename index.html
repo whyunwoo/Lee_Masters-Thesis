@@ -67,16 +67,16 @@
     jsPsych.data.addProperties({ groups: groups });
 
     // create pavlovia participant ID
-    //var pavlovia_id = 'c-' + group + '_p-' + subject_id + '_s-' + session_id;
+    var pavlovia_id = 'c-' + group + '_p-' + subject_id + '_s-' + session_id;
 
     /* init connection with pavlovia.org */
-    //var pavlovia_init = {
-    //    type: jsPsychPavlovia,
-    //    data: {
-    //        task: 'pavlovia-init'
-    //    },
-    //    command: "init"
-    //};
+    var pavlovia_init = {
+        type: jsPsychPavlovia,
+        data: {
+            task: 'pavlovia-init'
+        },
+        command: "init"
+    };
 
     // timeline 
     var timeline = [];
@@ -437,14 +437,14 @@
     };
 
     /* finish connection with pavlovia.org */
-    //var pavlovia_finish = {
-    //    type: jsPsychPavlovia,
-    //    data: {
-    //        task: 'pavlovia-finish'
-    //    },
-    //    command: "finish",
-    //    participantId: pavlovia_id
-    //};
+    var pavlovia_finish = {
+        type: jsPsychPavlovia,
+        data: {
+            task: 'pavlovia-finish'
+        },
+        command: "finish",
+        participantId: pavlovia_id
+    };
 
     ////////* EXECUTING TIMELINE *////////
     var main_timeline = [];
@@ -495,10 +495,10 @@
         }
     };
 
-    //timeline.push(pavlovia_init);
+    timeline.push(pavlovia_init);
     timeline.push(consentForm);
     timeline.push(consent_condition);
-    //timeline.push(pavlovia_finish);
+    timeline.push(pavlovia_finish);
     timeline.push(no_consent_condition);
 
 
