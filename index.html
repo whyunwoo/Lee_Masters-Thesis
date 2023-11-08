@@ -67,16 +67,16 @@
     jsPsych.data.addProperties({ groups: groups });
 
     // create pavlovia participant ID
-    var pavlovia_id = 'c-' + group + '_p-' + subject_id + '_s-' + session_id;
+    //var pavlovia_id = 'c-' + group + '_p-' + subject_id + '_s-' + session_id;
 
     /* init connection with pavlovia.org */
-    var pavlovia_init = {
-        type: jsPsychPavlovia,
-        data: {
-            task: 'pavlovia-init'
-        },
-        command: "init"
-    };
+    //var pavlovia_init = {
+    //    type: jsPsychPavlovia,
+    //    data: {
+    //       task: 'pavlovia-init'
+    //    },
+    //    command: "init"
+    //};
 
     // timeline 
     var timeline = [];
@@ -110,8 +110,7 @@
             'assets/img/invisible-high.png',
             'assets/img/attention-check.png',
             'assets/img/countdown-15.gif', 
-            Array.from(picture),
-        ],
+        ].concat(svList),
         message: `Please wait while the experiment loads. This should not take longer than a minute.`
     }
 
@@ -148,12 +147,33 @@
 
     // function to generate new trial with picture stimuli
     function newTrial() {
-        var randomIndex = Math.floor(Math.random() * svList.length);   // choose random number of pictures
-        var picture = svList[randomIndex]; // get picture assigned to random number
-        
+        // Choose a random group
+        var randomGroup = jsPsych.randomization.sampleWithoutReplacement(groups, 1)[0];
+      
+        // Get the images from the selected group
+        var images = randomGroup.images;
+      
+        // Shuffle the order of the images
+        var shuffledImages = jsPsych.randomization.shuffle(images);
+      
+        // Create a trial for each image
+        for (var i = 0; i < shuffledImages.length; i++) {
+          var trial = {
+            type: 'image-presentation', // Adjust the type as needed
+            stimulus: shuffledImages[i]
+          };
+      
+          main_timeline.push(trial);
+        }
+      }
+      
+      // Call newTrial to add the trials to the main timeline
+      newTrial();
+      
+    
         var trialNew = {
             type: jsPsychSurvey,
-            data: Object.assign({}, picture, { 'task': 'trial' }),
+            data: { 'task': 'trial' },
             pages: [[
                 {
                     type: 'html',
@@ -241,8 +261,7 @@
             button_label_finish: 'Continue'
         };
 
-        return (trialNew);
-    };
+    
 
     var half_way = {
         type: jsPsychHtmlButtonResponse,
@@ -438,38 +457,43 @@
     };
 
     /* finish connection with pavlovia.org */
-    var pavlovia_finish = {
-        type: jsPsychPavlovia,
-        data: {
-            task: 'pavlovia-finish'
-        },
-        command: "finish",
-        participantId: pavlovia_id
-    };
+    //var pavlovia_finish = {
+    //    type: jsPsychPavlovia,
+    //    data: {
+    //        task: 'pavlovia-finish'
+    //    },
+    //    command: "finish",
+    //   participantId: pavlovia_id
+    //};
 
     ////////* EXECUTING TIMELINE *////////
     var main_timeline = [];
+
+    // Insert "half-way" and "attention-check" at appropriate positions
+    var shuffledList = jsPsych.randomization.shuffle(svList);;
+    shuffledList.splice(shuffledList.length / 2, 0, "half-way");
+    shuffledList.splice(shuffledList.length / 2, 0, "attention-check");
 
     main_timeline.push(browserCheck);
     main_timeline.push(preload);
     main_timeline.push(intro1);
     main_timeline.push(intro2);
     main_timeline.push(intro3);
+    newTrial(group_number);
 
-    // Push trials
-    var shuffledList = jsPsych.randomization.shuffle(Object.keys(svList));
-    shuffledList.splice(shuffledList.length / 2, 0, "half-way");
-    shuffledList.splice(shuffledList.length / 2, 0, "attention-check");
 
-    for (group_number of shuffledList) {
-        if (group_number == 'half-way') {
-            main_timeline.push(half_way);
-        } else if (group_number == 'attention-check') {
-            main_timeline.push(attention_check);
+    // Loop to add trials based on the shuffledList
+    for (var i = 0; i < shuffledList.length; i++) {
+        var trial;
+        if (shuffledList[i] === "half-way") {
+            trial = half_way;
+        } else if (shuffledList[i] === "attention-check") {
+            trial = attention_check;
         } else {
-            main_timeline.push(newTrial());
+            trial = Object.assign({}, trialNew, { picture: shuffledList[i] });
         }
-    };
+        main_timeline.push(trial);
+    }
 
     main_timeline.push(demogForm);
     main_timeline.push(demogForm2);
@@ -496,10 +520,10 @@
         }
     };
 
-    timeline.push(pavlovia_init);
+    //timeline.push(pavlovia_init);
     timeline.push(consentForm);
     timeline.push(consent_condition);
-    timeline.push(pavlovia_finish);
+    //timeline.push(pavlovia_finish);
     timeline.push(no_consent_condition);
 
 
