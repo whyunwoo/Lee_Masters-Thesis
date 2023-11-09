@@ -1,0 +1,64 @@
+--------------------
+Group = 1
+size=[6, 15, 40], culture=[30, 31], place=[10, 29, 22], direct={'a': 31, 'b': 30, 'x': 0, 'y': 0}
+Number of pictures in the group: 61
+--------------------
+Group = 2
+size=[3, 21, 37], culture=[32, 29], place=[10, 20, 31], direct={'a': 22, 'b': 39, 'x': 0, 'y': 0}
+Number of pictures in the group: 61
+--------------------
+Group = 3
+size=[4, 11, 46], culture=[27, 34], place=[8, 18, 35], direct={'a': 30, 'b': 31, 'x': 0, 'y': 0}
+Number of pictures in the group: 61
+--------------------
+Group = 4
+size=[5, 14, 42], culture=[34, 27], place=[10, 21, 30], direct={'a': 33, 'b': 28, 'x': 0, 'y': 0}
+Number of pictures in the group: 61
+--------------------
+Group = 5
+size=[7, 10, 44], culture=[37, 24], place=[6, 25, 30], direct={'a': 36, 'b': 25, 'x': 0, 'y': 0}
+Number of pictures in the group: 61
+--------------------
+Group = 6
+size=[6, 13, 42], culture=[28, 33], place=[12, 28, 21], direct={'a': 26, 'b': 35, 'x': 0, 'y': 0}
+Number of pictures in the group: 61
+--------------------
+Group = 7
+size=[4, 15, 42], culture=[30, 31], place=[8, 19, 34], direct={'a': 32, 'b': 29, 'x': 0, 'y': 0}
+Number of pictures in the group: 61
+--------------------
+Group = 8
+size=[5, 13, 43], culture=[26, 35], place=[8, 24, 29], direct={'a': 34, 'b': 27, 'x': 0, 'y': 0}
+Number of pictures in the group: 61
+--------------------
+Group = 9
+size=[6, 13, 42], culture=[29, 32], place=[11, 22, 28], direct={'a': 0, 'b': 0, 'x': 24, 'y': 37}
+Number of pictures in the group: 61
+--------------------
+Group = 10
+size=[6, 20, 35], culture=[30, 31], place=[11, 23, 27], direct={'a': 0, 'b': 0, 'x': 34, 'y': 27}
+Number of pictures in the group: 61
+--------------------
+Group = 11
+size=[5, 17, 39], culture=[27, 34], place=[9, 26, 26], direct={'a': 0, 'b': 0, 'x': 34, 'y': 27}
+Number of pictures in the group: 61
+--------------------
+Group = 12
+size=[6, 12, 43], culture=[34, 27], place=[9, 25, 27], direct={'a': 0, 'b': 0, 'x': 34, 'y': 27}
+Number of pictures in the group: 61
+--------------------
+Group = 13
+size=[8, 9, 44], culture=[26, 35], place=[8, 22, 31], direct={'a': 0, 'b': 0, 'x': 35, 'y': 26}
+Number of pictures in the group: 61
+--------------------
+Group = 14
+size=[5, 15, 41], culture=[31, 30], place=[13, 17, 31], direct={'a': 0, 'b': 0, 'x': 28, 'y': 33}
+Number of pictures in the group: 61
+--------------------
+Group = 15
+size=[0, 13, 48], culture=[34, 27], place=[5, 26, 30], direct={'a': 0, 'b': 0, 'x': 31, 'y': 30}
+Number of pictures in the group: 61
+--------------------
+Group = 16
+size=[4, 13, 44], culture=[33, 28], place=[6, 23, 32], direct={'a': 0, 'b': 0, 'x': 24, 'y': 37}
+Number of pictures in the group: 61
