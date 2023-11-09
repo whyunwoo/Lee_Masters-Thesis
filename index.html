@@ -60,19 +60,20 @@
     }
     var condition = randomNum(1, 16);
     
-    var stimuli_map = groups[key];
+    var stimuli_map = groups;
+    console.log(stimuli_map);
     var num_conditions = 16;
-    // Create an empty array to store 'picture' values
+
     var stimuli = []
         var stimuli_that_match_condition = []
             for (var key in stimuli_map) {
                 if (condition == key) {
-                    stimuli_that_match_condition.push(stimuli_map);
+                    stimuli_that_match_condition.push(stimuli_map[key]);
                 }
             }
-    stimuli.push(stimuli_that_match_condition);
+    stimuli.push([...stimuli_that_match_condition]);
     
-    // 'svList' now contains all the 'picture' values
+
     console.log(condition) 
     console.log(stimuli);      
 
@@ -166,214 +167,218 @@
 // Call the main_exp function with the selected group
 var generatedTrials = main_exp(stimuli);
 
-    function main_exp(){
-        var trials = [];
-        
-        for (var i = 0; i < num_conditions; i++) {
-            var shuffledGroup = stimuli // The 'i' variable is defined
-            shuffleArray(shuffledGroup); // Call shuffleArray after variable is defined.
-           
-            for (var j = 0; j < shuffledGroup.length; j++) {
-                var picture = shuffledGroup[j];
+function main_exp(){
+    var trials = [];
+    
+    for (var i = 0; i < num_conditions; i++) {
+        var shuffledGroup = stimuli
+        console.log(stimuli);
 
-                if (shuffledGroup[j].length === 30) {
-                    var trial = {
-                        type: jsPsychHtmlButtonResponse,
-                        data: {
-                            task: 'half-way'
-                        },
-                        stimulus: half_way_prompt,
-                        choices: ['Next'],
-                        trial_duration: 15750
-                    };
-                } 
-                
-                else if (shuffledGroup[j].length === 5) {
-                    var trial = {
-                        type: jsPsychSurvey,
-                        data: {
-                            task: 'attention-check'
-                        },
-                        pages: [[
-                            {
-                                type: 'html',
-                                prompt: `
-                                    <style>
+        shuffleArray(shuffledGroup);
+        console.log(shuffledGroup);
+
+        for (var j = 0; j < shuffledGroup.length; j++) {
+            var picture = shuffledGroup[j];
+            
+            if (shuffledGroup[j].length === 30) {
+                var trial = {
+                    type: jsPsychHtmlButtonResponse,
+                    data: {
+                        task: 'half-way'
+                    },
+                    stimulus: half_way_prompt,
+                    choices: ['Next'],
+                    trial_duration: 15750
+                };
+            } 
+            
+            else if (shuffledGroup[j].length === 5) {
+                var trial = {
+                    type: jsPsychSurvey,
+                    data: {
+                        task: 'attention-check'
+                    },
+                    pages: [[
+                        {
+                            type: 'html',
+                            prompt: `
+                                <style>
+                                .sv_q.sv_qstn {
+                                    align-items: center;
+                                    justify-content: center;
+                                    text-align: center;
+                                }
+                                .sv_body {
+                                    color: #000000;
+                                    font-size: 95%;
+                                }
+                                .sv_main .sv_container .sv_body .sv_p_root .sv_q_title {
+                                    font-weight: bold;
+                                }
+                                .sv_q_rating_min_text {
+                                    min-width: 150px;
+                                }
+                                </style>
+                                <p>Take a look at the following landscape</p>
+                                <img src='assets/img/attention-check.png'>
+                                <h3>In this image, ...</h3>
+                            `,
+                        }, {
+                            type: 'likert',
+                            prompt: "how ambiguous is the boundary of each object?",
+                            name: 'ambiguous',
+                            likert_scale_min_label: 'Distinct, Clear',
+                            likert_scale_max_label: 'Ambiguous, Unclear',
+                            likert_scale_values: [
+                                { value: 1 },
+                                { value: 2 },
+                                { value: 3 },
+                                { value: 4 },
+                                { value: 5 }
+                            ]
+                        }, {
+                            type: 'likert',
+                            prompt: "how many different objects do there seem to be?",
+                            name: 'objects',
+                            likert_scale_min_label: 'Relatively few',
+                            likert_scale_max_label: 'Enormous number',
+                            likert_scale_values: [
+                                { value: 1 },
+                                { value: 2 },
+                                { value: 3 },
+                                { value: 4 },
+                                { value: 5 }
+                            ]
+                        }, {
+                            type: 'likert',
+                            prompt: "to what degree do there seem to be parts of the scene that are invisible?",
+                            name: 'invisible',
+                            likert_scale_min_label: 'Few invisible parts',
+                            likert_scale_max_label: 'Many invisible parts',
+                            likert_scale_values: [
+                                { value: 1 },
+                                { value: 2 },
+                                { value: 3 },
+                                { value: 4 },
+                                { value: 5 }
+                            ]
+                        }, {
+                            type: 'likert',
+                            prompt: "to what degree is the scene either organized or chaotic?",
+                            name: 'chaos',
+                            likert_scale_min_label: 'Organized',
+                            likert_scale_max_label: 'Chaotic',
+                            likert_scale_values: [
+                                { value: 1 },
+                                { value: 2 },
+                                { value: 3 },
+                                { value: 4 },
+                                { value: 5 }
+                            ]
+                        }
+                    ]],
+                    button_label_finish: 'Continue'
+                };
+            } 
+            
+            else {
+                var name = picture.name;
+                console.log(name);
+                var trial = {
+                    type: jsPsychSurvey,
+                    data: {},
+                    pages: [[
+                        {
+                            type: 'html',
+                            prompt: `
+                                <style>
                                     .sv_q.sv_qstn {
-                                        align-items: center;
-                                        justify-content: center;
-                                        text-align: center;
+                                    align-items: center;
+                                    justify-content: center;
+                                    text-align: center;
                                     }
                                     .sv_body {
-                                        color: #000000;
-                                        font-size: 95%;
+                                    color: #000000;
+                                    font-size: 95%;
                                     }
                                     .sv_main .sv_container .sv_body .sv_p_root .sv_q_title {
-                                        font-weight: bold;
+                                    font-weight: bold;
                                     }
                                     .sv_q_rating_min_text {
-                                        min-width: 150px;
+                                    min-width: 150px;
                                     }
-                                    </style>
-                                    <p>Take a look at the following landscape</p>
-                                    <img src='assets/img/attention-check.png'>
-                                    <h3>In this image, ...</h3>
-                                `,
-                            }, {
-                                type: 'likert',
-                                prompt: "how ambiguous is the boundary of each object?",
-                                name: 'ambiguous',
-                                likert_scale_min_label: 'Distinct, Clear',
-                                likert_scale_max_label: 'Ambiguous, Unclear',
-                                likert_scale_values: [
-                                    { value: 1 },
-                                    { value: 2 },
-                                    { value: 3 },
-                                    { value: 4 },
-                                    { value: 5 }
-                                ]
-                            }, {
-                                type: 'likert',
-                                prompt: "how many different objects do there seem to be?",
-                                name: 'objects',
-                                likert_scale_min_label: 'Relatively few',
-                                likert_scale_max_label: 'Enormous number',
-                                likert_scale_values: [
-                                    { value: 1 },
-                                    { value: 2 },
-                                    { value: 3 },
-                                    { value: 4 },
-                                    { value: 5 }
-                                ]
-                            }, {
-                                type: 'likert',
-                                prompt: "to what degree do there seem to be parts of the scene that are invisible?",
-                                name: 'invisible',
-                                likert_scale_min_label: 'Few invisible parts',
-                                likert_scale_max_label: 'Many invisible parts',
-                                likert_scale_values: [
-                                    { value: 1 },
-                                    { value: 2 },
-                                    { value: 3 },
-                                    { value: 4 },
-                                    { value: 5 }
-                                ]
-                            }, {
-                                type: 'likert',
-                                prompt: "to what degree is the scene either organized or chaotic?",
-                                name: 'chaos',
-                                likert_scale_min_label: 'Organized',
-                                likert_scale_max_label: 'Chaotic',
-                                likert_scale_values: [
-                                    { value: 1 },
-                                    { value: 2 },
-                                    { value: 3 },
-                                    { value: 4 },
-                                    { value: 5 }
-                                ]
-                            }
-                        ]],
-                        button_label_finish: 'Continue'
-                    };
-                } 
-                
-                else {
-                    var name = shuffledGroup[j].name;
-                    var trial = {
-                        type: jsPsychSurvey,
-                        data: {},
-                        pages: [[
-                            {
-                                type: 'html',
-                                prompt: `
-                                    <style>
-                                        .sv_q.sv_qstn {
-                                        align-items: center;
-                                        justify-content: center;
-                                        text-align: center;
-                                        }
-                                        .sv_body {
-                                        color: #000000;
-                                        font-size: 95%;
-                                        }
-                                        .sv_main .sv_container .sv_body .sv_p_root .sv_q_title {
-                                        font-weight: bold;
-                                        }
-                                        .sv_q_rating_min_text {
-                                        min-width: 150px;
-                                        }
-                                    </style>
+                                </style>
 
-                                    <h3>Take a look at the following landscape.</h3>
-                                <img src = '/assets/img/stim/${shuffledGroup[j].name}' width= 600px height= auto>
-                                    <h3>In this image, ...</h3>
-                                `,
-                            }, {
-                                type: 'likert',
-                                prompt: "how ambiguous is the boundary of each object?",
-                                name: 'ambiguous',
-                                likert_scale_min_label: 'Distinct, Clear',
-                                likert_scale_max_label: 'Ambiguous, Unclear',
-                                likert_scale_values: [
-                                    { value: 1 },
-                                    { value: 2 },
-                                    { value: 3 },
-                                    { value: 4 },
-                                    { value: 5 }
-                                ],
-                                required: false
-                            }, {
-                                type: 'likert',
-                                prompt: "how many different objects do there seem to be?",
-                                name: 'objects',
-                                likert_scale_min_label: 'Relatively few',
-                                likert_scale_max_label: 'Enormous number',
-                                likert_scale_values: [
-                                    { value: 1 },
-                                    { value: 2 },
-                                    { value: 3 },
-                                    { value: 4 },
-                                    { value: 5 }
-                                ],
-                                required: false
-                            }, {
-                                type: 'likert',
-                                prompt: "to what degree do there seem to be parts of the scene that are invisible?",
-                                name: 'invisible',
-                                likert_scale_min_label: 'Few invisible parts',
-                                likert_scale_max_label: 'Many invisible parts',
-                                likert_scale_values: [
-                                    { value: 1 },
-                                    { value: 2 },
-                                    { value: 3 },
-                                    { value: 4 },
-                                    { value: 5 }
-                                ],
-                                required: false
-                            }, {
-                                type: 'likert',
-                                prompt: "to what degree is the scene either organized or chaotic?",
-                                name: 'chaos',
-                                likert_scale_min_label: 'Organized',
-                                likert_scale_max_label: 'Chaotic',
-                                likert_scale_values: [
-                                    { value: 1 },
-                                    { value: 2 },
-                                    { value: 3 },
-                                    { value: 4 },
-                                    { value: 5 }
-                                ],
-                                required: false
-                            }
-                        ]],
-                        button_label_finish: 'Continue'
-                    };
-                }
-        }
-        trials.push(trial);
+                                <h3>Take a look at the following landscape.</h3>
+                            <img src = "/assets/img/stim/${name}" width= 600px height= auto>
+                                <h3>In this image, ...</h3>
+                            `,
+                        }, {
+                            type: 'likert',
+                            prompt: "how ambiguous is the boundary of each object?",
+                            name: 'ambiguous',
+                            likert_scale_min_label: 'Distinct, Clear',
+                            likert_scale_max_label: 'Ambiguous, Unclear',
+                            likert_scale_values: [
+                                { value: 1 },
+                                { value: 2 },
+                                { value: 3 },
+                                { value: 4 },
+                                { value: 5 }
+                            ],
+                            required: false
+                        }, {
+                            type: 'likert',
+                            prompt: "how many different objects do there seem to be?",
+                            name: 'objects',
+                            likert_scale_min_label: 'Relatively few',
+                            likert_scale_max_label: 'Enormous number',
+                            likert_scale_values: [
+                                { value: 1 },
+                                { value: 2 },
+                                { value: 3 },
+                                { value: 4 },
+                                { value: 5 }
+                            ],
+                            required: false
+                        }, {
+                            type: 'likert',
+                            prompt: "to what degree do there seem to be parts of the scene that are invisible?",
+                            name: 'invisible',
+                            likert_scale_min_label: 'Few invisible parts',
+                            likert_scale_max_label: 'Many invisible parts',
+                            likert_scale_values: [
+                                { value: 1 },
+                                { value: 2 },
+                                { value: 3 },
+                                { value: 4 },
+                                { value: 5 }
+                            ],
+                            required: false
+                        }, {
+                            type: 'likert',
+                            prompt: "to what degree is the scene either organized or chaotic?",
+                            name: 'chaos',
+                            likert_scale_min_label: 'Organized',
+                            likert_scale_max_label: 'Chaotic',
+                            likert_scale_values: [
+                                { value: 1 },
+                                { value: 2 },
+                                { value: 3 },
+                                { value: 4 },
+                                { value: 5 }
+                            ],
+                            required: false
+                        }
+                    ]],
+                    button_label_finish: 'Continue'
+                };
+            }
     }
-    return trials;
-    }
+    trials.push(trial);
+}
+return trials;
+}
     
     
 

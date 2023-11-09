@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>A Study on Street View Images</title>
+    <meta charset="UTF-8">
+
+    <!--Javascript Files-->
+    <script src="https://unpkg.com/jspsych@7.3.3"></script>
+    <script src="assets/scripts/randomize_equally.js"></script>
+    <script src="assets/scripts/script.js"></script>
+
+    <!--jsPsych Plugins-->
+    <script src="https://unpkg.com/@jspsych/plugin-browser-check@1.0.1"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-preload@1.1.1"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-html-button-response@1.1.1"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-survey@0.2.0"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-survey-text@1.1.1"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-survey-html-form"></script>
+
+    <!--CSS Files-->
+    <link href="https://unpkg.com/jspsych@7.2.3/css/jspsych.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/css/bootstrap-alart.css">
+    <link rel="stylesheet" href="https://unpkg.com/@jspsych/plugin-survey@0.1.1/css/survey.css">
+    <link rel="stylesheet" href="assets/css/jsPsych-padding.css">
+    <link rel="stylesheet" href="assets/css/jsPsych-text-edits.css">
+</head>
+
+<body></body>
+
+<script>
+    ////////* STUDY SETUP */////////
+    // jsPsych
+    var jsPsych = initJsPsych({  
+        use_webaudio: false,
+    });
+
+    // Prolific Integration
+    var subject_id = jsPsych.data.getURLVariable('PROLIFIC_PID');
+    var study_id = jsPsych.data.getURLVariable('STUDY_ID');
+    var session_id = jsPsych.data.getURLVariable('SESSION_ID');
+
+    jsPsych.data.addProperties({
+        subject_id: subject_id,
+        study_id: study_id,
+        session_id: session_id
+    });
+
+    /* VARIABLES */
+    // Add a shuffle function
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+    function randomNum(min, max){
+        var randNum = Math.floor(Math.random()*(max-min+1)) + min;
+        return randNum;
+    }
+    var condition = randomNum(1, 16);
+    
+    var stimuli_map = groups;
+    console.log(stimuli_map);
+    var num_conditions = 16;
+
+    var stimuli = []
+        var stimuli_that_match_condition = []
+            for (var key in stimuli_map) {
+                if (condition == key) {
+                    stimuli_that_match_condition.push(stimuli_map[key]);
+                }
+            }
+    stimuli.push(stimuli_that_match_condition);
+    
+
+    console.log(condition) 
+    console.log(stimuli);      
+
+
+
+    // add global data variables
+    jsPsych.data.addProperties({ groups: groups });
+
+    // create pavlovia participant ID
+    //var pavlovia_id = 'c-' + group + '_p-' + subject_id + '_s-' + session_id;
+
+    /* init connection with pavlovia.org */
+    //var pavlovia_init = {
+    //    type: jsPsychPavlovia,
+    //    data: {
+    //       task: 'pavlovia-init'
+    //    },
+    //    command: "init"
+    //};
+
+    // timeline 
+    var timeline = [];
+
+    // browser check
+    var browserCheck = {
+        type: jsPsychBrowserCheck,
+        data: {
+            task: 'browser-check'
+        },
+        minimum_width: 700
+    };
+
+    var consentForm = {
+        type: jsPsychHtmlButtonResponse,
+        stimulus: consentHTML,
+        data: {
+            task: 'consent'
+        },
+        choices: ['Decline and exit', 'Accept and continue'],
+    };
+
+    // preload
+    var preload = {
+        type: jsPsychPreload,
+        auto_preload: true,
+        images: [
+            'assets/img/ambiguous-low.png',
+            'assets/img/ambiguous-high.png',
+            'assets/img/invisible-low.png',
+            'assets/img/invisible-high.png',
+            'assets/img/attention-check.png',
+            'assets/img/countdown-15.gif', 
+        ],
+        message: `Please wait while the experiment loads. This should not take longer than a minute.`
+    }
+
+
+    ////////* EXPERIMENT */////////
+    var intro1 = {
+        type: jsPsychHtmlButtonResponse,
+        data: {
+            task: 'instructions',
+        },
+        post_trial_gap: 300,
+        choices: ['Next'],
+        stimulus: html_intro1
+    };
+
+    var intro2 = {
+        type: jsPsychHtmlButtonResponse,
+        data: {
+            task: 'instructions',
+        },
+        choices: ['Next'],
+        stimulus: html_intro2
+    };    
+
+    var intro3 = {
+        type: jsPsychHtmlButtonResponse,
+        data: {
+            task: 'instructions',
+        },
+        choices: ['Next'],
+        stimulus: html_intro3
+    }
+
+
+///////////
+
+
+// Call the main_exp function with the selected group
+var generatedTrials = main_exp(stimuli);
+
+    function main_exp(){
+        var trials = [];
+        
+        for (var i = 0; i < num_conditions; i++) {
+            var shuffledGroup = stimuli // The 'i' variable is defined
+            shuffleArray(shuffledGroup); // Call shuffleArray after variable is defined.
+           
+            for (var j = 0; j < shuffledGroup.length; j++) {
+                var picture = shuffledGroup[j];
+                console.log(picture);
+                if (shuffledGroup[j].length === 30) {
+                    var trial = {
+                        type: jsPsychHtmlButtonResponse,
+                        data: {
+                            task: 'half-way'
+                        },
+                        stimulus: half_way_prompt,
+                        choices: ['Next'],
+                        trial_duration: 15750
+                    };
+                } 
+                
+                else if (shuffledGroup[j].length === 5) {
+                    var trial = {
+                        type: jsPsychSurvey,
+                        data: {
+                            task: 'attention-check'
+                        },
+                        pages: [[
+                            {
+                                type: 'html',
+                                prompt: `
+                                    <style>
+                                    .sv_q.sv_qstn {
+                                        align-items: center;
+                                        justify-content: center;
+                                        text-align: center;
+                                    }
+                                    .sv_body {
+                                        color: #000000;
+                                        font-size: 95%;
+                                    }
+                                    .sv_main .sv_container .sv_body .sv_p_root .sv_q_title {
+                                        font-weight: bold;
+                                    }
+                                    .sv_q_rating_min_text {
+                                        min-width: 150px;
+                                    }
+                                    </style>
+                                    <p>Take a look at the following landscape</p>
+                                    <img src='assets/img/attention-check.png'>
+                                    <h3>In this image, ...</h3>
+                                `,
+                            }, {
+                                type: 'likert',
+                                prompt: "how ambiguous is the boundary of each object?",
+                                name: 'ambiguous',
+                                likert_scale_min_label: 'Distinct, Clear',
+                                likert_scale_max_label: 'Ambiguous, Unclear',
+                                likert_scale_values: [
+                                    { value: 1 },
+                                    { value: 2 },
+                                    { value: 3 },
+                                    { value: 4 },
+                                    { value: 5 }
+                                ]
+                            }, {
+                                type: 'likert',
+                                prompt: "how many different objects do there seem to be?",
+                                name: 'objects',
+                                likert_scale_min_label: 'Relatively few',
+                                likert_scale_max_label: 'Enormous number',
+                                likert_scale_values: [
+                                    { value: 1 },
+                                    { value: 2 },
+                                    { value: 3 },
+                                    { value: 4 },
+                                    { value: 5 }
+                                ]
+                            }, {
+                                type: 'likert',
+                                prompt: "to what degree do there seem to be parts of the scene that are invisible?",
+                                name: 'invisible',
+                                likert_scale_min_label: 'Few invisible parts',
+                                likert_scale_max_label: 'Many invisible parts',
+                                likert_scale_values: [
+                                    { value: 1 },
+                                    { value: 2 },
+                                    { value: 3 },
+                                    { value: 4 },
+                                    { value: 5 }
+                                ]
+                            }, {
+                                type: 'likert',
+                                prompt: "to what degree is the scene either organized or chaotic?",
+                                name: 'chaos',
+                                likert_scale_min_label: 'Organized',
+                                likert_scale_max_label: 'Chaotic',
+                                likert_scale_values: [
+                                    { value: 1 },
+                                    { value: 2 },
+                                    { value: 3 },
+                                    { value: 4 },
+                                    { value: 5 }
+                                ]
+                            }
+                        ]],
+                        button_label_finish: 'Continue'
+                    };
+                } 
+                
+                else {
+                    var name = picture;
+                    console.log(name);
+                    var trial = {
+                        type: jsPsychSurvey,
+                        data: {},
+                        pages: [[
+                            {
+                                type: 'html',
+                                prompt: `
+                                    <style>
+                                        .sv_q.sv_qstn {
+                                        align-items: center;
+                                        justify-content: center;
+                                        text-align: center;
+                                        }
+                                        .sv_body {
+                                        color: #000000;
+                                        font-size: 95%;
+                                        }
+                                        .sv_main .sv_container .sv_body .sv_p_root .sv_q_title {
+                                        font-weight: bold;
+                                        }
+                                        .sv_q_rating_min_text {
+                                        min-width: 150px;
+                                        }
+                                    </style>
+
+                                    <h3>Take a look at the following landscape.</h3>
+                                <img src = '/assets/img/stim/${name}' width= 600px height= auto>
+                                    <h3>In this image, ...</h3>
+                                `,
+                            }, {
+                                type: 'likert',
+                                prompt: "how ambiguous is the boundary of each object?",
+                                name: 'ambiguous',
+                                likert_scale_min_label: 'Distinct, Clear',
+                                likert_scale_max_label: 'Ambiguous, Unclear',
+                                likert_scale_values: [
+                                    { value: 1 },
+                                    { value: 2 },
+                                    { value: 3 },
+                                    { value: 4 },
+                                    { value: 5 }
+                                ],
+                                required: false
+                            }, {
+                                type: 'likert',
+                                prompt: "how many different objects do there seem to be?",
+                                name: 'objects',
+                                likert_scale_min_label: 'Relatively few',
+                                likert_scale_max_label: 'Enormous number',
+                                likert_scale_values: [
+                                    { value: 1 },
+                                    { value: 2 },
+                                    { value: 3 },
+                                    { value: 4 },
+                                    { value: 5 }
+                                ],
+                                required: false
+                            }, {
+                                type: 'likert',
+                                prompt: "to what degree do there seem to be parts of the scene that are invisible?",
+                                name: 'invisible',
+                                likert_scale_min_label: 'Few invisible parts',
+                                likert_scale_max_label: 'Many invisible parts',
+                                likert_scale_values: [
+                                    { value: 1 },
+                                    { value: 2 },
+                                    { value: 3 },
+                                    { value: 4 },
+                                    { value: 5 }
+                                ],
+                                required: false
+                            }, {
+                                type: 'likert',
+                                prompt: "to what degree is the scene either organized or chaotic?",
+                                name: 'chaos',
+                                likert_scale_min_label: 'Organized',
+                                likert_scale_max_label: 'Chaotic',
+                                likert_scale_values: [
+                                    { value: 1 },
+                                    { value: 2 },
+                                    { value: 3 },
+                                    { value: 4 },
+                                    { value: 5 }
+                                ],
+                                required: false
+                            }
+                        ]],
+                        button_label_finish: 'Continue'
+                    };
+                }
+        }
+        trials.push(trial);
+    }
+    return trials;
+    }
+    
+    
+
+
+    
+
+
+    /* DEMOGRAPHICS */
+    const preambleDemog = `
+        <br>
+        <p>Thank you for your responses. Finally, we’d like to ask you a few questions about yourself.</p>
+        <hr>
+        <br>
+    `;
+
+    function selfDescribe() {
+        a = document.getElementById('self-describe');
+        a.checked = true;
+    };
+
+    var demogForm = {
+        type: jsPsychSurveyHtmlForm,
+        data: {
+            task: 'demographics'
+        },
+        preamble: preambleDemog,
+        html: htmlDemogForm1,
+        choices: ['Next'],
+    };
+
+    var demogForm2 = {
+        type: jsPsychSurvey,
+        data: {
+            task: 'demographics'
+        },
+        pages: [[
+            {
+                type: 'html',
+                prompt: `
+                    <style>
+                        div.sv_body {
+                            max-width: 700px;
+                        }
+                        .sv_main.sv_default_css .sv_container {
+                            color: #000000;
+                        }
+                        input.sv_prev_btn {
+                            display: none;
+                        }
+                    </style>
+                `,
+            }, {
+                type: 'multi-choice',
+                prompt: 'Have you ever spent more than 1 year out side of the United States?',
+                options: ['Yes', 'No'],
+                name: 'outsideUS',
+            }, {
+                type: 'text',
+                prompt: 'If yes, how long have you spent outside of the US? (Round to nearest year)',
+                name: 'outsideUS_years'
+            }, 
+        ]]
+    };
+
+
+    /* END OF STUDY */
+    var endSurveyDebrief = {
+        type: jsPsychSurveyText,
+        data: {
+            task: 'end-survey'
+        },
+        preamble: debriefHTML,
+        questions: [
+            {
+                prompt: 'Do you have any comments on the study you’d like to share?',
+                rows: 8,
+                columns: 80
+            }
+        ]
+    };
+
+    /* end study screen based on consent */
+
+
+    var endRedirect = {
+        type: jsPsychHtmlButtonResponse,
+        data: {
+            task: 'end-survey',
+        },
+        stimulus: endRedirectPrompt,
+        //trial_duration: 10000, //5000
+        choices: ['Continue']
+    };
+
+    var endStudyNoConsent = {
+        type: jsPsychHtmlButtonResponse,
+        data: {
+            task: 'end-survey'
+        },
+        stimulus: endStudyNoConsent_prompt,
+        choices: []
+    };
+
+    /* finish connection with pavlovia.org */
+    //var pavlovia_finish = {
+    //    type: jsPsychPavlovia,
+    //    data: {
+    //        task: 'pavlovia-finish'
+    //    },
+    //    command: "finish",
+    //   participantId: pavlovia_id
+    //};
+
+    // Insert "half-way" and "attention-check" at appropriate positions
+
+
+    timeline.push(browserCheck);
+    timeline.push(preload);
+    timeline.push(intro1);
+    timeline.push(intro2);
+    timeline.push(intro3);
+
+ 
+    timeline = timeline.concat(generatedTrials);
+    timeline.push(demogForm);
+    timeline.push(demogForm2);
+    timeline.push(endSurveyDebrief);
+    timeline.push(endRedirect);
+
+    // check consent condition
+    var consent = null;
+
+    var consent_condition = {
+        conditional_function: function () {
+            var data = jsPsych.data.get().last(1).values()[0];
+            consent = data.response == 1;
+            console.log(data.response);
+            return consent;
+        }
+    };
+
+    var no_consent_condition = {
+        timeline: [endStudyNoConsent],
+        conditional_function: function () {
+            return !consent;
+        }
+    };
+
+    //timeline.push(pavlovia_init);
+    timeline.push(consentForm);
+    timeline.push(consent_condition);
+    //timeline.push(pavlovia_finish);
+    timeline.push(no_consent_condition);
+
+
+    /* start the experiment */
+    jsPsych.run(timeline);
+
+</script>
+
+</html>

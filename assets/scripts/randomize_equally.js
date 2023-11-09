@@ -1,4 +1,4 @@
-var groups = [{
+var groups = {
     "1": [
         {
             "name": "ny.s.h1.a1.JPG",
@@ -9792,7 +9792,7 @@ var groups = [{
         }
     ]
 }
-]
+
 
 
 const condition_map = {
