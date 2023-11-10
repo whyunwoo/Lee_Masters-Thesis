@@ -53,6 +53,7 @@
 
     // group assignment
     var group = jsPsych.randomization.randomInt(1, 16);
+    console.log(group);
     var svList = groups[group];
     console.log(svList);
     // add global data variables
@@ -169,42 +170,7 @@
         message: `Please wait while the experiment loads. This should not take longer than a minute.`
     }
 
-    // street view image size parameters
-    const svWidth = 640;
-    const svHeight = 320;
-
-    /* HELPER FUNCTIONS */
-    /**
-     * A function to get street view image using coordinates.
-     * See https://developers.google.com/maps/documentation/streetview/overview#url-parameters
-     * for detailed descriptions of these parameters
-     * @param {Number} lat      latitude of location
-     * @param {Number} lng      longitude of location
-     * @param {Number} heading  heading of the camera (angle), between 0 and 360
-     * @param {Number} pitch    tilt angle of the camera
-     * @param {Number} fov      field of view of the image (zoom in or out), 
-     *                          Google default is 90.
-     * @param {Number} width    width of the returning image
-     * @param {Number} height   height of the returning image
-     * @return an html string of an `img` tag with all above parameters
-     */
-
-
-    /**
-     * A function to get street view image using address or location name.
-     * See https://developers.google.com/maps/documentation/streetview/overview#url-parameters
-     * for detailed descriptions of these parameters
-     * @param {String} location location name or street address     
-     * @param {Number} heading  heading of the camera (angle), between 0 and 360
-     * @param {Number} pitch    tilt angle of the camera
-     * @param {Number} fov      field of view of the image (zoom in or out), 
-     *                          Google default is 90.
-     * @param {Number} width    width of the returning image
-     * @param {Number} height   height of the returning image
-     * @return an html string of an `img` tag with all above parameters
-     */
-    
-
+   
     ////////* EXPERIMENT */////////
     /* WELCOME MESSAGE */
     const html_intro1 = `
@@ -216,7 +182,7 @@
                     In this study, we are interested in how people think about different Google Street View images. Google Street View takes pictures of streets used for Google Earth and Google Maps. You’ll see Google Street View images of different places and answer some questions about each one.
                 </p>
             </div>
-            {getSVCoord(37.783631, -122.432766, 80, 2, 100)}
+            {getSVImg(37.783631, -122.432766, 80, 2, 100)}
             <br>
         <br>
     `;
@@ -303,102 +269,103 @@
     };
 
     // function to generate new trial with location info
-    function getSVCoord(svList) {
+    function getSVImg(svList) {
+        var trialList = [];
         for (var i = 0; i < 61; i++){ 
         var imgTag = `
-            <img src="assets/img/stim/${svList[i].name}">`
-
-        var trialNew = {
-            type: jsPsychSurvey,
-            //data: {},
-            pages: [[
-                {
-                    type: 'html',
-                    prompt: `
-                        <style>
-                            .sv_q.sv_qstn {
-                            align-items: center;
-                            justify-content: center;
-                            text-align: center;
-                            }
-                            .sv_body {
-                            color: #000000;
-                            font-size: 95%;
-                            }
-                            .sv_main .sv_container .sv_body .sv_p_root .sv_q_title {
-                            font-weight: bold;
-                            }
-                            .sv_q_rating_min_text {
-                            min-width: 150px;
-                            }
-                        </style>
-
-                        <p>Take a look at the following landscape from Google Street View</p>
-                        ${imgTag}
-                        <h3>In this image, ...</h3>
-                    `,
-                }, {
-                    type: 'likert',
-                    prompt: "how ambiguous is the boundary of each object?",
-                    name: 'ambiguous',
-                    likert_scale_min_label: 'Distinct, Clear',
-                    likert_scale_max_label: 'Ambiguous, Unclear',
-                    likert_scale_values: [
-                        { value: 1 },
-                        { value: 2 },
-                        { value: 3 },
-                        { value: 4 },
-                        { value: 5 }
-                    ],
-                    required: false
-                }, {
-                    type: 'likert',
-                    prompt: "how many different objects do there seem to be?",
-                    name: 'objects',
-                    likert_scale_min_label: 'Relatively few',
-                    likert_scale_max_label: 'Enormous number',
-                    likert_scale_values: [
-                        { value: 1 },
-                        { value: 2 },
-                        { value: 3 },
-                        { value: 4 },
-                        { value: 5 }
-                    ],
-                    required: false
-                }, {
-                    type: 'likert',
-                    prompt: "to what degree do there seem to be parts of the scene that are invisible?",
-                    name: 'invisible',
-                    likert_scale_min_label: 'Few invisible parts',
-                    likert_scale_max_label: 'Many invisible parts',
-                    likert_scale_values: [
-                        { value: 1 },
-                        { value: 2 },
-                        { value: 3 },
-                        { value: 4 },
-                        { value: 5 }
-                    ],
-                    required: false
-                }, {
-                    type: 'likert',
-                    prompt: "to what degree is the scene either organized or chaotic?",
-                    name: 'chaos',
-                    likert_scale_min_label: 'Organized',
-                    likert_scale_max_label: 'Chaotic',
-                    likert_scale_values: [
-                        { value: 1 },
-                        { value: 2 },
-                        { value: 3 },
-                        { value: 4 },
-                        { value: 5 }
-                    ],
-                    required: false
-                }
-            ]],
-            button_label_finish: 'Continue'
-        };
-    }
-        return trialNew;
+            <img src="assets/img/stim/${svList[i].name}" width= 200px, height =auto>`
+            var trialNew = {
+                type: jsPsychSurvey,
+                //data: {},
+                pages: [[
+                    {
+                        type: 'html',
+                        prompt: `
+                            <style>
+                                .sv_q.sv_qstn {
+                                align-items: center;
+                                justify-content: center;
+                                text-align: center;
+                                }
+                                .sv_body {
+                                color: #000000;
+                                font-size: 95%;
+                                }
+                                .sv_main .sv_container .sv_body .sv_p_root .sv_q_title {
+                                font-weight: bold;
+                                }
+                                .sv_q_rating_min_text {
+                                min-width: 150px;
+                                }
+                            </style>
+                            <p> Trial ${i+1} / 61 </p>
+                            <p>Take a look at the following landscape from Google Street View</p>
+                            ${imgTag}
+                            <h3>In this image, ...</h3>
+                        `,
+                    }, {
+                        type: 'likert',
+                        prompt: "how ambiguous is the boundary of each object?",
+                        name: 'ambiguous',
+                        likert_scale_min_label: 'Distinct, Clear',
+                        likert_scale_max_label: 'Ambiguous, Unclear',
+                        likert_scale_values: [
+                            { value: 1 },
+                            { value: 2 },
+                            { value: 3 },
+                            { value: 4 },
+                            { value: 5 }
+                        ],
+                        required: false
+                    }, {
+                        type: 'likert',
+                        prompt: "how many different objects do there seem to be?",
+                        name: 'objects',
+                        likert_scale_min_label: 'Relatively few',
+                        likert_scale_max_label: 'Enormous number',
+                        likert_scale_values: [
+                            { value: 1 },
+                            { value: 2 },
+                            { value: 3 },
+                            { value: 4 },
+                            { value: 5 }
+                        ],
+                        required: false
+                    }, {
+                        type: 'likert',
+                        prompt: "to what degree do there seem to be parts of the scene that are invisible?",
+                        name: 'invisible',
+                        likert_scale_min_label: 'Few invisible parts',
+                        likert_scale_max_label: 'Many invisible parts',
+                        likert_scale_values: [
+                            { value: 1 },
+                            { value: 2 },
+                            { value: 3 },
+                            { value: 4 },
+                            { value: 5 }
+                        ],
+                        required: false
+                    }, {
+                        type: 'likert',
+                        prompt: "to what degree is the scene either organized or chaotic?",
+                        name: 'chaos',
+                        likert_scale_min_label: 'Organized',
+                        likert_scale_max_label: 'Chaotic',
+                        likert_scale_values: [
+                            { value: 1 },
+                            { value: 2 },
+                            { value: 3 },
+                            { value: 4 },
+                            { value: 5 }
+                        ],
+                        required: false
+                    }
+                ]],
+                button_label_finish: 'Continue'
+            };
+            trialList.push(trialNew);
+        }
+            return trialList;
     };
 
     var half_way = {
@@ -676,19 +643,18 @@
     main_timeline.push(intro3);
 
     // Push trials
-    var shuffledList = jsPsych.randomization.shuffle(Object.keys(svList));
-    shuffledList.splice(shuffledList.length / 2, 0, "half-way");
-    shuffledList.splice(shuffledList.length / 2, 0, "attention-check");
 
-    for (loc of shuffledList) {
-        if (loc == 'half-way') {
-            main_timeline.push(half_way);
-        } else if (loc == 'attention-check') {
-            main_timeline.push(attention_check);
-        } else {
-            main_timeline.push(getSVCoord(svList));
-        }
-    };
+
+    var svTrials = getSVImg(svList);  // get list of trials
+    svTrials.splice(Math.floor((svTrials.length / 2)), 0, half_way);
+    svTrials.splice(Math.floor(svTrials.length / 2) + 1, 0, attention_check);
+    for (trial of svTrials) {
+        main_timeline.push(trial); // push each trial to timeline
+    } 
+    // Insert "half-way" and "attention-check" at appropriate positions
+    
+    
+   
 
     main_timeline.push(demogForm);
     main_timeline.push(demogForm2);
