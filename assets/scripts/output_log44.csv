@@ -1,0 +1,17 @@
+Group,Culture_Count,Size_Count,Place_Count,Direct_Count,Total_Pictures
+1,"(1: 30, 2: 31)","(large: 25, middle: 24, small: 12)","(school: 19, postoffice: 19, hotel: 23)","(a: 34, b: 27, x: 0, y: 0)",61
+2,"(1: 30, 2: 31)","(large: 21, middle: 19, small: 21)","(school: 13, postoffice: 32, hotel: 16)","(a: 29, b: 32, x: 0, y: 0)",61
+3,"(1: 30, 2: 31)","(large: 25, middle: 18, small: 18)","(school: 21, postoffice: 19, hotel: 21)","(a: 24, b: 37, x: 0, y: 0)",61
+4,"(1: 30, 2: 31)","(large: 23, middle: 17, small: 21)","(school: 25, postoffice: 23, hotel: 13)","(a: 37, b: 24, x: 0, y: 0)",61
+5,"(1: 30, 2: 31)","(large: 24, middle: 14, small: 23)","(school: 19, postoffice: 23, hotel: 19)","(a: 28, b: 33, x: 0, y: 0)",61
+6,"(1: 30, 2: 31)","(large: 19, middle: 19, small: 23)","(school: 17, postoffice: 28, hotel: 16)","(a: 31, b: 30, x: 0, y: 0)",61
+7,"(1: 30, 2: 31)","(large: 20, middle: 16, small: 25)","(school: 23, postoffice: 15, hotel: 23)","(a: 31, b: 30, x: 0, y: 0)",61
+8,"(1: 30, 2: 27)","(large: 19, middle: 17, small: 21)","(school: 19, postoffice: 24, hotel: 14)","(a: 28, b: 29, x: 0, y: 0)",57
+9,"(1: 30, 2: 31)","(large: 19, middle: 16, small: 26)","(school: 17, postoffice: 26, hotel: 18)","(a: 0, b: 0, x: 30, y: 31)",61
+10,"(1: 30, 2: 31)","(large: 20, middle: 19, small: 22)","(school: 19, postoffice: 21, hotel: 21)","(a: 0, b: 0, x: 36, y: 25)",61
+11,"(1: 30, 2: 31)","(large: 21, middle: 22, small: 18)","(school: 18, postoffice: 19, hotel: 24)","(a: 0, b: 0, x: 34, y: 27)",61
+12,"(1: 30, 2: 31)","(large: 14, middle: 23, small: 24)","(school: 21, postoffice: 20, hotel: 20)","(a: 0, b: 0, x: 31, y: 30)",61
+13,"(1: 30, 2: 31)","(large: 24, middle: 13, small: 24)","(school: 19, postoffice: 18, hotel: 24)","(a: 0, b: 0, x: 31, y: 30)",61
+14,"(1: 30, 2: 31)","(large: 23, middle: 22, small: 16)","(school: 18, postoffice: 21, hotel: 22)","(a: 0, b: 0, x: 31, y: 30)",61
+15,"(1: 30, 2: 31)","(large: 26, middle: 18, small: 17)","(school: 17, postoffice: 23, hotel: 21)","(a: 0, b: 0, x: 27, y: 34)",61
+16,"(1: 30, 2: 27)","(large: 12, middle: 20, small: 25)","(school: 16, postoffice: 22, hotel: 19)","(a: 0, b: 0, x: 21, y: 36)",57
