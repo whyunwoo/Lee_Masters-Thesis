@@ -97,6 +97,7 @@
     // preload
     var preload = {
         type: jsPsychPreload,
+        auto_preload: true,
         images: [
             'assets/img/ambiguous-low.png',
             'assets/img/ambiguous-high.png',
@@ -104,7 +105,6 @@
             'assets/img/invisible-high.png',
             'assets/img/attention-check.png',
             'assets/img/countdown-15.gif', 
-            Array.from(svList)
         ],
         message: `Please wait while the experiment loads. This should not take longer than a minute.`
     }
