@@ -148,11 +148,12 @@
     function getSVImg(svList) {
         var trialList = [];
         for (var i = 0; i < 61; i++){ 
+        var path = svList[i].name,
         var imgTag = `
-            <img src="assets/img/stim/${svList[i].name}" width= 400px, height =auto>`
+            <img src="assets/img/stim/${path}" width= 400px, height =auto>`
             var trialNew = {
                 type: jsPsychSurvey,
-                data: {imgTag},
+                data: {path},
                 pages: [[
                     {
                         type: 'html',
