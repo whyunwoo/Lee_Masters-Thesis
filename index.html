@@ -60,8 +60,9 @@
     // group assignment
     var group = jsPsych.randomization.randomInt(1, 16);
     console.log(group);
-    var svList = groups[group];
+    var init_svList = groups[group];
     console.log(svList);
+    var svList = jsPsych.randomization.repeat(init_svList, 1);
     // add global data variables
     jsPsych.data.addProperties({ group: group });
 
