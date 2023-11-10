@@ -483,7 +483,8 @@
     // Push trials
     var svTrials = getSVImg(svList);  // get list of trials
     svTrials.splice(Math.floor((svTrials.length / 2)), 0, half_way);
-    svTrials.splice(Math.floor(svTrials.length / 2) + 1, 0, attention_check);
+    var randomCheckPos = Math.floor(Math.random() * svTrials.length);
+    svTrials.splice(randomCheckPos, 0, attention_check);
     
     for (trial of svTrials) {
         main_timeline.push(trial); // push each trial to timeline
