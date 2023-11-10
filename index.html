@@ -62,7 +62,7 @@
     console.log(group);
     var init_svList = groups[group];
     console.log(svList);
-    var svList = jsPsych.randomization.repeat(init_svList, 1);
+    var svList = jsPsych.randomization.shuffleNorepeat(init_svList);
     // add global data variables
     jsPsych.data.addProperties({ group: group });
 
