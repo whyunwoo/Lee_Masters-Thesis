@@ -157,7 +157,7 @@ const htmlDemogForm1 = `
 
 
         <label for="sex">Please indicate your sex.<br>
-            <div class="text-left" style="max-width:200px; margin:auto;">
+            <div class="text-left" style="max-width:500px; margin:auto;">
             <label for="female" style="font-size:85%">
                 <input type="radio" id="female" name="sex" value="female">
                 Female
@@ -201,12 +201,11 @@ const htmlDemogForm1 = `
 
             <label for="nonbinary" style="font-size:85%">
             <input type="radio" id="nonbinary" name="gender" value="nonbinary">
-            Non-Binary or another gender identity
+                Non-Binary or another gender identity
             </label><br>
 
             <label for="self-describe" onClick=selfDescribe() style="font-size:85%">
-                <input type="radio" id="self-describe" name="gender" value="self-describe">
-                Please describe your gender identity if you checked on 'Non-Binary or another gender' above:<br> &nbsp;&nbsp;&nbsp;   
+               Please describe your gender identity if you checked on 'Non-Binary or another gender' above:<br> &nbsp;&nbsp;&nbsp;   
                 <input type="text" id="self-describe" name="gender-self-describe">
             </label>
             </div>
