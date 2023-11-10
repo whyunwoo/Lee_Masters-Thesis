@@ -75,7 +75,7 @@ const html_intro1 = `
             In this study, we are interested in how people think about different Google Street View images. Google Street View takes pictures of streets used for Google Earth and Google Maps. You’ll see Google Street View images of different places and answer some questions about each one.
         </p>
     </div>
-    Example stimuli will be updated.
+    <img src = "assets/img/example.png">
     <br>
 <br>
 `;
