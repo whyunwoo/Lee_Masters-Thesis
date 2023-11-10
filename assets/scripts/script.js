@@ -200,23 +200,13 @@ const debriefHTML = `
     </div>
 `;
 
-var endStudy_prompt = `
-    <h3>Thanks for participating! Your response has been saved.</h3>
-
-    <div class="alert alert-warning"><b>
-        <p>Please enter the following completion code on Prolific:</p>
-        <h3>1DC94F05</h3>
-    </b></div>
-
-    <p>You may safely close this window afterwards.</p>
-    `;
 
 var endStudyNoConsent_prompt = `
     <h3>You have declined the informed consent form.</h3>
     <p>Please exit this window and return this study on Prolific.</p>
     `;
 
-endRedirectPrompt = [`You've reached the end of the survey. <br><br> 
+var endRedirectPrompt = [`You've reached the end of the survey. <br><br> 
 <b>Do not close or refresh this window.</b><br>
 In the next page, you will see a pop-up like below after a few moment.<br><br>
 <img src='assets/img/chrome.PNG'> <br><br>
