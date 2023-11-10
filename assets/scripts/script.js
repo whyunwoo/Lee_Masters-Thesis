@@ -206,7 +206,7 @@ const htmlDemogForm1 = `
 
             <label for="self-describe" onClick=selfDescribe() style="font-size:85%">
                Please describe your gender identity if you checked on 'Non-Binary or another gender' above:<br> &nbsp;&nbsp;&nbsp;   
-                <input type="text" id="self-describe" name="gender-self-describe" float=center>
+                <div style= "text-align: center"><input type="text" id="self-describe" name="gender-self-describe"></div>
             </label>
             </div>
         </label><br><br>
