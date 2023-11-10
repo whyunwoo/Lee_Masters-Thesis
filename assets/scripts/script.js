@@ -143,6 +143,13 @@ var half_way_prompt = `
 <p>The study will automatically advance forward after the countdown is complete. However, you may click "Next" to advance forward now if you wish.</p>
 `;
 
+const preambleDemog = `
+        <br>
+        <p>Thank you for your responses. Finally, we’d like to ask you a few questions about yourself.</p>
+        <hr>
+        <br>
+    `;
+    
 const htmlDemogForm1 = `
         <label for="age">What is your age in years?<br>
             <input type="number" id="age" name="age" min=18><br><br>
