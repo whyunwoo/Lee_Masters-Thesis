@@ -157,7 +157,7 @@ const htmlDemogForm1 = `
 
 
         <label for="sex">Please indicate your sex.<br>
-            <div class="text-left" style="max-width:500px; margin:auto;">
+            <div class="text-left" style="max-width:200px; margin:auto;">
             <label for="female" style="font-size:85%">
                 <input type="radio" id="female" name="sex" value="female">
                 Female
@@ -182,7 +182,7 @@ const htmlDemogForm1 = `
 
         
         <label for="gender">How do you currently describe your gender identity?<br>
-            <div class="text-left" style="max-width:200px; margin:auto;">
+            <div class="text-left" style="max-width:400px; margin:auto;">
             <label for="woman" style="font-size:85%">
                 <input type="radio" id="woman" name="gender" value="woman">
                 Woman
