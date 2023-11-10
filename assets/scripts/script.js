@@ -154,27 +154,59 @@ const htmlDemogForm1 = `
         <label for="age">What is your age in years?<br>
             <input type="number" id="age" name="age" min=18><br><br>
         </label>
-        
-        <label for="gender">How do you currently describe your gender identity?<br>
+
+
+        <label for="sex">Please indicate your sex.<br>
             <div class="text-left" style="max-width:200px; margin:auto;">
             <label for="female" style="font-size:85%">
-                <input type="radio" id="female" name="gender" value="female">
+                <input type="radio" id="female" name="sex" value="female">
                 Female
             </label><br>
-            
+
             <label for="male" style="font-size:85%">
-                <input type="radio" id="male" name="gender" value="male">
+                <input type="radio" id="male" name="sex" value="male">
                 Male
             </label><br>
             
-            <label for="nonbinary" style="font-size:85%">
-                <input type="radio" id="nonbinary" name="gender" value="nonbinary">
-                Nonbinary
+            <label for="intersex" style="font-size:85%">
+                <input type="radio" id="intersex" name="sex" value="nonbinary">
+                Intersex
             </label><br>
             
+            <label for="not-to-say" style="font-size:85%">
+                <input type="radio" id="not-to-say" name="sex" value="not-to-say">
+                I prefer not to answer this question
+            </label><br>
+            </div>
+        </label><br><br>
+
+        
+        <label for="gender">How do you currently describe your gender identity?<br>
+            <div class="text-left" style="max-width:200px; margin:auto;">
+            <label for="woman" style="font-size:85%">
+                <input type="radio" id="woman" name="gender" value="woman">
+                Woman
+            </label><br>
+            
+            
+            <label for="man" style="font-size:85%">
+                <input type="radio" id="man" name="gender" value="man">
+                Man
+            </label><br>
+            
+            <label for="not-to-say" style="font-size:85%">
+                <input type="radio" id="not-to-say" name="gender" value="not-to-say">
+                I prefer not to answer this question
+            </label><br>
+
+            <label for="nonbinary" style="font-size:85%">
+            <input type="radio" id="nonbinary" name="gender" value="nonbinary">
+            Non-Binary or another gender identity
+            </label><br>
+
             <label for="self-describe" onClick=selfDescribe() style="font-size:85%">
                 <input type="radio" id="self-describe" name="gender" value="self-describe">
-                Prefer to self-describe:<br> &nbsp;&nbsp;&nbsp;   
+                Please describe your gender identity if you checked on 'Non-Binary or another gender' above:<br> &nbsp;&nbsp;&nbsp;   
                 <input type="text" id="self-describe" name="gender-self-describe">
             </label>
             </div>
