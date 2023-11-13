@@ -160,7 +160,11 @@
                 type: jsPsychSurvey,
                 data: {
                         task: 'svTrial', 
-                        stimulus: path
+                        stimulus: path,
+                        size: svList[i].size,
+                        culture: svList[i].culture,
+                        loct: svList[i].location_type,
+                        number: location_number,
                     },
                 pages: [[
                     {
