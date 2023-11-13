@@ -58,7 +58,7 @@
     
     /* VARIABLES */
     // group assignment
-    var group = jsPsych.randomization.randomInt(1, 16);
+    var group = jsPsych.randomization.randomInt(1, 8);
     console.log(group);
     var init_svList = groups[group];
     console.log(svList);
@@ -112,7 +112,10 @@
     var preload2 = {
         type: jsPsychPreload,
         auto_preload: true,
-        images: svList.map(svList => 'assets/img/stim/' + svList),
+        images: [svList.map(svList => 'assets/img/stim/' + svList.name + "_0" + '.jpg'),
+        svList.map(svList => 'assets/img/stim/' + svList.name + "_1"  + '.jpg'),
+        svList.map(svList => 'assets/img/stim/' + svList.name + "_2"  + '.jpg'),
+        svList.map(svList => 'assets/img/stim/' + svList.name + "_3"  + '.jpg')],
         message: `Please wait while the experiment loads. This should not take longer than a minute.`
     }
    
@@ -148,8 +151,9 @@
     // function to generate new trial with location info
     function getSVImg(svList) {
         var trialList = [];
-        for (var i = 0; i < 61; i++){ 
-        var path = svList[i].name;
+        for (var i = 0; i < 48; i++){ 
+        var direction = jsPsych.randomization.randomInt(0, 3);
+        var path = svList[i].name + "_" + direction + ".jpg"; 
         var imgTag = `
             <img src="assets/img/stim/${path}" width= 500px, height =auto>`
             var trialNew = {
@@ -179,7 +183,7 @@
                                 min-width: 150px;
                                 }
                             </style>
-                            <p> Trial ${i+1} / 61 </p>
+                            <p> Trial ${i+1} / 48 </p>
                             <p>Take a look at the following landscape</p>
                             ${imgTag}
                             <h3>In this image, ...</h3>
