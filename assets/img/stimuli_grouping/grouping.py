@@ -63,13 +63,15 @@ for i in range(16):
     output_log = pd.concat([output_log, log_item], ignore_index=True)
     groups[f"{i+1}"] = group.to_dict(orient="records")
 
-output_log.to_csv('/Users/arajo/Documents/01. Project/perceptual-affordance-OriginalStimuli/assets/scripts/output_log44.csv', index=False)
-leftover_data = pd.concat([data_US, data_JP, data_US_XY, data_JP_XY])
+# Save output
+output_log.to_csv('/Users/arajo/Documents/01. Project/perceptual-affordance-OriginalStimuli/assets/scripts/output_log.csv', index=False)
 
-groups_that_need_jp = [group_key for group_key in groups if sum(1 for item in groups[group_key] if item['culture'] == 2) == 27]
-leftover_jp = leftover_data[leftover_data['culture'] == 2]
-print(leftover_data)
-output_json_path = '/Users/arajo/Documents/01. Project/perceptual-affordance-OriginalStimuli/assets/scripts/dd44.json'
+# Save leftover data to a CSV file
+leftover_data = pd.concat([data_US, data_JP, data_US_XY, data_JP_XY])
+leftover_data.to_csv('/Users/arajo/Documents/01. Project/perceptual-affordance-OriginalStimuli/assets/scripts/leftover_data.csv', index=False, sep='\t')
+
+# Save grouped json file
+output_json_path = '/Users/arajo/Documents/01. Project/perceptual-affordance-OriginalStimuli/assets/scripts/groups.json'
 with open(output_json_path, 'w') as json_file:
     json.dump(groups, json_file, indent=4)
 
