@@ -595,14 +595,14 @@ const groups = {
             "size": "large",
             "culture": 2,
             "location_type": "sch",
-            "number": "a5"
+            "number": "5"
         },
         {
             "name": "Ishikawa_large_sch_1",
             "size": "middle",
             "culture": 2,
             "location_type": "sch",
-            "number": "a1"
+            "number": "1"
         },
         {
             "name": "Toyama_large_pos_3",
@@ -1010,7 +1010,7 @@ const groups = {
             "size": "small",
             "culture": 2,
             "location_type": "sch",
-            "number": "a6"
+            "number": "6"
         }
     ],
     "4": [
@@ -1236,7 +1236,7 @@ const groups = {
             "size": "large",
             "culture": 2,
             "location_type": "pos",
-            "number": "a9"
+            "number": "9"
         },
         {
             "name": "Toyama_middle_sch_7",
@@ -1313,7 +1313,7 @@ const groups = {
             "size": "middle",
             "culture": 2,
             "location_type": "sch",
-            "number": "a2"
+            "number": "2"
         },
         {
             "name": "Ishikawa_middle_sch_2",
@@ -1341,7 +1341,7 @@ const groups = {
             "size": "middle",
             "culture": 2,
             "location_type": "pos",
-            "number": "a12"
+            "number": "12"
         },
         {
             "name": "Akita_small_pos_4",
@@ -1686,7 +1686,7 @@ const groups = {
             "size": "middle",
             "culture": 2,
             "location_type": "sch",
-            "number": "a4"
+            "number": "4"
         }
     ],
     "6": [
@@ -1919,7 +1919,7 @@ const groups = {
             "size": "middle",
             "culture": 2,
             "location_type": "pos",
-            "number": "a3"
+            "number": "3"
         },
         {
             "name": "Akita_large_sch_12",
@@ -1996,7 +1996,7 @@ const groups = {
             "size": "middle",
             "culture": 2,
             "location_type": "pos",
-            "number": "a10"
+            "number": "10"
         },
         {
             "name": "Toyama_large_pos_6",
@@ -2285,7 +2285,7 @@ const groups = {
             "size": "large",
             "culture": 2,
             "location_type": "pos",
-            "number": "a7"
+            "number": "7"
         },
         {
             "name": "Ishikawa_middle_sch_6",
@@ -2320,7 +2320,7 @@ const groups = {
             "size": "large",
             "culture": 2,
             "location_type": "pos",
-            "number": "a8"
+            "number": "8"
         },
         {
             "name": "Niigata_large_sch_12",
@@ -2560,7 +2560,7 @@ const groups = {
             "size": "small",
             "culture": 2,
             "location_type": "pos",
-            "number": "a11"
+            "number": "11"
         },
         {
             "name": "Toyama_large_pos_2",
