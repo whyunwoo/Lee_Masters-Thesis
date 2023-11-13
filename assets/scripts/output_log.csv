@@ -1,17 +1,9 @@
-Group,Culture_Count,Size_Count,Place_Count,Direct_Count,Total_Pictures
-1,"(1: 30, 2: 31)","(large: 25, middle: 19, small: 17)","(school: 15, postoffice: 27, hotel: 19)","(a: 30, b: 31, x: 0, y: 0)",61
-2,"(1: 30, 2: 31)","(large: 13, middle: 25, small: 23)","(school: 15, postoffice: 17, hotel: 29)","(a: 34, b: 27, x: 0, y: 0)",61
-3,"(1: 30, 2: 31)","(large: 25, middle: 20, small: 16)","(school: 21, postoffice: 22, hotel: 18)","(a: 31, b: 30, x: 0, y: 0)",61
-4,"(1: 30, 2: 31)","(large: 19, middle: 24, small: 18)","(school: 22, postoffice: 25, hotel: 14)","(a: 22, b: 39, x: 0, y: 0)",61
-5,"(1: 30, 2: 31)","(large: 22, middle: 25, small: 14)","(school: 16, postoffice: 21, hotel: 24)","(a: 38, b: 23, x: 0, y: 0)",61
-6,"(1: 30, 2: 31)","(large: 22, middle: 18, small: 21)","(school: 19, postoffice: 25, hotel: 17)","(a: 30, b: 31, x: 0, y: 0)",61
-7,"(1: 30, 2: 31)","(large: 21, middle: 20, small: 20)","(school: 20, postoffice: 19, hotel: 22)","(a: 31, b: 30, x: 0, y: 0)",61
-8,"(1: 30, 2: 27)","(large: 23, middle: 23, small: 11)","(school: 24, postoffice: 14, hotel: 19)","(a: 25, b: 32, x: 0, y: 0)",57
-9,"(1: 30, 2: 31)","(large: 18, middle: 21, small: 22)","(school: 28, postoffice: 18, hotel: 15)","(a: 0, b: 0, x: 31, y: 30)",61
-10,"(1: 30, 2: 31)","(large: 22, middle: 23, small: 16)","(school: 19, postoffice: 24, hotel: 18)","(a: 0, b: 0, x: 30, y: 31)",61
-11,"(1: 30, 2: 31)","(large: 18, middle: 21, small: 22)","(school: 18, postoffice: 18, hotel: 25)","(a: 0, b: 0, x: 24, y: 37)",61
-12,"(1: 30, 2: 31)","(large: 16, middle: 24, small: 21)","(school: 15, postoffice: 18, hotel: 28)","(a: 0, b: 0, x: 28, y: 33)",61
-13,"(1: 30, 2: 31)","(large: 26, middle: 18, small: 17)","(school: 25, postoffice: 21, hotel: 15)","(a: 0, b: 0, x: 31, y: 30)",61
-14,"(1: 30, 2: 31)","(large: 25, middle: 24, small: 12)","(school: 22, postoffice: 23, hotel: 16)","(a: 0, b: 0, x: 34, y: 27)",61
-15,"(1: 30, 2: 31)","(large: 15, middle: 25, small: 21)","(school: 22, postoffice: 16, hotel: 23)","(a: 0, b: 0, x: 31, y: 30)",61
-16,"(1: 30, 2: 27)","(large: 21, middle: 14, small: 22)","(school: 14, postoffice: 21, hotel: 22)","(a: 0, b: 0, x: 33, y: 24)",57
+Group,Culture_Count,Size_Count,Location_Type_Count,Total_Pictures
+1,"(1: 24, 2: 24)","(large: 15, middle: 24, small: 9)","(sch: 31, pos: 17)",48
+2,"(1: 24, 2: 24)","(large: 14, middle: 19, small: 15)","(sch: 29, pos: 19)",48
+3,"(1: 24, 2: 24)","(large: 16, middle: 8, small: 24)","(sch: 27, pos: 21)",48
+4,"(1: 24, 2: 24)","(large: 15, middle: 21, small: 12)","(sch: 19, pos: 29)",48
+5,"(1: 24, 2: 24)","(large: 12, middle: 13, small: 23)","(sch: 25, pos: 23)",48
+6,"(1: 24, 2: 24)","(large: 18, middle: 16, small: 14)","(sch: 23, pos: 25)",48
+7,"(1: 24, 2: 24)","(large: 24, middle: 10, small: 14)","(sch: 29, pos: 19)",48
+8,"(1: 24, 2: 24)","(large: 21, middle: 12, small: 15)","(sch: 22, pos: 26)",48

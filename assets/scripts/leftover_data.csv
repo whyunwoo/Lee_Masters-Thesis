@@ -1,9 +1,1 @@
-name	city	size	culture	place	location_number	direct	back
-aa.s1.b1.JPG	aa	small	1	post office	1	b	1
-cs.h2.a1.JPG	cs	small	1	school	2	a	1
-ny.s.p2.a2.JPG	ny	middle	1	school	p	a	2
-ny.s.p6.a2.JPG	ny	large	1	school	p	a	2
-ny.c.h8.y1.JPG	ny	middle	1	hotel	h	y	1
-ny.c.p4.y1.JPG	ny	large	1	hotel	p	y	1
-ny.s.p4.x2.JPG	ny	large	1	school	p	x	2
-ny.s.p5.x1.JPG	ny	small	1	hotel	p	x	1
+name	culture	size	location_type	number
