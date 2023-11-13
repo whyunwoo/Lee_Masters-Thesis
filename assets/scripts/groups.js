@@ -591,14 +591,14 @@ const groups = {
             "number": "12"
         },
         {
-            "name": "Ishikawa_large_sch_a5",
+            "name": "Ishikawa_large_sch_5",
             "size": "large",
             "culture": 2,
             "location_type": "sch",
             "number": "a5"
         },
         {
-            "name": "Ishikawa_large_sch_a1",
+            "name": "Ishikawa_large_sch_1",
             "size": "middle",
             "culture": 2,
             "location_type": "sch",
@@ -1006,7 +1006,7 @@ const groups = {
             "number": "6"
         },
         {
-            "name": "Ishikawa_large_sch_a6",
+            "name": "Ishikawa_large_sch_6",
             "size": "small",
             "culture": 2,
             "location_type": "sch",
@@ -1232,7 +1232,7 @@ const groups = {
             "number": "10"
         },
         {
-            "name": "Ishikawa_large_sch_a9",
+            "name": "Ishikawa_large_sch_9",
             "size": "large",
             "culture": 2,
             "location_type": "pos",
@@ -1309,7 +1309,7 @@ const groups = {
             "number": "9"
         },
         {
-            "name": "Ishikawa_large_sch_a2",
+            "name": "Ishikawa_large_sch_2",
             "size": "middle",
             "culture": 2,
             "location_type": "sch",
@@ -1337,7 +1337,7 @@ const groups = {
             "number": "2"
         },
         {
-            "name": "Ishikawa_large_sch_a12",
+            "name": "Ishikawa_large_sch_12",
             "size": "middle",
             "culture": 2,
             "location_type": "pos",
@@ -1682,7 +1682,7 @@ const groups = {
             "number": "1"
         },
         {
-            "name": "Ishikawa_large_sch_a4",
+            "name": "Ishikawa_large_sch_4",
             "size": "middle",
             "culture": 2,
             "location_type": "sch",
@@ -1915,7 +1915,7 @@ const groups = {
             "number": "5"
         },
         {
-            "name": "Ishikawa_large_sch_a3",
+            "name": "Ishikawa_large_sch_3",
             "size": "middle",
             "culture": 2,
             "location_type": "pos",
@@ -1992,7 +1992,7 @@ const groups = {
             "number": "10"
         },
         {
-            "name": "Ishikawa_large_sch_a10",
+            "name": "Ishikawa_large_sch_10",
             "size": "middle",
             "culture": 2,
             "location_type": "pos",
@@ -2281,7 +2281,7 @@ const groups = {
             "number": "3"
         },
         {
-            "name": "Ishikawa_large_sch_a7",
+            "name": "Ishikawa_large_sch_7",
             "size": "large",
             "culture": 2,
             "location_type": "pos",
@@ -2316,7 +2316,7 @@ const groups = {
             "number": "3"
         },
         {
-            "name": "Ishikawa_large_sch_a8",
+            "name": "Ishikawa_large_sch_8",
             "size": "large",
             "culture": 2,
             "location_type": "pos",
@@ -2556,7 +2556,7 @@ const groups = {
             "number": "2"
         },
         {
-            "name": "Ishikawa_large_sch_a11",
+            "name": "Ishikawa_large_sch_11",
             "size": "small",
             "culture": 2,
             "location_type": "pos",
