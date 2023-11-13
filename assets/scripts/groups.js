@@ -1,4 +1,4 @@
-{
+const groups = {
     "1": [
         {
             "name": "aa.h5.a1.JPG",
