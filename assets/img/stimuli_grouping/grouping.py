@@ -3,14 +3,14 @@ import json
 import numpy as np
 
 # Load CSV file
-data = pd.read_csv('/Users/arajo/Documents/01. Project/perceptual-affordance-Lee_Thesis/assets/img/stimuli_grouping/stimgrouping.csv')
+data = pd.read_csv('stimgrouping.csv')
 
 # Add place and size as random
 location_type = ["sch", "pos"]
 sizes = ["small", "middle", "large"]
 
-data["location_type"] = np.random.choice(location_type, len(data))
-data["size"] = np.random.choice(sizes, len(data))
+# data["location_type"] = np.random.choice(location_type, len(data))
+# data["size"] = np.random.choice(sizes, len(data))
 
 print("Culture, [wheat, rice]")
 
@@ -38,11 +38,12 @@ while len(data) >= total_pictures_per_group and len(groups)<group_count:
     group = pd.concat([df_WHEAT, df_RICE])
 
     size_count = group['size'].value_counts().to_dict()
+    print(group["size"].value_counts().to_dict())
     culture_count = group['culture'].value_counts().to_dict()
     location_type_count = group['location_type'].value_counts().to_dict()
 
     culture_count_str = f"(1: {culture_count.get(1, 0)}, 2: {culture_count.get(2, 0)})"
-    size_count_str = f"(large: {size_count.get('large', 0)}, middle: {size_count.get('middle', 0)}, small: {size_count.get('small', 0)})"
+    size_count_str = f"(1: {size_count.get(1, 0)}, 2: {size_count.get(2, 0)}, 3: {size_count.get(3, 0)})"
     location_type_count_str = f"(sch: {location_type_count.get('sch', 0)}, pos: {location_type_count.get('pos', 0)})"
 
     log_item = pd.DataFrame([{
@@ -57,14 +58,14 @@ while len(data) >= total_pictures_per_group and len(groups)<group_count:
     groups[len(groups) + 1] = group[['name', 'size', 'culture', 'location_type', 'number']].to_dict('records')
 
 # Save output log to a CSV file
-output_log.to_csv('/Users/arajo/Documents/01. Project/perceptual-affordance-Lee_Thesis/assets/scripts/output_log.csv', index=False)
+output_log.to_csv('../../scripts/output_log.csv', index=False)
 
 # Save leftover data to a CSV file
 leftover_data = pd.concat([data])
-leftover_data.to_csv('/Users/arajo/Documents/01. Project/perceptual-affordance-Lee_Thesis/assets/scripts/leftover_data.csv', index=False, sep='\t')
+leftover_data.to_csv('../../scripts/leftover_data.csv', index=False, sep='\t')
 
 # Save grouped JSON file
-output_json_path = '/Users/arajo/Documents/01. Project/perceptual-affordance-Lee_Thesis/assets/scripts/groups.json'
+output_json_path = '../../scripts/groups.json'
 with open(output_json_path, 'w') as json_file:
     json.dump(groups, json_file, indent=4)
 

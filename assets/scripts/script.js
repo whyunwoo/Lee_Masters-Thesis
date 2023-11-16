@@ -19,10 +19,10 @@ const consentHTML = `
         <p>
             The risks associated with this study are minimal. The benefits which may reasonably be expected to result from this study are none.  We cannot and do not guarantee or promise that you will receive any benefits from this study. 
         </p><br>
-    
+
         <h4>PAYMENTS</h4>
         <p>You will be paid <b>$4.25</b> for your participation.</p><br>
-    
+
         <h4>SUBJECT'S RIGHTS</h4>
         <p>
             If you have read this form and have decided to participate in this project, please understand your participation is voluntary and you have the right to withdraw your consent or discontinue participation at any time without penalty or loss of benefits to which you are otherwise entitled.  The alternative is not to participate.  You have the right to refuse to answer particular questions.  
@@ -151,6 +151,10 @@ const preambleDemog = `
     `;
     
 const htmlDemogForm1 = `
+        <label for="zipcode">What's the zipcode of your current residence?<br>
+            <input type="number" id="zipcode" name="zipcode">
+        </label><br><br>
+
         <label for="age">What is your age in years?<br>
             <input type="number" id="age" name="age" min=18><br><br>
         </label>
@@ -210,9 +214,64 @@ const htmlDemogForm1 = `
             </label>
             </div>
         </label><br><br>
+
+        <label for="ethnicity">How do you identify your ethnicity?<br>
+            <div class="text-left" style="max-width:400px; margin:auto;">
+            <label for="caucasian" style="font-size:85%">
+                <input type="radio" id="caucasian" name="ethnicity" value="caucasian">
+                Caucasian
+            </label><br>
         
-        <label for="zipcode">What's the zipcode of your current residence?<br>
-            <input type="number" id="zipcode" name="zipcode">
+            <label for="african" style="font-size:85%">
+                <input type="radio" id="african" name="ethnicity" value="african">
+                African or African American
+            </label><br>
+        
+            <label for="east-asian" style="font-size:85%">
+                <input type="radio" id="east-asian" name="ethnicity" value="east-asian">
+                East Asian (e.g., Chinese, Japanese, Korean)
+            </label><br>
+
+            <label for="south-asian" style="font-size:85%">
+                <input type="radio" id="south-asian" name="ethnicity" value="south-asian">
+                South Asian (e.g., Indian, Pakistani, Bangladeshi)
+            </label><br>
+
+            <label for="southeast-asian" style="font-size:85%">
+                <input type="radio" id="southeast-asian" name="ethnicity" value="southeast-asian">
+                Southeast Asian (e.g., Vietnamese, Thai, Filipino)
+            </label><br>
+
+            <label for="middle-eastern" style="font-size:85%">
+                <input type="radio" id="middle-eastern" name="ethnicity" value="middle-eastern">
+                Middle Eastern (e.g., Arab, Iranian, Turkish)
+            </label><br>
+
+            <label for="latino" style="font-size:85%">
+                <input type="radio" id="latino" name="ethnicity" value="latino">
+                Latino or Hispanic
+            </label><br>
+
+            <label for="native" style="font-size:85%">
+                <input type="radio" id="native" name="ethnicity" value="native">
+                Native American or Alaskan Native
+            </label><br>
+
+            <label for="other" style="font-size:85%">
+                <input type="radio" id="other" name="ethnicity" value="other">
+                Other
+            </label><br>
+
+            <label for="prefer-not-to-say" style="font-size:85%">
+                <input type="radio" id="prefer-not-to-say" name="ethnicity" value="prefer-not-to-say">
+                I prefer not to answer this question
+            </label><br>
+
+            <label for="self-describe-ethnicity" onClick=selfDescribeEthnicity() style="font-size:85%">
+                Please describe your ethnicity if you selected 'Other' above: &nbsp;&nbsp;&nbsp;   
+                 <div style="text-align: center"><input type="text" id="self-describe-ethnicity" name="ethnicity-self-describe"></div>
+            </label>
+            </div>
         </label><br><br>
     `;
 
@@ -242,5 +301,5 @@ var endRedirectPrompt = [`You've reached the end of the survey. <br><br>
 In the next page, you will see a pop-up like below after a few moment.<br><br>
 <img src='assets/img/chrome.PNG'> <br><br>
 Press the <b>'Leave'</b> button to exit from the experiment without losing your record.<br>
-You will be automatically redirected to SONA once you click the <b>'Leave'</b> button. <br><br>`
+You will be automatically redirected to PROLIFIC once you click the <b>'Leave'</b> button. <br><br>`
 ]
