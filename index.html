@@ -35,15 +35,14 @@
     var jsPsych = initJsPsych({
         use_webaudio: false,
         on_finish: function(data){
-            var sona_id = jsPsych.data.getURLVariable('sona_id');
-            window.location.assign("https://umichpsych.sona-systems.com/webstudy_credit.aspx?experiment_id=3148&credit_token=072d0c6eaf304b8797d930f9baa01e3c&survey_code="+sona_id)
+            window.location.assign("https://app.prolific.com/submissions/complete?cc=C1IYJVLI")
         },
     });
 
     var timeline = [];
 
     // Prolific Integration
-    var subject_id = jsPsych.data.getURLVariable("sona_id"); // SONA ID FOR SUBJECT POOL
+    var subject_id = jsPsych.data.getURLVariable("PROLIFIC_PID"); // SONA ID FOR SUBJECT POOL
     var study_id = jsPsych.data.getURLVariable('STUDY_ID');
     var session_id = jsPsych.data.getURLVariable('SESSION_ID');
 
@@ -116,7 +115,7 @@
         svList.map(svList => 'assets/img/stim/' + svList.name + "_1"  + '.jpg'),
         svList.map(svList => 'assets/img/stim/' + svList.name + "_2"  + '.jpg'),
         svList.map(svList => 'assets/img/stim/' + svList.name + "_3"  + '.jpg')],
-        message: `Please wait while the experiment loads. This should not take longer than a minute.`
+        message: `Please wait a moment while the experiment loads.`
     }
    
     ////////* EXPERIMENT */////////
