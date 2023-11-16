@@ -13,7 +13,7 @@ const consentHTML = `
         </p><br>
     
         <h4>TIME INVOLVEMENT</h4>
-        <p>Your participation will take approximately 30 minutes.</p><br>
+        <p>Your participation will take approximately 20 minutes.</p><br>
     
         <h4>RISKS AND BENEFITS</h4>
         <p>
@@ -21,7 +21,7 @@ const consentHTML = `
         </p><br>
     
         <h4>PAYMENTS</h4>
-        <p>You will be paid <b>$5.00</b> for your participation.</p><br>
+        <p>You will be paid <b>$4.25</b> for your participation.</p><br>
     
         <h4>SUBJECT'S RIGHTS</h4>
         <p>
