@@ -1,0 +1,193 @@
+"task","trial_type","trial_index","time_elapsed","internal_node_id","subject_id","study_id","session_id","group","rt","stimulus","response","width","height","webaudio","browser","browser_version","mobile","os","fullscreen","vsync_rate","webcam","microphone","success","timeout","failed_images","failed_audio","failed_video","accuracy","size","culture","loct","number"
+"pavlovia-init","pavlovia","0","1222","0.0-0.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","","","","","","","","","","","","","","","","","","","","","","","",""
+"consent","html-button-response","1","8998","0.0-1.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","7765","
+    <div style=""font-size: 80%; max-width:700px"">
+        <h2>Informed Consent</h2><br>
+    
+        <div style=""text-align: left"">
+        <h3>Streetscape Perceptions</h3>
+        <b>HUM00189138</b>
+        <br><hr>
+    
+        <h4>DESCRIPTION</h4>
+        <p>
+            In this study, you will view Google Street View images. You will then answer questions about your impressions of the streetscapes presented in those images.
+        </p><br>
+    
+        <h4>TIME INVOLVEMENT</h4>
+        <p>Your participation will take approximately 20-25 minutes.</p><br>
+    
+        <h4>RISKS AND BENEFITS</h4>
+        <p>
+            The risks associated with this study are minimal. The benefits which may reasonably be expected to result from this study are none.  We cannot and do not guarantee or promise that you will receive any benefits from this study. 
+        </p><br>
+
+        <h4>PAYMENTS</h4>
+        <p>You will be paid <b>$4.60</b> for your participation.</p><br>
+
+        <h4>SUBJECT'S RIGHTS</h4>
+        <p>
+            If you have read this form and have decided to participate in this project, please understand your participation is voluntary and you have the right to withdraw your consent or discontinue participation at any time without penalty or loss of benefits to which you are otherwise entitled.  The alternative is not to participate.  You have the right to refuse to answer particular questions.  
+        </p>
+    
+        <p>
+            Your individual privacy will be maintained in all published and written data resulting from the study. Your responses will be kept confidential: you are given a participant code, and no one, not even the research team, can match that code with your identity. Your collected information may also be shared with other researchers as part of our dataset.
+        </p><br>
+    
+        <h4>CONTACT INFORMATION</h4>
+        <p>
+            Questions: If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Nicholas Camp, npcamp@umich.edu, (443) 851-6783.
+        </p>
+    
+        <p>
+            If you have questions about your rights as a research participant, or wish to obtain information, ask questions or discuss any concerns about this study with someone other than the researcher(s), please contact the following:
+            <br><br>
+    
+            University of Michigan<br>
+            Health Sciences and Behavioral Sciences Institutional Review Board
+            (IRB-HSBS)<br>
+            2800 Plymouth Road <br>
+            Building 520, Room 1169 <br>
+            Ann Arbor, MI 48109-2800 <br>
+            Telephone: 734-936-0933 or toll free (866) 936-0933 <br>
+            Fax: 734-936-1852 <br />
+            E-mail: irbhsbs@umich.edu <br>
+        </p>
+    
+        <p>
+            You can also contact the University of Michigan Compliance Hotline at 1-866-990-0111. You may also print this consent form to keep.
+        </p>
+        <br>
+    
+        <div class=""alert alert-warning""><b>
+            Do you consent to participate in this study? If you consent to participate in this study, please click “Accept and continue.”
+        </b></div>
+        </div>
+    </div>
+","1","","","","","","","","","","","","","","","","","","","","",""
+"browser-check","browser-check","2","10028","0.0-2.0-0.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","","","","980","1740","true","samsung","23.0.0","true","Android OS","true","60.23","true","true","","","","","","","","","",""
+"","preload","3","33122","0.0-2.0-1.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","","","","","","","","","","","","","","","true","false","[]","[]","[]","","","","",""
+"","preload","4","82655","0.0-2.0-2.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","","","","","","","","","","","","","","","true","false","[]","[]","[]","","","","",""
+"instructions","html-button-response","5","109766","0.0-2.0-3.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","27105","
+<div class=""text-container"">
+    <h1>Welcome to the study!</h1>
+    
+    <div class=""text-left"">
+        <p>
+            In this study, we are interested in how people think about different Google Street View images. Google Street View takes pictures of streets used for Google Earth and Google Maps. You’ll see Google Street View images of different places and answer some questions about each one.
+        </p>
+    </div>
+    <img src = ""assets/img/example.png"" width = 500px, height = auto>
+    <br>
+<br>
+","0","","","","","","","","","","","","","","","","","","","","",""
+"instructions","html-button-response","6","140109","0.0-2.0-4.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","30033","
+        <style>
+            img.small {
+            max-width: 100px;
+            }
+            li {
+            text-indent: 40px;
+            }
+        </style>
+
+        <div class=""text-container text-left"">
+            <p>For each picture, we’d like your impressions of the scene:</p>
+            
+            <hr>
+                Are there <b>clear, distinct boundaries</b> between objects in the scene, or are the <b>boundaries ambiguous or unclear</b>?
+                
+                <li>clear, distinct boundaries: <img class=""small"" src=""assets/img/ambiguous-low.png""></li>
+                <li>ambiguous or unclear boundaries: <img class=""small"" src=""assets/img/ambiguous-high.png""></li>
+            <hr>
+            <br>
+                Are there <b>only a few different objects</b> in the scene, or is there <b>a large number</b>?
+            <br><br>
+            <hr>
+                Are only <b>a few parts</b> of the scene <b>invisible or obscured</b>, or are <b>many parts invisible or obscured</b>?
+                
+                <li>a few parts invisible or obscured: <img class=""small"" src=""assets/img/invisible-low.png""></li>
+                <li>many parts invisible or obscured: <img class=""small"" src=""assets/img/invisible-high.png""></li>
+            <hr>
+            <br>
+                Does the scene look <b>organized</b> or <b>chaotic</b> to you?
+            <br><br>
+            <hr>
+            
+            <p>
+                There are no right or wrong answers: we are interested in <b>your</b> impression. Note that some images might have individual buildings or faces blurred for privacy. Please ignore these when making your judgments.
+            </p>
+        </div>
+        <br>
+    ","0","","","","","","","","","","","","","","","","","","","","",""
+"instructions","html-button-response","7","148107","0.0-2.0-5.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","7986","
+    <div class=""text-container text-left"">
+        <p>Please make sure you are doing this study in an area where you can focus and complete the survey in one sitting.</p>
+
+        <p>Don’t spend too much time on any one picture- go with your gut impression!</p>
+        
+        <p>The study should take about 20 minutes. We’ll let you know when you’re halfway through.</p>
+    </div>
+        
+    <h3>Ready? Click next to get started!</h3>
+    <br>
+","0","","","","","","","","","","","","","","","","","","","","",""
+"svTrial","survey","8","178889","0.0-2.0-6.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","30642","Toyama_large_sch_12_2.jpg","{""P0_Q0"":null,""ambiguous"":3,""objects"":3,""invisible"":4,""chaos"":3,""complex"":2}","","","","","","","","","","","","","","","","","[]","small","2","pos","12"
+"svTrial","survey","9","204281","0.0-2.0-7.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","25357","Kanagawa_small_pos_2_3.jpg","{""P0_Q0"":null,""ambiguous"":2,""objects"":4,""invisible"":2,""chaos"":2,""complex"":3}","","","","","","","","","","","","","","","","","[]","small","1","sch","2"
+"svTrial","survey","10","232424","0.0-2.0-8.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","28114","Niigata_large_pos_6_2.jpg","{""P0_Q0"":null,""ambiguous"":4,""objects"":1,""invisible"":2,""chaos"":1,""complex"":1}","","","","","","","","","","","","","","","","","[]","large","2","sch","6"
+"svTrial","survey","11","251069","0.0-2.0-9.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","18614","Tokyo_large_pos_6_3.jpg","{""P0_Q0"":null,""ambiguous"":2,""objects"":3,""invisible"":3,""chaos"":1,""complex"":2}","","","","","","","","","","","","","","","","","[]","middle","1","pos","6"
+"svTrial","survey","12","267858","0.0-2.0-10.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","16762","Toyama_large_sch_1_0.jpg","{""P0_Q0"":null,""ambiguous"":4,""objects"":3,""invisible"":4,""chaos"":3,""complex"":2}","","","","","","","","","","","","","","","","","[]","middle","2","sch","1"
+"svTrial","survey","13","293078","0.0-2.0-11.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","25188","Okinawa_large_sch_9_2.jpg","{""P0_Q0"":null,""ambiguous"":3,""objects"":2,""invisible"":4,""chaos"":3,""complex"":2}","","","","","","","","","","","","","","","","","[]","small","1","sch","9"
+"svTrial","survey","14","307995","0.0-2.0-12.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","14886","Akita_large_pos_8_3.jpg","{""P0_Q0"":null,""ambiguous"":2,""objects"":2,""invisible"":2,""chaos"":1,""complex"":1}","","","","","","","","","","","","","","","","","[]","middle","2","pos","8"
+"attention-check","survey","15","313814","0.0-2.0-13.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","5789","","{""P0_Q0"":null,""ambiguous"":null,""objects"":null,""invisible"":null,""chaos"":null,""complex"":null}","","","","","","","","","","","","","","","","","[]","","","",""
+"svTrial","survey","16","334087","0.0-2.0-14.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","20245","Tokyo_large_pos_5_3.jpg","{""P0_Q0"":null,""ambiguous"":2,""objects"":1,""invisible"":1,""chaos"":1,""complex"":1}","","","","","","","","","","","","","","","","","[]","middle","1","pos","5"
+"svTrial","survey","17","344621","0.0-2.0-15.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","10499","Toyama_middle_pos_4_2.jpg","{""P0_Q0"":null,""ambiguous"":1,""objects"":1,""invisible"":1,""chaos"":1,""complex"":1}","","","","","","","","","","","","","","","","","[]","large","2","sch","4"
+"svTrial","survey","18","365699","0.0-2.0-16.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","21051","Hokkaido_large_sch_6_3.jpg","{""P0_Q0"":null,""ambiguous"":3,""objects"":4,""invisible"":3,""chaos"":3,""complex"":2}","","","","","","","","","","","","","","","","","[]","small","1","pos","6"
+"svTrial","survey","19","379874","0.0-2.0-17.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","14145","Toyama_middle_pos_2_3.jpg","{""P0_Q0"":null,""ambiguous"":4,""objects"":2,""invisible"":3,""chaos"":4,""complex"":2}","","","","","","","","","","","","","","","","","[]","middle","2","pos","2"
+"svTrial","survey","20","394162","0.0-2.0-18.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","14262","Ishikawa_large_sch_5_2.jpg","{""P0_Q0"":null,""ambiguous"":2,""objects"":2,""invisible"":2,""chaos"":1,""complex"":2}","","","","","","","","","","","","","","","","","[]","large","2","sch","5"
+"svTrial","survey","21","407022","0.0-2.0-19.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","12832","Ishikawa_large_sch_1_1.jpg","{""P0_Q0"":null,""ambiguous"":1,""objects"":1,""invisible"":1,""chaos"":1,""complex"":1}","","","","","","","","","","","","","","","","","[]","middle","2","sch","1"
+"svTrial","survey","22","424812","0.0-2.0-20.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","17761","Hokkaido_middle_sch_5_3.jpg","{""P0_Q0"":null,""ambiguous"":4,""objects"":4,""invisible"":3,""chaos"":4,""complex"":3}","","","","","","","","","","","","","","","","","[]","small","1","pos","5"
+"svTrial","survey","23","438197","0.0-2.0-21.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","13359","Kanagawa_large_sch_3_3.jpg","{""P0_Q0"":null,""ambiguous"":4,""objects"":3,""invisible"":4,""chaos"":5,""complex"":3}","","","","","","","","","","","","","","","","","[]","small","1","pos","3"
+"svTrial","survey","24","456242","0.0-2.0-22.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","18019","Hokkaido_large_pos_12_3.jpg","{""P0_Q0"":null,""ambiguous"":1,""objects"":2,""invisible"":1,""chaos"":2,""complex"":1}","","","","","","","","","","","","","","","","","[]","middle","1","sch","12"
+"svTrial","survey","25","469139","0.0-2.0-23.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","12873","Niigata_large_sch_4_2.jpg","{""P0_Q0"":null,""ambiguous"":2,""objects"":2,""invisible"":2,""chaos"":3,""complex"":2}","","","","","","","","","","","","","","","","","[]","small","2","sch","4"
+"svTrial","survey","26","480554","0.0-2.0-24.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","11391","Toyama_large_pos_3_0.jpg","{""P0_Q0"":null,""ambiguous"":2,""objects"":1,""invisible"":1,""chaos"":1,""complex"":1}","","","","","","","","","","","","","","","","","[]","middle","2","pos","3"
+"svTrial","survey","27","498857","0.0-2.0-25.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","18276","Hokkaido_small_sch_4_1.jpg","{""P0_Q0"":null,""ambiguous"":3,""objects"":3,""invisible"":3,""chaos"":2,""complex"":3}","","","","","","","","","","","","","","","","","[]","small","1","pos","4"
+"svTrial","survey","28","512807","0.0-2.0-26.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","13922","Kanagawa_large_sch_4_3.jpg","{""P0_Q0"":null,""ambiguous"":3,""objects"":2,""invisible"":2,""chaos"":1,""complex"":2}","","","","","","","","","","","","","","","","","[]","middle","1","sch","4"
+"svTrial","survey","29","526474","0.0-2.0-27.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","13641","Kanagawa_large_sch_6_1.jpg","{""P0_Q0"":null,""ambiguous"":4,""objects"":3,""invisible"":3,""chaos"":2,""complex"":2}","","","","","","","","","","","","","","","","","[]","middle","1","pos","6"
+"svTrial","survey","30","536506","0.0-2.0-28.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","10003","Akita_large_pos_6_1.jpg","{""P0_Q0"":null,""ambiguous"":1,""objects"":1,""invisible"":1,""chaos"":1,""complex"":1}","","","","","","","","","","","","","","","","","[]","large","2","sch","6"
+"svTrial","survey","31","550328","0.0-2.0-29.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","13798","Okinawa_middle_sch_2_3.jpg","{""P0_Q0"":null,""ambiguous"":3,""objects"":3,""invisible"":2,""chaos"":4,""complex"":3}","","","","","","","","","","","","","","","","","[]","small","1","sch","2"
+"svTrial","survey","32","571635","0.0-2.0-30.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","21284","Akita_middle_sch_2_0.jpg","{""P0_Q0"":null,""ambiguous"":2,""objects"":1,""invisible"":1,""chaos"":1,""complex"":2}","","","","","","","","","","","","","","","","","[]","middle","2","sch","2"
+"half-way","html-button-response","33","587398","0.0-2.0-31.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","null","
+<h3>You are now half way through the study.</h3>
+<p>Please take a quick, 15-second break before you continue.</p>
+<img src='assets/img/countdown-15.gif'>
+<p>The study will automatically advance forward after the countdown is complete. However, you may click ""Next"" to advance forward now if you wish.</p>
+","null","","","","","","","","","","","","","","","","","","","","",""
+"svTrial","survey","34","601789","0.0-2.0-32.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","14313","Toyama_middle_pos_5_0.jpg","{""P0_Q0"":null,""ambiguous"":4,""objects"":3,""invisible"":2,""chaos"":4,""complex"":2}","","","","","","","","","","","","","","","","","[]","large","2","sch","5"
+"svTrial","survey","35","621970","0.0-2.0-33.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","20157","Hokkaido_middle_sch_3_0.jpg","{""P0_Q0"":null,""ambiguous"":4,""objects"":3,""invisible"":2,""chaos"":3,""complex"":2}","","","","","","","","","","","","","","","","","[]","middle","1","sch","3"
+"svTrial","survey","36","633878","0.0-2.0-34.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","11884","Kanagawa_large_pos_5_0.jpg","{""P0_Q0"":null,""ambiguous"":5,""objects"":5,""invisible"":3,""chaos"":5,""complex"":4}","","","","","","","","","","","","","","","","","[]","small","1","sch","5"
+"svTrial","survey","37","655370","0.0-2.0-35.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","21465","Kanagawa_small_pos_3_1.jpg","{""P0_Q0"":null,""ambiguous"":4,""objects"":3,""invisible"":3,""chaos"":4,""complex"":3}","","","","","","","","","","","","","","","","","[]","large","1","sch","3"
+"svTrial","survey","38","697232","0.0-2.0-36.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","41839","Niigata_middle_sch_5_2.jpg","{""P0_Q0"":null,""ambiguous"":4,""objects"":2,""invisible"":2,""chaos"":3,""complex"":2}","","","","","","","","","","","","","","","","","[]","small","2","pos","5"
+"svTrial","survey","39","710592","0.0-2.0-37.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","13331","Okinawa_small_pos_2_1.jpg","{""P0_Q0"":null,""ambiguous"":3,""objects"":1,""invisible"":2,""chaos"":2,""complex"":1}","","","","","","","","","","","","","","","","","[]","large","1","pos","2"
+"svTrial","survey","40","737503","0.0-2.0-38.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","26878","Akita_middle_sch_7_1.jpg","{""P0_Q0"":null,""ambiguous"":1,""objects"":1,""invisible"":1,""chaos"":1,""complex"":1}","","","","","","","","","","","","","","","","","[]","large","2","sch","7"
+"svTrial","survey","41","758598","0.0-2.0-39.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","21067","Niigata_large_sch_8_0.jpg","{""P0_Q0"":null,""ambiguous"":2,""objects"":1,""invisible"":2,""chaos"":1,""complex"":1}","","","","","","","","","","","","","","","","","[]","middle","2","sch","8"
+"svTrial","survey","42","778374","0.0-2.0-40.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","19749","Akita_large_sch_3_2.jpg","{""P0_Q0"":null,""ambiguous"":4,""objects"":4,""invisible"":3,""chaos"":5,""complex"":3}","","","","","","","","","","","","","","","","","[]","small","2","sch","3"
+"svTrial","survey","43","799440","0.0-2.0-41.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","21037","Tokyo_small_sch_3_3.jpg","{""P0_Q0"":null,""ambiguous"":3,""objects"":2,""invisible"":4,""chaos"":2,""complex"":4}","","","","","","","","","","","","","","","","","[]","small","1","sch","3"
+"svTrial","survey","44","903579","0.0-2.0-42.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","104115","Okinawa_large_pos_4_0.jpg","{""P0_Q0"":null,""ambiguous"":2,""objects"":3,""invisible"":2,""chaos"":2,""complex"":2}","","","","","","","","","","","","","","","","","[]","large","1","sch","4"
+"svTrial","survey","45","1051543","0.0-2.0-43.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","147938","Niigata_middle_pos_8_1.jpg","{""P0_Q0"":null,""ambiguous"":1,""objects"":3,""invisible"":1,""chaos"":3,""complex"":4}","","","","","","","","","","","","","","","","","[]","middle","2","pos","8"
+"svTrial","survey","46","1109159","0.0-2.0-44.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","57589","Niigata_large_pos_8_2.jpg","{""P0_Q0"":null,""ambiguous"":2,""objects"":3,""invisible"":1,""chaos"":2,""complex"":3}","","","","","","","","","","","","","","","","","[]","middle","2","pos","8"
+"svTrial","survey","47","1212993","0.0-2.0-45.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","103808","Kanagawa_middle_sch_3_3.jpg","{""P0_Q0"":null,""ambiguous"":5,""objects"":5,""invisible"":4,""chaos"":5,""complex"":5}","","","","","","","","","","","","","","","","","[]","large","1","sch","3"
+"svTrial","survey","48","1234730","0.0-2.0-46.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","21711","Toyama_large_sch_5_0.jpg","{""P0_Q0"":null,""ambiguous"":2,""objects"":4,""invisible"":2,""chaos"":2,""complex"":2}","","","","","","","","","","","","","","","","","[]","large","2","sch","5"
+"svTrial","survey","49","1259497","0.0-2.0-47.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","24741","Toyama_small_sch_2_3.jpg","{""P0_Q0"":null,""ambiguous"":2,""objects"":3,""invisible"":2,""chaos"":3,""complex"":3}","","","","","","","","","","","","","","","","","[]","large","2","pos","2"
+"svTrial","survey","50","1273572","0.0-2.0-48.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","14048","Kanagawa_large_sch_7_2.jpg","{""P0_Q0"":null,""ambiguous"":5,""objects"":4,""invisible"":4,""chaos"":3,""complex"":2}","","","","","","","","","","","","","","","","","[]","middle","1","pos","7"
+"svTrial","survey","51","1298317","0.0-2.0-49.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","24705","Toyama_small_sch_4_3.jpg","{""P0_Q0"":null,""ambiguous"":2,""objects"":2,""invisible"":1,""chaos"":1,""complex"":1}","","","","","","","","","","","","","","","","","[]","middle","2","sch","4"
+"svTrial","survey","52","1315880","0.0-2.0-50.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","17535","Toyama_middle_pos_7_3.jpg","{""P0_Q0"":null,""ambiguous"":4,""objects"":3,""invisible"":2,""chaos"":3,""complex"":3}","","","","","","","","","","","","","","","","","[]","large","2","sch","7"
+"svTrial","survey","53","1375413","0.0-2.0-51.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","59507","Toyama_small_pos_4_2.jpg","{""P0_Q0"":null,""ambiguous"":3,""objects"":4,""invisible"":3,""chaos"":4,""complex"":3}","","","","","","","","","","","","","","","","","[]","small","2","sch","4"
+"svTrial","survey","54","1397832","0.0-2.0-52.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","22389","Okinawa_large_sch_1_0.jpg","{""P0_Q0"":null,""ambiguous"":3,""objects"":3,""invisible"":2,""chaos"":3,""complex"":2}","","","","","","","","","","","","","","","","","[]","middle","1","pos","1"
+"svTrial","survey","55","1418541","0.0-2.0-53.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","20685","Okinawa_large_sch_8_2.jpg","{""P0_Q0"":null,""ambiguous"":4,""objects"":3,""invisible"":4,""chaos"":2,""complex"":2}","","","","","","","","","","","","","","","","","[]","middle","1","sch","8"
+"svTrial","survey","56","1435818","0.0-2.0-54.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","17251","Okinawa_large_sch_3_2.jpg","{""P0_Q0"":null,""ambiguous"":2,""objects"":3,""invisible"":2,""chaos"":2,""complex"":1}","","","","","","","","","","","","","","","","","[]","large","1","pos","3"
+"svTrial","survey","57","1453518","0.0-2.0-55.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","17675","Tokyo_middle_sch_8_0.jpg","{""P0_Q0"":null,""ambiguous"":3,""objects"":4,""invisible"":2,""chaos"":4,""complex"":3}","","","","","","","","","","","","","","","","","[]","small","1","sch","8"
+"demographics","survey-html-form","58","1466501","0.0-2.0-56.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","12974","","{""zipcode"":""02910"",""age"":""32"",""sex"":""female"",""gender"":""woman"",""gender-self-describe"":"""",""ethnicity"":""caucasian"",""ethnicity-self-describe"":""""}","","","","","","","","","","","","","","","","","","","","",""
+"demographics","survey","59","1473096","0.0-2.0-57.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","6564","","{""P0_Q0"":null,""outsideUS"":""No"",""outsideUS_years"":""""}","","","","","","","","","","","","","","","","","[]","","","",""
+"end-survey","survey-text","60","1476951","0.0-2.0-58.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","3837","","{""Q0"":""""}","","","","","","","","","","","","","","","","","","","","",""
+"end-survey","html-button-response","61","1489347","0.0-4.0","5ffff3ac6fc9001772ea3312","65553732575bb29198a888d7","655658abd643c3a98feb10cc","2","12379","[""You've reached the end of the survey. <br><br> \n<b>Do not close or refresh this window.</b><br>\nIn the next page, you will see a pop-up like below after a few moment.<br><br>\n<img src='assets/img/chrome.PNG'> <br><br>\nPress the <b>'Leave'</b> button to exit from the experiment without losing your record.<br>\nYou will be automatically redirected to PROLIFIC once you click the <b>'Leave'</b> button. <br><br>""]","0","","","","","","","","","","","","","","","","","","","","",""
