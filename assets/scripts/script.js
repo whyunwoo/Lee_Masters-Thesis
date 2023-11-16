@@ -126,9 +126,9 @@ const html_intro3 = `
     <div class="text-container text-left">
         <p>Please make sure you are doing this study in an area where you can focus and complete the survey in one sitting.</p>
 
-        <p>Don’t spend too much time on any one picture, and, again go with your gut impression!</p>
+        <p>Don’t spend too much time on any one picture- go with your gut impression!</p>
         
-        <p>The study should take about 30 minutes. We’ll let you know when you’re halfway through.</p>
+        <p>The study should take about 20 minutes. We’ll let you know when you’re halfway through.</p>
     </div>
         
     <h3>Ready? Click next to get started!</h3>
