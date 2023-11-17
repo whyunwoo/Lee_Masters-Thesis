@@ -1,0 +1,115 @@
+---
+title: "Data_Munging_Lee"
+output: html_document
+---
+
+
+```{r setup}
+library(tidyverse)
+library(tidyjson)
+library(dplyr)
+library(stringr)
+library(jsonlite)
+library(here)
+
+
+myPath=dirname(rstudioapi::getActiveDocumentContext()$path)
+
+```
+
+#Process data function: takes in a raw .csv file, processes it, and if write flag is enabled, writes clean .csv to subfolder
+```{r munging}
+processData=function(rawData,write=TRUE){
+#Clean RC trials: make Response variable, make Trial variable; get both RC attention checks
+
+  attnData=rawData%>%
+  dplyr::filter(str_detect(task,"attention-check"))%>%
+  mutate(spread_all(response))%>%
+  rowwise()%>%
+  mutate(totalNA=sum(c(!is.na(ambiguous),!is.na(objects),!is.na(invisible),!is.na(chaos),!is.na(complex))))%>%
+  mutate(passedCheck=(totalNA==0))%>%
+  group_by(subject_id)%>%
+  summarise(passedChecks=sum(passedCheck))
+  
+  trialData <- rawData%>%
+    dplyr::filter(str_detect(task,"svTrial"))%>%
+    mutate(spread_all(response))%>%select(-response,-..JSON)
+
+dataDemog1 <- rawData%>%
+  dplyr::filter(task=="demographics")%>%
+  dplyr::filter(trial_type=="survey-html-form")%>%
+  mutate(spread_all(response))%>%
+  select(subject_id,zipcode:"ethnicity-self-describe")
+
+dataDemog2 <- rawData%>%
+  dplyr::filter(task=="demographics")%>%
+  dplyr::filter(trial_type=="survey")%>%
+  mutate(spread_all(response))%>%
+  select(subject_id,outsideUS:outsideUS_years)
+
+dataDemogComments <- rawData%>%
+  dplyr::filter(trial_type=="survey-text")%>%
+  mutate(spread_all(response))%>%
+  mutate(surveyComments=Q0)%>%
+  select(subject_id,surveyComments)
+
+demog <-left_join(dataDemog1,dataDemog2,by="subject_id")%>%
+  left_join(dataDemogComments,by="subject_id")
+
+trials <-left_join(trialData,attnData,by="subject_id")%>%
+  select(-P0_Q0)%>%
+  mutate(rt=as.character(rt))
+
+dataCombo <- merge(trials, demog, by = "subject_id")
+
+if(write==TRUE){
+  print(dataCombo$subject_id)
+  write.csv(dataCombo,
+    paste(myPath,"/cleaned/",
+    dataCombo$subject_id[1],
+    "_cleaned.csv",
+    sep="")
+    )
+}
+
+return(dataCombo)
+
+}
+```
+
+#Map dataprocess function to multiple files in order to clean them and create single concatenated dataframe
+```{r}
+#list all files in directory that begin with rc-neighborhood and end with .csv
+#note that the path might need to change depending on where we save data
+files_df <-
+    tibble(
+        path = 
+            list.files(
+                path = myPath,
+                full.names = TRUE,
+                pattern = "perceptual-affordance.*.csv"
+            )
+    )
+
+#Now we take in all files, read the .csv, and apply the processing function. This gives us a single merged dataset
+dat_df <- 
+  files_df %>%
+  mutate(
+    data = map(
+      path, ~ read_csv(.)
+  )) 
+
+dat_df=dat_df%>%
+  mutate(
+    cleaned_data=map(
+      data,~processData(.,write=TRUE)
+    )
+  )%>%
+  dplyr::select(-data)%>%
+  unnest(cleaned_data)
+
+#Write merged dataset
+write.csv(dat_df,paste(myPath,"merged_WL_Thesis.csv",sep="/"))
+```
+
+
