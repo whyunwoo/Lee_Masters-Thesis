@@ -1,3 +1,3 @@
-# perceptual-affordance-with Original Stimuli
+# perceptual-affordance-sister-city-families
 
-- This experiment has same structure as the study 1A and 1B but we replaced the stimuli with the original stimuli from the original paper.
+- Notion: [Miyamoto Replication-3 (Sister cities of US-JP, and more… William’s Thesis)](https://www.notion.so/mindinsocietylab/Miyamoto-Replication-3-Sister-cities-of-US-JP-and-more-William-s-Thesis-11ab0f4e67138085b839f59ed8232ad0?pvs=4)
