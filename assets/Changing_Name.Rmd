@@ -1,0 +1,123 @@
+---
+title: "Changing File Names"
+author: "William Lee"
+output: html_document
+date: "2024-12-13"
+---
+
+```{r setup, include=FALSE}
+#code chunk to put in default settings, like whether other code chunks run/show messages
+knitr::opts_chunk$set(echo = TRUE, 
+                      messages = FALSE)
+
+# Set so that long lines in R will be wrapped:
+knitr::opts_chunk$set(tidy.opts=list(width.cutoff=80), tidy=TRUE)
+#note may need to install and load package "formatR" for this to run. 
+
+options (width = 80)
+```
+
+# Set Working Directory
+```{r, include = FALSE}
+setwd("/Users/whyunwoo/R/MiSL/Independence-Interdependence") # TODO: Change the working directory
+```
+
+```{r}
+# install packages
+# install.packages("tidyverse")
+
+# Load necessary libraries
+library(readr)
+library(fs)
+library(dplyr)
+library(stringr)
+library(stringi)
+```
+
+```{r}
+# Path to the CSV file
+csv_path <- "/Users/whyunwoo/R/MiSL/Independence-Interdependence/assets.csv"
+
+# Load the CSV file
+assets <- read_csv(csv_path)
+
+# Ensure the `city` and `city_id` columns exist
+city_column <- "city"  # Column for city names
+city_id_column <- "city_number"  # Column for city numeric IDs
+
+if (!all(c(city_column, city_id_column) %in% colnames(assets))) {
+  stop("The specified columns do not exist in the CSV file.")
+}
+
+# Unzip the stim.zip file
+unzip("stim.zip", exdir = "stim_extracted")
+
+# Check if the expected structure exists
+stim_path <- "stim_extracted/stim"
+if (!dir_exists(stim_path)) {
+  stop("The 'stim' folder does not exist in the extracted content. Check the folder structure.")
+}
+
+# Normalize text by removing accents and converting to lowercase
+normalize_text <- function(x) {
+  stri_trans_general(x, "Latin-ASCII") %>%
+    str_to_lower() %>%
+    str_trim()
+}
+
+# Normalize city names in the mapping
+city_mapping <- assets %>%
+  distinct(!!sym(city_column), !!sym(city_id_column)) %>%
+  mutate(city_name_normalized = normalize_text(!!sym(city_column))) %>%
+  rename(city_name = !!sym(city_column), city_id = !!sym(city_id_column))
+
+# List all numbered folders in 'stim'
+folders <- dir_ls(stim_path, type = "directory")
+
+# Process each numbered folder
+for (folder in folders) {
+  # Get subfolders (city folders)
+  city_folders <- dir_ls(folder, type = "directory")
+
+  for (city_folder in city_folders) {
+    # Extract the city name from the folder name
+    original_name <- basename(city_folder)
+    city_name_extracted <- normalize_text(str_extract(original_name, "^[^,]+"))  # Extract text before the first comma
+
+    # Find the corresponding city_id for the city
+    city_id <- city_mapping %>%
+      filter(city_name_normalized == city_name_extracted) %>%
+      pull(city_id)
+
+    if (length(city_id) == 1) {
+      # Rename the folder to its city_id
+      new_path <- path(folder, city_id)
+      file_move(city_folder, new_path)
+
+      # Rename images inside the folder
+      images <- dir_ls(new_path, regexp = "\\.jpg$")
+      for (image in images) {
+        # Normalize the image file name
+        normalized_image_name <- normalize_text(basename(image))
+        new_image_name <- str_extract(normalized_image_name, "\\d+_\\d+\\.jpg")
+        if (!is.na(new_image_name)) {
+          new_image_path <- path(new_path, new_image_name)
+          file_move(image, new_image_path)
+        } else {
+          warning(paste("Could not normalize image name for:", image))
+        }
+      }
+    } else {
+      warning(paste("No matching city found for:", original_name))
+    }
+  }
+}
+
+# Optional: Recompress the folder back to a zip file
+zip::zip("stim_updated.zip", "stim_extracted")
+
+# Clean up
+unlink("stim_extracted", recursive = TRUE)
+```
+
+
