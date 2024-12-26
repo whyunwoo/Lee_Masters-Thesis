@@ -6,11 +6,11 @@
     <meta charset="UTF-8">
 
     <!--Javascript Files-->
-    <script src="https://unpkg.com/jspsych@7.3.3"></script>
+    <script src="https://unpkg.com/jspsych@7.3.3"></script> 
     <script src="assets/scripts/groups.js"></script>
     <script src="assets/scripts/script.js"></script>
 
-    <script src="lib/jspsych-7-pavlovia-2022.1.1.js"></script>
+    <!-- <script src="lib/jspsych-7-pavlovia-2022.1.1.js"></script> -->
     <!--jsPsych Plugins-->
     <script src="https://unpkg.com/@jspsych/plugin-browser-check@1.0.1"></script>
     <script src="https://unpkg.com/@jspsych/plugin-preload@1.1.1"></script>
@@ -51,15 +51,14 @@
         study_id: study_id,
         session_id: session_id
     });
-    // create pavlovia participant ID
-    var pavlovia_id = 'c-' + group + '_p-' + subject_id + '_s-' + session_id;
+    // create pavlovia participant ID --> when need to open this on chorme comment out all the chuncks with pavlovia
+    // var pavlovia_id = 'c-' + group + '_p-' + subject_id + '_s-' + session_id;
    
-    
     /* VARIABLES */
     // group assignment
-    var group = jsPsych.randomization.randomInt(1, 8);
+    var group = jsPsych.randomization.randomInt(1, 2);   // 2 groups
     console.log(group);
-    var init_svList = groups[group];
+    var init_svList = groups[group];        // TODO
     console.log(svList);
     var svList = jsPsych.randomization.shuffleNoRepeats(init_svList);
     // add global data variables
@@ -67,14 +66,14 @@
 
     
 
-    /* init connection with pavlovia.org */
-    var pavlovia_init = {
-        type: jsPsychPavlovia,
-        data: {
-            task: 'pavlovia-init'
-        },
-        command: "init"
-    };
+    // /* init connection with pavlovia.org */
+    // var pavlovia_init = {
+    //     type: jsPsychPavlovia,
+    //     data: {
+    //         task: 'pavlovia-init'
+    //     },
+    //     command: "init"
+    // };
 
     // browser check
     var browserCheck = {
@@ -109,15 +108,14 @@
         message: `Please wait while the experiment loads. This should not take longer than a minute.`
     }
     var preload2 = {
-        type: jsPsychPreload,
-        auto_preload: true,
-        images: [svList.map(svList => 'assets/img/stim/' + svList.name + "_0" + '.jpg'),
-        svList.map(svList => 'assets/img/stim/' + svList.name + "_1"  + '.jpg'),
-        svList.map(svList => 'assets/img/stim/' + svList.name + "_2"  + '.jpg'),
-        svList.map(svList => 'assets/img/stim/' + svList.name + "_3"  + '.jpg')],
-        message: `Please wait a moment while the experiment loads.`
+            type: jsPsychPreload,
+            auto_preload: true,
+            images: Object.values(init_svList).flatMap(block => {
+                return Object.values(block).flatMap(countryImages => countryImages);
+            }),
+            message: `Please wait while additional stimuli load.`
     }
-   
+
     ////////* EXPERIMENT */////////
     var intro1 = {
         type: jsPsychHtmlButtonResponse,
@@ -146,129 +144,127 @@
         choices: ['Next'],
         stimulus: html_intro3
     };
-
-    // function to generate new trial with location info
-    function getSVImg(svList) {
-        var trialList = [];
-        for (var i = 0; i < 48; i++){ 
-        var direction = jsPsych.randomization.randomInt(0, 3);
-        var path = svList[i].name + "_" + direction + ".jpg"; 
-        var imgTag = `
-            <img src="assets/img/stim/${path}" width= 500px, height =auto>`
-            var trialNew = {
-                type: jsPsychSurvey,
-                data: {
-                        task: 'svTrial', 
-                        stimulus: path,
-                        size: svList[i].size,
-                        culture: svList[i].culture,
-                        loct: svList[i].location_type,
-                        number: svList[i].number,
-                    },
-                pages: [[
-                    {
-                        type: 'html',
-                        prompt: `
-                            <style>
-                                .sv_q.sv_qstn {
+  
+    // Function to generate new trial with location info
+function getSVImg(svList) {
+    var trialList = [];
+    svList.forEach((path, i) => {
+        var imgTag = `<img src="${path}" width=500px height=auto>`;
+        var trialNew = {
+            type: jsPsychSurvey,
+            data: {
+                task: 'svTrial',
+                stimulus: path
+            },
+            pages: [[
+                {
+                    type: 'html',
+                    prompt: `
+                        <style>
+                            .sv_q.sv_qstn {
                                 align-items: center;
                                 justify-content: center;
                                 text-align: center;
-                                }
-                                .sv_body {
+                            }
+                            .sv_body {
                                 color: #000000;
                                 font-size: 95%;
-                                }
-                                .sv_main .sv_container .sv_body .sv_p_root .sv_q_title {
+                            }
+                            .sv_main .sv_container .sv_body .sv_p_root .sv_q_title {
                                 font-weight: bold;
-                                }
-                                .sv_q_rating_min_text {
+                            }
+                            .sv_q_rating_min_text {
                                 min-width: 150px;
-                                }
-                            </style>
-                            <p> Trial ${i+1} / 48 </p>
-                            <p>Take a look at the following landscape</p>
-                            ${imgTag}
-                            <h3>In this image, ...</h3>
-                        `,
-                    }, {
-                        type: 'likert',
-                        prompt: "how ambiguous is the boundary of each object?",
-                        name: 'ambiguous',
-                        likert_scale_min_label: 'Distinct, Clear',
-                        likert_scale_max_label: 'Ambiguous, Unclear',
-                        likert_scale_values: [
-                            { value: 1 },
-                            { value: 2 },
-                            { value: 3 },
-                            { value: 4 },
-                            { value: 5 }
-                        ],
-                        required: false
-                    }, {
-                        type: 'likert',
-                        prompt: "how many different objects do there seem to be?",
-                        name: 'objects',
-                        likert_scale_min_label: 'Relatively few',
-                        likert_scale_max_label: 'Enormous number',
-                        likert_scale_values: [
-                            { value: 1 },
-                            { value: 2 },
-                            { value: 3 },
-                            { value: 4 },
-                            { value: 5 }
-                        ],
-                        required: false
-                    }, {
-                        type: 'likert',
-                        prompt: "to what degree do there seem to be parts of the scene that are invisible?",
-                        name: 'invisible',
-                        likert_scale_min_label: 'Few invisible parts',
-                        likert_scale_max_label: 'Many invisible parts',
-                        likert_scale_values: [
-                            { value: 1 },
-                            { value: 2 },
-                            { value: 3 },
-                            { value: 4 },
-                            { value: 5 }
-                        ],
-                        required: false
-                    }, {
-                        type: 'likert',
-                        prompt: "to what degree is the scene either organized or chaotic?",
-                        name: 'chaos',
-                        likert_scale_min_label: 'Organized',
-                        likert_scale_max_label: 'Chaotic',
-                        likert_scale_values: [
-                            { value: 1 },
-                            { value: 2 },
-                            { value: 3 },
-                            { value: 4 },
-                            { value: 5 }
-                        ],
-                        required: false
-                    },{
-                        type: 'likert',
-                        prompt: "how complex is this image?",
-                        name: 'complex',
-                        likert_scale_min_label: 'Simple',
-                        likert_scale_max_label: 'Complex',
-                        likert_scale_values: [
-                            { value: 1 },
-                            { value: 2 },
-                            { value: 3 },
-                            { value: 4 },
-                            { value: 5 }
-                        ],
-                        required: false
-                    }
-                ]],
-                button_label_finish: 'Continue'
-            };
-            trialList.push(trialNew);
-        }
-            return trialList;
-    };
+                            }
+                        </style>
+                        <p> Trial ${i + 1} / 48 </p>
+                        <p>Take a look at the following landscape</p>
+                        ${imgTag}
+                        <h3>In this image, ...</h3>
+                    `,
+                },
+                {
+                    type: 'likert',
+                    prompt: "how ambiguous is the boundary of each object?",
+                    name: 'ambiguous',
+                    likert_scale_min_label: 'Distinct, Clear',
+                    likert_scale_max_label: 'Ambiguous, Unclear',
+                    likert_scale_values: [
+                        { value: 1 },
+                        { value: 2 },
+                        { value: 3 },
+                        { value: 4 },
+                        { value: 5 }
+                    ],
+                    required: false
+                },
+                {
+                    type: 'likert',
+                    prompt: "how many different objects do there seem to be?",
+                    name: 'objects',
+                    likert_scale_min_label: 'Relatively few',
+                    likert_scale_max_label: 'Enormous number',
+                    likert_scale_values: [
+                        { value: 1 },
+                        { value: 2 },
+                        { value: 3 },
+                        { value: 4 },
+                        { value: 5 }
+                    ],
+                    required: false
+                },
+                {
+                    type: 'likert',
+                    prompt: "to what degree do there seem to be parts of the scene that are invisible?",
+                    name: 'invisible',
+                    likert_scale_min_label: 'Few invisible parts',
+                    likert_scale_max_label: 'Many invisible parts',
+                    likert_scale_values: [
+                        { value: 1 },
+                        { value: 2 },
+                        { value: 3 },
+                        { value: 4 },
+                        { value: 5 }
+                    ],
+                    required: false
+                },
+                {
+                    type: 'likert',
+                    prompt: "to what degree is the scene either organized or chaotic?",
+                    name: 'chaos',
+                    likert_scale_min_label: 'Organized',
+                    likert_scale_max_label: 'Chaotic',
+                    likert_scale_values: [
+                        { value: 1 },
+                        { value: 2 },
+                        { value: 3 },
+                        { value: 4 },
+                        { value: 5 }
+                    ],
+                    required: false
+                },
+                {
+                    type: 'likert',
+                    prompt: "how complex is this image?",
+                    name: 'complex',
+                    likert_scale_min_label: 'Simple',
+                    likert_scale_max_label: 'Complex',
+                    likert_scale_values: [
+                        { value: 1 },
+                        { value: 2 },
+                        { value: 3 },
+                        { value: 4 },
+                        { value: 5 }
+                    ],
+                    required: false
+                }
+            ]],
+            button_label_finish: 'Continue'
+        };
+        trialList.push(trialNew);
+    });
+    return trialList; 
+};
 
     var half_way = {
         type: jsPsychHtmlButtonResponse,
@@ -468,15 +464,15 @@
         choices: []
     };
 
-    /* finish connection with pavlovia.org */
-    var pavlovia_finish = {
-        type: jsPsychPavlovia,
-        data: {
-            task: 'pavlovia-finish'
-        },
-        command: "finish",
-        participantId: pavlovia_id
-    };
+    // /* finish connection with pavlovia.org */
+    // var pavlovia_finish = {
+    //     type: jsPsychPavlovia,
+    //     data: {
+    //         task: 'pavlovia-finish'
+    //     },
+    //     command: "finish",
+    //     participantId: pavlovia_id
+    // };
 
     ////////* EXECUTING TIMELINE *////////
     var main_timeline = [];
@@ -522,13 +518,13 @@
         }
     };
 
-    timeline.push(pavlovia_init);
+    //timeline.push(pavlovia_init);
     timeline.push(consentForm);
     timeline.push(consent_condition);
     timeline.push(no_consent_condition);
 
     timeline.push(endRedirect);
-    timeline.push(pavlovia_finish);
+    //timeline.push(pavlovia_finish);
 
     /* start the experiment */
     jsPsych.run(timeline);
@@ -536,3 +532,4 @@
 </script>
 
 </html>
+    
