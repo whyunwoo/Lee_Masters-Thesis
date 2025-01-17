@@ -1,42 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>A Study on Street View Images</title>
+    <title>Perceptions of Spaces</title>
     <meta charset="UTF-8">
 
-    <!--Javascript Files-->
-    <script src="https://unpkg.com/jspsych@7.3.3"></script> 
+    <!---- STYLESHEETS ---->
+    <link rel="stylesheet" href="assets/css/jspsych.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-alart.css">
+    <link rel="stylesheet" href="assets/css/jsPsych-padding.css">
+    <link rel="stylesheet" href="assets/css/jsPsych-text-edits.css">
+    <link rel="stylesheet" href="assets/css/center.css">
+    <link rel="stylesheet" href="https://unpkg.com/@jspsych/plugin-survey@0.2.2/css/survey.css">
+    <link rel="stylesheet" href="assets/css/MiSL.css">
+
+    <!---- SCRIPTS ---->
+    <script src="https://unpkg.com/jspsych@7.2.3"></script>
+    <script src="lib/jspsych-7-pavlovia-2022.1.1.js"></script>
+
     <script src="assets/scripts/groups.js"></script>
+    <script src="assets/scripts/firebase.js"></script>
+    <script src="assets/scripts/jquery-3.6.0.min.js"></script>
     <script src="assets/scripts/script.js"></script>
 
-    <!-- <script src="lib/jspsych-7-pavlovia-2022.1.1.js"></script> -->
-    <!--jsPsych Plugins-->
+    <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.1/underscore-umd-min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- PLUGINS -->
     <script src="https://unpkg.com/@jspsych/plugin-browser-check@1.0.1"></script>
     <script src="https://unpkg.com/@jspsych/plugin-preload@1.1.1"></script>
     <script src="https://unpkg.com/@jspsych/plugin-html-button-response@1.1.1"></script>
-    <script src="https://unpkg.com/@jspsych/plugin-survey@0.2.0"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-html-keyboard-response@1.1.3"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-image-button-response@1.1.1"></script>
     <script src="https://unpkg.com/@jspsych/plugin-survey-text@1.1.1"></script>
-    <script src="https://unpkg.com/@jspsych/plugin-survey-html-form"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-survey-html-form@1.0.1"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-survey@0.2.2"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-survey-multi-choice@1.0.0"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-survey-likert@1.1.3"></script>
+    <script src="assets/scripts/plugin-html-slider-response.js"></script>
+    <script src="assets/scripts/jspsych-html-mouse-response.js"></script>
 
-    <!--CSS Files-->
-    <link href="https://unpkg.com/jspsych@7.2.3/css/jspsych.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="assets/css/bootstrap-alart.css">
-    <link rel="stylesheet" href="https://unpkg.com/@jspsych/plugin-survey@0.1.1/css/survey.css">
-    <link rel="stylesheet" href="assets/css/jsPsych-padding.css">
-    <link rel="stylesheet" href="assets/css/jsPsych-text-edits.css">
+    <script src="https://unpkg.com/jspsych@7.3.4"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body></body>
 
 <script>
-    ////////* STUDY SETUP */////////
-    // jsPsych
+    
+    // Initialize jsPsych
     var jsPsych = initJsPsych({
         use_webaudio: false,
-        on_finish: function(data){
-            window.location.assign("https://app.prolific.com/submissions/complete?cc=C1IYJVLI")
-        },
+        on_finish: function(data) {
+            window.location.assign("https://app.prolific.com/submissions/complete?cc=C1IYJVLI");
+        }
     });
 
     var timeline = [];
@@ -53,20 +70,63 @@
     });
     // create pavlovia participant ID --> when need to open this on chorme comment out all the chuncks with pavlovia
     // var pavlovia_id = 'c-' + group + '_p-' + subject_id + '_s-' + session_id;
-   
-    /* VARIABLES */
-    // group assignment
-    var group = jsPsych.randomization.randomInt(1, 2);   // 2 groups
-    console.log(group);
-    var init_svList = groups[group];        // TODO
-    console.log(svList);
-    var svList = jsPsych.randomization.shuffleNoRepeats(init_svList);
-    // add global data variables
-    jsPsych.data.addProperties({ group: group });
 
+    // GENERATING STIMULI_ARRAY
+    const group = `${Math.floor(Math.random() * 2) + 1}`; 
+    console.log(`Group : ${group}`);
+
+    let clusterNumbers = shuffleArray([...Array(6).keys()].map(i => `${i + 1}`)); 
+    console.log(`Cluster : ${clusterNumbers}`);
+
+    let stimuliArrays = [];
+    clusterNumbers.forEach(clusterNumbers => {
+        let country = shuffleArray(['1', '2', '3', '4']); 
+        country.forEach(country => {
+            let filePaths = groups[group][clusterNumbers][country];                                  // bring all 10 images from on state
+            let shuffledFilePaths = shuffleArray(filePaths);
+            stimuliArrays.push({ clusterNumbers, country, stimuli: shuffledFilePaths });
+        });
+    });
+
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+    console.log("Stimuli arrays:", stimuliArrays);
     
+    flat_stimuli_array = [];                        // Initialize an empty array to store the flattened stimuli.
+    for (let item of stimuliArrays) {               // Iterate over each item in the stimuliArrays. Each item represents a set of stimuli associated with a specific condition and state.
+        for (let stimulus of item.stimuli) {        // Iterate over each stimulus in the current item's stimuli array. This inner loop goes through the individual stimuli (image paths) and adds them to the flat_stimuli_array.
+            flat_stimuli_array.push(stimulus);      // Add each stimulus (image path) to the flat_stimuli_array, resulting in a single-level array of all stimuli.
+        }
+    }
 
-    // /* init connection with pavlovia.org */
+    // ADD INFORMATION OF TRIALS TO THE FINAL DATA
+    let data = [];
+    stimuliArrays.forEach(item => {                 // Iterate over each item in the stimuliArrays. Each item contains information about a set of stimuli for a given condition and state.
+        let trialData = {                           // Construct a trialData object containing details for a single trial. This includes the overall condition, the pair in the condition, the state, and the array of stimuli.
+            condition: group,
+            clusterNumbers: item.cluster,
+            country: item.country,
+            stimuli_array: item.stimuli
+        };
+        data.push(trialData);
+    });
+    console.log("Data:", data);
+
+
+
+/****** INITIALIZE EXPERIMENT ******
+************************************
+************************************
+************************************
+************************************/
+    
+    // var pavlovia_id = 's-' + condition + '_p-' + subject_id + '_s-' + session_id;
+
     // var pavlovia_init = {
     //     type: jsPsychPavlovia,
     //     data: {
@@ -74,8 +134,15 @@
     //     },
     //     command: "init"
     // };
+    // timeline.push(pavlovia_init);
+    
 
-    // browser check
+/********* START EXPERIMENT ********
+************************************
+************************************
+************************************
+************************************/
+
     var browserCheck = {
         type: jsPsychBrowserCheck,
         data: {
@@ -83,7 +150,7 @@
         },
         minimum_width: 700
     };
-
+    
     var consentForm = {
         type: jsPsychHtmlButtonResponse,
         stimulus: consentHTML,
@@ -93,178 +160,187 @@
         choices: ['Decline and exit', 'Accept and continue'],
     };
 
-    // preload
+    let preload_images = [
+        'assets/img/attnchk.png',
+        'assets/img/countdown-15.gif',
+        'assets/img/example.png',
+        'assets/img/ladder_marked.png',
+        'assets/img/redirect.png',
+    ];
+
+    stimuliArrays.forEach(item => {                         // Get all stimuli path from stimuliArrays
+        preload_images.push(...item.stimuli);
+    });
+
+    preload_images = [...new Set(preload_images)];          //Exclude duplicated images just in case
+
     var preload = {
         type: jsPsychPreload,
-        auto_preload: true,
-        images: [
-            'assets/img/ambiguous-low.png',
-            'assets/img/ambiguous-high.png',
-            'assets/img/invisible-low.png',
-            'assets/img/invisible-high.png',
-            'assets/img/attention-check.png',
-            'assets/img/countdown-15.gif', 
-        ],
-        message: `Please wait while the experiment loads. This should not take longer than a minute.`
-    }
-    var preload2 = {
-            type: jsPsychPreload,
-            auto_preload: true,
-            images: Object.values(init_svList).flatMap(block => {
-                return Object.values(block).flatMap(countryImages => countryImages);
-            }),
-            message: `Please wait while additional stimuli load.`
-    }
+        images: preload_images,
+        message: `Please wait while the experiment loads. This should take only a moment.`
+    };
 
-    ////////* EXPERIMENT */////////
     var intro1 = {
         type: jsPsychHtmlButtonResponse,
         data: {
             task: 'instructions',
         },
-        post_trial_gap: 300,
         choices: ['Next'],
         stimulus: html_intro1
     };
 
-    var intro2 = {
-        type: jsPsychHtmlButtonResponse,
-        data: {
-            task: 'instructions',
-        },
-        choices: ['Next'],
-        stimulus: html_intro2
+    // var intro2 = {
+    //     type: jsPsychHtmlButtonResponse,
+    //     data: {
+    //         task: 'instructions',
+    //     },
+    //     choices: ['Next'],
+    //     stimulus: html_intro2
+    // };
+
+    var initialInstruction = {
+            type: jsPsychHtmlButtonResponse,
+            stimulus: function() {
+                return `<div class="text-container"><h3>On the next page, you will view a few Google Streetview images taken at random from a single town.</h3><br></div>`;
+            },
+            choices: ['Next'],
     };
 
-    var intro3 = {
-        type: jsPsychHtmlButtonResponse,
-        data: {
-            task: 'instructions',
-        },
-        choices: ['Next'],
-        stimulus: html_intro3
-    };
-  
-    // Function to generate new trial with location info
-function getSVImg(svList) {
-    var trialList = [];
-    svList.forEach((path, i) => {
-        var imgTag = `<img src="${path}" width=500px height=auto>`;
-        var trialNew = {
-            type: jsPsychSurvey,
-            data: {
-                task: 'svTrial',
-                stimulus: path
+
+
+/******** MAIN EXPERIMENT **********
+************************************
+************************************
+************************************
+************************************/
+    
+    var current_trial_count = 1;  
+    
+    function make_trial_block(stimuli_array, item) {
+
+        var sub_timeline_main_experiment = [];      // sub_timeline_main_experiment contains all the main experiment trials
+        
+        // Add an instruction slide at the beginning of each block
+        sub_timeline_main_experiment.push({
+            type: jsPsychHtmlButtonResponse,
+            stimulus: function() {
+                return `<div class="text-container"><h3>Click next to see the next town.</h3></div></div><br>`; //<br>Trial: ${current_trial_count++} / 16
             },
-            pages: [[
+            choices: ['Next']
+        })
+
+        // Iterate over the stimuli array to create a series of image slideshow trials.
+        for (var i = 0; i < stimuli_array.length; i++) {
+            sub_timeline_main_experiment.push(run_present_svSlideshow(stimuli_array[i], item));
+        }
+
+        // Function to display a single image in a slideshow format.
+        function run_present_svSlideshow(img) {
+            var present_svSlideshow = {
+                type: jsPsychImageButtonResponse,
+                data: {
+                    task: 'street view slide show',
+                    condition: item.group, // Add condition data
+                    cluster: item.cluster, // Add pair_in_condition data
+                    country: item.country, // Add state data
+                },
+                stimulus: img,
+                trial_duration: 1000, //1000
+                choices: [],
+                on_start: function() {
+                    console.log("Current stimulus:", img);
+                },
+            };
+            return present_svSlideshow;
+        };
+            
+        // Function to create a prompt with street view images.
+        function create_prompt(message, stimuliArray) {
+            let prompt_init = `<div style="max-width:95%; min-height: 23em; margin-top: 15px; text-align: center;">`;
+                prompt_init += message + '<br><br>';
+                    for (let stimulus of stimuli_array) {
+                        prompt_init += `<img src='${stimulus}' class="zoomable-image" width=18% height=auto; style="padding: 5px;">`;
+                    }
+                    prompt_init += "</div>";
+                    return prompt_init;
+        }
+
+        // Combine the final prompt with the survey
+    const finalPrompt = create_prompt(
+        "Take a look at all the street view images together:",
+        stimuli_array
+    );
+
+    sub_timeline_main_experiment.push({
+        type: jsPsychSurvey,
+        button_label_finish: "Continue",
+        data: {
+            task: "landscape",
+            trial_id: item.cluster,
+        },
+        pages: [
+            [
                 {
-                    type: 'html',
+                    name: "prompt",
+                    type: "html",
                     prompt: `
-                        <style>
-                            .sv_q.sv_qstn {
-                                align-items: center;
-                                justify-content: center;
-                                text-align: center;
-                            }
-                            .sv_body {
-                                color: #000000;
-                                font-size: 95%;
-                            }
-                            .sv_main .sv_container .sv_body .sv_p_root .sv_q_title {
-                                font-weight: bold;
-                            }
-                            .sv_q_rating_min_text {
-                                min-width: 150px;
-                            }
-                        </style>
-                        <p> Trial ${i + 1} / 48 </p>
-                        <p>Take a look at the following landscape</p>
-                        ${imgTag}
-                        <h3>In this image, ...</h3>
+                        <div style="text-align: center;">
+                            ${finalPrompt}
+                            <h3>Answer the following questions based on the images above:</h3>
+                        </div>
                     `,
                 },
                 {
-                    type: 'likert',
-                    prompt: "how ambiguous is the boundary of each object?",
-                    name: 'ambiguous',
-                    likert_scale_min_label: 'Distinct, Clear',
-                    likert_scale_max_label: 'Ambiguous, Unclear',
-                    likert_scale_values: [
-                        { value: 1 },
-                        { value: 2 },
-                        { value: 3 },
-                        { value: 4 },
-                        { value: 5 }
-                    ],
-                    required: false
-                },
-                {
-                    type: 'likert',
-                    prompt: "how many different objects do there seem to be?",
-                    name: 'objects',
-                    likert_scale_min_label: 'Relatively few',
-                    likert_scale_max_label: 'Enormous number',
-                    likert_scale_values: [
-                        { value: 1 },
-                        { value: 2 },
-                        { value: 3 },
-                        { value: 4 },
-                        { value: 5 }
-                    ],
-                    required: false
-                },
-                {
-                    type: 'likert',
-                    prompt: "to what degree do there seem to be parts of the scene that are invisible?",
-                    name: 'invisible',
-                    likert_scale_min_label: 'Few invisible parts',
-                    likert_scale_max_label: 'Many invisible parts',
-                    likert_scale_values: [
-                        { value: 1 },
-                        { value: 2 },
-                        { value: 3 },
-                        { value: 4 },
-                        { value: 5 }
-                    ],
-                    required: false
-                },
-                {
-                    type: 'likert',
-                    prompt: "to what degree is the scene either organized or chaotic?",
-                    name: 'chaos',
-                    likert_scale_min_label: 'Organized',
-                    likert_scale_max_label: 'Chaotic',
-                    likert_scale_values: [
-                        { value: 1 },
-                        { value: 2 },
-                        { value: 3 },
-                        { value: 4 },
-                        { value: 5 }
-                    ],
-                    required: false
-                },
-                {
-                    type: 'likert',
-                    prompt: "how complex is this image?",
-                    name: 'complex',
-                    likert_scale_min_label: 'Simple',
-                    likert_scale_max_label: 'Complex',
-                    likert_scale_values: [
-                        { value: 1 },
-                        { value: 2 },
-                        { value: 3 },
-                        { value: 4 },
-                        { value: 5 }
-                    ],
-                    required: false
-                }
-            ]],
-            button_label_finish: 'Continue'
-        };
-        trialList.push(trialNew);
+                type: "likert",
+                name: "ambiguous",
+                prompt: "How ambiguous is the boundary of each object?",
+                likert_scale_min_label: "Distinct, Clear",
+                likert_scale_max_label: "Ambiguous, Unclear",
+                likert_scale_values: [1, 2, 3, 4, 5],
+                required: false,
+            },
+            {
+                type: "likert",
+                name: "objects",
+                prompt: "How many different objects do there seem to be?",
+                likert_scale_min_label: "Relatively few",
+                likert_scale_max_label: "Enormous number",
+                likert_scale_values: [1, 2, 3, 4, 5],
+                required: false,
+            },
+            {
+                type: "likert",
+                name: "invisible",
+                prompt: "To what degree do there seem to be parts of the scene that are invisible?",
+                likert_scale_min_label: "Few invisible parts",
+                likert_scale_max_label: "Many invisible parts",
+                likert_scale_values: [1, 2, 3, 4, 5],
+                required: false,
+            },
+            {
+                type: "likert",
+                name: "chaos",
+                prompt: "To what degree is the scene either organized or chaotic?",
+                likert_scale_min_label: "Organized",
+                likert_scale_max_label: "Chaotic",
+                likert_scale_values: [1, 2, 3, 4, 5],
+                required: false,
+            },
+            {
+                type: "likert",
+                name: "complex",
+                prompt: "How complex is this image?",
+                likert_scale_min_label: "Simple",
+                likert_scale_max_label: "Complex",
+                likert_scale_values: [1, 2, 3, 4, 5],
+                required: false,
+            },
+            ],
+        ],
     });
-    return trialList; 
-};
+        
+        return sub_timeline_main_experiment;
+    };
 
     var half_way = {
         type: jsPsychHtmlButtonResponse,
@@ -276,159 +352,154 @@ function getSVImg(svList) {
         trial_duration: 15750
     };
 
-    var attention_check = {
-        type: jsPsychSurvey,
-        data: {
-            task: 'attention-check'
-        },
-        pages: [[
-            {
-                type: 'html',
-                prompt: `
-                    <style>
-                    .sv_q.sv_qstn {
-                        align-items: center;
-                        justify-content: center;
-                        text-align: center;
-                    }
-                    .sv_body {
-                        color: #000000;
-                        font-size: 95%;
-                    }
-                    .sv_main .sv_container .sv_body .sv_p_root .sv_q_title {
-                        font-weight: bold;
-                    }
-                    .sv_q_rating_min_text {
-                        min-width: 150px;
-                    }
-                    </style>
-                    <p> Trial 0 / 61 </p>
-                    <p>Take a look at the following landscape</p>
-                    <img src='assets/img/attention-check.png' width= 500px, height = auto>
-                    <h3>In this image, ...</h3>
-                `,
-            }, {
-                type: 'likert',
-                prompt: "how ambiguous is the boundary of each object?",
-                name: 'ambiguous',
-                likert_scale_min_label: 'Distinct, Clear',
-                likert_scale_max_label: 'Ambiguous, Unclear',
-                likert_scale_values: [
-                    { value: 1 },
-                    { value: 2 },
-                    { value: 3 },
-                    { value: 4 },
-                    { value: 5 }
-                ]
-            }, {
-                type: 'likert',
-                prompt: "how many different objects do there seem to be?",
-                name: 'objects',
-                likert_scale_min_label: 'Relatively few',
-                likert_scale_max_label: 'Enormous number',
-                likert_scale_values: [
-                    { value: 1 },
-                    { value: 2 },
-                    { value: 3 },
-                    { value: 4 },
-                    { value: 5 }
-                ]
-            }, {
-                type: 'likert',
-                prompt: "to what degree do there seem to be parts of the scene that are invisible?",
-                name: 'invisible',
-                likert_scale_min_label: 'Few invisible parts',
-                likert_scale_max_label: 'Many invisible parts',
-                likert_scale_values: [
-                    { value: 1 },
-                    { value: 2 },
-                    { value: 3 },
-                    { value: 4 },
-                    { value: 5 }
-                ]
-            }, {
-                type: 'likert',
-                prompt: "to what degree is the scene either organized or chaotic?",
-                name: 'chaos',
-                likert_scale_min_label: 'Organized',
-                likert_scale_max_label: 'Chaotic',
-                likert_scale_values: [
-                    { value: 1 },
-                    { value: 2 },
-                    { value: 3 },
-                    { value: 4 },
-                    { value: 5 }
-                ]
-            }, {
-                type: 'likert',
-                prompt: "how complex is this image?",
-                name: 'complex',
-                likert_scale_min_label: 'Simple',
-                likert_scale_max_label: 'Complex',
-                likert_scale_values: [
-                    { value: 1 },
-                    { value: 2 },
-                    { value: 3 },
-                    { value: 4 },
-                    { value: 5 }
-                ],
-                required: false
-            }
-        ]],
-        button_label_finish: 'Continue'
-    };
 
-    /* DEMOGRAPHICS */
+
+    // END OF EXPERIMENT
     function selfDescribe() {
         a = document.getElementById('self-describe');
         a.checked = true;
     };
-    
-    var demogForm = {
+
+    function selfDescribeRace() {
+        a = document.getElementById('self-describe-race');
+        a.checked = true;
+    };
+
+    var demogFormFormat = "<p>Please complete this section with your demographic information:</p>";
+    var final_html = "<p>Thank you for participating in this study!</p>";
+
+    var demogForm1 = {
         type: jsPsychSurveyHtmlForm,
         data: {
-            task: 'demographics'
+            task: 'demographics1'
         },
         preamble: preambleDemog,
-        html: htmlDemogForm1,
+        html: demogForm1,
         choices: ['Next'],
     };
 
     var demogForm2 = {
         type: jsPsychSurvey,
+        button_label_finish: "Next",
         data: {
-            task: 'demographics'
+            task: 'demographics2'
         },
-        pages: [[
-            {
-                type: 'html',
-                prompt: `
-                    <style>
-                        div.sv_body {
-                            max-width: 700px;
-                        }
-                        .sv_main.sv_default_css .sv_container {
-                            color: #000000;
-                        }
-                        input.sv_prev_btn {
-                            display: none;
-                        }
-                    </style>
-                `,
-            }, {
-                type: 'multi-choice',
-                prompt: 'Have you ever spent more than 1 year out side of the United States?',
-                options: ['Yes', 'No'],
-                name: 'outsideUS',
-            }, {
-                type: 'text',
-                prompt: 'If yes, how long have you spent outside of the US? (Round to nearest year)',
-                name: 'outsideUS_years'
-            }, 
-        ]]
+        pages: [
+                /*[
+                    {
+                        type: 'html',
+                        prompt: demogFormFormat,
+                        name: 'format_skip',
+                    },
+                    {
+                        type: 'multi-choice',
+                        prompt: "What is the highest education you've completed?",
+                        options: [
+                            'Some high school',
+                            'High school diploma or equivalent',
+                            'Some college',
+                            'Associate’s degree',
+                            'Bachelor’s degree',
+                            'Graduate & professional degrees'
+                        ],
+                        name: 'education',
+                    },
+                ],*/  
+                [
+                    {
+                        type: 'html',
+                        prompt: demogFormFormat,
+                        name: 'format_skip',
+                    }, 
+                    {
+                        type: 'multi-choice',
+                        prompt: "How would you describe your political orientation?",
+                        options: [
+                            "Very Liberal",
+                            "Liberal",
+                            "Moderate",
+                            "Conservative",
+                            "Very Conservative"
+                        ],
+                        name: "ideology",
+                    },
+                ], 
+                [
+                    {
+                        type: 'html',
+                        prompt: demogFormFormat,
+                        name: 'format_skip',
+                    }, 
+                    {
+                        type: 'text',
+                        prompt: "How many times during your childhood did you move to a totally new neighborhood or town?",
+                        name: 'num-moves',
+                        textbox_columns: 5,
+                        input_type: 'number'
+                    },
+                ],
+                [
+                    {
+                        type: 'html',
+                        prompt: final_html,
+                        name: 'format_skip',
+                    }, 
+                    {
+                        type: 'likert-table',
+                        name: 'SDO',
+                        prompt: ' ',
+                        randomize_statement_order: true,
+                        statements: [
+                            {prompt: "An ideal society requires some groups to be on top and others to be on the bottom.", name: 'PDom_1'},
+                            {prompt: "Some groups of people are simply inferior to other groups.", name: "PDom_2",},
+                            {prompt: "No one group should dominate in society.", name: 'CDom_1'},
+                            {prompt: "Groups at the bottom are just as deserving as groups at the top.", name: 'CDom_2'},
+                            {prompt: "Group equality should not be our primary goal.", name: 'PAE_1'},
+                            {prompt: "It is unjust to try to make groups equal.", name: 'PAE_2'},
+                            {prompt: "We should do what we can to equalize conditions for different groups.", name: 'CAE_1'},
+                            {prompt: "We should work to give all groups an equal chance to succeed.", name: 'CAE_2'},
+                        ],
+                        options: [
+                            "Strongly Oppose",
+                            "Somewhat Oppose",
+                            "Slightly Oppose",
+                            "Neutral",
+                            "Slightly Favor",
+                            "Somewhat Favor",
+                            "Strongly Favor",
+                        ],
+                    }
+                ],
+                /*[
+                    {
+                        type: 'html',
+                        prompt: demogFormFormat + `
+                        <div class="text-container">
+                            <p style="text-align: left;">
+                                Think of this ladder as representing where people stand in the United States. At the top of the ladder are the people who are the best off – those who have the most money, the most education, and the most respected jobs. At the bottom are the people who are the worst off – those who have the least money, least education, the least respected jobs, or no job. The higher up you are on this ladder, the closer you are to the people at the very top; the lower you are, the closer you are to the people at the very bottom.
+                            </p>
+                            <img src="assets/img/ladder_marked.png" style="max-width: 150px;">
+                        </div>
+                        `,
+                        name: 'format_skip',
+                    },
+                    {
+                        type: 'likert',
+                        prompt: "Where would you place yourself on this ladder?",
+                        name: 'social-ladder',
+                        likert_scale_min: 1,
+                        likert_scale_max: 10
+                    }
+                ]*/
+            ]
     };
 
-    /* END OF STUDY */
+
+    
+/***********************************
+*********** END OF STUDY************
+************************************
+************************************/
     var endSurveyDebrief = {
         type: jsPsychSurveyText,
         data: {
@@ -439,32 +510,26 @@ function getSVImg(svList) {
             {
                 prompt: 'Do you have any comments on the study you’d like to share?',
                 rows: 8,
-                columns: 80
+                columns: 80,
+                name: 'comment',
             }
-        ]
+        ],
+        // on_finish: function(data){
+        //     data.num_attention_checks_correct = num_attention_checks_correct;
+        // },
     };
 
-    /* end study screen based on consent */
+    var endRedirect_prompt = "<p>Thank you for completing the study! Please click 'Continue' to finish and receive credit.</p>";
+
     var endRedirect = {
         type: jsPsychHtmlButtonResponse,
         data: {
             task: 'end-survey',
         },
-        stimulus: endRedirectPrompt,
-        //trial_duration: 10000, //5000
+        stimulus: endRedirect_prompt, 
         choices: ['Continue']
     };
-
-    var endStudyNoConsent = {
-        type: jsPsychHtmlButtonResponse,
-        data: {
-            task: 'end-survey'
-        },
-        stimulus: endStudyNoConsent_prompt,
-        choices: []
-    };
-
-    // /* finish connection with pavlovia.org */
+    
     // var pavlovia_finish = {
     //     type: jsPsychPavlovia,
     //     data: {
@@ -473,63 +538,36 @@ function getSVImg(svList) {
     //     command: "finish",
     //     participantId: pavlovia_id
     // };
-
-    ////////* EXECUTING TIMELINE *////////
-    var main_timeline = [];
-
-    main_timeline.push(browserCheck);
-    main_timeline.push(preload);
-    main_timeline.push(preload2);
-    main_timeline.push(intro1);
-    main_timeline.push(intro2);
-    main_timeline.push(intro3);
-
-    // Push trials
-    var svTrials = getSVImg(svList);  // get list of trials
-    svTrials.splice(Math.floor((svTrials.length / 2)), 0, half_way);
-    var randomCheckPos = Math.floor(Math.random() * svTrials.length);
-    svTrials.splice(randomCheckPos, 0, attention_check);
     
-    for (trial of svTrials) {
-        main_timeline.push(trial); // push each trial to timeline
-    } 
     
-    main_timeline.push(demogForm);
-    main_timeline.push(demogForm2);
-    main_timeline.push(endSurveyDebrief);
 
-    // check consent condition
-    var consent = null;
-
-    var consent_condition = {
-        timeline: main_timeline,
-        conditional_function: function () {
-            var data = jsPsych.data.get().last(1).values()[0];
-            consent = data.response == 1;
-            //console.log(data.response);
-            return consent;
-        }
-    };
-
-    var no_consent_condition = {
-        timeline: [endStudyNoConsent],
-        conditional_function: function () {
-            return !consent;
-        }
-    };
-
-    //timeline.push(pavlovia_init);
+/***********************************
+************* TIMELINE *************
+************************************
+************************************/
+    timeline.push(browserCheck);
     timeline.push(consentForm);
-    timeline.push(consent_condition);
-    timeline.push(no_consent_condition);
+    timeline.push(preload);
+    timeline.push(intro1);
+    //timeline.push(intro2);
 
+    timeline.push(initialInstruction);
+    data.forEach((item, index) => {
+        var sub_timeline_main_experiment = make_trial_block(item.stimuli_array, item);
+        timeline.push(...sub_timeline_main_experiment);
+        if (index === Math.floor(data.length / 2) - 1) {
+            timeline.push(half_way);
+        }
+    });
+
+    timeline.push(demogForm1);
+    timeline.push(demogForm2);
+    timeline.push(endSurveyDebrief);
+    // Recommend this object is **BEFORE** the trial to redirect for completion or display code
     timeline.push(endRedirect);
-    //timeline.push(pavlovia_finish);
-
-    /* start the experiment */
+    // timeline.push(pavlovia_finish);
+    
+    // start the experiment
     jsPsych.run(timeline);
 
 </script>
-
-</html>
-    
