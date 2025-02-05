@@ -1,0 +1,14 @@
+@charset "UTF-8";
+.sv_main .sv_container .sv_body .sv_p_root table.sv_q_matrix td {
+  min-width: 1em;
+}
+
+.zoomable-image {
+  transition: transform 0.25s ease;
+  cursor: zoom-in;
+}
+
+.zoomable-image:hover {
+  transform: scale(1.5);
+  z-index: 10;
+}
