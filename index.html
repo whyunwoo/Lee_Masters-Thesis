@@ -259,7 +259,7 @@
             
         // Function to create a prompt with street view images.
         function create_prompt(message, stimuliArray) {
-            let prompt_init = `<div style="max-width:95%; min-height: 23em; margin-top: 15px; text-align: center;">`;
+            let prompt_init = `<div style="max-width:95%; min-height: 5em; margin-top: 15px; text-align: center;">`;
                 prompt_init += message + '<br><br>';
                     for (let stimulus of stimuli_array) {
                         prompt_init += `<img src='${stimulus}' class="zoomable-image" width=18% height=auto; style="padding: 5px;">`;
@@ -289,7 +289,7 @@
                     prompt: `
                         <div style="text-align: center;">
                             ${finalPrompt}
-                            <h3>Answer the following questions based on the images above:</h3>
+                            <p>Answer the following questions based on the images above:</p>
                         </div>
                     `,
                 },
@@ -381,121 +381,121 @@
         choices: ['Next'],
     };
 
-    var demogForm2 = {
-        type: jsPsychSurvey,
-        button_label_finish: "Next",
-        data: {
-            task: 'demographics2'
-        },
-        pages: [
-                /*[
-                    {
-                        type: 'html',
-                        prompt: demogFormFormat,
-                        name: 'format_skip',
-                    },
-                    {
-                        type: 'multi-choice',
-                        prompt: "What is the highest education you've completed?",
-                        options: [
-                            'Some high school',
-                            'High school diploma or equivalent',
-                            'Some college',
-                            'Associate’s degree',
-                            'Bachelor’s degree',
-                            'Graduate & professional degrees'
-                        ],
-                        name: 'education',
-                    },
-                ],*/  
-                [
-                    {
-                        type: 'html',
-                        prompt: demogFormFormat,
-                        name: 'format_skip',
-                    }, 
-                    {
-                        type: 'multi-choice',
-                        prompt: "How would you describe your political orientation?",
-                        options: [
-                            "Very Liberal",
-                            "Liberal",
-                            "Moderate",
-                            "Conservative",
-                            "Very Conservative"
-                        ],
-                        name: "ideology",
-                    },
-                ], 
-                [
-                    {
-                        type: 'html',
-                        prompt: demogFormFormat,
-                        name: 'format_skip',
-                    }, 
-                    {
-                        type: 'text',
-                        prompt: "How many times during your childhood did you move to a totally new neighborhood or town?",
-                        name: 'num-moves',
-                        textbox_columns: 5,
-                        input_type: 'number'
-                    },
-                ],
-                [
-                    {
-                        type: 'html',
-                        prompt: final_html,
-                        name: 'format_skip',
-                    }, 
-                    {
-                        type: 'likert-table',
-                        name: 'SDO',
-                        prompt: ' ',
-                        randomize_statement_order: true,
-                        statements: [
-                            {prompt: "An ideal society requires some groups to be on top and others to be on the bottom.", name: 'PDom_1'},
-                            {prompt: "Some groups of people are simply inferior to other groups.", name: "PDom_2",},
-                            {prompt: "No one group should dominate in society.", name: 'CDom_1'},
-                            {prompt: "Groups at the bottom are just as deserving as groups at the top.", name: 'CDom_2'},
-                            {prompt: "Group equality should not be our primary goal.", name: 'PAE_1'},
-                            {prompt: "It is unjust to try to make groups equal.", name: 'PAE_2'},
-                            {prompt: "We should do what we can to equalize conditions for different groups.", name: 'CAE_1'},
-                            {prompt: "We should work to give all groups an equal chance to succeed.", name: 'CAE_2'},
-                        ],
-                        options: [
-                            "Strongly Oppose",
-                            "Somewhat Oppose",
-                            "Slightly Oppose",
-                            "Neutral",
-                            "Slightly Favor",
-                            "Somewhat Favor",
-                            "Strongly Favor",
-                        ],
-                    }
-                ],
-                /*[
-                    {
-                        type: 'html',
-                        prompt: demogFormFormat + `
-                        <div class="text-container">
-                            <p style="text-align: left;">
-                                Think of this ladder as representing where people stand in the United States. At the top of the ladder are the people who are the best off – those who have the most money, the most education, and the most respected jobs. At the bottom are the people who are the worst off – those who have the least money, least education, the least respected jobs, or no job. The higher up you are on this ladder, the closer you are to the people at the very top; the lower you are, the closer you are to the people at the very bottom.
-                            </p>
-                            <img src="assets/img/ladder_marked.png" style="max-width: 150px;">
-                        </div>
-                        `,
-                        name: 'format_skip',
-                    },
-                    {
-                        type: 'likert',
-                        prompt: "Where would you place yourself on this ladder?",
-                        name: 'social-ladder',
-                        likert_scale_min: 1,
-                        likert_scale_max: 10
-                    }
-                ]*/
-            ]
-    };
+    // var demogForm2 = {
+    //     type: jsPsychSurvey,
+    //     button_label_finish: "Next",
+    //     data: {
+    //         task: 'demographics2'
+    //     },
+    //     pages: [
+    //             /*[
+    //                 {
+    //                     type: 'html',
+    //                     prompt: demogFormFormat,
+    //                     name: 'format_skip',
+    //                 },
+    //                 {
+    //                     type: 'multi-choice',
+    //                     prompt: "What is the highest education you've completed?",
+    //                     options: [
+    //                         'Some high school',
+    //                         'High school diploma or equivalent',
+    //                         'Some college',
+    //                         'Associate’s degree',
+    //                         'Bachelor’s degree',
+    //                         'Graduate & professional degrees'
+    //                     ],
+    //                     name: 'education',
+    //                 },
+    //             ],*/  
+    //             [
+    //                 {
+    //                     type: 'html',
+    //                     prompt: demogFormFormat,
+    //                     name: 'format_skip',
+    //                 }, 
+    //                 {
+    //                     type: 'multi-choice',
+    //                     prompt: "How would you describe your political orientation?",
+    //                     options: [
+    //                         "Very Liberal",
+    //                         "Liberal",
+    //                         "Moderate",
+    //                         "Conservative",
+    //                         "Very Conservative"
+    //                     ],
+    //                     name: "ideology",
+    //                 },
+    //             ], 
+    //             [
+    //                 {
+    //                     type: 'html',
+    //                     prompt: demogFormFormat,
+    //                     name: 'format_skip',
+    //                 }, 
+    //                 {
+    //                     type: 'text',
+    //                     prompt: "How many times during your childhood did you move to a totally new neighborhood or town?",
+    //                     name: 'num-moves',
+    //                     textbox_columns: 5,
+    //                     input_type: 'number'
+    //                 },
+    //             ],
+    //             [
+    //                 {
+    //                     type: 'html',
+    //                     prompt: final_html,
+    //                     name: 'format_skip',
+    //                 }, 
+    //                 {
+    //                     type: 'likert-table',
+    //                     name: 'SDO',
+    //                     prompt: ' ',
+    //                     randomize_statement_order: true,
+    //                     statements: [
+    //                         {prompt: "An ideal society requires some groups to be on top and others to be on the bottom.", name: 'PDom_1'},
+    //                         {prompt: "Some groups of people are simply inferior to other groups.", name: "PDom_2",},
+    //                         {prompt: "No one group should dominate in society.", name: 'CDom_1'},
+    //                         {prompt: "Groups at the bottom are just as deserving as groups at the top.", name: 'CDom_2'},
+    //                         {prompt: "Group equality should not be our primary goal.", name: 'PAE_1'},
+    //                         {prompt: "It is unjust to try to make groups equal.", name: 'PAE_2'},
+    //                         {prompt: "We should do what we can to equalize conditions for different groups.", name: 'CAE_1'},
+    //                         {prompt: "We should work to give all groups an equal chance to succeed.", name: 'CAE_2'},
+    //                     ],
+    //                     options: [
+    //                         "Strongly Oppose",
+    //                         "Somewhat Oppose",
+    //                         "Slightly Oppose",
+    //                         "Neutral",
+    //                         "Slightly Favor",
+    //                         "Somewhat Favor",
+    //                         "Strongly Favor",
+    //                     ],
+    //                 }
+    //             ],
+    //             /*[
+    //                 {
+    //                     type: 'html',
+    //                     prompt: demogFormFormat + `
+    //                     <div class="text-container">
+    //                         <p style="text-align: left;">
+    //                             Think of this ladder as representing where people stand in the United States. At the top of the ladder are the people who are the best off – those who have the most money, the most education, and the most respected jobs. At the bottom are the people who are the worst off – those who have the least money, least education, the least respected jobs, or no job. The higher up you are on this ladder, the closer you are to the people at the very top; the lower you are, the closer you are to the people at the very bottom.
+    //                         </p>
+    //                         <img src="assets/img/ladder_marked.png" style="max-width: 150px;">
+    //                     </div>
+    //                     `,
+    //                     name: 'format_skip',
+    //                 },
+    //                 {
+    //                     type: 'likert',
+    //                     prompt: "Where would you place yourself on this ladder?",
+    //                     name: 'social-ladder',
+    //                     likert_scale_min: 1,
+    //                     likert_scale_max: 10
+    //                 }
+    //             ]*/
+    //         ]
+    // };
 
 
     
@@ -533,14 +533,14 @@
         choices: ['Continue']
     };
     
-    // var pavlovia_finish = {
-    //     type: jsPsychPavlovia,
-    //     data: {
-    //         task: 'pavlovia-finish'
-    //     },
-    //     command: "finish",
-    //     participantId: pavlovia_id
-    // };
+    var pavlovia_finish = {
+        type: jsPsychPavlovia,
+        data: {
+            task: 'pavlovia-finish'
+        },
+        command: "finish",
+        participantId: pavlovia_id
+    };
     
     
 
@@ -564,11 +564,11 @@
     });
 
     timeline.push(demogForm1);
-    timeline.push(demogForm2);
+    //timeline.push(demogForm2);
     timeline.push(endSurveyDebrief);
     // Recommend this object is **BEFORE** the trial to redirect for completion or display code
     timeline.push(endRedirect);
-    // timeline.push(pavlovia_finish);
+    timeline.push(pavlovia_finish);
     
     // start the experiment
     jsPsych.run(timeline);
