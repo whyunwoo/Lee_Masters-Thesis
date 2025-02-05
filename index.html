@@ -71,7 +71,7 @@
         session_id: session_id
     });
     // create pavlovia participant ID --> when need to open this on chorme comment out all the chuncks with pavlovia
-    // var pavlovia_id = '_p-' + subject_id + '_s-' + session_id; //'c-' + group + '_p-' + subject_id + '_s-' + session_id;
+    var pavlovia_id = '_p-' + subject_id + '_s-' + session_id; //'c-' + group + '_p-' + subject_id + '_s-' + session_id;
 
     // GENERATING STIMULI_ARRAY
     const group = `${Math.floor(Math.random() * 2) + 1}`; 
@@ -127,16 +127,16 @@
 ************************************
 ************************************/
     
-    //var pavlovia_id = 's-' + condition + '_p-' + subject_id + '_s-' + session_id;
+    var pavlovia_id = 's-' + condition + '_p-' + subject_id + '_s-' + session_id;
 
-    // var pavlovia_init = {
-    //     type: jsPsychPavlovia,
-    //     data: {
-    //         task: 'pavlovia-init'
-    //     },
-    //     command: "init"
-    // };
-    // timeline.push(pavlovia_init);
+    var pavlovia_init = {
+        type: jsPsychPavlovia,
+        data: {
+            task: 'pavlovia-init'
+        },
+        command: "init"
+    };
+    timeline.push(pavlovia_init);
     
 
 /********* START EXPERIMENT ********
