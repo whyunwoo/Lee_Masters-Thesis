@@ -190,14 +190,14 @@
         stimulus: html_intro1
     };
 
-    // var intro2 = {
-    //     type: jsPsychHtmlButtonResponse,
-    //     data: {
-    //         task: 'instructions',
-    //     },
-    //     choices: ['Next'],
-    //     stimulus: html_intro2
-    // };
+    var intro2 = {
+        type: jsPsychHtmlButtonResponse,
+        data: {
+            task: 'instructions',
+        },
+        choices: ['Next'],
+        stimulus: html_intro2
+    };
 
     var initialInstruction = {
             type: jsPsychHtmlButtonResponse,
@@ -550,7 +550,7 @@
     timeline.push(consentForm);
     timeline.push(preload);
     timeline.push(intro1);
-    //timeline.push(intro2);
+    timeline.push(intro2);
 
     timeline.push(initialInstruction);
     data.forEach((item, index) => {
