@@ -71,7 +71,7 @@
         session_id: session_id
     });
     // create pavlovia participant ID --> when need to open this on chorme comment out all the chuncks with pavlovia
-    var pavlovia_id = '_p-' + subject_id + '_s-' + session_id; //'c-' + group + '_p-' + subject_id + '_s-' + session_id;
+    // var pavlovia_id = '_p-' + subject_id + '_s-' + session_id; //'c-' + group + '_p-' + subject_id + '_s-' + session_id;
 
     // GENERATING STIMULI_ARRAY
     const group = `${Math.floor(Math.random() * 2) + 1}`; 
@@ -129,14 +129,14 @@
     
     //var pavlovia_id = 's-' + condition + '_p-' + subject_id + '_s-' + session_id;
 
-    var pavlovia_init = {
-        type: jsPsychPavlovia,
-        data: {
-            task: 'pavlovia-init'
-        },
-        command: "init"
-    };
-    timeline.push(pavlovia_init);
+    // var pavlovia_init = {
+    //     type: jsPsychPavlovia,
+    //     data: {
+    //         task: 'pavlovia-init'
+    //     },
+    //     command: "init"
+    // };
+    // timeline.push(pavlovia_init);
     
 
 /********* START EXPERIMENT ********
@@ -163,11 +163,12 @@
     };
 
     let preload_images = [
-        'assets/img/attnchk.png',
-        'assets/img/countdown-15.gif',
-        'assets/img/example.png',
-        'assets/img/ladder_marked.png',
-        'assets/img/redirect.png',
+        'assets/img/ambiguous-low.png',
+        'assets/img/ambiguous-high.png',
+        'assets/img/invisible-low.png',
+        'assets/img/invisible-high.png',
+        'assets/img/attention-check.png',
+        'assets/img/countdown-15.gif'
     ];
 
     stimuliArrays.forEach(item => {                         // Get all stimuli path from stimuliArrays
@@ -532,14 +533,14 @@
         choices: ['Continue']
     };
     
-    var pavlovia_finish = {
-        type: jsPsychPavlovia,
-        data: {
-            task: 'pavlovia-finish'
-        },
-        command: "finish",
-        participantId: pavlovia_id
-    };
+    // var pavlovia_finish = {
+    //     type: jsPsychPavlovia,
+    //     data: {
+    //         task: 'pavlovia-finish'
+    //     },
+    //     command: "finish",
+    //     participantId: pavlovia_id
+    // };
     
     
 
@@ -567,7 +568,7 @@
     timeline.push(endSurveyDebrief);
     // Recommend this object is **BEFORE** the trial to redirect for completion or display code
     timeline.push(endRedirect);
-    timeline.push(pavlovia_finish);
+    // timeline.push(pavlovia_finish);
     
     // start the experiment
     jsPsych.run(timeline);
