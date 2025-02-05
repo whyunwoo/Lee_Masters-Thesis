@@ -163,14 +163,14 @@ var groups = {
                 "./stim/Hitachi_2_6_2.jpg",
                 "./stim/Hitachi_2_6_3.jpg",
                 "./stim/Hitachi_2_6_4.jpg",
-                "./stim/Hitachi_2_6_5.jpg",
-                "./stim/Szekesfehervar_3_6_5.jpg"
+                "./stim/Hitachi_2_6_5.jpg"   
             ],
             "3": [
                 "./stim/Szekesfehervar_3_6_1.jpg",
                 "./stim/Szekesfehervar_3_6_2.jpg",
                 "./stim/Szekesfehervar_3_6_3.jpg",
-                "./stim/Szekesfehervar_3_6_4.jpg"
+                "./stim/Szekesfehervar_3_6_4.jpg",
+                "./stim/Szekesfehervar_3_6_5.jpg"
             ],
             "4": [
                 "./stim/Tauranga_4_6_1.jpg",
@@ -345,14 +345,14 @@ var groups = {
                 "./stim/Kiryu_2_6_2.jpg",
                 "./stim/Kiryu_2_6_3.jpg",
                 "./stim/Kiryu_2_6_4.jpg",
-                "./stim/Kiryu_2_6_5.jpg",
-                "./stim/Taichung_3_6_5.jpg"
+                "./stim/Kiryu_2_6_5.jpg"
             ],
             "3": [
                 "./stim/Taichung_3_6_1.jpg",
                 "./stim/Taichung_3_6_2.jpg",
                 "./stim/Taichung_3_6_3.jpg",
-                "./stim/Taichung_3_6_4.jpg"
+                "./stim/Taichung_3_6_4.jpg",
+                "./stim/Taichung_3_6_5.jpg"
             ],
             "4": [
                 "./stim/Biella_4_6_1.jpg",
