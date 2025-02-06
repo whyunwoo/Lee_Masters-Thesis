@@ -204,7 +204,7 @@
     var initialInstruction = {
             type: jsPsychHtmlButtonResponse,
             stimulus: function() {
-                return `<div class="text-container"><h3>On the next page, you will view a few Google Streetview images taken at random from a single town.</h3><br></div>`;
+                return `<div class="text-container"><h3>On the next page, you will view a few Google Streetview images taken at random from a single neighborhood.</h3><br></div>`;
             },
             choices: ['Next'],
     };
@@ -227,7 +227,7 @@
         sub_timeline_main_experiment.push({
             type: jsPsychHtmlButtonResponse,
             stimulus: function() {
-                return `<div class="text-container"><h3>Click next to see the next town.</h3></div></div><br>`; //<br>Trial: ${current_trial_count++} / 16
+                return `<div class="text-container"><h3>Click next to see the next neighborhood.</h3></div></div><br>`; //<br>Trial: ${current_trial_count++} / 16
             },
             choices: ['Next']
         })
@@ -270,7 +270,7 @@
 
         // Combine the final prompt with the survey
     const finalPrompt = create_prompt(
-        "Take a look at all the street view images together:",
+        "Here are the images you saw from this neighborhood (you can hover over to take a closer look):",
         stimuli_array
     );
 
@@ -289,7 +289,7 @@
                     prompt: `
                         <div style="text-align: center;">
                             ${finalPrompt}
-                            <p>Answer the following questions based on the images above:</p>
+                            <p>Please give your general impressions of this neighborhood:</p>
                         </div>
                     `,
                 },
@@ -314,7 +314,7 @@
             {
                 type: "likert",
                 name: "invisible",
-                prompt: "To what degree do there seem to be parts of the scene that are invisible?",
+                prompt: "To what degree do there seem to be parts of the scenes that are invisible?",
                 likert_scale_min_label: "Few invisible parts",
                 likert_scale_max_label: "Many invisible parts",
                 likert_scale_values: [1, 2, 3, 4, 5],
@@ -323,7 +323,7 @@
             {
                 type: "likert",
                 name: "chaos",
-                prompt: "To what degree is the scene either organized or chaotic?",
+                prompt: "To what degree are the scenes either organized or chaotic?",
                 likert_scale_min_label: "Organized",
                 likert_scale_max_label: "Chaotic",
                 likert_scale_values: [1, 2, 3, 4, 5],
@@ -332,7 +332,7 @@
             {
                 type: "likert",
                 name: "complex",
-                prompt: "How complex is this image?",
+                prompt: "How complex are these images?",
                 likert_scale_min_label: "Simple",
                 likert_scale_max_label: "Complex",
                 likert_scale_values: [1, 2, 3, 4, 5],
