@@ -54,14 +54,15 @@
     var jsPsych = initJsPsych({
         use_webaudio: false,
         on_finish: function(data) {
-            window.location.assign("https://app.prolific.com/submissions/complete?cc=C1IYJVLI");
+            var sona_id = jsPsych.data.getURLVariable('sona_id');
+            window.location.assign("https://umichpsych.sona-systems.com/webstudy_credit.aspx?experiment_id=3148&credit_token=072d0c6eaf304b8797d930f9baa01e3c&survey_code="+sona_id)
         }
     });
 
     var timeline = [];
 
-    // Prolific Integration
-    var subject_id = jsPsych.data.getURLVariable("PROLIFIC_PID"); // Prolific ID for Subject Pool
+    // SONA
+    var subject_id = jsPsych.data.getURLVariable("sona_id"); //SONA ID for Subject Pool
     var study_id = jsPsych.data.getURLVariable('STUDY_ID');
     var session_id = jsPsych.data.getURLVariable('SESSION_ID');
 
@@ -70,25 +71,16 @@
         study_id: study_id,
         session_id: session_id
     });
-    // create pavlovia participant ID --> when need to open this on chorme comment out all the chuncks with pavlovia
-    var pavlovia_id = '_p-' + subject_id + '_s-' + session_id; //'c-' + group + '_p-' + subject_id + '_s-' + session_id;
+    // var pavlovia_id = '_p-' + subject_id + '_s-' + session_id;       // create pavlovia participant ID --> when need to open this on chorme comment out all the chuncks with pavlovia
 
-    // GENERATING STIMULI_ARRAY
-    const group = `${Math.floor(Math.random() * 2) + 1}`; 
-    console.log(`Group : ${group}`);
 
-    let clusterNumbers = shuffleArray([...Array(6).keys()].map(i => `${i + 1}`)); 
-    console.log(`Cluster : ${clusterNumbers}`);
 
-    let stimuliArrays = [];
-    clusterNumbers.forEach(clusterNumbers => {
-        let country = shuffleArray(['1', '2', '3', '4']); 
-        country.forEach(country => {
-            let filePaths = groups[group][clusterNumbers][country];                                  // bring all 10 images from on state
-            let shuffledFilePaths = shuffleArray(filePaths);
-            stimuliArrays.push({ clusterNumbers, country, stimuli: shuffledFilePaths });
-        });
-    });
+
+/********* GENERATE STIMULI ********
+************************************
+************************************
+************************************
+************************************/
 
     function shuffleArray(array) {
         for (let i = array.length - 1; i > 0; i--) {
@@ -97,21 +89,47 @@
         }
         return array;
     }
-    console.log("Stimuli arrays:", stimuliArrays);
-    
-    flat_stimuli_array = [];                        // Initialize an empty array to store the flattened stimuli.
-    for (let item of stimuliArrays) {               // Iterate over each item in the stimuliArrays. Each item represents a set of stimuli associated with a specific condition and state.
-        for (let stimulus of item.stimuli) {        // Iterate over each stimulus in the current item's stimuli array. This inner loop goes through the individual stimuli (image paths) and adds them to the flat_stimuli_array.
-            flat_stimuli_array.push(stimulus);      // Add each stimulus (image path) to the flat_stimuli_array, resulting in a single-level array of all stimuli.
-        }
-    }
+
+    const familiesList = shuffleArray(['1', '2']);      // RANDOMIZE FAMILY ORDER
+
+    let stimuliArrays = [];
+
+    familiesList.forEach(family => {  
+        console.log(`Family: ${family}`);
+
+        let clusters = shuffleArray([...Array(6).keys()].map(i => `${i + 1}`));          // RANDOMIZE CLUSTER ORDER WITHIN EACH FAMILY
+
+        clusters.forEach(cluster => {   
+            let countries = shuffleArray(['1', '2', '3', '4']);         // RANDOMIZE COUNTRY ORDER WITHIN EACH CLUSTER
+            console.log(`cluster: ${cluster}, country: ${countries}`);   
+            countries.forEach(country => { 
+                let filePaths = groups?.[family]?.[cluster]?.[country];     // STEP 4: RANDOMIZE FILE PATHS WITHIN EACH COUNTRY
+                if (!filePaths) {
+                    console.error(`Error: Missing file paths for family ${family}, cluster ${cluster}, country ${country}`);
+                    return;  
+                }
+                let shuffledFilePaths = shuffleArray(filePaths);    
+                stimuliArrays.push({ family, cluster, country, stimuli: shuffledFilePaths });
+            });
+        });
+    });
+
+    // FLATTEN STIMULI ARRAY
+    let flat_stimuli_array = [];
+    stimuliArrays.forEach(item => {
+        item.stimuli.forEach(stimulus => {
+            flat_stimuli_array.push(stimulus);
+        });
+    });
+
+
 
     // ADD INFORMATION OF TRIALS TO THE FINAL DATA
     let data = [];
     stimuliArrays.forEach(item => {                 // Iterate over each item in the stimuliArrays. Each item contains information about a set of stimuli for a given condition and state.
         let trialData = {                           // Construct a trialData object containing details for a single trial. This includes the overall condition, the pair in the condition, the state, and the array of stimuli.
-            condition: group,
-            clusterNumbers: item.cluster,
+            family: item.family,
+            cluster: item.cluster,
             country: item.country,
             stimuli_array: item.stimuli
         };
@@ -121,29 +139,47 @@
 
 
 
-/****** INITIALIZE EXPERIMENT ******
+
+
+
+/********* SETTING EXPERIMENT ********
 ************************************
 ************************************
 ************************************
 ************************************/
-    
-    // var pavlovia_id = 's-' + condition + '_p-' + subject_id + '_s-' + session_id;
+    let preload_images = [
+        'assets/img/ambiguous-low.png',
+        'assets/img/ambiguous-high.png',
+        'assets/img/invisible-low.png',
+        'assets/img/invisible-high.png',
+        'assets/img/attention-check.png',
+        'assets/img/countdown-15.gif'
+    ];
 
-    var pavlovia_init = {
-        type: jsPsychPavlovia,
-        data: {
-            task: 'pavlovia-init'
-        },
-        command: "init"
-    };
-    timeline.push(pavlovia_init);
-    
+    stimuliArrays.forEach(item => {                         // Get all stimuli path from stimuliArrays
+        preload_images.push(...item.stimuli);
+    });
+
+    preload_images = [...new Set(preload_images)];          //Exclude duplicated images just in case
+
+
+
+
 
 /********* START EXPERIMENT ********
 ************************************
 ************************************
 ************************************
 ************************************/
+
+    // var pavlovia_init = {
+    //         type: jsPsychPavlovia,
+    //         data: {
+    //             task: 'pavlovia-init'
+    //         },
+    //         command: "init"
+    //     };
+    //     timeline.push(pavlovia_init);
 
     var browserCheck = {
         type: jsPsychBrowserCheck,
@@ -162,21 +198,7 @@
         choices: ['Decline and exit', 'Accept and continue'],
     };
 
-    let preload_images = [
-        'assets/img/ambiguous-low.png',
-        'assets/img/ambiguous-high.png',
-        'assets/img/invisible-low.png',
-        'assets/img/invisible-high.png',
-        'assets/img/attention-check.png',
-        'assets/img/countdown-15.gif'
-    ];
-
-    stimuliArrays.forEach(item => {                         // Get all stimuli path from stimuliArrays
-        preload_images.push(...item.stimuli);
-    });
-
-    preload_images = [...new Set(preload_images)];          //Exclude duplicated images just in case
-
+    
     var preload = {
         type: jsPsychPreload,
         images: preload_images,
@@ -217,8 +239,6 @@
 ************************************
 ************************************/
     
-    var current_trial_count = 1;  
-    
     function make_trial_block(stimuli_array, item) {
 
         var sub_timeline_main_experiment = [];      // sub_timeline_main_experiment contains all the main experiment trials
@@ -227,7 +247,7 @@
         sub_timeline_main_experiment.push({
             type: jsPsychHtmlButtonResponse,
             stimulus: function() {
-                return `<div class="text-container"><h3>Click next to see the next neighborhood.</h3></div></div><br>`; //<br>Trial: ${current_trial_count++} / 16
+                return `<div class="text-container"><h3>Click next to see the next neighborhood.</h3></div><br>`;
             },
             choices: ['Next']
         })
@@ -243,12 +263,12 @@
                 type: jsPsychImageButtonResponse,
                 data: {
                     task: 'street view slide show',
-                    condition: item.group, // Add condition data
+                    family: item.family, // Add condition data
                     cluster: item.cluster, // Add pair_in_condition data
                     country: item.country, // Add state data
                 },
                 stimulus: img,
-                trial_duration: 1000, //1000
+                trial_duration: 100, //1000
                 choices: [],
                 on_start: function() {
                     console.log("Current stimulus:", img);
@@ -269,79 +289,78 @@
         }
 
         // Combine the final prompt with the survey
-    const finalPrompt = create_prompt(
-        "Here are the images you saw from this neighborhood (you can hover over to take a closer look):",
-        stimuli_array
-    );
+        const finalPrompt = create_prompt(
+            "Here are the images you saw from this neighborhood <br>(you can hover over to take a closer look):",
+            stimuli_array
+        );
 
-    sub_timeline_main_experiment.push({
-        type: jsPsychSurvey,
-        button_label_finish: "Continue",
-        data: {
-            task: "landscape",
-            trial_id: item.cluster,
-        },
-        pages: [
-            [
-                {
-                    name: "prompt",
-                    type: "html",
-                    prompt: `
-                        <div style="text-align: center;">
-                            ${finalPrompt}
-                            <p>Please give your general impressions of this neighborhood:</p>
-                        </div>
-                    `,
+        sub_timeline_main_experiment.push({
+            type: jsPsychSurvey,
+            button_label_finish: "Continue",
+            data: {
+                task: "landscape",
+                trial_id: item.cluster,
+            },
+            pages: [
+                [
+                    {
+                        name: "prompt",
+                        type: "html",
+                        prompt: `
+                            <div style="text-align: center;">
+                                ${finalPrompt}
+                                <p>Please give your general impressions of this neighborhood:</p>
+                            </div>
+                        `,
+                    },
+                    {
+                    type: "likert",
+                    name: "ambiguous",
+                    prompt: "How ambiguous is the boundary of each object?",
+                    likert_scale_min_label: "Distinct, Clear",
+                    likert_scale_max_label: "Ambiguous, Unclear",
+                    likert_scale_values: [1, 2, 3, 4, 5],
+                    required: false,
                 },
                 {
-                type: "likert",
-                name: "ambiguous",
-                prompt: "How ambiguous is the boundary of each object?",
-                likert_scale_min_label: "Distinct, Clear",
-                likert_scale_max_label: "Ambiguous, Unclear",
-                likert_scale_values: [1, 2, 3, 4, 5],
-                required: false,
-            },
-            {
-                type: "likert",
-                name: "objects",
-                prompt: "How many different objects do there seem to be?",
-                likert_scale_min_label: "Relatively few",
-                likert_scale_max_label: "Enormous number",
-                likert_scale_values: [1, 2, 3, 4, 5],
-                required: false,
-            },
-            {
-                type: "likert",
-                name: "invisible",
-                prompt: "To what degree do there seem to be parts of the scenes that are invisible?",
-                likert_scale_min_label: "Few invisible parts",
-                likert_scale_max_label: "Many invisible parts",
-                likert_scale_values: [1, 2, 3, 4, 5],
-                required: false,
-            },
-            {
-                type: "likert",
-                name: "chaos",
-                prompt: "To what degree are the scenes either organized or chaotic?",
-                likert_scale_min_label: "Organized",
-                likert_scale_max_label: "Chaotic",
-                likert_scale_values: [1, 2, 3, 4, 5],
-                required: false,
-            },
-            {
-                type: "likert",
-                name: "complex",
-                prompt: "How complex are these images?",
-                likert_scale_min_label: "Simple",
-                likert_scale_max_label: "Complex",
-                likert_scale_values: [1, 2, 3, 4, 5],
-                required: false,
-            },
+                    type: "likert",
+                    name: "objects",
+                    prompt: "How many different objects do there seem to be?",
+                    likert_scale_min_label: "Relatively few",
+                    likert_scale_max_label: "Enormous number",
+                    likert_scale_values: [1, 2, 3, 4, 5],
+                    required: false,
+                },
+                {
+                    type: "likert",
+                    name: "invisible",
+                    prompt: "To what degree do there seem to be parts of the scenes that are invisible?",
+                    likert_scale_min_label: "Few invisible parts",
+                    likert_scale_max_label: "Many invisible parts",
+                    likert_scale_values: [1, 2, 3, 4, 5],
+                    required: false,
+                },
+                {
+                    type: "likert",
+                    name: "chaos",
+                    prompt: "To what degree are the scenes either organized or chaotic?",
+                    likert_scale_min_label: "Organized",
+                    likert_scale_max_label: "Chaotic",
+                    likert_scale_values: [1, 2, 3, 4, 5],
+                    required: false,
+                },
+                {
+                    type: "likert",
+                    name: "complex",
+                    prompt: "How complex are these images?",
+                    likert_scale_min_label: "Simple",
+                    likert_scale_max_label: "Complex",
+                    likert_scale_values: [1, 2, 3, 4, 5],
+                    required: false,
+                },
+                ],
             ],
-        ],
-    });
-        
+        });
         return sub_timeline_main_experiment;
     };
 
@@ -533,14 +552,14 @@
         choices: ['Continue']
     };
     
-    var pavlovia_finish = {
-        type: jsPsychPavlovia,
-        data: {
-            task: 'pavlovia-finish'
-        },
-        command: "finish",
-        participantId: pavlovia_id
-    };
+    // var pavlovia_finish = {
+    //     type: jsPsychPavlovia,
+    //     data: {
+    //         task: 'pavlovia-finish'
+    //     },
+    //     command: "finish",
+    //     participantId: pavlovia_id
+    // };
     
     
 
@@ -549,10 +568,10 @@
 ************************************
 ************************************/
     timeline.push(browserCheck);
-    timeline.push(consentForm);
+    // timeline.push(consentForm);
     timeline.push(preload);
-    timeline.push(intro1);
-    timeline.push(intro2);
+    // timeline.push(intro1);
+    // timeline.push(intro2);
 
     timeline.push(initialInstruction);
     data.forEach((item, index) => {
@@ -563,14 +582,17 @@
         }
     });
 
-    timeline.push(demogForm1);
+    // timeline.push(demogForm1);
     //timeline.push(demogForm2);
-    timeline.push(endSurveyDebrief);
+    // timeline.push(endSurveyDebrief);
     // Recommend this object is **BEFORE** the trial to redirect for completion or display code
-    timeline.push(endRedirect);
-    timeline.push(pavlovia_finish);
+    // timeline.push(endRedirect);
+    // timeline.push(pavlovia_finish);
     
     // start the experiment
     jsPsych.run(timeline);
 
 </script>
+
+
+</html>
