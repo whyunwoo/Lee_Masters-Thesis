@@ -258,7 +258,7 @@
                     country: item.country, // Add state data
                 },
                 stimulus: img,
-                trial_duration: 10, //1000
+                trial_duration: 1000, //1000
                 choices: [],
                 on_start: function() {
                     console.log("Current stimulus:", img);
@@ -288,8 +288,7 @@
             type: jsPsychSurvey,
             button_label_finish: "Continue",
             data: {
-                task: "landscape",
-                trial_id: item.cluster,
+                task: "sv response",
             },
             pages: [
                 [
@@ -380,13 +379,139 @@
     var demogFormFormat = "<p>Please complete this section with your demographic information:</p>";
     var final_html = "<p>Thank you for participating in this study!</p>";
 
+        
+    const htmlDemogForm1 = `
+            <label for="zipcode">What's the zipcode of your current residence?<br>
+                <input type="number" id="zipcode" name="zipcode">
+            </label><br><br>
+
+            <label for="age">What is your age in years?<br>
+                <input type="number" id="age" name="age" min=18><br><br>
+            </label>
+
+
+            <label for="sex">Please indicate your sex.<br>
+                <div class="text-left" style="max-width:200px; margin:auto;">
+                <label for="female" style="font-size:85%">
+                    <input type="radio" id="female" name="sex" value="female">
+                    Female
+                </label><br>
+
+                <label for="male" style="font-size:85%">
+                    <input type="radio" id="male" name="sex" value="male">
+                    Male
+                </label><br>
+                
+                <label for="intersex" style="font-size:85%">
+                    <input type="radio" id="intersex" name="sex" value="nonbinary">
+                    Intersex
+                </label><br>
+                
+                <label for="not-to-say" style="font-size:85%">
+                    <input type="radio" id="not-to-say" name="sex" value="not-to-say">
+                    I prefer not to answer this question
+                </label><br>
+                </div>
+            </label><br><br>
+
+            
+            <label for="gender">How do you currently describe your gender identity?<br>
+                <div class="text-left" style="max-width:400px; margin:auto;">
+                <label for="woman" style="font-size:85%">
+                    <input type="radio" id="woman" name="gender" value="woman">
+                    Woman
+                </label><br>
+                
+                
+                <label for="man" style="font-size:85%">
+                    <input type="radio" id="man" name="gender" value="man">
+                    Man
+                </label><br>
+                
+                <label for="not-to-say" style="font-size:85%">
+                    <input type="radio" id="not-to-say" name="gender" value="not-to-say">
+                    I prefer not to answer this question
+                </label><br>
+
+                <label for="nonbinary" style="font-size:85%">
+                <input type="radio" id="nonbinary" name="gender" value="nonbinary">
+                    Non-Binary or another gender identity
+                </label><br>
+
+                <label for="self-describe" onClick=selfDescribe() style="font-size:85%">
+                    <br>Please describe your gender identity if you checked on 'Non-Binary or another gender' above: &nbsp;&nbsp;&nbsp;   
+                    <div style= "text-align: center"><input type="text" id="self-describe" name="gender-self-describe"></div>
+                </label>
+                </div>
+            </label><br><br>
+
+            <label for="ethnicity">How do you identify your ethnicity?<br>
+                <div class="text-left" style="max-width:400px; margin:auto;">
+                <label for="caucasian" style="font-size:85%">
+                    <input type="radio" id="caucasian" name="ethnicity" value="caucasian">
+                    Caucasian
+                </label><br>
+            
+                <label for="african" style="font-size:85%">
+                    <input type="radio" id="african" name="ethnicity" value="african">
+                    African or African American
+                </label><br>
+            
+                <label for="east-asian" style="font-size:85%">
+                    <input type="radio" id="east-asian" name="ethnicity" value="east-asian">
+                    East Asian (e.g., Chinese, Japanese, Korean)
+                </label><br>
+
+                <label for="south-asian" style="font-size:85%">
+                    <input type="radio" id="south-asian" name="ethnicity" value="south-asian">
+                    South Asian (e.g., Indian, Pakistani, Bangladeshi)
+                </label><br>
+
+                <label for="southeast-asian" style="font-size:85%">
+                    <input type="radio" id="southeast-asian" name="ethnicity" value="southeast-asian">
+                    Southeast Asian (e.g., Vietnamese, Thai, Filipino)
+                </label><br>
+
+                <label for="middle-eastern" style="font-size:85%">
+                    <input type="radio" id="middle-eastern" name="ethnicity" value="middle-eastern">
+                    Middle Eastern (e.g., Arab, Iranian, Turkish)
+                </label><br>
+
+                <label for="latino" style="font-size:85%">
+                    <input type="radio" id="latino" name="ethnicity" value="latino">
+                    Latino or Hispanic
+                </label><br>
+
+                <label for="native" style="font-size:85%">
+                    <input type="radio" id="native" name="ethnicity" value="native">
+                    Native American or Alaskan Native
+                </label><br>
+
+                <label for="other" style="font-size:85%">
+                    <input type="radio" id="other" name="ethnicity" value="other">
+                    Other
+                </label><br>
+
+                <label for="prefer-not-to-say" style="font-size:85%">
+                    <input type="radio" id="prefer-not-to-say" name="ethnicity" value="prefer-not-to-say">
+                    I prefer not to answer this question
+                </label><br>
+
+                <label for="self-describe-ethnicity" onClick=selfDescribeEthnicity() style="font-size:85%">
+                    <br>Please describe your ethnicity if you selected 'Other' above: &nbsp;&nbsp;&nbsp;   
+                    <div style="text-align: center"><input type="text" id="self-describe-ethnicity" name="ethnicity-self-describe"></div>
+                </label>
+                </div>
+            </label><br><br>
+        `;
+
     var demogForm1 = {
         type: jsPsychSurveyHtmlForm,
         data: {
             task: 'demographics1'
         },
         preamble: preambleDemog,
-        html: demogForm1,
+        html: htmlDemogForm1,
         choices: ['Next'],
     };
 
