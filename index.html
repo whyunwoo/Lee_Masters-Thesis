@@ -559,19 +559,19 @@
 ************************************
 ************************************/
     timeline.push(browserCheck);
-    // timeline.push(consentForm);
-    // timeline.push(preload);
-    // timeline.push(intro1);
-    // timeline.push(intro2);
+    timeline.push(consentForm);
+    timeline.push(preload);
+    timeline.push(intro1);
+    timeline.push(intro2);
 
-    // timeline.push(initialInstruction);
-    // data.forEach((item, index) => {
-    //     var sub_timeline_main_experiment = make_trial_block(item.stimuli_array, item);
-    //     timeline.push(...sub_timeline_main_experiment);
-    //     if (index === Math.floor(data.length / 2) - 1) {
-    //         timeline.push(half_way);
-    //     }
-    // });
+    timeline.push(initialInstruction);
+    data.forEach((item, index) => {
+        var sub_timeline_main_experiment = make_trial_block(item.stimuli_array, item);
+        timeline.push(...sub_timeline_main_experiment);
+        if (index === Math.floor(data.length / 2) - 1) {
+            timeline.push(half_way);
+        }
+    });
 
     timeline.push(demogForm1);
     timeline.push(endSurveyDebrief);
