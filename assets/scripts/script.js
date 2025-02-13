@@ -10,22 +10,24 @@ const consentHTML = `
         <h4>DESCRIPTION</h4>
         <p>
             In this study, you will view Google Street View images. You will then answer questions about your impressions of the streetscapes presented in those images.
+
         </p><br>
     
         <h4>TIME INVOLVEMENT</h4>
-        <p>Your participation will take approximately 20-25 minutes.</p><br>
+        <p>Your participation will take approximately 30 minutes.</p><br>
     
         <h4>RISKS AND BENEFITS</h4>
         <p>
-            The risks associated with this study are minimal. The benefits which may reasonably be expected to result from this study are none.  We cannot and do not guarantee or promise that you will receive any benefits from this study. 
+           The risks associated with this study are minimal. The benefits which may reasonably be expected to result from this study are none.  We cannot and do not guarantee or promise that you will receive any benefits from this study.  
         </p><br>
 
         <h4>PAYMENTS</h4>
-        <p>You will be paid <b>$4.60</b> for your participation.</p><br>
+        <p>You will receive .5 credit  for your participation.</p><br>
 
         <h4>SUBJECT'S RIGHTS</h4>
         <p>
             If you have read this form and have decided to participate in this project, please understand your participation is voluntary and you have the right to withdraw your consent or discontinue participation at any time without penalty or loss of benefits to which you are otherwise entitled.  The alternative is not to participate.  You have the right to refuse to answer particular questions.  
+ 
         </p>
     
         <p>
@@ -34,7 +36,7 @@ const consentHTML = `
     
         <h4>CONTACT INFORMATION</h4>
         <p>
-            Questions: If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Nicholas Camp, npcamp@umich.edu, (443) 851-6783.
+           Questions:  If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Nicholas Camp, npcamp@umich.edu, (443) 851-6783.
         </p>
     
         <p>
@@ -58,7 +60,8 @@ const consentHTML = `
         <br>
     
         <div class="alert alert-warning"><b>
-            Do you consent to participate in this study? If you consent to participate in this study, please click “Accept and continue.”
+            Do you consent to participate in this study? If you consent to participate in this study, please click “yes”. If you select "no", you will be directed out of the survey.
+
         </b></div>
         </div>
     </div>
@@ -157,6 +160,12 @@ const debriefHTML = `
     <div style="text-align: left; max-width: 700px; font-size: 80%">
         <p>
             In this study, we were interested in how environments in different places influence perception. Specifically, we want to know how complex the environment appears in different cities around the world. You rated images from different cities in the United States and Japan; your answers will help us understand these differences in the physical environment. 
+        </p>
+
+        <p>
+          Interested in learning more? Check out these articles: <br>
+                - Miyamoto, Y., Nisbett, R. E., & Masuda, T. (2006). Culture and the physical environment: Holistic versus analytic perceptual affordances. Psychological science, 17(2), 113-119.<br>
+                - Masuda, T., Ishii, K., & Kimura, J. (2016). When does the culturally dominant mode of attention appear or disappear? Comparing patterns of eye movement during the visual flicker task between European Canadians and Japanese. Journal of Cross-Cultural Psychology, 47(7), 997-1014.<br>
         </p>
     
         <p>
