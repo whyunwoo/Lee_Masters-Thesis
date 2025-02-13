@@ -380,7 +380,7 @@
     var final_html = "<p>Thank you for participating in this study!</p>";
 
         
-    const htmlDemogForm1 = `
+    var htmlDemogForm1Script = `
             <label for="zipcode">What's the zipcode of your current residence?<br>
                 <input type="number" id="zipcode" name="zipcode">
             </label><br><br>
@@ -511,7 +511,7 @@
             task: 'demographics1'
         },
         preamble: preambleDemog,
-        html: htmlDemogForm1,
+        html: htmlDemogForm1Script,
         choices: ['Next'],
     };
 
