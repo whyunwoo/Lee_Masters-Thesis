@@ -177,7 +177,7 @@ const debriefHTML = `
 
 var endStudyNoConsent_prompt = `
     <h3>You have declined the informed consent form.</h3>
-    <p>Please exit this window and return this study on Prolific.</p>
+    <p>Please exit this window and return this study on SONA.</p>
     `;
 
 var endRedirectPrompt = [`You've reached the end of the survey. <br><br> 
@@ -185,5 +185,5 @@ var endRedirectPrompt = [`You've reached the end of the survey. <br><br>
 In the next page, you will see a pop-up like below after a few moment.<br><br>
 <img src='assets/img/chrome.PNG'> <br><br>
 Press the <b>'Leave'</b> button to exit from the experiment without losing your record.<br>
-You will be automatically redirected to PROLIFIC once you click the <b>'Leave'</b> button. <br><br>`
+You will be automatically redirected to SONA once you click the <b>'Leave'</b> button. <br><br>`
 ]
