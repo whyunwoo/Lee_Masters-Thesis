@@ -1,29 +1,29 @@
 var groups = {
-    "1": {
-        "1": {
-            "1": [
-                "./stim/Birmingham_1_1_1.jpg",
+    "1": {  //family
+        "1": {  //cluster
+            "1": [  //country number (1-4)
+                "./stim/Birmingham_1_1_1.jpg",  //city_1_cluster_1
                 "./stim/Birmingham_1_1_2.jpg",
                 "./stim/Birmingham_1_1_3.jpg",
                 "./stim/Birmingham_1_1_4.jpg",
                 "./stim/Birmingham_1_1_5.jpg"
             ],
             "2": [
-                "./stim/Hitachi_2_1_1.jpg",
+                "./stim/Hitachi_2_1_1.jpg",  //city_2_cluster_1
                 "./stim/Hitachi_2_1_2.jpg",
                 "./stim/Hitachi_2_1_3.jpg",
                 "./stim/Hitachi_2_1_4.jpg",
                 "./stim/Hitachi_2_1_5.jpg"
             ],
             "3": [
-                "./stim/Szekesfehervar_3_1_1.jpg",
+                "./stim/Szekesfehervar_3_1_1.jpg",  //city_3_cluster_1
                 "./stim/Szekesfehervar_3_1_2.jpg",
                 "./stim/Szekesfehervar_3_1_3.jpg",
                 "./stim/Szekesfehervar_3_1_4.jpg",
                 "./stim/Szekesfehervar_3_1_5.jpg"
             ],
             "4": [
-                "./stim/Tauranga_4_1_1.jpg",
+                "./stim/Tauranga_4_1_1.jpg",    //city_4_cluster_1
                 "./stim/Tauranga_4_1_2.jpg",
                 "./stim/Tauranga_4_1_3.jpg",
                 "./stim/Tauranga_4_1_4.jpg",
