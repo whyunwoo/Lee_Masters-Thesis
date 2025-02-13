@@ -4,7 +4,7 @@
 <head>
     <title>Perceptions of Spaces</title>
     <meta charset="UTF-8">
-    
+
     <!-- PAVLOVIA, JSPSYCH, PLUGINS -->
     <script src="lib/jspsych-7-pavlovia-2022.1.1.js"></script>
     <script src="https://unpkg.com/jspsych@7.3.4"></script>
@@ -45,6 +45,8 @@
 <script>
     
     // Initialize jsPsych
+    var timeline = [];
+
     var jsPsych = initJsPsych({
         use_webaudio: false,
         on_finish: function(data) {
@@ -53,21 +55,17 @@
         }
     });
 
-    var timeline = [];
 
     // SONA
-    var subject_id = jsPsych.data.getURLVariable("sona_id"); //SONA ID for Subject Pool
+    var subject_id = sona_id
     var study_id = jsPsych.data.getURLVariable('STUDY_ID');
-    var session_id = jsPsych.data.getURLVariable('SESSION_ID');
+    var pavlovia_id = '_p-' + subject_id;       // create pavlovia participant ID --> when need to open this on chrome comment out all the chuncks with pavlovia
 
     jsPsych.data.addProperties({
         subject_id: subject_id,
         study_id: study_id,
         session_id: session_id
     });
-    // var pavlovia_id = '_p-' + subject_id + '_s-' + session_id;       // create pavlovia participant ID --> when need to open this on chorme comment out all the chuncks with pavlovia
-
-
 
 
 /********* GENERATE STIMULI ********
@@ -97,7 +95,7 @@
             let countries = shuffleArray(['1', '2', '3', '4']);         // RANDOMIZE COUNTRY ORDER WITHIN EACH CLUSTER
             console.log(`cluster: ${cluster}, country: ${countries}`);   
             countries.forEach(country => { 
-                let filePaths = groups?.[family]?.[cluster]?.[country];     // STEP 4: RANDOMIZE FILE PATHS WITHIN EACH COUNTRY
+                let filePaths = groups?.[family]?.[cluster]?.[country];     // RANDOMIZE FILE PATHS WITHIN EACH COUNTRY
                 if (!filePaths) {
                     console.error(`Error: Missing file paths for family ${family}, cluster ${cluster}, country ${country}`);
                     return;  
@@ -166,14 +164,14 @@
 ************************************
 ************************************/
 
-    // var pavlovia_init = {
-    //         type: jsPsychPavlovia,
-    //         data: {
-    //             task: 'pavlovia-init'
-    //         },
-    //         command: "init"
-    //     };
-    //     timeline.push(pavlovia_init);
+    var pavlovia_init = {
+            type: jsPsychPavlovia,
+            data: {
+                task: 'pavlovia-init'
+            },
+            command: "init"
+        };
+        timeline.push(pavlovia_init);
 
     var browserCheck = {
         type: jsPsychBrowserCheck,
@@ -191,7 +189,6 @@
         },
         choices: ['Decline and exit', 'Accept and continue'],
     };
-
     
     var preload = {
         type: jsPsychPreload,
@@ -262,7 +259,7 @@
                     country: item.country, // Add state data
                 },
                 stimulus: img,
-                trial_duration: 100, //1000
+                trial_duration: 10, //1000
                 choices: [],
                 on_start: function() {
                     console.log("Current stimulus:", img);
@@ -370,7 +367,7 @@
 
 
 
-    // END OF EXPERIMENT
+    // DEMOGRAPHICS
     function selfDescribe() {
         a = document.getElementById('self-describe');
         a.checked = true;
@@ -394,123 +391,6 @@
         choices: ['Next'],
     };
 
-    // var demogForm2 = {
-    //     type: jsPsychSurvey,
-    //     button_label_finish: "Next",
-    //     data: {
-    //         task: 'demographics2'
-    //     },
-    //     pages: [
-    //             /*[
-    //                 {
-    //                     type: 'html',
-    //                     prompt: demogFormFormat,
-    //                     name: 'format_skip',
-    //                 },
-    //                 {
-    //                     type: 'multi-choice',
-    //                     prompt: "What is the highest education you've completed?",
-    //                     options: [
-    //                         'Some high school',
-    //                         'High school diploma or equivalent',
-    //                         'Some college',
-    //                         'Associate’s degree',
-    //                         'Bachelor’s degree',
-    //                         'Graduate & professional degrees'
-    //                     ],
-    //                     name: 'education',
-    //                 },
-    //             ],*/  
-    //             [
-    //                 {
-    //                     type: 'html',
-    //                     prompt: demogFormFormat,
-    //                     name: 'format_skip',
-    //                 }, 
-    //                 {
-    //                     type: 'multi-choice',
-    //                     prompt: "How would you describe your political orientation?",
-    //                     options: [
-    //                         "Very Liberal",
-    //                         "Liberal",
-    //                         "Moderate",
-    //                         "Conservative",
-    //                         "Very Conservative"
-    //                     ],
-    //                     name: "ideology",
-    //                 },
-    //             ], 
-    //             [
-    //                 {
-    //                     type: 'html',
-    //                     prompt: demogFormFormat,
-    //                     name: 'format_skip',
-    //                 }, 
-    //                 {
-    //                     type: 'text',
-    //                     prompt: "How many times during your childhood did you move to a totally new neighborhood or town?",
-    //                     name: 'num-moves',
-    //                     textbox_columns: 5,
-    //                     input_type: 'number'
-    //                 },
-    //             ],
-    //             [
-    //                 {
-    //                     type: 'html',
-    //                     prompt: final_html,
-    //                     name: 'format_skip',
-    //                 }, 
-    //                 {
-    //                     type: 'likert-table',
-    //                     name: 'SDO',
-    //                     prompt: ' ',
-    //                     randomize_statement_order: true,
-    //                     statements: [
-    //                         {prompt: "An ideal society requires some groups to be on top and others to be on the bottom.", name: 'PDom_1'},
-    //                         {prompt: "Some groups of people are simply inferior to other groups.", name: "PDom_2",},
-    //                         {prompt: "No one group should dominate in society.", name: 'CDom_1'},
-    //                         {prompt: "Groups at the bottom are just as deserving as groups at the top.", name: 'CDom_2'},
-    //                         {prompt: "Group equality should not be our primary goal.", name: 'PAE_1'},
-    //                         {prompt: "It is unjust to try to make groups equal.", name: 'PAE_2'},
-    //                         {prompt: "We should do what we can to equalize conditions for different groups.", name: 'CAE_1'},
-    //                         {prompt: "We should work to give all groups an equal chance to succeed.", name: 'CAE_2'},
-    //                     ],
-    //                     options: [
-    //                         "Strongly Oppose",
-    //                         "Somewhat Oppose",
-    //                         "Slightly Oppose",
-    //                         "Neutral",
-    //                         "Slightly Favor",
-    //                         "Somewhat Favor",
-    //                         "Strongly Favor",
-    //                     ],
-    //                 }
-    //             ],
-    //             /*[
-    //                 {
-    //                     type: 'html',
-    //                     prompt: demogFormFormat + `
-    //                     <div class="text-container">
-    //                         <p style="text-align: left;">
-    //                             Think of this ladder as representing where people stand in the United States. At the top of the ladder are the people who are the best off – those who have the most money, the most education, and the most respected jobs. At the bottom are the people who are the worst off – those who have the least money, least education, the least respected jobs, or no job. The higher up you are on this ladder, the closer you are to the people at the very top; the lower you are, the closer you are to the people at the very bottom.
-    //                         </p>
-    //                         <img src="assets/img/ladder_marked.png" style="max-width: 150px;">
-    //                     </div>
-    //                     `,
-    //                     name: 'format_skip',
-    //                 },
-    //                 {
-    //                     type: 'likert',
-    //                     prompt: "Where would you place yourself on this ladder?",
-    //                     name: 'social-ladder',
-    //                     likert_scale_min: 1,
-    //                     likert_scale_max: 10
-    //                 }
-    //             ]*/
-    //         ]
-    // };
-
-
     
 /***********************************
 *********** END OF STUDY************
@@ -530,9 +410,6 @@
                 name: 'comment',
             }
         ],
-        // on_finish: function(data){
-        //     data.num_attention_checks_correct = num_attention_checks_correct;
-        // },
     };
 
     var endRedirect_prompt = "<p>Thank you for completing the study! Please click 'Continue' to finish and receive credit.</p>";
@@ -546,14 +423,14 @@
         choices: ['Continue']
     };
     
-    // var pavlovia_finish = {
-    //     type: jsPsychPavlovia,
-    //     data: {
-    //         task: 'pavlovia-finish'
-    //     },
-    //     command: "finish",
-    //     participantId: pavlovia_id
-    // };
+    var pavlovia_finish = {
+        type: jsPsychPavlovia,
+        data: {
+            task: 'pavlovia-finish'
+        },
+        command: "finish",
+        participantId: pavlovia_id
+    };
     
     
 
@@ -562,10 +439,10 @@
 ************************************
 ************************************/
     timeline.push(browserCheck);
-    // timeline.push(consentForm);
+    timeline.push(consentForm);
     timeline.push(preload);
-    // timeline.push(intro1);
-    // timeline.push(intro2);
+    timeline.push(intro1);
+    timeline.push(intro2);
 
     timeline.push(initialInstruction);
     data.forEach((item, index) => {
@@ -576,17 +453,15 @@
         }
     });
 
-    // timeline.push(demogForm1);
-    //timeline.push(demogForm2);
-    // timeline.push(endSurveyDebrief);
-    // Recommend this object is **BEFORE** the trial to redirect for completion or display code
-    // timeline.push(endRedirect);
-    // timeline.push(pavlovia_finish);
+    timeline.push(demogForm1);
+    timeline.push(endSurveyDebrief);
+    timeline.push(endRedirect);     // Recommend this object is **BEFORE** the trial to redirect for completion or display code
+    timeline.push(pavlovia_finish);
     
+
+
     // start the experiment
     jsPsych.run(timeline);
 
 </script>
-
-
 </html>
