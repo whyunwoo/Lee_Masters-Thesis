@@ -1,0 +1,6 @@
+"task","trial_type","trial_index","time_elapsed","internal_node_id","subject_id","study_id","width","height","webaudio","browser","browser_version","mobile","os","fullscreen","vsync_rate","webcam","microphone","rt","response","stimulus"
+"pavlovia-init","pavlovia","0","1106","0.0-0.0","71600","","","","","","","","","","","","","","",""
+"browser-check","browser-check","1","2117","0.0-1.0","71600","","1985","855","true","chrome","133.0.0","false","Mac OS","true","59.99","true","true","","",""
+"demographics1","survey-html-form","2","9321","0.0-2.0","71600","","","","","","","","","","","","","7201","{""zipcode"":"""",""age"":"""",""gender-self-describe"":"""",""ethnicity-self-describe"":""""}",""
+"end-survey","survey-text","3","10973","0.0-3.0","71600","","","","","","","","","","","","","1641","{""comment"":""""}",""
+"end-survey","html-button-response","4","12558","0.0-4.0","71600","","","","","","","","","","","","","1583","0","[""You've reached the end of the survey. <br><br> \n<b>Do not close or refresh this window.</b><br>\nIn the next page, you will see a pop-up like below after a few moment.<br><br>\n<img src='assets/img/chrome.PNG'> <br><br>\nPress the <b>'Leave'</b> button to exit from the experiment without losing your record.<br>\nYou will be automatically redirected to SONA once you click the <b>'Leave'</b> button. <br><br>""]"
