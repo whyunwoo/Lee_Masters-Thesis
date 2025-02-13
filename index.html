@@ -57,7 +57,7 @@
 
 
     // SONA
-    var subject_id = sona_id
+    var subject_id = jsPsych.data.getURLVariable('sona_id');
     var study_id = jsPsych.data.getURLVariable('STUDY_ID');
     var pavlovia_id = '_p-' + subject_id;       // create pavlovia participant ID --> when need to open this on chrome comment out all the chuncks with pavlovia
 
