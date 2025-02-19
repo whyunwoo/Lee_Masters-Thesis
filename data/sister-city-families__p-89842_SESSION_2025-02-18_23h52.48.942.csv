@@ -1,0 +1,470 @@
+"task","trial_type","trial_index","time_elapsed","internal_node_id","subject_id","study_id","width","height","webaudio","browser","browser_version","mobile","os","fullscreen","vsync_rate","webcam","microphone","rt","stimulus","response","success","timeout","failed_images","failed_audio","failed_video","family","cluster","country","accuracy"
+"pavlovia-init","pavlovia","0","1225","0.0-0.0","89842","","","","","","","","","","","","","","","","","","","","","","","",""
+"browser-check","browser-check","1","2240","0.0-1.0","89842","","1039","729","true","chrome","131.0.0","false","Mac OS","true","59.98","true","true","","","","","","","","","","","",""
+"consent","html-button-response","2","22018","0.0-2.0","89842","","","","","","","","","","","","","19776","
+    <div style=""font-size: 80%; max-width:700px"">
+        <h2>Informed Consent</h2><br>
+    
+        <div style=""text-align: left"">
+        <h3>Streetscape Perceptions</h3>
+        <b>HUM00189138</b>
+        <br><hr>
+    
+        <h4>DESCRIPTION</h4>
+        <p>
+            In this study, you will view Google Street View images. You will then answer questions about your impressions of the streetscapes presented in those images.
+
+        </p><br>
+    
+        <h4>TIME INVOLVEMENT</h4>
+        <p>Your participation will take approximately 30 minutes.</p><br>
+    
+        <h4>RISKS AND BENEFITS</h4>
+        <p>
+           The risks associated with this study are minimal. The benefits which may reasonably be expected to result from this study are none.  We cannot and do not guarantee or promise that you will receive any benefits from this study.  
+        </p><br>
+
+        <h4>PAYMENTS</h4>
+        <p>You will receive .5 credit  for your participation.</p><br>
+
+        <h4>SUBJECT'S RIGHTS</h4>
+        <p>
+            If you have read this form and have decided to participate in this project, please understand your participation is voluntary and you have the right to withdraw your consent or discontinue participation at any time without penalty or loss of benefits to which you are otherwise entitled.  The alternative is not to participate.  You have the right to refuse to answer particular questions.  
+ 
+        </p>
+    
+        <p>
+            Your individual privacy will be maintained in all published and written data resulting from the study. Your responses will be kept confidential: you are given a participant code, and no one, not even the research team, can match that code with your identity. Your collected information may also be shared with other researchers as part of our dataset.
+        </p><br>
+    
+        <h4>CONTACT INFORMATION</h4>
+        <p>
+           Questions:  If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Nicholas Camp, npcamp@umich.edu, (443) 851-6783.
+        </p>
+    
+        <p>
+            If you have questions about your rights as a research participant, or wish to obtain information, ask questions or discuss any concerns about this study with someone other than the researcher(s), please contact the following:
+            <br><br>
+    
+            University of Michigan<br>
+            Health Sciences and Behavioral Sciences Institutional Review Board
+            (IRB-HSBS)<br>
+            2800 Plymouth Road <br>
+            Building 520, Room 1169 <br>
+            Ann Arbor, MI 48109-2800 <br>
+            Telephone: 734-936-0933 or toll free (866) 936-0933 <br>
+            Fax: 734-936-1852 <br />
+            E-mail: irbhsbs@umich.edu <br>
+        </p>
+    
+        <p>
+            You can also contact the University of Michigan Compliance Hotline at 1-866-990-0111. You may also print this consent form to keep.
+        </p>
+        <br>
+    
+        <div class=""alert alert-warning""><b>
+            Do you consent to participate in this study? If you consent to participate in this study, please click “yes”. If you select ""no"", you will be directed out of the survey.
+
+        </b></div>
+        </div>
+    </div>
+","1","","","","","","","","",""
+"","preload","3","26941","0.0-3.0","89842","","","","","","","","","","","","","","","","true","false","[]","[]","[]","","","",""
+"instructions","html-button-response","4","37134","0.0-4.0","89842","","","","","","","","","","","","","10193","
+<div class=""text-container"">
+    <h1>Welcome to the study!</h1>
+    
+    <div class=""text-left"">
+        <p>
+            In this study, we are interested in how people think about different Google Street View images. Google Street View takes pictures of streets used for Google Earth and Google Maps. You’ll see Google Street View images of different places and answer some questions about each one.
+        </p>
+    </div>
+    <img src = ""assets/img/example.png"" width = 500px, height = auto>
+    <br>
+<br>
+","0","","","","","","","","",""
+"instructions","html-button-response","5","56052","0.0-5.0","89842","","","","","","","","","","","","","18918","
+        <style>
+            img.small {
+            max-width: 100px;
+            }
+            li {
+            text-indent: 40px;
+            }
+        </style>
+
+        <div class=""text-container text-left"">
+            <p>For each picture, we’d like your impressions of the scene:</p>
+            
+            <hr>
+                Are there <b>clear, distinct boundaries</b> between objects in the scene, or are the <b>boundaries ambiguous or unclear</b>?
+                
+                <li>clear, distinct boundaries: <img class=""small"" src=""assets/img/ambiguous-low.png""></li>
+                <li>ambiguous or unclear boundaries: <img class=""small"" src=""assets/img/ambiguous-high.png""></li>
+            <hr>
+            <br>
+                Are there <b>only a few different objects</b> in the scene, or is there <b>a large number</b>?
+            <br><br>
+            <hr>
+                Are only <b>a few parts</b> of the scene <b>invisible or obscured</b>, or are <b>many parts invisible or obscured</b>?
+                
+                <li>a few parts invisible or obscured: <img class=""small"" src=""assets/img/invisible-low.png""></li>
+                <li>many parts invisible or obscured: <img class=""small"" src=""assets/img/invisible-high.png""></li>
+            <hr>
+            <br>
+                Does the scene look <b>organized</b> or <b>chaotic</b> to you?
+            <br><br>
+            <hr>
+            
+            <p>
+                There are no right or wrong answers: we are interested in <b>your</b> impression. Note that some images might have individual buildings or faces blurred for privacy. Please ignore these when making your judgments.
+            </p>
+        </div>
+        <br>
+    ","0","","","","","","","","",""
+"","html-button-response","6","59055","0.0-6.0","89842","","","","","","","","","","","","","3002","<div class=""text-container""><h3>On the next page, you will view a few Google Streetview images taken at random from a single neighborhood.</h3><br></div>","0","","","","","","","","",""
+"","html-button-response","7","60401","0.0-7.0","89842","","","","","","","","","","","","","1346","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","8","61403","0.0-8.0","89842","","","","","","","","","","","","","null","./stim/Birmingham_1_3_3.jpg","null","","","","","","1","3","1",""
+"street view slide show","image-button-response","9","62405","0.0-9.0","89842","","","","","","","","","","","","","null","./stim/Birmingham_1_3_4.jpg","null","","","","","","1","3","1",""
+"street view slide show","image-button-response","10","63407","0.0-10.0","89842","","","","","","","","","","","","","null","./stim/Birmingham_1_3_2.jpg","null","","","","","","1","3","1",""
+"street view slide show","image-button-response","11","64410","0.0-11.0","89842","","","","","","","","","","","","","null","./stim/Birmingham_1_3_1.jpg","null","","","","","","1","3","1",""
+"street view slide show","image-button-response","12","65413","0.0-12.0","89842","","","","","","","","","","","","","null","./stim/Birmingham_1_3_5.jpg","null","","","","","","1","3","1",""
+"sv response","survey","13","101512","0.0-13.0","89842","","","","","","","","","","","","","36053","","{""prompt"":null,""ambiguous"":4,""objects"":3,""invisible"":3,""chaos"":2,""complex"":1}","","","","","","","","","[]"
+"","html-button-response","14","103001","0.0-14.0","89842","","","","","","","","","","","","","1489","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","15","104004","0.0-15.0","89842","","","","","","","","","","","","","null","./stim/Tauranga_4_3_4.jpg","null","","","","","","1","3","4",""
+"street view slide show","image-button-response","16","105007","0.0-16.0","89842","","","","","","","","","","","","","null","./stim/Tauranga_4_3_2.jpg","null","","","","","","1","3","4",""
+"street view slide show","image-button-response","17","106012","0.0-17.0","89842","","","","","","","","","","","","","null","./stim/Tauranga_4_3_5.jpg","null","","","","","","1","3","4",""
+"street view slide show","image-button-response","18","107014","0.0-18.0","89842","","","","","","","","","","","","","null","./stim/Tauranga_4_3_3.jpg","null","","","","","","1","3","4",""
+"street view slide show","image-button-response","19","108019","0.0-19.0","89842","","","","","","","","","","","","","null","./stim/Tauranga_4_3_1.jpg","null","","","","","","1","3","4",""
+"sv response","survey","20","127823","0.0-20.0","89842","","","","","","","","","","","","","19785","","{""prompt"":null,""ambiguous"":3,""objects"":3,""invisible"":2,""chaos"":4,""complex"":2}","","","","","","","","","[]"
+"","html-button-response","21","128951","0.0-21.0","89842","","","","","","","","","","","","","1128","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","22","129953","0.0-22.0","89842","","","","","","","","","","","","","null","./stim/Hitachi_2_3_4.jpg","null","","","","","","1","3","2",""
+"street view slide show","image-button-response","23","130955","0.0-23.0","89842","","","","","","","","","","","","","null","./stim/Hitachi_2_3_1.jpg","null","","","","","","1","3","2",""
+"street view slide show","image-button-response","24","131958","0.0-24.0","89842","","","","","","","","","","","","","null","./stim/Hitachi_2_3_5.jpg","null","","","","","","1","3","2",""
+"street view slide show","image-button-response","25","132961","0.0-25.0","89842","","","","","","","","","","","","","null","./stim/Hitachi_2_3_2.jpg","null","","","","","","1","3","2",""
+"street view slide show","image-button-response","26","133964","0.0-26.0","89842","","","","","","","","","","","","","null","./stim/Hitachi_2_3_3.jpg","null","","","","","","1","3","2",""
+"sv response","survey","27","179854","0.0-27.0","89842","","","","","","","","","","","","","45876","","{""prompt"":null,""ambiguous"":4,""objects"":4,""invisible"":3,""chaos"":4,""complex"":1}","","","","","","","","","[]"
+"","html-button-response","28","181118","0.0-28.0","89842","","","","","","","","","","","","","1263","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","29","182120","0.0-29.0","89842","","","","","","","","","","","","","null","./stim/Szekesfehervar_3_3_4.jpg","null","","","","","","1","3","3",""
+"street view slide show","image-button-response","30","183123","0.0-30.0","89842","","","","","","","","","","","","","null","./stim/Szekesfehervar_3_3_1.jpg","null","","","","","","1","3","3",""
+"street view slide show","image-button-response","31","184127","0.0-31.0","89842","","","","","","","","","","","","","null","./stim/Szekesfehervar_3_3_3.jpg","null","","","","","","1","3","3",""
+"street view slide show","image-button-response","32","185129","0.0-32.0","89842","","","","","","","","","","","","","null","./stim/Szekesfehervar_3_3_5.jpg","null","","","","","","1","3","3",""
+"street view slide show","image-button-response","33","186133","0.0-33.0","89842","","","","","","","","","","","","","null","./stim/Szekesfehervar_3_3_2.jpg","null","","","","","","1","3","3",""
+"sv response","survey","34","202654","0.0-34.0","89842","","","","","","","","","","","","","16511","","{""prompt"":null,""ambiguous"":3,""objects"":3,""invisible"":2,""chaos"":4,""complex"":2}","","","","","","","","","[]"
+"","html-button-response","35","204001","0.0-35.0","89842","","","","","","","","","","","","","1346","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","36","205004","0.0-36.0","89842","","","","","","","","","","","","","null","./stim/Hitachi_2_5_3.jpg","null","","","","","","1","5","2",""
+"street view slide show","image-button-response","37","206007","0.0-37.0","89842","","","","","","","","","","","","","null","./stim/Hitachi_2_5_5.jpg","null","","","","","","1","5","2",""
+"street view slide show","image-button-response","38","207011","0.0-38.0","89842","","","","","","","","","","","","","null","./stim/Hitachi_2_5_2.jpg","null","","","","","","1","5","2",""
+"street view slide show","image-button-response","39","208013","0.0-39.0","89842","","","","","","","","","","","","","null","./stim/Hitachi_2_5_1.jpg","null","","","","","","1","5","2",""
+"street view slide show","image-button-response","40","209016","0.0-40.0","89842","","","","","","","","","","","","","null","./stim/Hitachi_2_5_4.jpg","null","","","","","","1","5","2",""
+"sv response","survey","41","220140","0.0-41.0","89842","","","","","","","","","","","","","11109","","{""prompt"":null,""ambiguous"":2,""objects"":3,""invisible"":2,""chaos"":4,""complex"":2}","","","","","","","","","[]"
+"","html-button-response","42","221752","0.0-42.0","89842","","","","","","","","","","","","","1611","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","43","222754","0.0-43.0","89842","","","","","","","","","","","","","null","./stim/Szekesfehervar_3_5_4.jpg","null","","","","","","1","5","3",""
+"street view slide show","image-button-response","44","223758","0.0-44.0","89842","","","","","","","","","","","","","null","./stim/Szekesfehervar_3_5_2.jpg","null","","","","","","1","5","3",""
+"street view slide show","image-button-response","45","224761","0.0-45.0","89842","","","","","","","","","","","","","null","./stim/Szekesfehervar_3_5_5.jpg","null","","","","","","1","5","3",""
+"street view slide show","image-button-response","46","225763","0.0-46.0","89842","","","","","","","","","","","","","null","./stim/Szekesfehervar_3_5_3.jpg","null","","","","","","1","5","3",""
+"street view slide show","image-button-response","47","226766","0.0-47.0","89842","","","","","","","","","","","","","null","./stim/Szekesfehervar_3_5_1.jpg","null","","","","","","1","5","3",""
+"sv response","survey","48","240621","0.0-48.0","89842","","","","","","","","","","","","","13840","","{""prompt"":null,""ambiguous"":4,""objects"":2,""invisible"":3,""chaos"":4,""complex"":2}","","","","","","","","","[]"
+"","html-button-response","49","241604","0.0-49.0","89842","","","","","","","","","","","","","983","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","50","242607","0.0-50.0","89842","","","","","","","","","","","","","null","./stim/Tauranga_4_5_4.jpg","null","","","","","","1","5","4",""
+"street view slide show","image-button-response","51","243609","0.0-51.0","89842","","","","","","","","","","","","","null","./stim/Tauranga_4_5_5.jpg","null","","","","","","1","5","4",""
+"street view slide show","image-button-response","52","244612","0.0-52.0","89842","","","","","","","","","","","","","null","./stim/Tauranga_4_5_3.jpg","null","","","","","","1","5","4",""
+"street view slide show","image-button-response","53","245614","0.0-53.0","89842","","","","","","","","","","","","","null","./stim/Tauranga_4_5_2.jpg","null","","","","","","1","5","4",""
+"street view slide show","image-button-response","54","246617","0.0-54.0","89842","","","","","","","","","","","","","null","./stim/Tauranga_4_5_1.jpg","null","","","","","","1","5","4",""
+"sv response","survey","55","260654","0.0-55.0","89842","","","","","","","","","","","","","14025","","{""prompt"":null,""ambiguous"":3,""objects"":4,""invisible"":3,""chaos"":4,""complex"":2}","","","","","","","","","[]"
+"","html-button-response","56","261786","0.0-56.0","89842","","","","","","","","","","","","","1131","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","57","262788","0.0-57.0","89842","","","","","","","","","","","","","null","./stim/Birmingham_1_5_3.jpg","null","","","","","","1","5","1",""
+"street view slide show","image-button-response","58","263790","0.0-58.0","89842","","","","","","","","","","","","","null","./stim/Birmingham_1_5_5.jpg","null","","","","","","1","5","1",""
+"street view slide show","image-button-response","59","264793","0.0-59.0","89842","","","","","","","","","","","","","null","./stim/Birmingham_1_5_2.jpg","null","","","","","","1","5","1",""
+"street view slide show","image-button-response","60","265795","0.0-60.0","89842","","","","","","","","","","","","","null","./stim/Birmingham_1_5_1.jpg","null","","","","","","1","5","1",""
+"street view slide show","image-button-response","61","266798","0.0-61.0","89842","","","","","","","","","","","","","null","./stim/Birmingham_1_5_4.jpg","null","","","","","","1","5","1",""
+"sv response","survey","62","283170","0.0-62.0","89842","","","","","","","","","","","","","16358","","{""prompt"":null,""ambiguous"":4,""objects"":3,""invisible"":4,""chaos"":2,""complex"":2}","","","","","","","","","[]"
+"","html-button-response","63","284319","0.0-63.0","89842","","","","","","","","","","","","","1148","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","64","285321","0.0-64.0","89842","","","","","","","","","","","","","null","./stim/Szekesfehervar_3_1_1.jpg","null","","","","","","1","1","3",""
+"street view slide show","image-button-response","65","286324","0.0-65.0","89842","","","","","","","","","","","","","null","./stim/Szekesfehervar_3_1_2.jpg","null","","","","","","1","1","3",""
+"street view slide show","image-button-response","66","287327","0.0-66.0","89842","","","","","","","","","","","","","null","./stim/Szekesfehervar_3_1_3.jpg","null","","","","","","1","1","3",""
+"street view slide show","image-button-response","67","288330","0.0-67.0","89842","","","","","","","","","","","","","null","./stim/Szekesfehervar_3_1_5.jpg","null","","","","","","1","1","3",""
+"street view slide show","image-button-response","68","289333","0.0-68.0","89842","","","","","","","","","","","","","null","./stim/Szekesfehervar_3_1_4.jpg","null","","","","","","1","1","3",""
+"sv response","survey","69","3760638","0.0-69.0","89842","","","","","","","","","","","","","3471324","","{""prompt"":null,""ambiguous"":5,""objects"":1,""invisible"":5,""chaos"":1,""complex"":2}","","","","","","","","","[]"
+"","html-button-response","70","3762416","0.0-70.0","89842","","","","","","","","","","","","","1777","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","71","3763419","0.0-71.0","89842","","","","","","","","","","","","","null","./stim/Hitachi_2_1_4.jpg","null","","","","","","1","1","2",""
+"street view slide show","image-button-response","72","3764422","0.0-72.0","89842","","","","","","","","","","","","","null","./stim/Hitachi_2_1_1.jpg","null","","","","","","1","1","2",""
+"street view slide show","image-button-response","73","3765425","0.0-73.0","89842","","","","","","","","","","","","","null","./stim/Hitachi_2_1_2.jpg","null","","","","","","1","1","2",""
+"street view slide show","image-button-response","74","3766427","0.0-74.0","89842","","","","","","","","","","","","","null","./stim/Hitachi_2_1_5.jpg","null","","","","","","1","1","2",""
+"street view slide show","image-button-response","75","3767434","0.0-75.0","89842","","","","","","","","","","","","","null","./stim/Hitachi_2_1_3.jpg","null","","","","","","1","1","2",""
+"sv response","survey","76","4193208","0.0-76.0","89842","","","","","","","","","","","","","425765","","{""prompt"":null,""ambiguous"":3,""objects"":4,""invisible"":3,""chaos"":2,""complex"":2}","","","","","","","","","[]"
+"","html-button-response","77","4194538","0.0-77.0","89842","","","","","","","","","","","","","1329","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","78","4195540","0.0-78.0","89842","","","","","","","","","","","","","null","./stim/Tauranga_4_1_1.jpg","null","","","","","","1","1","4",""
+"street view slide show","image-button-response","79","4196542","0.0-79.0","89842","","","","","","","","","","","","","null","./stim/Tauranga_4_1_4.jpg","null","","","","","","1","1","4",""
+"street view slide show","image-button-response","80","4197544","0.0-80.0","89842","","","","","","","","","","","","","null","./stim/Tauranga_4_1_2.jpg","null","","","","","","1","1","4",""
+"street view slide show","image-button-response","81","4198547","0.0-81.0","89842","","","","","","","","","","","","","null","./stim/Tauranga_4_1_5.jpg","null","","","","","","1","1","4",""
+"street view slide show","image-button-response","82","4199549","0.0-82.0","89842","","","","","","","","","","","","","null","./stim/Tauranga_4_1_3.jpg","null","","","","","","1","1","4",""
+"sv response","survey","83","4224172","0.0-83.0","89842","","","","","","","","","","","","","24610","","{""prompt"":null,""ambiguous"":3,""objects"":2,""invisible"":4,""chaos"":2,""complex"":2}","","","","","","","","","[]"
+"","html-button-response","84","4225172","0.0-84.0","89842","","","","","","","","","","","","","1000","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","85","4226174","0.0-85.0","89842","","","","","","","","","","","","","null","./stim/Birmingham_1_1_5.jpg","null","","","","","","1","1","1",""
+"street view slide show","image-button-response","86","4227177","0.0-86.0","89842","","","","","","","","","","","","","null","./stim/Birmingham_1_1_1.jpg","null","","","","","","1","1","1",""
+"street view slide show","image-button-response","87","4228179","0.0-87.0","89842","","","","","","","","","","","","","null","./stim/Birmingham_1_1_2.jpg","null","","","","","","1","1","1",""
+"street view slide show","image-button-response","88","4229182","0.0-88.0","89842","","","","","","","","","","","","","null","./stim/Birmingham_1_1_4.jpg","null","","","","","","1","1","1",""
+"street view slide show","image-button-response","89","4230186","0.0-89.0","89842","","","","","","","","","","","","","null","./stim/Birmingham_1_1_3.jpg","null","","","","","","1","1","1",""
+"sv response","survey","90","4244375","0.0-90.0","89842","","","","","","","","","","","","","14175","","{""prompt"":null,""ambiguous"":4,""objects"":2,""invisible"":4,""chaos"":3,""complex"":2}","","","","","","","","","[]"
+"","html-button-response","91","4245469","0.0-91.0","89842","","","","","","","","","","","","","1093","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","92","4246471","0.0-92.0","89842","","","","","","","","","","","","","null","./stim/Szekesfehervar_3_6_5.jpg","null","","","","","","1","6","3",""
+"street view slide show","image-button-response","93","4247473","0.0-93.0","89842","","","","","","","","","","","","","null","./stim/Szekesfehervar_3_6_2.jpg","null","","","","","","1","6","3",""
+"street view slide show","image-button-response","94","4248476","0.0-94.0","89842","","","","","","","","","","","","","null","./stim/Szekesfehervar_3_6_1.jpg","null","","","","","","1","6","3",""
+"street view slide show","image-button-response","95","4249479","0.0-95.0","89842","","","","","","","","","","","","","null","./stim/Szekesfehervar_3_6_3.jpg","null","","","","","","1","6","3",""
+"street view slide show","image-button-response","96","4250483","0.0-96.0","89842","","","","","","","","","","","","","null","./stim/Szekesfehervar_3_6_4.jpg","null","","","","","","1","6","3",""
+"sv response","survey","97","4266222","0.0-97.0","89842","","","","","","","","","","","","","15725","","{""prompt"":null,""ambiguous"":5,""objects"":1,""invisible"":4,""chaos"":1,""complex"":2}","","","","","","","","","[]"
+"","html-button-response","98","4267303","0.0-98.0","89842","","","","","","","","","","","","","1080","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","99","4268305","0.0-99.0","89842","","","","","","","","","","","","","null","./stim/Hitachi_2_6_3.jpg","null","","","","","","1","6","2",""
+"street view slide show","image-button-response","100","4269307","0.0-100.0","89842","","","","","","","","","","","","","null","./stim/Hitachi_2_6_5.jpg","null","","","","","","1","6","2",""
+"street view slide show","image-button-response","101","4270309","0.0-101.0","89842","","","","","","","","","","","","","null","./stim/Hitachi_2_6_1.jpg","null","","","","","","1","6","2",""
+"street view slide show","image-button-response","102","4271311","0.0-102.0","89842","","","","","","","","","","","","","null","./stim/Hitachi_2_6_4.jpg","null","","","","","","1","6","2",""
+"street view slide show","image-button-response","103","4272314","0.0-103.0","89842","","","","","","","","","","","","","null","./stim/Hitachi_2_6_2.jpg","null","","","","","","1","6","2",""
+"sv response","survey","104","4286172","0.0-104.0","89842","","","","","","","","","","","","","13845","","{""prompt"":null,""ambiguous"":4,""objects"":2,""invisible"":4,""chaos"":1,""complex"":3}","","","","","","","","","[]"
+"","html-button-response","105","4287156","0.0-105.0","89842","","","","","","","","","","","","","983","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","106","4288158","0.0-106.0","89842","","","","","","","","","","","","","null","./stim/Tauranga_4_6_3.jpg","null","","","","","","1","6","4",""
+"street view slide show","image-button-response","107","4289160","0.0-107.0","89842","","","","","","","","","","","","","null","./stim/Tauranga_4_6_4.jpg","null","","","","","","1","6","4",""
+"street view slide show","image-button-response","108","4290163","0.0-108.0","89842","","","","","","","","","","","","","null","./stim/Tauranga_4_6_5.jpg","null","","","","","","1","6","4",""
+"street view slide show","image-button-response","109","4291165","0.0-109.0","89842","","","","","","","","","","","","","null","./stim/Tauranga_4_6_1.jpg","null","","","","","","1","6","4",""
+"street view slide show","image-button-response","110","4292168","0.0-110.0","89842","","","","","","","","","","","","","null","./stim/Tauranga_4_6_2.jpg","null","","","","","","1","6","4",""
+"sv response","survey","111","4301138","0.0-111.0","89842","","","","","","","","","","","","","8958","","{""prompt"":null,""ambiguous"":4,""objects"":3,""invisible"":4,""chaos"":2,""complex"":2}","","","","","","","","","[]"
+"","html-button-response","112","4302469","0.0-112.0","89842","","","","","","","","","","","","","1330","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","113","4303471","0.0-113.0","89842","","","","","","","","","","","","","null","./stim/Birmingham_1_6_3.jpg","null","","","","","","1","6","1",""
+"street view slide show","image-button-response","114","4304474","0.0-114.0","89842","","","","","","","","","","","","","null","./stim/Birmingham_1_6_2.jpg","null","","","","","","1","6","1",""
+"street view slide show","image-button-response","115","4305478","0.0-115.0","89842","","","","","","","","","","","","","null","./stim/Birmingham_1_6_1.jpg","null","","","","","","1","6","1",""
+"street view slide show","image-button-response","116","4306480","0.0-116.0","89842","","","","","","","","","","","","","null","./stim/Birmingham_1_6_5.jpg","null","","","","","","1","6","1",""
+"street view slide show","image-button-response","117","4307482","0.0-117.0","89842","","","","","","","","","","","","","null","./stim/Birmingham_1_6_4.jpg","null","","","","","","1","6","1",""
+"sv response","survey","118","4315472","0.0-118.0","89842","","","","","","","","","","","","","7986","","{""prompt"":null,""ambiguous"":5,""objects"":2,""invisible"":4,""chaos"":3,""complex"":1}","","","","","","","","","[]"
+"","html-button-response","119","4316555","0.0-119.0","89842","","","","","","","","","","","","","1083","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","120","4317558","0.0-120.0","89842","","","","","","","","","","","","","null","./stim/Tauranga_4_2_1.jpg","null","","","","","","1","2","4",""
+"street view slide show","image-button-response","121","4318559","0.0-121.0","89842","","","","","","","","","","","","","null","./stim/Tauranga_4_2_3.jpg","null","","","","","","1","2","4",""
+"street view slide show","image-button-response","122","4319562","0.0-122.0","89842","","","","","","","","","","","","","null","./stim/Tauranga_4_2_5.jpg","null","","","","","","1","2","4",""
+"street view slide show","image-button-response","123","4320565","0.0-123.0","89842","","","","","","","","","","","","","null","./stim/Tauranga_4_2_2.jpg","null","","","","","","1","2","4",""
+"street view slide show","image-button-response","124","4321568","0.0-124.0","89842","","","","","","","","","","","","","null","./stim/Tauranga_4_2_4.jpg","null","","","","","","1","2","4",""
+"sv response","survey","125","4524274","0.0-125.0","89842","","","","","","","","","","","","","202700","","{""prompt"":null,""ambiguous"":4,""objects"":1,""invisible"":4,""chaos"":1,""complex"":2}","","","","","","","","","[]"
+"","html-button-response","126","4525802","0.0-126.0","89842","","","","","","","","","","","","","1528","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","127","4526807","0.0-127.0","89842","","","","","","","","","","","","","null","./stim/Birmingham_1_2_2.jpg","null","","","","","","1","2","1",""
+"street view slide show","image-button-response","128","4527809","0.0-128.0","89842","","","","","","","","","","","","","null","./stim/Birmingham_1_2_4.jpg","null","","","","","","1","2","1",""
+"street view slide show","image-button-response","129","4528811","0.0-129.0","89842","","","","","","","","","","","","","null","./stim/Birmingham_1_2_3.jpg","null","","","","","","1","2","1",""
+"street view slide show","image-button-response","130","4529814","0.0-130.0","89842","","","","","","","","","","","","","null","./stim/Birmingham_1_2_5.jpg","null","","","","","","1","2","1",""
+"street view slide show","image-button-response","131","4530817","0.0-131.0","89842","","","","","","","","","","","","","null","./stim/Birmingham_1_2_1.jpg","null","","","","","","1","2","1",""
+"sv response","survey","132","6896320","0.0-132.0","89842","","","","","","","","","","","","","2365523","","{""prompt"":null,""ambiguous"":3,""objects"":2,""invisible"":4,""chaos"":3,""complex"":3}","","","","","","","","","[]"
+"","html-button-response","133","6897735","0.0-133.0","89842","","","","","","","","","","","","","1413","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","134","6898738","0.0-134.0","89842","","","","","","","","","","","","","null","./stim/Hitachi_2_2_2.jpg","null","","","","","","1","2","2",""
+"street view slide show","image-button-response","135","6899742","0.0-135.0","89842","","","","","","","","","","","","","null","./stim/Hitachi_2_2_3.jpg","null","","","","","","1","2","2",""
+"street view slide show","image-button-response","136","6900745","0.0-136.0","89842","","","","","","","","","","","","","null","./stim/Hitachi_2_2_5.jpg","null","","","","","","1","2","2",""
+"street view slide show","image-button-response","137","6901747","0.0-137.0","89842","","","","","","","","","","","","","null","./stim/Hitachi_2_2_4.jpg","null","","","","","","1","2","2",""
+"street view slide show","image-button-response","138","6902751","0.0-138.0","89842","","","","","","","","","","","","","null","./stim/Hitachi_2_2_1.jpg","null","","","","","","1","2","2",""
+"sv response","survey","139","6964103","0.0-139.0","89842","","","","","","","","","","","","","61337","","{""prompt"":null,""ambiguous"":3,""objects"":4,""invisible"":3,""chaos"":3,""complex"":2}","","","","","","","","","[]"
+"","html-button-response","140","6965281","0.0-140.0","89842","","","","","","","","","","","","","1178","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","141","6966282","0.0-141.0","89842","","","","","","","","","","","","","null","./stim/Szekesfehervar_3_2_4.jpg","null","","","","","","1","2","3",""
+"street view slide show","image-button-response","142","6967284","0.0-142.0","89842","","","","","","","","","","","","","null","./stim/Szekesfehervar_3_2_2.jpg","null","","","","","","1","2","3",""
+"street view slide show","image-button-response","143","6968288","0.0-143.0","89842","","","","","","","","","","","","","null","./stim/Szekesfehervar_3_2_5.jpg","null","","","","","","1","2","3",""
+"street view slide show","image-button-response","144","6969291","0.0-144.0","89842","","","","","","","","","","","","","null","./stim/Szekesfehervar_3_2_1.jpg","null","","","","","","1","2","3",""
+"street view slide show","image-button-response","145","6970293","0.0-145.0","89842","","","","","","","","","","","","","null","./stim/Szekesfehervar_3_2_3.jpg","null","","","","","","1","2","3",""
+"sv response","survey","146","7102950","0.0-146.0","89842","","","","","","","","","","","","","132644","","{""prompt"":null,""ambiguous"":4,""objects"":3,""invisible"":2,""chaos"":4,""complex"":4}","","","","","","","","","[]"
+"","html-button-response","147","7104364","0.0-147.0","89842","","","","","","","","","","","","","1413","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","148","7105367","0.0-148.0","89842","","","","","","","","","","","","","null","./stim/Tauranga_4_4_5.jpg","null","","","","","","1","4","4",""
+"street view slide show","image-button-response","149","7106369","0.0-149.0","89842","","","","","","","","","","","","","null","./stim/Tauranga_4_4_2.jpg","null","","","","","","1","4","4",""
+"street view slide show","image-button-response","150","7107372","0.0-150.0","89842","","","","","","","","","","","","","null","./stim/Tauranga_4_4_1.jpg","null","","","","","","1","4","4",""
+"street view slide show","image-button-response","151","7108375","0.0-151.0","89842","","","","","","","","","","","","","null","./stim/Tauranga_4_4_4.jpg","null","","","","","","1","4","4",""
+"street view slide show","image-button-response","152","7109378","0.0-152.0","89842","","","","","","","","","","","","","null","./stim/Tauranga_4_4_3.jpg","null","","","","","","1","4","4",""
+"sv response","survey","153","7127382","0.0-153.0","89842","","","","","","","","","","","","","17992","","{""prompt"":null,""ambiguous"":4,""objects"":2,""invisible"":4,""chaos"":3,""complex"":2}","","","","","","","","","[]"
+"","html-button-response","154","7128266","0.0-154.0","89842","","","","","","","","","","","","","883","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","155","7129268","0.0-155.0","89842","","","","","","","","","","","","","null","./stim/Hitachi_2_4_4.jpg","null","","","","","","1","4","2",""
+"street view slide show","image-button-response","156","7130270","0.0-156.0","89842","","","","","","","","","","","","","null","./stim/Hitachi_2_4_2.jpg","null","","","","","","1","4","2",""
+"street view slide show","image-button-response","157","7131272","0.0-157.0","89842","","","","","","","","","","","","","null","./stim/Hitachi_2_4_5.jpg","null","","","","","","1","4","2",""
+"street view slide show","image-button-response","158","7132275","0.0-158.0","89842","","","","","","","","","","","","","null","./stim/Hitachi_2_4_1.jpg","null","","","","","","1","4","2",""
+"street view slide show","image-button-response","159","7133279","0.0-159.0","89842","","","","","","","","","","","","","null","./stim/Hitachi_2_4_3.jpg","null","","","","","","1","4","2",""
+"sv response","survey","160","7138854","0.0-160.0","89842","","","","","","","","","","","","","5562","","{""prompt"":null,""ambiguous"":4,""objects"":2,""invisible"":4,""chaos"":2,""complex"":3}","","","","","","","","","[]"
+"","html-button-response","161","7139896","0.0-161.0","89842","","","","","","","","","","","","","1041","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","162","7140898","0.0-162.0","89842","","","","","","","","","","","","","null","./stim/Szekesfehervar_3_4_5.jpg","null","","","","","","1","4","3",""
+"street view slide show","image-button-response","163","7141901","0.0-163.0","89842","","","","","","","","","","","","","null","./stim/Szekesfehervar_3_4_3.jpg","null","","","","","","1","4","3",""
+"street view slide show","image-button-response","164","7142904","0.0-164.0","89842","","","","","","","","","","","","","null","./stim/Szekesfehervar_3_4_4.jpg","null","","","","","","1","4","3",""
+"street view slide show","image-button-response","165","7143907","0.0-165.0","89842","","","","","","","","","","","","","null","./stim/Szekesfehervar_3_4_2.jpg","null","","","","","","1","4","3",""
+"street view slide show","image-button-response","166","7144911","0.0-166.0","89842","","","","","","","","","","","","","null","./stim/Szekesfehervar_3_4_1.jpg","null","","","","","","1","4","3",""
+"sv response","survey","167","7153249","0.0-167.0","89842","","","","","","","","","","","","","8324","","{""prompt"":null,""ambiguous"":4,""objects"":2,""invisible"":3,""chaos"":4,""complex"":2}","","","","","","","","","[]"
+"","html-button-response","168","7154879","0.0-168.0","89842","","","","","","","","","","","","","1630","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","169","7155882","0.0-169.0","89842","","","","","","","","","","","","","null","./stim/Birmingham_1_4_5.jpg","null","","","","","","1","4","1",""
+"street view slide show","image-button-response","170","7156884","0.0-170.0","89842","","","","","","","","","","","","","null","./stim/Birmingham_1_4_4.jpg","null","","","","","","1","4","1",""
+"street view slide show","image-button-response","171","7157886","0.0-171.0","89842","","","","","","","","","","","","","null","./stim/Birmingham_1_4_1.jpg","null","","","","","","1","4","1",""
+"street view slide show","image-button-response","172","7158888","0.0-172.0","89842","","","","","","","","","","","","","null","./stim/Birmingham_1_4_3.jpg","null","","","","","","1","4","1",""
+"street view slide show","image-button-response","173","7159894","0.0-173.0","89842","","","","","","","","","","","","","null","./stim/Birmingham_1_4_2.jpg","null","","","","","","1","4","1",""
+"sv response","survey","174","7170215","0.0-174.0","89842","","","","","","","","","","","","","10307","","{""prompt"":null,""ambiguous"":5,""objects"":2,""invisible"":2,""chaos"":2,""complex"":2}","","","","","","","","","[]"
+"half-way","html-button-response","175","7185968","0.0-175.0","89842","","","","","","","","","","","","","null","
+<h3>You are now half way through the study.</h3>
+<p>Please take a quick, 15-second break before you continue.</p>
+<img src='assets/img/countdown-15.gif'>
+<p>The study will automatically advance forward after the countdown is complete. However, you may click ""Next"" to advance forward now if you wish.</p>
+","null","","","","","","","","",""
+"","html-button-response","176","7186996","0.0-176.0","89842","","","","","","","","","","","","","1027","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","177","7187998","0.0-177.0","89842","","","","","","","","","","","","","null","./stim/Kiryu_2_2_5.jpg","null","","","","","","2","2","2",""
+"street view slide show","image-button-response","178","7189000","0.0-178.0","89842","","","","","","","","","","","","","null","./stim/Kiryu_2_2_1.jpg","null","","","","","","2","2","2",""
+"street view slide show","image-button-response","179","7190003","0.0-179.0","89842","","","","","","","","","","","","","null","./stim/Kiryu_2_2_3.jpg","null","","","","","","2","2","2",""
+"street view slide show","image-button-response","180","7191004","0.0-180.0","89842","","","","","","","","","","","","","null","./stim/Kiryu_2_2_2.jpg","null","","","","","","2","2","2",""
+"street view slide show","image-button-response","181","7192008","0.0-181.0","89842","","","","","","","","","","","","","null","./stim/Kiryu_2_2_4.jpg","null","","","","","","2","2","2",""
+"sv response","survey","182","7196582","0.0-182.0","89842","","","","","","","","","","","","","4562","","{""prompt"":null,""ambiguous"":3,""objects"":4,""invisible"":2,""chaos"":4,""complex"":3}","","","","","","","","","[]"
+"","html-button-response","183","7197862","0.0-183.0","89842","","","","","","","","","","","","","1280","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","184","7198864","0.0-184.0","89842","","","","","","","","","","","","","null","./stim/Biella_4_2_4.jpg","null","","","","","","2","2","4",""
+"street view slide show","image-button-response","185","7199867","0.0-185.0","89842","","","","","","","","","","","","","null","./stim/Biella_4_2_5.jpg","null","","","","","","2","2","4",""
+"street view slide show","image-button-response","186","7200871","0.0-186.0","89842","","","","","","","","","","","","","null","./stim/Biella_4_2_2.jpg","null","","","","","","2","2","4",""
+"street view slide show","image-button-response","187","7201874","0.0-187.0","89842","","","","","","","","","","","","","null","./stim/Biella_4_2_3.jpg","null","","","","","","2","2","4",""
+"street view slide show","image-button-response","188","7202876","0.0-188.0","89842","","","","","","","","","","","","","null","./stim/Biella_4_2_1.jpg","null","","","","","","2","2","4",""
+"sv response","survey","189","7218216","0.0-189.0","89842","","","","","","","","","","","","","15327","","{""prompt"":null,""ambiguous"":4,""objects"":2,""invisible"":4,""chaos"":3,""complex"":2}","","","","","","","","","[]"
+"","html-button-response","190","7219112","0.0-190.0","89842","","","","","","","","","","","","","896","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","191","7220114","0.0-191.0","89842","","","","","","","","","","","","","null","./stim/Taichung_3_2_3.jpg","null","","","","","","2","2","3",""
+"street view slide show","image-button-response","192","7221117","0.0-192.0","89842","","","","","","","","","","","","","null","./stim/Taichung_3_2_1.jpg","null","","","","","","2","2","3",""
+"street view slide show","image-button-response","193","7222120","0.0-193.0","89842","","","","","","","","","","","","","null","./stim/Taichung_3_2_4.jpg","null","","","","","","2","2","3",""
+"street view slide show","image-button-response","194","7223122","0.0-194.0","89842","","","","","","","","","","","","","null","./stim/Taichung_3_2_2.jpg","null","","","","","","2","2","3",""
+"street view slide show","image-button-response","195","7224124","0.0-195.0","89842","","","","","","","","","","","","","null","./stim/Taichung_3_2_5.jpg","null","","","","","","2","2","3",""
+"sv response","survey","196","7229815","0.0-196.0","89842","","","","","","","","","","","","","5683","","{""prompt"":null,""ambiguous"":4,""objects"":2,""invisible"":4,""chaos"":3,""complex"":3}","","","","","","","","","[]"
+"","html-button-response","197","7230929","0.0-197.0","89842","","","","","","","","","","","","","1113","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","198","7231931","0.0-198.0","89842","","","","","","","","","","","","","null","./stim/Columbus_1_2_3.jpg","null","","","","","","2","2","1",""
+"street view slide show","image-button-response","199","7232934","0.0-199.0","89842","","","","","","","","","","","","","null","./stim/Columbus_1_2_4.jpg","null","","","","","","2","2","1",""
+"street view slide show","image-button-response","200","7233937","0.0-200.0","89842","","","","","","","","","","","","","null","./stim/Columbus_1_2_1.jpg","null","","","","","","2","2","1",""
+"street view slide show","image-button-response","201","7234940","0.0-201.0","89842","","","","","","","","","","","","","null","./stim/Columbus_1_2_5.jpg","null","","","","","","2","2","1",""
+"street view slide show","image-button-response","202","7235943","0.0-202.0","89842","","","","","","","","","","","","","null","./stim/Columbus_1_2_2.jpg","null","","","","","","2","2","1",""
+"sv response","survey","203","7242549","0.0-203.0","89842","","","","","","","","","","","","","6594","","{""prompt"":null,""ambiguous"":4,""objects"":3,""invisible"":4,""chaos"":2,""complex"":4}","","","","","","","","","[]"
+"","html-button-response","204","7243445","0.0-204.0","89842","","","","","","","","","","","","","896","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","205","7244448","0.0-205.0","89842","","","","","","","","","","","","","null","./stim/Taichung_3_3_2.jpg","null","","","","","","2","3","3",""
+"street view slide show","image-button-response","206","7245450","0.0-206.0","89842","","","","","","","","","","","","","null","./stim/Taichung_3_3_4.jpg","null","","","","","","2","3","3",""
+"street view slide show","image-button-response","207","7246454","0.0-207.0","89842","","","","","","","","","","","","","null","./stim/Taichung_3_3_1.jpg","null","","","","","","2","3","3",""
+"street view slide show","image-button-response","208","7247457","0.0-208.0","89842","","","","","","","","","","","","","null","./stim/Taichung_3_3_5.jpg","null","","","","","","2","3","3",""
+"street view slide show","image-button-response","209","7248460","0.0-209.0","89842","","","","","","","","","","","","","null","./stim/Taichung_3_3_3.jpg","null","","","","","","2","3","3",""
+"sv response","survey","210","7255183","0.0-210.0","89842","","","","","","","","","","","","","6709","","{""prompt"":null,""ambiguous"":4,""objects"":2,""invisible"":4,""chaos"":3,""complex"":2}","","","","","","","","","[]"
+"","html-button-response","211","7256079","0.0-211.0","89842","","","","","","","","","","","","","896","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","212","7257081","0.0-212.0","89842","","","","","","","","","","","","","null","./stim/Columbus_1_3_4.jpg","null","","","","","","2","3","1",""
+"street view slide show","image-button-response","213","7258082","0.0-213.0","89842","","","","","","","","","","","","","null","./stim/Columbus_1_3_5.jpg","null","","","","","","2","3","1",""
+"street view slide show","image-button-response","214","7259085","0.0-214.0","89842","","","","","","","","","","","","","null","./stim/Columbus_1_3_3.jpg","null","","","","","","2","3","1",""
+"street view slide show","image-button-response","215","7260088","0.0-215.0","89842","","","","","","","","","","","","","null","./stim/Columbus_1_3_1.jpg","null","","","","","","2","3","1",""
+"street view slide show","image-button-response","216","7261091","0.0-216.0","89842","","","","","","","","","","","","","null","./stim/Columbus_1_3_2.jpg","null","","","","","","2","3","1",""
+"sv response","survey","217","7266952","0.0-217.0","89842","","","","","","","","","","","","","5849","","{""prompt"":null,""ambiguous"":4,""objects"":3,""invisible"":4,""chaos"":2,""complex"":4}","","","","","","","","","[]"
+"","html-button-response","218","7268246","0.0-218.0","89842","","","","","","","","","","","","","1294","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","219","7269248","0.0-219.0","89842","","","","","","","","","","","","","null","./stim/Kiryu_2_3_1.jpg","null","","","","","","2","3","2",""
+"street view slide show","image-button-response","220","7270250","0.0-220.0","89842","","","","","","","","","","","","","null","./stim/Kiryu_2_3_4.jpg","null","","","","","","2","3","2",""
+"street view slide show","image-button-response","221","7271253","0.0-221.0","89842","","","","","","","","","","","","","null","./stim/Kiryu_2_3_3.jpg","null","","","","","","2","3","2",""
+"street view slide show","image-button-response","222","7272255","0.0-222.0","89842","","","","","","","","","","","","","null","./stim/Kiryu_2_3_5.jpg","null","","","","","","2","3","2",""
+"street view slide show","image-button-response","223","7273258","0.0-223.0","89842","","","","","","","","","","","","","null","./stim/Kiryu_2_3_2.jpg","null","","","","","","2","3","2",""
+"sv response","survey","224","7293537","0.0-224.0","89842","","","","","","","","","","","","","20266","","{""prompt"":null,""ambiguous"":4,""objects"":1,""invisible"":4,""chaos"":3,""complex"":2}","","","","","","","","","[]"
+"","html-button-response","225","7294563","0.0-225.0","89842","","","","","","","","","","","","","1026","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","226","7295565","0.0-226.0","89842","","","","","","","","","","","","","null","./stim/Biella_4_3_1.jpg","null","","","","","","2","3","4",""
+"street view slide show","image-button-response","227","7296568","0.0-227.0","89842","","","","","","","","","","","","","null","./stim/Biella_4_3_3.jpg","null","","","","","","2","3","4",""
+"street view slide show","image-button-response","228","7297571","0.0-228.0","89842","","","","","","","","","","","","","null","./stim/Biella_4_3_5.jpg","null","","","","","","2","3","4",""
+"street view slide show","image-button-response","229","7298573","0.0-229.0","89842","","","","","","","","","","","","","null","./stim/Biella_4_3_2.jpg","null","","","","","","2","3","4",""
+"street view slide show","image-button-response","230","7299576","0.0-230.0","89842","","","","","","","","","","","","","null","./stim/Biella_4_3_4.jpg","null","","","","","","2","3","4",""
+"sv response","survey","231","7313515","0.0-231.0","89842","","","","","","","","","","","","","13926","","{""prompt"":null,""ambiguous"":4,""objects"":2,""invisible"":3,""chaos"":2,""complex"":3}","","","","","","","","","[]"
+"","html-button-response","232","7314395","0.0-232.0","89842","","","","","","","","","","","","","881","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","233","7315398","0.0-233.0","89842","","","","","","","","","","","","","null","./stim/Taichung_3_5_1.jpg","null","","","","","","2","5","3",""
+"street view slide show","image-button-response","234","7316401","0.0-234.0","89842","","","","","","","","","","","","","null","./stim/Taichung_3_5_2.jpg","null","","","","","","2","5","3",""
+"street view slide show","image-button-response","235","7317405","0.0-235.0","89842","","","","","","","","","","","","","null","./stim/Taichung_3_5_4.jpg","null","","","","","","2","5","3",""
+"street view slide show","image-button-response","236","7318408","0.0-236.0","89842","","","","","","","","","","","","","null","./stim/Taichung_3_5_5.jpg","null","","","","","","2","5","3",""
+"street view slide show","image-button-response","237","7319411","0.0-237.0","89842","","","","","","","","","","","","","null","./stim/Taichung_3_5_3.jpg","null","","","","","","2","5","3",""
+"sv response","survey","238","7325419","0.0-238.0","89842","","","","","","","","","","","","","5995","","{""prompt"":null,""ambiguous"":4,""objects"":2,""invisible"":3,""chaos"":4,""complex"":2}","","","","","","","","","[]"
+"","html-button-response","239","7326251","0.0-239.0","89842","","","","","","","","","","","","","831","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","240","7327252","0.0-240.0","89842","","","","","","","","","","","","","null","./stim/Biella_4_5_1.jpg","null","","","","","","2","5","4",""
+"street view slide show","image-button-response","241","7328254","0.0-241.0","89842","","","","","","","","","","","","","null","./stim/Biella_4_5_2.jpg","null","","","","","","2","5","4",""
+"street view slide show","image-button-response","242","7329257","0.0-242.0","89842","","","","","","","","","","","","","null","./stim/Biella_4_5_3.jpg","null","","","","","","2","5","4",""
+"street view slide show","image-button-response","243","7330260","0.0-243.0","89842","","","","","","","","","","","","","null","./stim/Biella_4_5_4.jpg","null","","","","","","2","5","4",""
+"street view slide show","image-button-response","244","7331263","0.0-244.0","89842","","","","","","","","","","","","","null","./stim/Biella_4_5_5.jpg","null","","","","","","2","5","4",""
+"sv response","survey","245","7354332","0.0-245.0","89842","","","","","","","","","","","","","23055","","{""prompt"":null,""ambiguous"":4,""objects"":2,""invisible"":4,""chaos"":1,""complex"":2}","","","","","","","","","[]"
+"","html-button-response","246","7355582","0.0-246.0","89842","","","","","","","","","","","","","1250","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","247","7356584","0.0-247.0","89842","","","","","","","","","","","","","null","./stim/Kiryu_2_5_4.jpg","null","","","","","","2","5","2",""
+"street view slide show","image-button-response","248","7357585","0.0-248.0","89842","","","","","","","","","","","","","null","./stim/Kiryu_2_5_3.jpg","null","","","","","","2","5","2",""
+"street view slide show","image-button-response","249","7358588","0.0-249.0","89842","","","","","","","","","","","","","null","./stim/Kiryu_2_5_1.jpg","null","","","","","","2","5","2",""
+"street view slide show","image-button-response","250","7359590","0.0-250.0","89842","","","","","","","","","","","","","null","./stim/Kiryu_2_5_5.jpg","null","","","","","","2","5","2",""
+"street view slide show","image-button-response","251","7360593","0.0-251.0","89842","","","","","","","","","","","","","null","./stim/Kiryu_2_5_2.jpg","null","","","","","","2","5","2",""
+"sv response","survey","252","7382484","0.0-252.0","89842","","","","","","","","","","","","","21877","","{""prompt"":null,""ambiguous"":3,""objects"":2,""invisible"":4,""chaos"":3,""complex"":2}","","","","","","","","","[]"
+"","html-button-response","253","7383262","0.0-253.0","89842","","","","","","","","","","","","","777","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","254","7384264","0.0-254.0","89842","","","","","","","","","","","","","null","./stim/Columbus_1_5_2.jpg","null","","","","","","2","5","1",""
+"street view slide show","image-button-response","255","7385266","0.0-255.0","89842","","","","","","","","","","","","","null","./stim/Columbus_1_5_1.jpg","null","","","","","","2","5","1",""
+"street view slide show","image-button-response","256","7386267","0.0-256.0","89842","","","","","","","","","","","","","null","./stim/Columbus_1_5_3.jpg","null","","","","","","2","5","1",""
+"street view slide show","image-button-response","257","7387271","0.0-257.0","89842","","","","","","","","","","","","","null","./stim/Columbus_1_5_5.jpg","null","","","","","","2","5","1",""
+"street view slide show","image-button-response","258","7388275","0.0-258.0","89842","","","","","","","","","","","","","null","./stim/Columbus_1_5_4.jpg","null","","","","","","2","5","1",""
+"sv response","survey","259","7424366","0.0-259.0","89842","","","","","","","","","","","","","36081","","{""prompt"":null,""ambiguous"":4,""objects"":2,""invisible"":4,""chaos"":2,""complex"":2}","","","","","","","","","[]"
+"","html-button-response","260","7425528","0.0-260.0","89842","","","","","","","","","","","","","1161","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","261","7426531","0.0-261.0","89842","","","","","","","","","","","","","null","./stim/Columbus_1_6_4.jpg","null","","","","","","2","6","1",""
+"street view slide show","image-button-response","262","7427533","0.0-262.0","89842","","","","","","","","","","","","","null","./stim/Columbus_1_6_3.jpg","null","","","","","","2","6","1",""
+"street view slide show","image-button-response","263","7428536","0.0-263.0","89842","","","","","","","","","","","","","null","./stim/Columbus_1_6_2.jpg","null","","","","","","2","6","1",""
+"street view slide show","image-button-response","264","7429539","0.0-264.0","89842","","","","","","","","","","","","","null","./stim/Columbus_1_6_5.jpg","null","","","","","","2","6","1",""
+"street view slide show","image-button-response","265","7430543","0.0-265.0","89842","","","","","","","","","","","","","null","./stim/Columbus_1_6_1.jpg","null","","","","","","2","6","1",""
+"sv response","survey","266","7517301","0.0-266.0","89842","","","","","","","","","","","","","86750","","{""prompt"":null,""ambiguous"":4,""objects"":2,""invisible"":3,""chaos"":2,""complex"":2}","","","","","","","","","[]"
+"","html-button-response","267","7518447","0.0-267.0","89842","","","","","","","","","","","","","1146","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","268","7519450","0.0-268.0","89842","","","","","","","","","","","","","null","./stim/Biella_4_6_1.jpg","null","","","","","","2","6","4",""
+"street view slide show","image-button-response","269","7520453","0.0-269.0","89842","","","","","","","","","","","","","null","./stim/Biella_4_6_5.jpg","null","","","","","","2","6","4",""
+"street view slide show","image-button-response","270","7521455","0.0-270.0","89842","","","","","","","","","","","","","null","./stim/Biella_4_6_4.jpg","null","","","","","","2","6","4",""
+"street view slide show","image-button-response","271","7522458","0.0-271.0","89842","","","","","","","","","","","","","null","./stim/Biella_4_6_3.jpg","null","","","","","","2","6","4",""
+"street view slide show","image-button-response","272","7523460","0.0-272.0","89842","","","","","","","","","","","","","null","./stim/Biella_4_6_2.jpg","null","","","","","","2","6","4",""
+"sv response","survey","273","7548031","0.0-273.0","89842","","","","","","","","","","","","","24561","","{""prompt"":null,""ambiguous"":4,""objects"":3,""invisible"":4,""chaos"":3,""complex"":2}","","","","","","","","","[]"
+"","html-button-response","274","7548961","0.0-274.0","89842","","","","","","","","","","","","","930","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","275","7549964","0.0-275.0","89842","","","","","","","","","","","","","null","./stim/Taichung_3_6_3.jpg","null","","","","","","2","6","3",""
+"street view slide show","image-button-response","276","7550966","0.0-276.0","89842","","","","","","","","","","","","","null","./stim/Taichung_3_6_1.jpg","null","","","","","","2","6","3",""
+"street view slide show","image-button-response","277","7551969","0.0-277.0","89842","","","","","","","","","","","","","null","./stim/Taichung_3_6_4.jpg","null","","","","","","2","6","3",""
+"street view slide show","image-button-response","278","7552972","0.0-278.0","89842","","","","","","","","","","","","","null","./stim/Taichung_3_6_2.jpg","null","","","","","","2","6","3",""
+"street view slide show","image-button-response","279","7553979","0.0-279.0","89842","","","","","","","","","","","","","null","./stim/Taichung_3_6_5.jpg","null","","","","","","2","6","3",""
+"sv response","survey","280","7573680","0.0-280.0","89842","","","","","","","","","","","","","19690","","{""prompt"":null,""ambiguous"":4,""objects"":1,""invisible"":2,""chaos"":5,""complex"":3}","","","","","","","","","[]"
+"","html-button-response","281","7574811","0.0-281.0","89842","","","","","","","","","","","","","1130","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","282","7575813","0.0-282.0","89842","","","","","","","","","","","","","null","./stim/Kiryu_2_6_4.jpg","null","","","","","","2","6","2",""
+"street view slide show","image-button-response","283","7576816","0.0-283.0","89842","","","","","","","","","","","","","null","./stim/Kiryu_2_6_3.jpg","null","","","","","","2","6","2",""
+"street view slide show","image-button-response","284","7577820","0.0-284.0","89842","","","","","","","","","","","","","null","./stim/Kiryu_2_6_2.jpg","null","","","","","","2","6","2",""
+"street view slide show","image-button-response","285","7578821","0.0-285.0","89842","","","","","","","","","","","","","null","./stim/Kiryu_2_6_5.jpg","null","","","","","","2","6","2",""
+"street view slide show","image-button-response","286","7579825","0.0-286.0","89842","","","","","","","","","","","","","null","./stim/Kiryu_2_6_1.jpg","null","","","","","","2","6","2",""
+"sv response","survey","287","7686316","0.0-287.0","89842","","","","","","","","","","","","","106479","","{""prompt"":null,""ambiguous"":3,""objects"":4,""invisible"":2,""chaos"":4,""complex"":3}","","","","","","","","","[]"
+"","html-button-response","288","7687161","0.0-288.0","89842","","","","","","","","","","","","","844","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","289","7688163","0.0-289.0","89842","","","","","","","","","","","","","null","./stim/Taichung_3_4_1.jpg","null","","","","","","2","4","3",""
+"street view slide show","image-button-response","290","7689166","0.0-290.0","89842","","","","","","","","","","","","","null","./stim/Taichung_3_4_3.jpg","null","","","","","","2","4","3",""
+"street view slide show","image-button-response","291","7690168","0.0-291.0","89842","","","","","","","","","","","","","null","./stim/Taichung_3_4_4.jpg","null","","","","","","2","4","3",""
+"street view slide show","image-button-response","292","7691169","0.0-292.0","89842","","","","","","","","","","","","","null","./stim/Taichung_3_4_2.jpg","null","","","","","","2","4","3",""
+"street view slide show","image-button-response","293","7692171","0.0-293.0","89842","","","","","","","","","","","","","null","./stim/Taichung_3_4_5.jpg","null","","","","","","2","4","3",""
+"sv response","survey","294","7770648","0.0-294.0","89842","","","","","","","","","","","","","78474","","{""prompt"":null,""ambiguous"":4,""objects"":3,""invisible"":4,""chaos"":2,""complex"":2}","","","","","","","","","[]"
+"","html-button-response","295","7771494","0.0-295.0","89842","","","","","","","","","","","","","845","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","296","7772495","0.0-296.0","89842","","","","","","","","","","","","","null","./stim/Kiryu_2_4_1.jpg","null","","","","","","2","4","2",""
+"street view slide show","image-button-response","297","7773497","0.0-297.0","89842","","","","","","","","","","","","","null","./stim/Kiryu_2_4_3.jpg","null","","","","","","2","4","2",""
+"street view slide show","image-button-response","298","7774500","0.0-298.0","89842","","","","","","","","","","","","","null","./stim/Kiryu_2_4_2.jpg","null","","","","","","2","4","2",""
+"street view slide show","image-button-response","299","7775502","0.0-299.0","89842","","","","","","","","","","","","","null","./stim/Kiryu_2_4_4.jpg","null","","","","","","2","4","2",""
+"street view slide show","image-button-response","300","7776504","0.0-300.0","89842","","","","","","","","","","","","","null","./stim/Kiryu_2_4_5.jpg","null","","","","","","2","4","2",""
+"sv response","survey","301","7803597","0.0-301.0","89842","","","","","","","","","","","","","27084","","{""prompt"":null,""ambiguous"":4,""objects"":2,""invisible"":3,""chaos"":4,""complex"":3}","","","","","","","","","[]"
+"","html-button-response","302","7804693","0.0-302.0","89842","","","","","","","","","","","","","1095","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","303","7805696","0.0-303.0","89842","","","","","","","","","","","","","null","./stim/Biella_4_4_3.jpg","null","","","","","","2","4","4",""
+"street view slide show","image-button-response","304","7806698","0.0-304.0","89842","","","","","","","","","","","","","null","./stim/Biella_4_4_1.jpg","null","","","","","","2","4","4",""
+"street view slide show","image-button-response","305","7807700","0.0-305.0","89842","","","","","","","","","","","","","null","./stim/Biella_4_4_2.jpg","null","","","","","","2","4","4",""
+"street view slide show","image-button-response","306","7808701","0.0-306.0","89842","","","","","","","","","","","","","null","./stim/Biella_4_4_4.jpg","null","","","","","","2","4","4",""
+"street view slide show","image-button-response","307","7809704","0.0-307.0","89842","","","","","","","","","","","","","null","./stim/Biella_4_4_5.jpg","null","","","","","","2","4","4",""
+"sv response","survey","308","7827498","0.0-308.0","89842","","","","","","","","","","","","","17784","","{""prompt"":null,""ambiguous"":3,""objects"":3,""invisible"":2,""chaos"":3,""complex"":3}","","","","","","","","","[]"
+"","html-button-response","309","7828627","0.0-309.0","89842","","","","","","","","","","","","","1129","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","310","7829629","0.0-310.0","89842","","","","","","","","","","","","","null","./stim/Columbus_1_4_5.jpg","null","","","","","","2","4","1",""
+"street view slide show","image-button-response","311","7830631","0.0-311.0","89842","","","","","","","","","","","","","null","./stim/Columbus_1_4_4.jpg","null","","","","","","2","4","1",""
+"street view slide show","image-button-response","312","7831634","0.0-312.0","89842","","","","","","","","","","","","","null","./stim/Columbus_1_4_1.jpg","null","","","","","","2","4","1",""
+"street view slide show","image-button-response","313","7832636","0.0-313.0","89842","","","","","","","","","","","","","null","./stim/Columbus_1_4_3.jpg","null","","","","","","2","4","1",""
+"street view slide show","image-button-response","314","7833637","0.0-314.0","89842","","","","","","","","","","","","","null","./stim/Columbus_1_4_2.jpg","null","","","","","","2","4","1",""
+"sv response","survey","315","7839065","0.0-315.0","89842","","","","","","","","","","","","","5418","","{""prompt"":null,""ambiguous"":3,""objects"":4,""invisible"":2,""chaos"":3,""complex"":3}","","","","","","","","","[]"
+"","html-button-response","316","7840460","0.0-316.0","89842","","","","","","","","","","","","","1395","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","317","7841462","0.0-317.0","89842","","","","","","","","","","","","","null","./stim/Biella_4_1_2.jpg","null","","","","","","2","1","4",""
+"street view slide show","image-button-response","318","7842464","0.0-318.0","89842","","","","","","","","","","","","","null","./stim/Biella_4_1_4.jpg","null","","","","","","2","1","4",""
+"street view slide show","image-button-response","319","7843466","0.0-319.0","89842","","","","","","","","","","","","","null","./stim/Biella_4_1_1.jpg","null","","","","","","2","1","4",""
+"street view slide show","image-button-response","320","7844467","0.0-320.0","89842","","","","","","","","","","","","","null","./stim/Biella_4_1_5.jpg","null","","","","","","2","1","4",""
+"street view slide show","image-button-response","321","7845471","0.0-321.0","89842","","","","","","","","","","","","","null","./stim/Biella_4_1_3.jpg","null","","","","","","2","1","4",""
+"sv response","survey","322","7932181","0.0-322.0","89842","","","","","","","","","","","","","86702","","{""prompt"":null,""ambiguous"":4,""objects"":2,""invisible"":3,""chaos"":2,""complex"":3}","","","","","","","","","[]"
+"","html-button-response","323","7933327","0.0-323.0","89842","","","","","","","","","","","","","1146","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","324","7934329","0.0-324.0","89842","","","","","","","","","","","","","null","./stim/Kiryu_2_1_4.jpg","null","","","","","","2","1","2",""
+"street view slide show","image-button-response","325","7935331","0.0-325.0","89842","","","","","","","","","","","","","null","./stim/Kiryu_2_1_2.jpg","null","","","","","","2","1","2",""
+"street view slide show","image-button-response","326","7936334","0.0-326.0","89842","","","","","","","","","","","","","null","./stim/Kiryu_2_1_3.jpg","null","","","","","","2","1","2",""
+"street view slide show","image-button-response","327","7937336","0.0-327.0","89842","","","","","","","","","","","","","null","./stim/Kiryu_2_1_1.jpg","null","","","","","","2","1","2",""
+"street view slide show","image-button-response","328","7938338","0.0-328.0","89842","","","","","","","","","","","","","null","./stim/Kiryu_2_1_5.jpg","null","","","","","","2","1","2",""
+"sv response","survey","329","7948862","0.0-329.0","89842","","","","","","","","","","","","","10509","","{""prompt"":null,""ambiguous"":4,""objects"":2,""invisible"":4,""chaos"":2,""complex"":2}","","","","","","","","","[]"
+"","html-button-response","330","7950444","0.0-330.0","89842","","","","","","","","","","","","","1582","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","331","7951445","0.0-331.0","89842","","","","","","","","","","","","","null","./stim/Columbus_1_1_3.jpg","null","","","","","","2","1","1",""
+"street view slide show","image-button-response","332","7952447","0.0-332.0","89842","","","","","","","","","","","","","null","./stim/Columbus_1_1_5.jpg","null","","","","","","2","1","1",""
+"street view slide show","image-button-response","333","7953450","0.0-333.0","89842","","","","","","","","","","","","","null","./stim/Columbus_1_1_4.jpg","null","","","","","","2","1","1",""
+"street view slide show","image-button-response","334","7954451","0.0-334.0","89842","","","","","","","","","","","","","null","./stim/Columbus_1_1_2.jpg","null","","","","","","2","1","1",""
+"street view slide show","image-button-response","335","7955454","0.0-335.0","89842","","","","","","","","","","","","","null","./stim/Columbus_1_1_1.jpg","null","","","","","","2","1","1",""
+"sv response","survey","336","8291429","0.0-336.0","89842","","","","","","","","","","","","","335968","","{""prompt"":null,""ambiguous"":3,""objects"":3,""invisible"":2,""chaos"":2,""complex"":2}","","","","","","","","","[]"
+"","html-button-response","337","8292375","0.0-337.0","89842","","","","","","","","","","","","","945","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","338","8293377","0.0-338.0","89842","","","","","","","","","","","","","null","./stim/Taichung_3_1_4.jpg","null","","","","","","2","1","3",""
+"street view slide show","image-button-response","339","8294380","0.0-339.0","89842","","","","","","","","","","","","","null","./stim/Taichung_3_1_5.jpg","null","","","","","","2","1","3",""
+"street view slide show","image-button-response","340","8295382","0.0-340.0","89842","","","","","","","","","","","","","null","./stim/Taichung_3_1_2.jpg","null","","","","","","2","1","3",""
+"street view slide show","image-button-response","341","8296384","0.0-341.0","89842","","","","","","","","","","","","","null","./stim/Taichung_3_1_1.jpg","null","","","","","","2","1","3",""
+"street view slide show","image-button-response","342","8297494","0.0-342.0","89842","","","","","","","","","","","","","null","./stim/Taichung_3_1_3.jpg","null","","","","","","2","1","3",""
+"sv response","survey","343","8538440","0.0-343.0","89842","","","","","","","","","","","","","240938","","{""prompt"":null,""ambiguous"":4,""objects"":3,""invisible"":4,""chaos"":3,""complex"":3}","","","","","","","","","[]"
+"demographics1","survey-html-form","344","8558038","0.0-344.0","89842","","","","","","","","","","","","","19595","","{""zipcode"":""48109"",""age"":""18"",""sex"":""female"",""gender"":""woman"",""gender-self-describe"":"""",""ethnicity"":""east-asian"",""ethnicity-self-describe"":""""}","","","","","","","","",""
+"end-survey","survey-text","345","8560103","0.0-345.0","89842","","","","","","","","","","","","","2057","","{""comment"":""""}","","","","","","","","",""
+"end-survey","html-button-response","346","8568857","0.0-346.0","89842","","","","","","","","","","","","","8753","[""You've reached the end of the survey. <br><br> \n<b>Do not close or refresh this window.</b><br>\nIn the next page, you will see a pop-up like below after a few moment.<br><br>\n<img src='assets/img/chrome.PNG'> <br><br>\nPress the <b>'Leave'</b> button to exit from the experiment without losing your record.<br>\nYou will be automatically redirected to SONA once you click the <b>'Leave'</b> button. <br><br>""]","0","","","","","","","","",""
