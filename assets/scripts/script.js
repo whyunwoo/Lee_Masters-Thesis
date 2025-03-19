@@ -1,4 +1,4 @@
-const consentHTML = `
+const consentHTML = '
     <div style="font-size: 80%; max-width:700px">
         <h2>Informed Consent</h2><br>
     
@@ -64,11 +64,11 @@ const consentHTML = `
         </b></div>
         </div>
     </div>
-`;
+';
 
 
 /* WELCOME MESSAGE */
-const html_intro1 = `
+const html_intro1 = '
 <div class="text-container">
     <h1>Welcome to the study!</h1>
     <div class="text-left">
@@ -79,10 +79,10 @@ const html_intro1 = `
     <img src = "assets/img/example.png" width = 500px, height = auto>
     <br>
 <br>
-`;
+';
 
 
-const html_intro2 = `
+const html_intro2 = '
         <style>
             img.small {
             max-width: 100px;
@@ -116,9 +116,9 @@ const html_intro2 = `
             </p>
         </div>
         <br>
-`;
+';
 
-const html_intro3 = `
+const html_intro3 = '
     <div class="text-container text-left">
         <p>Please make sure you are doing this study in an area where you can focus and complete the survey in one sitting.</p>
         <p>Don’t spend too much time on any one picture- go with your gut impression!</p>
@@ -127,26 +127,26 @@ const html_intro3 = `
         
     <h3>Ready? Click next to get started!</h3>
     <br>
-`;
+';
 
-var half_way_prompt = `
+var half_way_prompt = '
 <h3>You are now half way through the study.</h3>
 <p>Please take a quick, 15-second break before you continue.</p>
 <img src='assets/img/countdown-15.gif'>
 <p>The study will automatically advance forward after the countdown is complete. However, you may click "Next" to advance forward now if you wish.</p>
-`;
+';
 
-const preambleDemog = `
+const preambleDemog = '
         <br>
         <p>
         Thank you for your responses. Finally, we’d like to ask you a few questions about yourself.
         </p>
         <hr>
         <br>
-    `;
+    ';
 
 
-const debriefHTML = `
+const debriefHTML = '
     <h3>Thank you for participating in the study!</h3>
     <div style="text-align: left; max-width: 700px; font-size: 80%">
         <p>
@@ -161,19 +161,19 @@ const debriefHTML = `
         If you have further questions about the study or your participation, please contact the protocol director at npcamp@umich.edu. 
         </p>
     </div>
-`;
+';
 
 
-var endStudyNoConsent_prompt = `
+var endStudyNoConsent_prompt = '
     <h3>You have declined the informed consent form.</h3>
     <p>Please exit this window and return this study on SONA.</p>
-`;
+';
 
-var endRedirectPrompt = [`You've reached the end of the survey. <br><br> 
+var endRedirectPrompt = ['You've reached the end of the survey. <br><br> 
 <b>Do not close or refresh this window.</b><br>
 In the next page, you will see a pop-up like below after a few moment.<br><br>
 <img src='assets/img/chrome.PNG'> <br><br>
 Press the <b>'Leave'</b> button to exit from the experiment without losing your record.<br>
 You will be automatically redirected to SONA once you click the <b>'Leave'</b> button. <br><br>
-`
+'
 ]
