@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Stim Image Verification</title>
+    <meta charset="UTF-8">
+
+    <!-- Load jsPsych -->
+    <script src="https://unpkg.com/jspsych@7.3.4"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-html-button-response@1.1.1"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-image-button-response@1.1.1"></script>
+
+    <!-- Load Groups Data -->
+    <script src="assets/scripts/groups.js"></script>
+</head>
+
+<body></body>
+
+<script>
+    function extractImageTrials(groups) {
+        let trials = [];
+
+        Object.keys(groups).forEach(family => {
+            Object.keys(groups[family]).forEach(city_order => {
+                let clustersInCity = Object.keys(groups[family][city_order]);
+                let totalClusters = clustersInCity.length; 
+
+                clustersInCity.forEach((cluster, clusterIndex) => {
+                    let images = groups[family][city_order][cluster];
+                    let clusterPosition = clusterIndex + 1;
+
+                    images.forEach((imagePath, imageIndex) => {
+                        let imageNumber = imageIndex + 1;
+
+
+                        let groupInfo = `
+                            <p style="font-size: 20px;">
+                                <strong>Family:</strong> ${family} <br>
+                                <strong>City Order:</strong> ${city_order} <br>
+                                <strong>Cluster:</strong> ${cluster} (${clusterPosition} / ${totalClusters}) <br>
+                                <strong>Image Number:</strong> ${imageNumber} / ${images.length}
+                            </p>
+                        `;
+
+
+                        trials.push({
+                            type: jsPsychImageButtonResponse, 
+                            stimulus: imagePath,
+                            prompt: groupInfo,
+                            choices: ['Next']
+                        });
+                    });
+                });
+            });
+        });
+
+        return trials;
+    }
+
+    const imageTrials = extractImageTrials(groups);
+
+    var jsPsych = initJsPsych({
+        use_webaudio: false,
+        on_finish: function() {
+            console.log("✅ Experiment finished.");
+        }
+    });
+
+    jsPsych.run(imageTrials);
+
+</script>
+
+</html>

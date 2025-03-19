@@ -74,38 +74,59 @@
 ************************************/
 
     function shuffleArray(array) {
-        for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]];
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
         }
-        return array;
+
+    // Function to pair families if the count is even, otherwise pick 2 randomly
+    function selectFamilies(groups) {
+        let familyKeys = Object.keys(groups); // Get all family keys
+        let selectedFamilies = [];
+
+        if (familyKeys.length % 2 === 1) {
+            // If the number of families is odd, randomly pick 2 families
+            selectedFamilies = shuffleArray(familyKeys).slice(0, 2);
+        } else {
+            // If the number of families is even, create pairs and select one randomly
+            let pairedFamilies = [];
+            for (let i = 0; i < familyKeys.length; i += 2) {
+                pairedFamilies.push([familyKeys[i], familyKeys[i + 1]]);
+            }
+            selectedFamilies = shuffleArray(pairedFamilies)[0]; // Randomly pick one pair
+        }
+
+        return selectedFamilies;
     }
 
-    const familiesList = shuffleArray(['1', '2']);      // RANDOMIZE FAMILY ORDER
+    const familiesList = shuffleArray(Object.keys(groups)).slice(0, 2);
 
     let stimuliArrays = [];
 
-    familiesList.forEach(family => {  
-        console.log(`Family: ${family}`);
+    familiesList.forEach(family => {
+        console.log(`Selected family: ${family}`);
 
-        let clusters = shuffleArray([...Array(6).keys()].map(i => `${i + 1}`));          // RANDOMIZE CLUSTER ORDER WITHIN EACH FAMILY
+        let cityOrders = shuffleArray(Object.keys(groups[family]))
 
-        clusters.forEach(cluster => {   
-            let countries = shuffleArray(['1', '2', '3', '4']);         // RANDOMIZE COUNTRY ORDER WITHIN EACH CLUSTER
-            console.log(`cluster: ${cluster}, country: ${countries}`);   
-            countries.forEach(country => { 
-                let filePaths = groups?.[family]?.[cluster]?.[country];     // RANDOMIZE FILE PATHS WITHIN EACH COUNTRY
+        cityOrders.forEach(city_order => {
+            let clusters = shuffleArray(Object.keys(groups[family][city_order]))
+            console.log(`country: ${city_order}, cluster: ${clusters}`)
+            clusters.forEach(cluster => {
+                let filePaths = groups[family][city_order][cluster];
                 if (!filePaths) {
                     console.error(`Error: Missing file paths for family ${family}, cluster ${cluster}, country ${country}`);
                     return;  
                 }
-                let shuffledFilePaths = shuffleArray(filePaths);    
-                stimuliArrays.push({ family, cluster, country, stimuli: shuffledFilePaths });
+                let shuffledFilePaths = shuffleArray(filePaths);
+                stimuliArrays.push({ family, city_order, cluster, stimuli: shuffledFilePaths });
             });
         });
     });
+    console.log("Final Stimuli Array:", stimuliArrays);
 
-    // FLATTEN STIMULI ARRAY
+    // Flatten the stimuli array
     let flat_stimuli_array = [];
     stimuliArrays.forEach(item => {
         item.stimuli.forEach(stimulus => {
@@ -113,21 +134,19 @@
         });
     });
 
-
-
     // ADD INFORMATION OF TRIALS TO THE FINAL DATA
     let data = [];
     stimuliArrays.forEach(item => {                 // Iterate over each item in the stimuliArrays. Each item contains information about a set of stimuli for a given condition and state.
         let trialData = {                           // Construct a trialData object containing details for a single trial. This includes the overall condition, the pair in the condition, the state, and the array of stimuli.
             family: item.family,
             cluster: item.cluster,
-            country: item.country,
+            country: item.city_order,
             stimuli_array: item.stimuli
         };
         data.push(trialData);
     });
     console.log("Data:", data);
-
+    console.log("Final data array:", data);
 
 
 
@@ -147,13 +166,8 @@
         'assets/img/countdown-15.gif'
     ];
 
-    stimuliArrays.forEach(item => {                         // Get all stimuli path from stimuliArrays
-        preload_images.push(...item.stimuli);
-    });
 
-    preload_images = [...new Set(preload_images)];          //Exclude duplicated images just in case
-
-
+    preload_images = preload_images.concat(flat_stimuli_array);
 
 
 
@@ -162,7 +176,8 @@
 ************************************
 ************************************
 ************************************/
-
+    console.log("thesis-exp")
+    
     var pavlovia_init = {
             type: jsPsychPavlovia,
             data: {
@@ -228,9 +243,8 @@
 ************************************
 ************************************
 ************************************/
-    
-    function make_trial_block(stimuli_array, item) {
 
+    function make_trial_block(stimuli_array, item) {
         var sub_timeline_main_experiment = [];      // sub_timeline_main_experiment contains all the main experiment trials
         
         // Add an instruction slide at the beginning of each block
@@ -253,20 +267,22 @@
                 type: jsPsychImageButtonResponse,
                 data: {
                     task: 'street view slide show',
-                    family: item.family, // Add condition data
-                    cluster: item.cluster, // Add pair_in_condition data
-                    country: item.country, // Add state data
+                    family: img.family, // Add condition data
+                    cluster: img.cluster, // Add pair_in_condition data
+                    country: img.city_order, // Add state data
                 },
                 stimulus: img,
-                trial_duration: 1000, //1000
+                trial_duration: 100, //1000
                 choices: [],
                 on_start: function() {
-                    console.log("Current stimulus:", img);
+                    console.log("Current stimulus: ", img);
                 },
             };
             return present_svSlideshow;
         };
-            
+
+
+
         // Function to create a prompt with street view images.
         function create_prompt(message, stimuliArray) {
             let prompt_init = `<div style="max-width:95%; min-height: 5em; margin-top: 15px; text-align: center;">`;
@@ -278,11 +294,12 @@
                     return prompt_init;
         }
 
-        // Combine the final prompt with the survey
         const finalPrompt = create_prompt(
             "Here are the images you saw from this neighborhood <br>(you can hover over to take a closer look):",
             stimuli_array
         );
+
+
 
         sub_timeline_main_experiment.push({
             type: jsPsychSurvey,
@@ -299,8 +316,7 @@
                             <div style="text-align: center;">
                                 ${finalPrompt}
                                 <p>Please give your general impressions of this neighborhood:</p>
-                            </div>
-                        `,
+                            </div>`,
                     },
                     {
                     type: "likert",
@@ -353,6 +369,8 @@
         return sub_timeline_main_experiment;
     };
 
+
+    
     var half_way = {
         type: jsPsychHtmlButtonResponse,
         data: {
@@ -565,8 +583,9 @@
     timeline.push(intro2);
 
     timeline.push(initialInstruction);
+
     data.forEach((item, index) => {
-        var sub_timeline_main_experiment = make_trial_block(item.stimuli_array, item);
+        var sub_timeline_main_experiment = make_trial_block(item.stimuli_array);
         timeline.push(...sub_timeline_main_experiment);
         if (index === Math.floor(data.length / 2) - 1) {
             timeline.push(half_way);
