@@ -179,13 +179,13 @@
     console.log("thesis-exp")
     
     var pavlovia_init = {
-            type: "jsPsychPavlovia",
+            type: jsPsychPavlovia,
             data: {
                 task: 'pavlovia-init'
             },
             command: "init"
         };
-    timeline.push(pavlovia_init);
+        timeline.push(pavlovia_init);
 
     var browserCheck = {
         type: jsPsychBrowserCheck,
@@ -562,7 +562,7 @@
     };
     
     var pavlovia_finish = {
-        type: "pavlovia",
+        type: jsPsychPavlovia,
         data: {
             task: 'pavlovia-finish'
         },
