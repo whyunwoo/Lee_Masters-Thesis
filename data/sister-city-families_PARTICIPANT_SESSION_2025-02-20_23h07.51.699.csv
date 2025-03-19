@@ -1,3 +1,0 @@
-"task","trial_type","trial_index","time_elapsed","internal_node_id","subject_id","study_id","width","height","webaudio","browser","browser_version","mobile","os","fullscreen","vsync_rate","webcam","microphone"
-"pavlovia-init","pavlovia","0","753","0.0-0.0","89412","","","","","","","","","","","",""
-"browser-check","browser-check","1","1757","0.0-1.0","89412","","1200","598","true","edge-chromium","133.0.0","false","Windows 10","true","60.02","true","true"
