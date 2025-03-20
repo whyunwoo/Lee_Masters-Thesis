@@ -758,46 +758,46 @@ const groups = {
         },
         "2": {
             "1": [
-                "./stim/Miyazaki_Shi_Japan_8_1_8/Miyazaki_Shi___Japan_1_1.jpg",
-                "./stim/Miyazaki_Shi_Japan_8_1_8/Miyazaki_Shi___Japan_1_2.jpg",
-                "./stim/Miyazaki_Shi_Japan_8_1_8/Miyazaki_Shi___Japan_1_3.jpg",
-                "./stim/Miyazaki_Shi_Japan_8_1_8/Miyazaki_Shi___Japan_1_4.jpg",
-                "./stim/Miyazaki_Shi_Japan_8_1_8/Miyazaki_Shi___Japan_1_5.jpg"
+                "./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_1_1.jpg",
+                "./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_1_2.jpg",
+                "./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_1_3.jpg",
+                "./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_1_4.jpg",
+                "./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_1_5.jpg"
             ],
             "4": [
-                "./stim/Miyazaki_Shi_Japan_8_1_8/Miyazaki_Shi___Japan_4_2.jpg",
-                "./stim/Miyazaki_Shi_Japan_8_1_8/Miyazaki_Shi___Japan_4_3.jpg",
-                "./stim/Miyazaki_Shi_Japan_8_1_8/Miyazaki_Shi___Japan_4_6.jpg",
-                "./stim/Miyazaki_Shi_Japan_8_1_8/Miyazaki_Shi___Japan_4_7.jpg",
-                "./stim/Miyazaki_Shi_Japan_8_1_8/Miyazaki_Shi___Japan_4_8.jpg"
+                "./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_4_2.jpg",
+                "./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_4_3.jpg",
+                "./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_4_6.jpg",
+                "./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_4_7.jpg",
+                "./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_4_8.jpg"
             ],
             "5": [
-                "./stim/Miyazaki_Shi_Japan_8_1_8/Miyazaki_Shi___Japan_5_1.jpg",
-                "./stim/Miyazaki_Shi_Japan_8_1_8/Miyazaki_Shi___Japan_5_2.jpg",
-                "./stim/Miyazaki_Shi_Japan_8_1_8/Miyazaki_Shi___Japan_5_3.jpg",
-                "./stim/Miyazaki_Shi_Japan_8_1_8/Miyazaki_Shi___Japan_5_4.jpg",
-                "./stim/Miyazaki_Shi_Japan_8_1_8/Miyazaki_Shi___Japan_5_6.jpg"
+                "./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_5_1.jpg",
+                "./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_5_2.jpg",
+                "./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_5_3.jpg",
+                "./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_5_4.jpg",
+                "./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_5_6.jpg"
             ],
             "6": [
-                "./stim/Miyazaki_Shi_Japan_8_1_8/Miyazaki_Shi___Japan_6_1.jpg",
-                "./stim/Miyazaki_Shi_Japan_8_1_8/Miyazaki_Shi___Japan_6_2.jpg",
-                "./stim/Miyazaki_Shi_Japan_8_1_8/Miyazaki_Shi___Japan_6_3.jpg",
-                "./stim/Miyazaki_Shi_Japan_8_1_8/Miyazaki_Shi___Japan_6_4.jpg",
-                "./stim/Miyazaki_Shi_Japan_8_1_8/Miyazaki_Shi___Japan_6_5.jpg"
+                "./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_6_1.jpg",
+                "./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_6_2.jpg",
+                "./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_6_3.jpg",
+                "./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_6_4.jpg",
+                "./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_6_5.jpg"
             ],
             "7": [
-                "./stim/Miyazaki_Shi_Japan_8_1_8/Miyazaki_Shi___Japan_7_1.jpg",
-                "./stim/Miyazaki_Shi_Japan_8_1_8/Miyazaki_Shi___Japan_7_2.jpg",
-                "./stim/Miyazaki_Shi_Japan_8_1_8/Miyazaki_Shi___Japan_7_3.jpg",
-                "./stim/Miyazaki_Shi_Japan_8_1_8/Miyazaki_Shi___Japan_7_4.jpg",
-                "./stim/Miyazaki_Shi_Japan_8_1_8/Miyazaki_Shi___Japan_7_5.jpg"
+                "./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_7_1.jpg",
+                "./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_7_2.jpg",
+                "./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_7_3.jpg",
+                "./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_7_4.jpg",
+                "./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_7_5.jpg"
             ],
             "8": [
-                "./stim/Miyazaki_Shi_Japan_8_1_8/Miyazaki_Shi___Japan_8_1.jpg",
-                "./stim/Miyazaki_Shi_Japan_8_1_8/Miyazaki_Shi___Japan_8_2.jpg",
-                "./stim/Miyazaki_Shi_Japan_8_1_8/Miyazaki_Shi___Japan_8_3.jpg",
-                "./stim/Miyazaki_Shi_Japan_8_1_8/Miyazaki_Shi___Japan_8_4.jpg",
-                "./stim/Miyazaki_Shi_Japan_8_1_8/Miyazaki_Shi___Japan_8_5.jpg"
+                "./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_8_1.jpg",
+                "./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_8_2.jpg",
+                "./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_8_3.jpg",
+                "./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_8_4.jpg",
+                "./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_8_5.jpg"
             ]
         },
         "3": {
