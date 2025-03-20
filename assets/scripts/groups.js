@@ -402,46 +402,46 @@ const groups = {
         },
         "2": {
             "1": [
-                "./stim/Shizuoka_Shi_Japan_8_1_8/Shizuoka_Shi___Japan_1_1.jpg",
-                "./stim/Shizuoka_Shi_Japan_8_1_8/Shizuoka_Shi___Japan_1_2.jpg",
-                "./stim/Shizuoka_Shi_Japan_8_1_8/Shizuoka_Shi___Japan_1_3.jpg",
-                "./stim/Shizuoka_Shi_Japan_8_1_8/Shizuoka_Shi___Japan_1_4.jpg",
-                "./stim/Shizuoka_Shi_Japan_8_1_8/Shizuoka_Shi___Japan_1_5.jpg"
+                "./stim/ShizuokaShi_Japan_8_1_8/Shizuoka_Shi___Japan_1_1.jpg",
+                "./stim/ShizuokaShi_Japan_8_1_8/Shizuoka_Shi___Japan_1_2.jpg",
+                "./stim/ShizuokaShi_Japan_8_1_8/Shizuoka_Shi___Japan_1_3.jpg",
+                "./stim/ShizuokaShi_Japan_8_1_8/Shizuoka_Shi___Japan_1_4.jpg",
+                "./stim/ShizuokaShi_Japan_8_1_8/Shizuoka_Shi___Japan_1_5.jpg"
             ],
             "2": [
-                "./stim/Shizuoka_Shi_Japan_8_1_8/Shizuoka_Shi___Japan_2_1.jpg",
-                "./stim/Shizuoka_Shi_Japan_8_1_8/Shizuoka_Shi___Japan_2_2.jpg",
-                "./stim/Shizuoka_Shi_Japan_8_1_8/Shizuoka_Shi___Japan_2_3.jpg",
-                "./stim/Shizuoka_Shi_Japan_8_1_8/Shizuoka_Shi___Japan_2_4.jpg",
-                "./stim/Shizuoka_Shi_Japan_8_1_8/Shizuoka_Shi___Japan_2_5.jpg"
+                "./stim/ShizuokaShi_Japan_8_1_8/Shizuoka_Shi___Japan_2_1.jpg",
+                "./stim/ShizuokaShi_Japan_8_1_8/Shizuoka_Shi___Japan_2_2.jpg",
+                "./stim/ShizuokaShi_Japan_8_1_8/Shizuoka_Shi___Japan_2_3.jpg",
+                "./stim/ShizuokaShi_Japan_8_1_8/Shizuoka_Shi___Japan_2_4.jpg",
+                "./stim/ShizuokaShi_Japan_8_1_8/Shizuoka_Shi___Japan_2_5.jpg"
             ],
             "3": [
-                "./stim/Shizuoka_Shi_Japan_8_1_8/Shizuoka_Shi___Japan_3_1.jpg",
-                "./stim/Shizuoka_Shi_Japan_8_1_8/Shizuoka_Shi___Japan_3_2.jpg",
-                "./stim/Shizuoka_Shi_Japan_8_1_8/Shizuoka_Shi___Japan_3_3.jpg",
-                "./stim/Shizuoka_Shi_Japan_8_1_8/Shizuoka_Shi___Japan_3_4.jpg",
-                "./stim/Shizuoka_Shi_Japan_8_1_8/Shizuoka_Shi___Japan_3_5.jpg"
+                "./stim/ShizuokaShi_Japan_8_1_8/Shizuoka_Shi___Japan_3_1.jpg",
+                "./stim/ShizuokaShi_Japan_8_1_8/Shizuoka_Shi___Japan_3_2.jpg",
+                "./stim/ShizuokaShi_Japan_8_1_8/Shizuoka_Shi___Japan_3_3.jpg",
+                "./stim/ShizuokaShi_Japan_8_1_8/Shizuoka_Shi___Japan_3_4.jpg",
+                "./stim/ShizuokaShi_Japan_8_1_8/Shizuoka_Shi___Japan_3_5.jpg"
             ],
             "4": [
-                "./stim/Shizuoka_Shi_Japan_8_1_8/Shizuoka_Shi___Japan_4_1.jpg",
-                "./stim/Shizuoka_Shi_Japan_8_1_8/Shizuoka_Shi___Japan_4_2.jpg",
-                "./stim/Shizuoka_Shi_Japan_8_1_8/Shizuoka_Shi___Japan_4_3.jpg",
-                "./stim/Shizuoka_Shi_Japan_8_1_8/Shizuoka_Shi___Japan_4_4.jpg",
-                "./stim/Shizuoka_Shi_Japan_8_1_8/Shizuoka_Shi___Japan_4_5.jpg"
+                "./stim/ShizuokaShi_Japan_8_1_8/Shizuoka_Shi___Japan_4_1.jpg",
+                "./stim/ShizuokaShi_Japan_8_1_8/Shizuoka_Shi___Japan_4_2.jpg",
+                "./stim/ShizuokaShi_Japan_8_1_8/Shizuoka_Shi___Japan_4_3.jpg",
+                "./stim/ShizuokaShi_Japan_8_1_8/Shizuoka_Shi___Japan_4_4.jpg",
+                "./stim/ShizuokaShi_Japan_8_1_8/Shizuoka_Shi___Japan_4_5.jpg"
             ],
             "7": [
-                "./stim/Shizuoka_Shi_Japan_8_1_8/Shizuoka_Shi___Japan_7_2.jpg",
-                "./stim/Shizuoka_Shi_Japan_8_1_8/Shizuoka_Shi___Japan_7_3.jpg",
-                "./stim/Shizuoka_Shi_Japan_8_1_8/Shizuoka_Shi___Japan_7_4.jpg",
-                "./stim/Shizuoka_Shi_Japan_8_1_8/Shizuoka_Shi___Japan_7_5.jpg",
-                "./stim/Shizuoka_Shi_Japan_8_1_8/Shizuoka_Shi___Japan_7_6.jpg"
+                "./stim/ShizuokaShi_Japan_8_1_8/Shizuoka_Shi___Japan_7_2.jpg",
+                "./stim/ShizuokaShi_Japan_8_1_8/Shizuoka_Shi___Japan_7_3.jpg",
+                "./stim/ShizuokaShi_Japan_8_1_8/Shizuoka_Shi___Japan_7_4.jpg",
+                "./stim/ShizuokaShi_Japan_8_1_8/Shizuoka_Shi___Japan_7_5.jpg",
+                "./stim/ShizuokaShi_Japan_8_1_8/Shizuoka_Shi___Japan_7_6.jpg"
             ],
             "8": [
-                "./stim/Shizuoka_Shi_Japan_8_1_8/Shizuoka_Shi___Japan_8_1.jpg",
-                "./stim/Shizuoka_Shi_Japan_8_1_8/Shizuoka_Shi___Japan_8_2.jpg",
-                "./stim/Shizuoka_Shi_Japan_8_1_8/Shizuoka_Shi___Japan_8_3.jpg",
-                "./stim/Shizuoka_Shi_Japan_8_1_8/Shizuoka_Shi___Japan_8_4.jpg",
-                "./stim/Shizuoka_Shi_Japan_8_1_8/Shizuoka_Shi___Japan_8_5.jpg"
+                "./stim/ShizuokaShi_Japan_8_1_8/Shizuoka_Shi___Japan_8_1.jpg",
+                "./stim/ShizuokaShi_Japan_8_1_8/Shizuoka_Shi___Japan_8_2.jpg",
+                "./stim/ShizuokaShi_Japan_8_1_8/Shizuoka_Shi___Japan_8_3.jpg",
+                "./stim/ShizuokaShi_Japan_8_1_8/Shizuoka_Shi___Japan_8_4.jpg",
+                "./stim/ShizuokaShi_Japan_8_1_8/Shizuoka_Shi___Japan_8_5.jpg"
             ]
         },
         "3": {
