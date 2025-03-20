@@ -157,7 +157,7 @@
 ************************************
 ************************************
 ************************************/
-    let preload_images = [
+    var preload_images = [
         'assets/img/ambiguous-low.png',
         'assets/img/ambiguous-high.png',
         'assets/img/invisible-low.png',
@@ -166,8 +166,6 @@
         'assets/img/countdown-15.gif'
     ];
 
-
-    preload_images = preload_images.concat(flat_stimuli_array);
 
 
 
@@ -207,6 +205,12 @@
     var preload = {
         type: jsPsychPreload,
         images: preload_images,
+        message: `Please wait while the experiment loads. This should take only a moment.`
+    };
+
+    var preload2 = {
+        type: jsPsychPreload,
+        images: flat_stimuli_array,
         message: `Please wait while the experiment loads. This should take only a moment.`
     };
 
@@ -579,6 +583,7 @@
     timeline.push(browserCheck);
     timeline.push(consentForm);
     timeline.push(preload);
+    timeline.push(preload2);
     timeline.push(intro1);
     timeline.push(intro2);
 
