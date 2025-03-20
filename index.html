@@ -50,16 +50,16 @@
     var jsPsych = initJsPsych({
         use_webaudio: false,
         on_finish: function(data) {
-            var sona_id = jsPsych.data.getURLVariable(`sona_id`);
+            var sona_id = jsPsych.data.getURLVariable('sona_id');
             window.location.assign("https://umichpsych.sona-systems.com/webstudy_credit.aspx?experiment_id=3338&credit_token=796ce98bb6104288a36bd1664bf5996e&survey_code="+sona_id)
         }
     });
 
 
     // SONA
-    var subject_id = jsPsych.data.getURLVariable(`sona_id`);
-    var study_id = jsPsych.data.getURLVariable(`STUDY_ID`);
-    var pavlovia_id = `_p-` + subject_id;       // create pavlovia participant ID --> when need to open this on chrome comment out all the chuncks with pavlovia
+    var subject_id = jsPsych.data.getURLVariable('sona_id');
+    var study_id = jsPsych.data.getURLVariable('STUDY_ID');
+    var pavlovia_id = '_p-' + subject_id;       // create pavlovia participant ID --> when need to open this on chrome comment out all the chuncks with pavlovia
 
     jsPsych.data.addProperties({
         subject_id: subject_id,
@@ -106,17 +106,17 @@
     let stimuliArrays = [];
 
     familiesList.forEach(family => {
-        console.log(`Selected family: ${family}`);
+        console.log('Selected family: ${family}');
 
         let cityOrders = shuffleArray(Object.keys(groups[family]))
 
         cityOrders.forEach(city_order => {
             let clusters = shuffleArray(Object.keys(groups[family][city_order]))
-            console.log(`country: ${city_order}, cluster: ${clusters}`)
+            console.log('country: ${city_order}, cluster: ${clusters}')
             clusters.forEach(cluster => {
                 let filePaths = groups[family][city_order][cluster];
                 if (!filePaths) {
-                    console.error(`Error: Missing file paths for family ${family}, cluster ${cluster}, country ${country}`);
+                    console.error('Error: Missing file paths for family ${family}, cluster ${cluster}, country ${country}');
                     return;  
                 }
                 let shuffledFilePaths = shuffleArray(filePaths);
@@ -158,12 +158,12 @@
 ************************************
 ************************************/
     let preload_images = [
-        `assets/img/ambiguous-low.png`,
-        `assets/img/ambiguous-high.png`,
-        `assets/img/invisible-low.png`,
-        `assets/img/invisible-high.png`,
-        `assets/img/attention-check.png`,
-        `assets/img/countdown-15.gif`
+        'assets/img/ambiguous-low.png',
+        'assets/img/ambiguous-high.png',
+        'assets/img/invisible-low.png',
+        'assets/img/invisible-high.png',
+        'assets/img/attention-check.png',
+        'assets/img/countdown-15.gif'
     ];
 
 
@@ -181,7 +181,7 @@
     var pavlovia_init = {
             type: jsPsychPavlovia,
             data: {
-                task: `pavlovia-init`
+                task: 'pavlovia-init'
             },
             command: "init"
         };
@@ -190,7 +190,7 @@
     var browserCheck = {
         type: jsPsychBrowserCheck,
         data: {
-            task: `browser-check`
+            task: 'browser-check'
         },
         minimum_width: 700
     };
@@ -199,9 +199,9 @@
         type: jsPsychHtmlButtonResponse,
         stimulus: consentHTML,
         data: {
-            task: `consent`
+            task: 'consent'
         },
-        choices: [`Decline and exit`, `Accept and continue`],
+        choices: ['Decline and exit', 'Accept and continue'],
     };
     
     var preload = {
@@ -213,27 +213,27 @@
     var intro1 = {
         type: jsPsychHtmlButtonResponse,
         data: {
-            task: `instructions`,
+            task: 'instructions',
         },
-        choices: [`Next`],
+        choices: ['Next'],
         stimulus: html_intro1
     };
 
     var intro2 = {
         type: jsPsychHtmlButtonResponse,
         data: {
-            task: `instructions`,
+            task: 'instructions',
         },
-        choices: [`Next`],
+        choices: ['Next'],
         stimulus: html_intro2
     };
 
     var initialInstruction = {
             type: jsPsychHtmlButtonResponse,
             stimulus: function() {
-                return `<div class="text-container"><h3>On the next page, you will view a few Google Streetview images taken at random from a single neighborhood.</h3><br></div>`;
+                return '<div class="text-container"><h3>On the next page, you will view a few Google Streetview images taken at random from a single neighborhood.</h3><br></div>';
             },
-            choices: [`Next`],
+            choices: ['Next'],
     };
 
 
@@ -251,9 +251,9 @@
         sub_timeline_main_experiment.push({
             type: jsPsychHtmlButtonResponse,
             stimulus: function() {
-                return `<div class="text-container"><h3>Click next to see the next neighborhood.</h3></div><br>`;
+                return '<div class="text-container"><h3>Click next to see the next neighborhood.</h3></div><br>';
             },
-            choices: [`Next`]
+            choices: ['Next']
         })
 
         // Iterate over the stimuli array to create a series of image slideshow trials.
@@ -266,7 +266,7 @@
             var present_svSlideshow = {
                 type: jsPsychImageButtonResponse,
                 data: {
-                    task: `street view slide show`,
+                    task: 'street view slide show',
                     family: img.family, // Add condition data
                     cluster: img.cluster, // Add pair_in_condition data
                     country: img.city_order, // Add state data
@@ -285,10 +285,10 @@
 
         // Function to create a prompt with street view images.
         function create_prompt(message, stimuliArray) {
-            let prompt_init = `<div style="max-width:95%; min-height: 5em; margin-top: 15px; text-align: center;">`;
-                prompt_init += message + `<br><br>`;
+            let prompt_init = '<div style="max-width:95%; min-height: 5em; margin-top: 15px; text-align: center;">';
+                prompt_init += message + '<br><br>';
                     for (let stimulus of stimuli_array) {
-                        prompt_init += `<img src=`${stimulus}` class="zoomable-image" width=18% height=auto; style="padding: 5px;">`;
+                        prompt_init += '<img src='${stimulus}' class="zoomable-image" width=18% height=auto; style="padding: 5px;">';
                     }
                     prompt_init += "</div>";
                     return prompt_init;
@@ -312,11 +312,11 @@
                     {
                         name: "prompt",
                         type: "html",
-                        prompt: `
+                        prompt: '
                             <div style="text-align: center;">
                                 ${finalPrompt}
                                 <p>Please give your general impressions of this neighborhood:</p>
-                            </div>`,
+                            </div>',
                     },
                     {
                     type: "likert",
@@ -374,10 +374,10 @@
     var half_way = {
         type: jsPsychHtmlButtonResponse,
         data: {
-            task: `half-way`
+            task: 'half-way'
         },
         stimulus: half_way_prompt,
-        choices: [`Next`],
+        choices: ['Next'],
         trial_duration: 15750
     };
 
@@ -385,18 +385,18 @@
 
     // DEMOGRAPHICS
     function selfDescribe() {
-        a = document.getElementById(`self-describe`);
+        a = document.getElementById('self-describe');
         a.checked = true;
     };
 
     function selfDescribeRace() {
-        a = document.getElementById(`self-describe-race`);
+        a = document.getElementById('self-describe-race');
         a.checked = true;
     };
 
         
-    var htmlDemogForm1Script = `
-            <label for="zipcode">What`s the zipcode of your current residence?<br>
+    var htmlDemogForm1Script = '
+            <label for="zipcode">What's the zipcode of your current residence?<br>
                 <input type="number" id="zipcode" name="zipcode">
             </label><br><br>
 
@@ -454,7 +454,7 @@
                 </label><br>
 
                 <label for="self-describe" onClick=selfDescribe() style="font-size:85%">
-                    <br>Please describe your gender identity if you checked on `Non-Binary or another gender` above: &nbsp;&nbsp;&nbsp;   
+                    <br>Please describe your gender identity if you checked on 'Non-Binary or another gender' above: &nbsp;&nbsp;&nbsp;   
                     <div style= "text-align: center"><input type="text" id="self-describe" name="gender-self-describe"></div>
                 </label>
                 </div>
@@ -513,21 +513,21 @@
                 </label><br>
 
                 <label for="self-describe-ethnicity" onClick=selfDescribeEthnicity() style="font-size:85%">
-                    <br>Please describe your ethnicity if you selected `Other` above: &nbsp;&nbsp;&nbsp;   
+                    <br>Please describe your ethnicity if you selected 'Other' above: &nbsp;&nbsp;&nbsp;   
                     <div style="text-align: center"><input type="text" id="self-describe-ethnicity" name="ethnicity-self-describe"></div>
                 </label>
                 </div>
             </label><br><br>
-        `;
+        ';
 
     var demogForm1 = {
         type: jsPsychSurveyHtmlForm,
         data: {
-            task: `demographics1`
+            task: 'demographics1'
         },
         preamble: preambleDemog,
         html: htmlDemogForm1Script,
-        choices: [`Next`],
+        choices: ['Next'],
     };
 
     
@@ -538,15 +538,15 @@
     var endSurveyDebrief = {
         type: jsPsychSurveyText,
         data: {
-            task: `end-survey`
+            task: 'end-survey'
         },
         preamble: debriefHTML,
         questions: [
             {
-                prompt: `Do you have any comments on the study you’d like to share?`,
+                prompt: 'Do you have any comments on the study you’d like to share?',
                 rows: 8,
                 columns: 80,
-                name: `comment`,
+                name: 'comment',
             }
         ],
     };
@@ -555,16 +555,16 @@
     var endRedirect = {
         type: jsPsychHtmlButtonResponse,
         data: {
-            task: `end-survey`,
+            task: 'end-survey',
         },
         stimulus: endRedirectPrompt, 
-        choices: [`Continue`]
+        choices: ['Continue']
     };
     
     var pavlovia_finish = {
         type: jsPsychPavlovia,
         data: {
-            task: `pavlovia-finish`
+            task: 'pavlovia-finish'
         },
         command: "finish",
         participantId: pavlovia_id
