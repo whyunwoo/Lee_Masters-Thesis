@@ -59,7 +59,7 @@
     // SONA
     var subject_id = jsPsych.data.getURLVariable('sona_id');
     var study_id = jsPsych.data.getURLVariable('STUDY_ID');
-    var pavlovia_id = '_p-' + subject_id;       // create pavlovia participant ID --> when need to open this on chrome comment out all the chuncks with pavlovia
+    var pavlovia_id = '_p-' + subject_id; // create pavlovia participant ID --> when need to open this on chrome comment out all the chuncks with pavlovia
 
     jsPsych.data.addProperties({
         subject_id: subject_id,
@@ -75,12 +75,12 @@
 
     // Shuffle array in-place using Fisher-Yates algorithm
     function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
     }
-    return array;
-}
 
     const familiesList = shuffleArray(Object.keys(groups)).slice(0, 2);
 
