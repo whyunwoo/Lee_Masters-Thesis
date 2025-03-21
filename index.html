@@ -73,83 +73,48 @@
 ************************************
 ************************************/
 
+    // Shuffle array in-place using Fisher-Yates algorithm
     function shuffleArray(array) {
-            for (let i = array.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [array[i], array[j]] = [array[j], array[i]];
-            }
-            return array;
-        }
-
-    // Function to pair families if the count is even, otherwise pick 2 randomly
-    function selectFamilies(groups) {
-        let familyKeys = Object.keys(groups); // Get all family keys
-        let selectedFamilies = [];
-
-        if (familyKeys.length % 2 === 1) {
-            // If the number of families is odd, randomly pick 2 families
-            selectedFamilies = shuffleArray(familyKeys).slice(0, 2);
-        } else {
-            // If the number of families is even, create pairs and select one randomly
-            let pairedFamilies = [];
-            for (let i = 0; i < familyKeys.length; i += 2) {
-                pairedFamilies.push([familyKeys[i], familyKeys[i + 1]]);
-            }
-            selectedFamilies = shuffleArray(pairedFamilies)[0]; // Randomly pick one pair
-        }
-
-        return selectedFamilies;
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
     }
+    return array;
+}
 
     const familiesList = shuffleArray(Object.keys(groups)).slice(0, 2);
 
-    let stimuliArrays = [];
+    let allTrials = [];
 
     familiesList.forEach(family => {
-        console.log(`Selected family: ${family}`);
-
-        let cityOrders = shuffleArray(Object.keys(groups[family]))
-
-        cityOrders.forEach(city_order => {
-            let clusters = shuffleArray(Object.keys(groups[family][city_order]))
-            console.log(`country: ${city_order}, cluster: ${clusters}`)
-            clusters.forEach(cluster => {
-                let filePaths = groups[family][city_order][cluster];
+        Object.keys(groups[family]).forEach(city_order => {
+            Object.keys(groups[family][city_order]).forEach(cluster => {
+                const filePaths = groups[family][city_order][cluster];
                 if (!filePaths) {
-                    console.error(`Error: Missing file paths for family ${family}, cluster ${cluster}, country ${country}`);
-                    return;  
+                    console.error(`Missing file paths for family ${family}, cluster ${cluster}, city ${city_order}`);
+                    return;
                 }
-                let shuffledFilePaths = shuffleArray(filePaths);
-                stimuliArrays.push({ family, city_order, cluster, stimuli: shuffledFilePaths });
+                const shuffledFilePaths = shuffleArray(filePaths);
+                allTrials.push({
+                    family,
+                    country: city_order,
+                    cluster,
+                    stimuli_array: shuffledFilePaths
+                });
             });
         });
     });
-    console.log("Final Stimuli Array:", stimuliArrays);
 
-    // Flatten the stimuli array
+    const randomizedTrials = shuffleArray(allTrials);
+
     let flat_stimuli_array = [];
-    stimuliArrays.forEach(item => {
-        item.stimuli.forEach(stimulus => {
-            flat_stimuli_array.push(stimulus);
-        });
+    randomizedTrials.forEach(trial => {
+        flat_stimuli_array = flat_stimuli_array.concat(trial.stimuli_array);
     });
 
-    // ADD INFORMATION OF TRIALS TO THE FINAL DATA
-    let data = [];
-    stimuliArrays.forEach(item => {                 // Iterate over each item in the stimuliArrays. Each item contains information about a set of stimuli for a given condition and state.
-        let trialData = {                           // Construct a trialData object containing details for a single trial. This includes the overall condition, the pair in the condition, the state, and the array of stimuli.
-            family: item.family,
-            cluster: item.cluster,
-            country: item.city_order,
-            stimuli_array: item.stimuli
-        };
-        data.push(trialData);
-    });
-    console.log("Data:", data);
-    console.log("Final data array:", data);
+    const data = randomizedTrials;
 
-
-
+    console.log("Randomized Trials (48):", data);
 
 
 /********* SETTING EXPERIMENT ********
@@ -266,24 +231,25 @@
         }
 
         // Function to display a single image in a slideshow format.
-        function run_present_svSlideshow(img) {
-            var present_svSlideshow = {
+        function run_present_svSlideshow(stimulusPath, item) {
+            return {
                 type: jsPsychImageButtonResponse,
+                stimulus: stimulusPath,
+                trial_duration: 1000,  // 원하는 시간으로 수정 가능
+                choices: [],
                 data: {
                     task: 'street view slide show',
-                    family: img.family, // Add condition data
-                    cluster: img.cluster, // Add pair_in_condition data
-                    country: img.city_order, // Add state data
+                    family: item.family,
+                    country: item.city_order,
+                    cluster: item.cluster,
+                    stimulus_path: stimulusPath
                 },
-                stimulus: img,
-                trial_duration: 1000, //1000
-                choices: [],
                 on_start: function() {
-                    console.log("Current stimulus: ", img);
-                },
+                    console.log("Current stimulus: ", stimulusPath);
+                }
             };
-            return present_svSlideshow;
-        };
+        }
+        
 
 
 
@@ -590,7 +556,7 @@
     timeline.push(initialInstruction);
 
     data.forEach((item, index) => {
-        var sub_timeline_main_experiment = make_trial_block(item.stimuli_array);
+        var sub_timeline_main_experiment = make_trial_block(item.stimuli_array, item);
         timeline.push(...sub_timeline_main_experiment);
         if (index === Math.floor(data.length / 2) - 1) {
             timeline.push(half_way);
