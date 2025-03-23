@@ -1,0 +1,217 @@
+"task","trial_type","trial_index","time_elapsed","internal_node_id","subject_id","study_id","width","height","webaudio","browser","browser_version","mobile","os","fullscreen","vsync_rate","webcam","microphone","rt","stimulus","response","success","timeout","failed_images","failed_audio","failed_video","family","cluster","country","accuracy"
+"pavlovia-init","pavlovia","0","1105","0.0-0.0","71600","","","","","","","","","","","","","","","","","","","","","","","",""
+"browser-check","browser-check","1","2111","0.0-1.0","71600","","1189","685","true","chrome","134.0.0","false","Mac OS","true","59.86","true","true","","","","","","","","","","","",""
+"consent","html-button-response","2","3937","0.0-2.0","71600","","","","","","","","","","","","","1825","
+    <div style=""font-size: 80%; max-width:700px"">
+        <h2>Informed Consent</h2><br>
+    
+        <div style=""text-align: left"">
+        <h3>Streetscape Perceptions</h3>
+        <b>HUM00189138</b>
+        <br><hr>
+    
+        <h4>DESCRIPTION</h4>
+        <p>
+        In this study, you will view Google Street View images. You will then answer questions about your impressions of the streetscapes presented in those images.
+
+        </p><br>
+    
+        <h4>TIME INVOLVEMENT</h4>
+        <p>Your participation will take approximately 30 minutes.</p><br>
+    
+        <h4>RISKS AND BENEFITS</h4>
+        <p>
+        The risks associated with this study are minimal. The benefits which may reasonably be expected to result from this study are none.  We cannot and do not guarantee or promise that you will receive any benefits from this study.  
+        </p><br>
+
+        <h4>PAYMENTS</h4>
+        <p>You will receive .5 credit  for your participation.</p><br>
+
+        <h4>SUBJECT'S RIGHTS</h4>
+        <p>
+        If you have read this form and have decided to participate in this project, please understand your participation is voluntary and you have the right to withdraw your consent or discontinue participation at any time without penalty or loss of benefits to which you are otherwise entitled.  The alternative is not to participate.  You have the right to refuse to answer particular questions.  
+        </p>
+    
+        <p>
+        Your individual privacy will be maintained in all published and written data resulting from the study. Your responses will be kept confidential: you are given a participant code, and no one, not even the research team, can match that code with your identity. Your collected information may also be shared with other researchers as part of our dataset.
+        </p><br>
+    
+        <h4>CONTACT INFORMATION</h4>
+        <p>
+        Questions:  If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Nicholas Camp, npcamp@umich.edu, (443) 851-6783.
+        </p>
+    
+        <p>
+        If you have questions about your rights as a research participant, or wish to obtain information, ask questions or discuss any concerns about this study with someone other than the researcher(s), please contact the following:
+        <br><br>
+    
+        University of Michigan<br>
+        Health Sciences and Behavioral Sciences Institutional Review Board
+        (IRB-HSBS)<br>
+        2800 Plymouth Road <br>
+        Building 520, Room 1169 <br>
+        Ann Arbor, MI 48109-2800 <br>
+        Telephone: 734-936-0933 or toll free (866) 936-0933 <br>
+        Fax: 734-936-1852 <br />
+        E-mail: irbhsbs@umich.edu <br>
+        </p>
+    
+        <p>
+        You can also contact the University of Michigan Compliance Hotline at 1-866-990-0111. You may also print this consent form to keep.
+        </p>
+        <br>
+    
+        <div class=""alert alert-warning""><b>
+        Do you consent to participate in this study? If you consent to participate in this study, please click “yes”. If you select ""no"", you will be directed out of the survey.
+
+        </b></div>
+        </div>
+    </div>
+","1","","","","","","","","",""
+"","preload","3","5098","0.0-3.0","71600","","","","","","","","","","","","","","","","true","false","[]","[]","[]","","","",""
+"","preload","4","6160","0.0-4.0","71600","","","","","","","","","","","","","","","","true","false","[]","[]","[]","","","",""
+"instructions","html-button-response","5","7937","0.0-5.0","71600","","","","","","","","","","","","","1776","
+<div class=""text-container"">
+    <h1>Welcome to the study!</h1>
+    <div class=""text-left"">
+        <p>
+            In this study, we are interested in how people think about different Google Street View images. Google Street View takes pictures of streets used for Google Earth and Google Maps. You’ll see Google Street View images of different places and answer some questions about each one.
+        </p>
+    </div>
+    <img src = ""assets/img/example.png"" width = 500px, height = auto>
+    <br>
+<br>
+","0","","","","","","","","",""
+"instructions","html-button-response","6","9619","0.0-6.0","71600","","","","","","","","","","","","","1681","
+        <style>
+            img.small {
+            max-width: 100px;
+            }
+            li {
+            text-indent: 40px;
+            }
+        </style>
+
+        <div class=""text-container text-left"">
+            <p>For each picture, we’d like your impressions of the scene:</p>
+            <hr>
+            Are there <b>clear, distinct boundaries</b> between objects in the scene, or are the <b>boundaries ambiguous or unclear</b>?
+            <li>clear, distinct boundaries: <img class=""small"" src=""assets/img/ambiguous-low.png""></li>
+            <li>ambiguous or unclear boundaries: <img class=""small"" src=""assets/img/ambiguous-high.png""></li>
+            <hr>
+            <br>
+            Are there <b>only a few different objects</b> in the scene, or is there <b>a large number</b>?
+            <br><br>
+            <hr>
+            Are only <b>a few parts</b> of the scene <b>invisible or obscured</b>, or are <b>many parts invisible or obscured</b>?    
+            <li>a few parts invisible or obscured: <img class=""small"" src=""assets/img/invisible-low.png""></li>
+            <li>many parts invisible or obscured: <img class=""small"" src=""assets/img/invisible-high.png""></li>
+            <hr>
+            <br>
+            Does the scene look <b>organized</b> or <b>chaotic</b> to you?
+            <br><br>
+            <hr>
+            <p>
+            There are no right or wrong answers: we are interested in <b>your</b> impression. Note that some images might have individual buildings or faces blurred for privacy. Please ignore these when making your judgments.
+            </p>
+        </div>
+        <br>
+","0","","","","","","","","",""
+"","html-button-response","7","10737","0.0-7.0","71600","","","","","","","","","","","","","1117","<div class=""text-container""><h3>On the next page, you will view a few Google Streetview images taken at random from a single neighborhood.</h3><br></div>","0","","","","","","","","",""
+"","html-button-response","8","11535","0.0-8.0","71600","","","","","","","","","","","","","798","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","9","12538","0.0-9.0","71600","","","","","","","","","","","","","null","./stim/Kofu_Japan_8_1_8/Kofu___Japan_1_4.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","10","13541","0.0-10.0","71600","","","","","","","","","","","","","null","./stim/Kofu_Japan_8_1_8/Kofu___Japan_1_5.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","11","14543","0.0-11.0","71600","","","","","","","","","","","","","null","./stim/Kofu_Japan_8_1_8/Kofu___Japan_1_3.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","12","15546","0.0-12.0","71600","","","","","","","","","","","","","null","./stim/Kofu_Japan_8_1_8/Kofu___Japan_1_2.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","13","16547","0.0-13.0","71600","","","","","","","","","","","","","null","./stim/Kofu_Japan_8_1_8/Kofu___Japan_1_1.jpg","null","","","","","","","","",""
+"sv response","survey","14","55342","0.0-14.0","71600","","","","","","","","","","","","","38760","","{""prompt"":null,""ambiguous"":null,""objects"":null,""invisible"":null,""chaos"":null,""complex"":null}","","","","","","","","","[]"
+"","html-button-response","15","56669","0.0-15.0","71600","","","","","","","","","","","","","1326","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","16","57671","0.0-16.0","71600","","","","","","","","","","","","","null","./stim/Kofu_Japan_8_1_8/Kofu___Japan_6_2.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","17","58672","0.0-17.0","71600","","","","","","","","","","","","","null","./stim/Kofu_Japan_8_1_8/Kofu___Japan_6_4.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","18","59674","0.0-18.0","71600","","","","","","","","","","","","","null","./stim/Kofu_Japan_8_1_8/Kofu___Japan_6_5.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","19","60675","0.0-19.0","71600","","","","","","","","","","","","","null","./stim/Kofu_Japan_8_1_8/Kofu___Japan_6_1.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","20","62015","0.0-20.0","71600","","","","","","","","","","","","","null","./stim/Kofu_Japan_8_1_8/Kofu___Japan_6_3.jpg","null","","","","","","","","",""
+"sv response","survey","21","120395","0.0-21.0","71600","","","","","","","","","","","","","58368","","{""prompt"":null,""ambiguous"":null,""objects"":null,""invisible"":null,""chaos"":null,""complex"":null}","","","","","","","","","[]"
+"","html-button-response","22","121700","0.0-22.0","71600","","","","","","","","","","","","","1305","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","23","122704","0.0-23.0","71600","","","","","","","","","","","","","null","./stim/Kofu_Japan_8_1_8/Kofu___Japan_3_3.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","24","123707","0.0-24.0","71600","","","","","","","","","","","","","null","./stim/Kofu_Japan_8_1_8/Kofu___Japan_3_1.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","25","124710","0.0-25.0","71600","","","","","","","","","","","","","null","./stim/Kofu_Japan_8_1_8/Kofu___Japan_3_6.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","26","125713","0.0-26.0","71600","","","","","","","","","","","","","null","./stim/Kofu_Japan_8_1_8/Kofu___Japan_3_4.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","27","126714","0.0-27.0","71600","","","","","","","","","","","","","null","./stim/Kofu_Japan_8_1_8/Kofu___Japan_3_7.jpg","null","","","","","","","","",""
+"sv response","survey","28","127871","0.0-28.0","71600","","","","","","","","","","","","","1142","","{""prompt"":null,""ambiguous"":null,""objects"":null,""invisible"":null,""chaos"":null,""complex"":null}","","","","","","","","","[]"
+"","html-button-response","29","128931","0.0-29.0","71600","","","","","","","","","","","","","1059","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","30","129933","0.0-30.0","71600","","","","","","","","","","","","","null","./stim/Kofu_Japan_8_1_8/Kofu___Japan_4_7.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","31","130937","0.0-31.0","71600","","","","","","","","","","","","","null","./stim/Kofu_Japan_8_1_8/Kofu___Japan_4_5.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","32","131939","0.0-32.0","71600","","","","","","","","","","","","","null","./stim/Kofu_Japan_8_1_8/Kofu___Japan_4_4.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","33","132941","0.0-33.0","71600","","","","","","","","","","","","","null","./stim/Kofu_Japan_8_1_8/Kofu___Japan_4_8.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","34","133944","0.0-34.0","71600","","","","","","","","","","","","","null","./stim/Kofu_Japan_8_1_8/Kofu___Japan_4_1.jpg","null","","","","","","","","",""
+"sv response","survey","35","135771","0.0-35.0","71600","","","","","","","","","","","","","1810","","{""prompt"":null,""ambiguous"":null,""objects"":null,""invisible"":null,""chaos"":null,""complex"":null}","","","","","","","","","[]"
+"","html-button-response","36","137737","0.0-36.0","71600","","","","","","","","","","","","","1965","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","37","138739","0.0-37.0","71600","","","","","","","","","","","","","null","./stim/Kofu_Japan_8_1_8/Kofu___Japan_5_4.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","38","139741","0.0-38.0","71600","","","","","","","","","","","","","null","./stim/Kofu_Japan_8_1_8/Kofu___Japan_5_2.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","39","140744","0.0-39.0","71600","","","","","","","","","","","","","null","./stim/Kofu_Japan_8_1_8/Kofu___Japan_5_5.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","40","141746","0.0-40.0","71600","","","","","","","","","","","","","null","./stim/Kofu_Japan_8_1_8/Kofu___Japan_5_3.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","41","142749","0.0-41.0","71600","","","","","","","","","","","","","null","./stim/Kofu_Japan_8_1_8/Kofu___Japan_5_1.jpg","null","","","","","","","","",""
+"sv response","survey","42","144155","0.0-42.0","71600","","","","","","","","","","","","","1388","","{""prompt"":null,""ambiguous"":null,""objects"":null,""invisible"":null,""chaos"":null,""complex"":null}","","","","","","","","","[]"
+"","html-button-response","43","145344","0.0-43.0","71600","","","","","","","","","","","","","1188","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","44","146346","0.0-44.0","71600","","","","","","","","","","","","","null","./stim/Kofu_Japan_8_1_8/Kofu___Japan_2_2.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","45","147349","0.0-45.0","71600","","","","","","","","","","","","","null","./stim/Kofu_Japan_8_1_8/Kofu___Japan_2_4.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","46","148352","0.0-46.0","71600","","","","","","","","","","","","","null","./stim/Kofu_Japan_8_1_8/Kofu___Japan_2_5.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","47","149355","0.0-47.0","71600","","","","","","","","","","","","","null","./stim/Kofu_Japan_8_1_8/Kofu___Japan_2_1.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","48","150357","0.0-48.0","71600","","","","","","","","","","","","","null","./stim/Kofu_Japan_8_1_8/Kofu___Japan_2_3.jpg","null","","","","","","","","",""
+"sv response","survey","49","183982","0.0-49.0","71600","","","","","","","","","","","","","33608","","{""prompt"":null,""ambiguous"":null,""objects"":null,""invisible"":null,""chaos"":null,""complex"":null}","","","","","","","","","[]"
+"","html-button-response","50","185080","0.0-50.0","71600","","","","","","","","","","","","","1097","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","51","186083","0.0-51.0","71600","","","","","","","","","","","","","null","./stim/SaintEtienne_France_8_1_8/Saint_Etienne___France_5_5.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","52","187086","0.0-52.0","71600","","","","","","","","","","","","","null","./stim/SaintEtienne_France_8_1_8/Saint_Etienne___France_5_3.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","53","188089","0.0-53.0","71600","","","","","","","","","","","","","null","./stim/SaintEtienne_France_8_1_8/Saint_Etienne___France_5_4.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","54","189090","0.0-54.0","71600","","","","","","","","","","","","","null","./stim/SaintEtienne_France_8_1_8/Saint_Etienne___France_5_2.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","55","190094","0.0-55.0","71600","","","","","","","","","","","","","null","./stim/SaintEtienne_France_8_1_8/Saint_Etienne___France_5_1.jpg","null","","","","","","","","",""
+"sv response","survey","56","191848","0.0-56.0","71600","","","","","","","","","","","","","1740","","{""prompt"":null,""ambiguous"":null,""objects"":null,""invisible"":null,""chaos"":null,""complex"":null}","","","","","","","","","[]"
+"","html-button-response","57","192903","0.0-57.0","71600","","","","","","","","","","","","","1055","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","58","193906","0.0-58.0","71600","","","","","","","","","","","","","null","./stim/SaintEtienne_France_8_1_8/Saint_Etienne___France_3_3.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","59","194908","0.0-59.0","71600","","","","","","","","","","","","","null","./stim/SaintEtienne_France_8_1_8/Saint_Etienne___France_3_2.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","60","195912","0.0-60.0","71600","","","","","","","","","","","","","null","./stim/SaintEtienne_France_8_1_8/Saint_Etienne___France_3_4.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","61","196915","0.0-61.0","71600","","","","","","","","","","","","","null","./stim/SaintEtienne_France_8_1_8/Saint_Etienne___France_3_5.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","62","197918","0.0-62.0","71600","","","","","","","","","","","","","null","./stim/SaintEtienne_France_8_1_8/Saint_Etienne___France_3_6.jpg","null","","","","","","","","",""
+"sv response","survey","63","199475","0.0-63.0","71600","","","","","","","","","","","","","1541","","{""prompt"":null,""ambiguous"":null,""objects"":null,""invisible"":null,""chaos"":null,""complex"":null}","","","","","","","","","[]"
+"","html-button-response","64","200817","0.0-64.0","71600","","","","","","","","","","","","","1342","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","65","201819","0.0-65.0","71600","","","","","","","","","","","","","null","./stim/SaintEtienne_France_8_1_8/Saint_Etienne___France_2_1.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","66","202821","0.0-66.0","71600","","","","","","","","","","","","","null","./stim/SaintEtienne_France_8_1_8/Saint_Etienne___France_2_4.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","67","203824","0.0-67.0","71600","","","","","","","","","","","","","null","./stim/SaintEtienne_France_8_1_8/Saint_Etienne___France_2_3.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","68","204826","0.0-68.0","71600","","","","","","","","","","","","","null","./stim/SaintEtienne_France_8_1_8/Saint_Etienne___France_2_5.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","69","205829","0.0-69.0","71600","","","","","","","","","","","","","null","./stim/SaintEtienne_France_8_1_8/Saint_Etienne___France_2_2.jpg","null","","","","","","","","",""
+"sv response","survey","70","207437","0.0-70.0","71600","","","","","","","","","","","","","1593","","{""prompt"":null,""ambiguous"":null,""objects"":null,""invisible"":null,""chaos"":null,""complex"":null}","","","","","","","","","[]"
+"","html-button-response","71","208561","0.0-71.0","71600","","","","","","","","","","","","","1124","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","72","209564","0.0-72.0","71600","","","","","","","","","","","","","null","./stim/SaintEtienne_France_8_1_8/Saint_Etienne___France_1_5.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","73","210567","0.0-73.0","71600","","","","","","","","","","","","","null","./stim/SaintEtienne_France_8_1_8/Saint_Etienne___France_1_7.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","74","211570","0.0-74.0","71600","","","","","","","","","","","","","null","./stim/SaintEtienne_France_8_1_8/Saint_Etienne___France_1_4.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","75","212574","0.0-75.0","71600","","","","","","","","","","","","","null","./stim/SaintEtienne_France_8_1_8/Saint_Etienne___France_1_1.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","76","213576","0.0-76.0","71600","","","","","","","","","","","","","null","./stim/SaintEtienne_France_8_1_8/Saint_Etienne___France_1_3.jpg","null","","","","","","","","",""
+"sv response","survey","77","226623","0.0-77.0","71600","","","","","","","","","","","","","13030","","{""prompt"":null,""ambiguous"":null,""objects"":null,""invisible"":null,""chaos"":null,""complex"":null}","","","","","","","","","[]"
+"","html-button-response","78","227654","0.0-78.0","71600","","","","","","","","","","","","","1030","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","79","228657","0.0-79.0","71600","","","","","","","","","","","","","null","./stim/SaintEtienne_France_8_1_8/Saint_Etienne___France_6_1.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","80","229659","0.0-80.0","71600","","","","","","","","","","","","","null","./stim/SaintEtienne_France_8_1_8/Saint_Etienne___France_6_2.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","81","230662","0.0-81.0","71600","","","","","","","","","","","","","null","./stim/SaintEtienne_France_8_1_8/Saint_Etienne___France_6_4.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","82","231663","0.0-82.0","71600","","","","","","","","","","","","","null","./stim/SaintEtienne_France_8_1_8/Saint_Etienne___France_6_5.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","83","232667","0.0-83.0","71600","","","","","","","","","","","","","null","./stim/SaintEtienne_France_8_1_8/Saint_Etienne___France_6_3.jpg","null","","","","","","","","",""
+"sv response","survey","84","235089","0.0-84.0","71600","","","","","","","","","","","","","2406","","{""prompt"":null,""ambiguous"":null,""objects"":null,""invisible"":null,""chaos"":null,""complex"":null}","","","","","","","","","[]"
+"","html-button-response","85","236387","0.0-85.0","71600","","","","","","","","","","","","","1297","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","86","237390","0.0-86.0","71600","","","","","","","","","","","","","null","./stim/SaintEtienne_France_8_1_8/Saint_Etienne___France_4_2.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","87","238392","0.0-87.0","71600","","","","","","","","","","","","","null","./stim/SaintEtienne_France_8_1_8/Saint_Etienne___France_4_3.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","88","239396","0.0-88.0","71600","","","","","","","","","","","","","null","./stim/SaintEtienne_France_8_1_8/Saint_Etienne___France_4_5.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","89","240398","0.0-89.0","71600","","","","","","","","","","","","","null","./stim/SaintEtienne_France_8_1_8/Saint_Etienne___France_4_4.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","90","241401","0.0-90.0","71600","","","","","","","","","","","","","null","./stim/SaintEtienne_France_8_1_8/Saint_Etienne___France_4_1.jpg","null","","","","","","","","",""
+"sv response","survey","91","242944","0.0-91.0","71600","","","","","","","","","","","","","1529","","{""prompt"":null,""ambiguous"":null,""objects"":null,""invisible"":null,""chaos"":null,""complex"":null}","","","","","","","","","[]"
+"","html-button-response","92","244468","0.0-92.0","71600","","","","","","","","","","","","","1523","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","93","245471","0.0-93.0","71600","","","","","","","","","","","","","null","./stim/DesMoines_Iowa_8_1_8/Des_Moines___Iowa_4_5.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","94","246474","0.0-94.0","71600","","","","","","","","","","","","","null","./stim/DesMoines_Iowa_8_1_8/Des_Moines___Iowa_4_6.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","95","247478","0.0-95.0","71600","","","","","","","","","","","","","null","./stim/DesMoines_Iowa_8_1_8/Des_Moines___Iowa_4_1.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","96","248481","0.0-96.0","71600","","","","","","","","","","","","","null","./stim/DesMoines_Iowa_8_1_8/Des_Moines___Iowa_4_2.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","97","249485","0.0-97.0","71600","","","","","","","","","","","","","null","./stim/DesMoines_Iowa_8_1_8/Des_Moines___Iowa_4_3.jpg","null","","","","","","","","",""
+"sv response","survey","98","251196","0.0-98.0","71600","","","","","","","","","","","","","1697","","{""prompt"":null,""ambiguous"":null,""objects"":null,""invisible"":null,""chaos"":null,""complex"":null}","","","","","","","","","[]"
+"","html-button-response","99","252104","0.0-99.0","71600","","","","","","","","","","","","","907","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","",""
+"street view slide show","image-button-response","100","253107","0.0-100.0","71600","","","","","","","","","","","","","null","./stim/DesMoines_Iowa_8_1_8/Des_Moines___Iowa_6_5.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","101","254110","0.0-101.0","71600","","","","","","","","","","","","","null","./stim/DesMoines_Iowa_8_1_8/Des_Moines___Iowa_6_3.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","102","256015","0.0-102.0","71600","","","","","","","","","","","","","null","./stim/DesMoines_Iowa_8_1_8/Des_Moines___Iowa_6_4.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","103","258016","0.0-103.0","71600","","","","","","","","","","","","","null","./stim/DesMoines_Iowa_8_1_8/Des_Moines___Iowa_6_2.jpg","null","","","","","","","","",""
+"street view slide show","image-button-response","104","260015","0.0-104.0","71600","","","","","","","","","","","","","null","./stim/DesMoines_Iowa_8_1_8/Des_Moines___Iowa_6_1.jpg","null","","","","","","","","",""
