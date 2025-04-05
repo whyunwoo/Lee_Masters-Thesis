@@ -1,0 +1,299 @@
+"task","trial_type","trial_index","time_elapsed","internal_node_id","subject_id","study_id","width","height","webaudio","browser","browser_version","mobile","os","fullscreen","vsync_rate","webcam","microphone","rt","stimulus","response","success","timeout","failed_images","failed_audio","failed_video","family","country","cluster","stimulus_path","accuracy"
+"pavlovia-init","pavlovia","0","1115","0.0-0.0","90451","","","","","","","","","","","","","","","","","","","","","","","","",""
+"browser-check","browser-check","1","2129","0.0-1.0","90451","","1280","591","true","chrome","128.0.0","false","Mac OS","true","60","true","true","","","","","","","","","","","","",""
+"consent","html-button-response","2","15343","0.0-2.0","90451","","","","","","","","","","","","","13213","
+    <div style=""font-size: 80%; max-width:700px"">
+        <h2>Informed Consent</h2><br>
+    
+        <div style=""text-align: left"">
+        <h3>Streetscape Perceptions</h3>
+        <b>HUM00189138</b>
+        <br><hr>
+    
+        <h4>DESCRIPTION</h4>
+        <p>
+        In this study, you will view Google Street View images. You will then answer questions about your impressions of the streetscapes presented in those images.
+
+        </p><br>
+    
+        <h4>TIME INVOLVEMENT</h4>
+        <p>Your participation will take approximately 30 minutes.</p><br>
+    
+        <h4>RISKS AND BENEFITS</h4>
+        <p>
+        The risks associated with this study are minimal. The benefits which may reasonably be expected to result from this study are none.  We cannot and do not guarantee or promise that you will receive any benefits from this study.  
+        </p><br>
+
+        <h4>PAYMENTS</h4>
+        <p>You will receive .5 credit  for your participation.</p><br>
+
+        <h4>SUBJECT'S RIGHTS</h4>
+        <p>
+        If you have read this form and have decided to participate in this project, please understand your participation is voluntary and you have the right to withdraw your consent or discontinue participation at any time without penalty or loss of benefits to which you are otherwise entitled.  The alternative is not to participate.  You have the right to refuse to answer particular questions.  
+        </p>
+    
+        <p>
+        Your individual privacy will be maintained in all published and written data resulting from the study. Your responses will be kept confidential: you are given a participant code, and no one, not even the research team, can match that code with your identity. Your collected information may also be shared with other researchers as part of our dataset.
+        </p><br>
+    
+        <h4>CONTACT INFORMATION</h4>
+        <p>
+        Questions:  If you have any questions, concerns or complaints about this research, its procedures, risks and benefits, contact the Protocol Director, Nicholas Camp, npcamp@umich.edu, (443) 851-6783.
+        </p>
+    
+        <p>
+        If you have questions about your rights as a research participant, or wish to obtain information, ask questions or discuss any concerns about this study with someone other than the researcher(s), please contact the following:
+        <br><br>
+    
+        University of Michigan<br>
+        Health Sciences and Behavioral Sciences Institutional Review Board
+        (IRB-HSBS)<br>
+        2800 Plymouth Road <br>
+        Building 520, Room 1169 <br>
+        Ann Arbor, MI 48109-2800 <br>
+        Telephone: 734-936-0933 or toll free (866) 936-0933 <br>
+        Fax: 734-936-1852 <br />
+        E-mail: irbhsbs@umich.edu <br>
+        </p>
+    
+        <p>
+        You can also contact the University of Michigan Compliance Hotline at 1-866-990-0111. You may also print this consent form to keep.
+        </p>
+        <br>
+    
+        <div class=""alert alert-warning""><b>
+        Do you consent to participate in this study? If you consent to participate in this study, please click “yes”. If you select ""no"", you will be directed out of the survey.
+
+        </b></div>
+        </div>
+    </div>
+","1","","","","","","","","","",""
+"","preload","3","16420","0.0-3.0","90451","","","","","","","","","","","","","","","","true","false","[]","[]","[]","","","","",""
+"","preload","4","17358","0.0-4.0","90451","","","","","","","","","","","","","","","","true","false","[]","[]","[]","","","","",""
+"instructions","html-button-response","5","19614","0.0-5.0","90451","","","","","","","","","","","","","2256","
+<div class=""text-container"">
+    <h1>Welcome to the study!</h1>
+    <div class=""text-left"">
+        <p>
+            In this study, we are interested in how people think about different Google Street View images. Google Street View takes pictures of streets used for Google Earth and Google Maps. You’ll see Google Street View images of different places and answer some questions about each one.
+        </p>
+    </div>
+    <img src = ""assets/img/example.png"" width = 500px, height = auto>
+    <br>
+<br>
+","0","","","","","","","","","",""
+"instructions","html-button-response","6","44449","0.0-6.0","90451","","","","","","","","","","","","","24833","
+        <style>
+            img.small {
+            max-width: 100px;
+            }
+            li {
+            text-indent: 40px;
+            }
+        </style>
+
+        <div class=""text-container text-left"">
+            <p>For each picture, we’d like your impressions of the scene:</p>
+            <hr>
+            Are there <b>clear, distinct boundaries</b> between objects in the scene, or are the <b>boundaries ambiguous or unclear</b>?
+            <li>clear, distinct boundaries: <img class=""small"" src=""assets/img/ambiguous-low.png""></li>
+            <li>ambiguous or unclear boundaries: <img class=""small"" src=""assets/img/ambiguous-high.png""></li>
+            <hr>
+            <br>
+            Are there <b>only a few different objects</b> in the scene, or is there <b>a large number</b>?
+            <br><br>
+            <hr>
+            Are only <b>a few parts</b> of the scene <b>invisible or obscured</b>, or are <b>many parts invisible or obscured</b>?    
+            <li>a few parts invisible or obscured: <img class=""small"" src=""assets/img/invisible-low.png""></li>
+            <li>many parts invisible or obscured: <img class=""small"" src=""assets/img/invisible-high.png""></li>
+            <hr>
+            <br>
+            Does the scene look <b>organized</b> or <b>chaotic</b> to you?
+            <br><br>
+            <hr>
+            <p>
+            There are no right or wrong answers: we are interested in <b>your</b> impression. Note that some images might have individual buildings or faces blurred for privacy. Please ignore these when making your judgments.
+            </p>
+        </div>
+        <br>
+","0","","","","","","","","","",""
+"","html-button-response","7","45637","0.0-7.0","90451","","","","","","","","","","","","","1187","<div class=""text-container""><h3>On the next page, you will view a few Google Streetview images taken at random from a single neighborhood.</h3><br></div>","0","","","","","","","","","",""
+"","html-button-response","8","46304","0.0-8.0","90451","","","","","","","","","","","","","667","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","","",""
+"street view slide show","image-button-response","9","47306","0.0-9.0","90451","","","","","","","","","","","","","null","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_3_3.jpg","null","","","","","","7","","3","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_3_3.jpg",""
+"street view slide show","image-button-response","10","48308","0.0-10.0","90451","","","","","","","","","","","","","null","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_3_2.jpg","null","","","","","","7","","3","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_3_2.jpg",""
+"street view slide show","image-button-response","11","49310","0.0-11.0","90451","","","","","","","","","","","","","null","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_3_4.jpg","null","","","","","","7","","3","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_3_4.jpg",""
+"street view slide show","image-button-response","12","50311","0.0-12.0","90451","","","","","","","","","","","","","null","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_3_5.jpg","null","","","","","","7","","3","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_3_5.jpg",""
+"street view slide show","image-button-response","13","51313","0.0-13.0","90451","","","","","","","","","","","","","null","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_3_1.jpg","null","","","","","","7","","3","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_3_1.jpg",""
+"sv response","survey","14","97727","0.0-14.0","90451","","","","","","","","","","","","","46394","","{""prompt"":null,""ambiguous"":1,""objects"":5,""invisible"":1,""chaos"":5,""complex"":2}","","","","","","","","","","[]"
+"","html-button-response","15","98654","0.0-15.0","90451","","","","","","","","","","","","","926","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","","",""
+"street view slide show","image-button-response","16","99655","0.0-16.0","90451","","","","","","","","","","","","","null","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_4_4.jpg","null","","","","","","22","","4","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_4_4.jpg",""
+"street view slide show","image-button-response","17","100656","0.0-17.0","90451","","","","","","","","","","","","","null","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_4_2.jpg","null","","","","","","22","","4","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_4_2.jpg",""
+"street view slide show","image-button-response","18","101658","0.0-18.0","90451","","","","","","","","","","","","","null","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_4_5.jpg","null","","","","","","22","","4","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_4_5.jpg",""
+"street view slide show","image-button-response","19","102660","0.0-19.0","90451","","","","","","","","","","","","","null","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_4_6.jpg","null","","","","","","22","","4","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_4_6.jpg",""
+"street view slide show","image-button-response","20","103662","0.0-20.0","90451","","","","","","","","","","","","","null","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_4_1.jpg","null","","","","","","22","","4","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_4_1.jpg",""
+"sv response","survey","21","118939","0.0-21.0","90451","","","","","","","","","","","","","15272","","{""prompt"":null,""ambiguous"":1,""objects"":5,""invisible"":1,""chaos"":1,""complex"":3}","","","","","","","","","","[]"
+"","html-button-response","22","120173","0.0-22.0","90451","","","","","","","","","","","","","1233","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","","",""
+"street view slide show","image-button-response","23","121175","0.0-23.0","90451","","","","","","","","","","","","","null","./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_6_4.jpg","null","","","","","","22","","6","./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_6_4.jpg",""
+"street view slide show","image-button-response","24","122177","0.0-24.0","90451","","","","","","","","","","","","","null","./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_6_1.jpg","null","","","","","","22","","6","./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_6_1.jpg",""
+"street view slide show","image-button-response","25","123179","0.0-25.0","90451","","","","","","","","","","","","","null","./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_6_5.jpg","null","","","","","","22","","6","./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_6_5.jpg",""
+"street view slide show","image-button-response","26","124180","0.0-26.0","90451","","","","","","","","","","","","","null","./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_6_3.jpg","null","","","","","","22","","6","./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_6_3.jpg",""
+"street view slide show","image-button-response","27","125182","0.0-27.0","90451","","","","","","","","","","","","","null","./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_6_2.jpg","null","","","","","","22","","6","./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_6_2.jpg",""
+"sv response","survey","28","184920","0.0-28.0","90451","","","","","","","","","","","","","59732","","{""prompt"":null,""ambiguous"":1,""objects"":5,""invisible"":1,""chaos"":3,""complex"":4}","","","","","","","","","","[]"
+"","html-button-response","29","185841","0.0-29.0","90451","","","","","","","","","","","","","921","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","","",""
+"street view slide show","image-button-response","30","186843","0.0-30.0","90451","","","","","","","","","","","","","null","./stim/Honolulu_Hawaii_8_1_8/Honolulu___Hawaii_6_2.jpg","null","","","","","","7","","6","./stim/Honolulu_Hawaii_8_1_8/Honolulu___Hawaii_6_2.jpg",""
+"street view slide show","image-button-response","31","187845","0.0-31.0","90451","","","","","","","","","","","","","null","./stim/Honolulu_Hawaii_8_1_8/Honolulu___Hawaii_6_3.jpg","null","","","","","","7","","6","./stim/Honolulu_Hawaii_8_1_8/Honolulu___Hawaii_6_3.jpg",""
+"street view slide show","image-button-response","32","188846","0.0-32.0","90451","","","","","","","","","","","","","null","./stim/Honolulu_Hawaii_8_1_8/Honolulu___Hawaii_6_5.jpg","null","","","","","","7","","6","./stim/Honolulu_Hawaii_8_1_8/Honolulu___Hawaii_6_5.jpg",""
+"street view slide show","image-button-response","33","189848","0.0-33.0","90451","","","","","","","","","","","","","null","./stim/Honolulu_Hawaii_8_1_8/Honolulu___Hawaii_6_4.jpg","null","","","","","","7","","6","./stim/Honolulu_Hawaii_8_1_8/Honolulu___Hawaii_6_4.jpg",""
+"street view slide show","image-button-response","34","190850","0.0-34.0","90451","","","","","","","","","","","","","null","./stim/Honolulu_Hawaii_8_1_8/Honolulu___Hawaii_6_6.jpg","null","","","","","","7","","6","./stim/Honolulu_Hawaii_8_1_8/Honolulu___Hawaii_6_6.jpg",""
+"sv response","survey","35","243507","0.0-35.0","90451","","","","","","","","","","","","","52645","","{""prompt"":null,""ambiguous"":5,""objects"":2,""invisible"":4,""chaos"":5,""complex"":5}","","","","","","","","","","[]"
+"","html-button-response","36","244282","0.0-36.0","90451","","","","","","","","","","","","","775","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","","",""
+"street view slide show","image-button-response","37","245285","0.0-37.0","90451","","","","","","","","","","","","","null","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_5_7.jpg","null","","","","","","22","","5","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_5_7.jpg",""
+"street view slide show","image-button-response","38","246287","0.0-38.0","90451","","","","","","","","","","","","","null","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_5_1.jpg","null","","","","","","22","","5","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_5_1.jpg",""
+"street view slide show","image-button-response","39","247289","0.0-39.0","90451","","","","","","","","","","","","","null","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_5_4.jpg","null","","","","","","22","","5","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_5_4.jpg",""
+"street view slide show","image-button-response","40","248292","0.0-40.0","90451","","","","","","","","","","","","","null","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_5_5.jpg","null","","","","","","22","","5","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_5_5.jpg",""
+"street view slide show","image-button-response","41","249295","0.0-41.0","90451","","","","","","","","","","","","","null","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_5_2.jpg","null","","","","","","22","","5","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_5_2.jpg",""
+"sv response","survey","42","256696","0.0-42.0","90451","","","","","","","","","","","","","7389","","{""prompt"":null,""ambiguous"":1,""objects"":5,""invisible"":1,""chaos"":1,""complex"":2}","","","","","","","","","","[]"
+"","html-button-response","43","257954","0.0-43.0","90451","","","","","","","","","","","","","1258","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","","",""
+"street view slide show","image-button-response","44","258956","0.0-44.0","90451","","","","","","","","","","","","","null","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_1_2.jpg","null","","","","","","22","","1","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_1_2.jpg",""
+"street view slide show","image-button-response","45","259958","0.0-45.0","90451","","","","","","","","","","","","","null","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_1_3.jpg","null","","","","","","22","","1","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_1_3.jpg",""
+"street view slide show","image-button-response","46","260960","0.0-46.0","90451","","","","","","","","","","","","","null","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_1_1.jpg","null","","","","","","22","","1","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_1_1.jpg",""
+"street view slide show","image-button-response","47","261962","0.0-47.0","90451","","","","","","","","","","","","","null","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_1_5.jpg","null","","","","","","22","","1","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_1_5.jpg",""
+"street view slide show","image-button-response","48","262965","0.0-48.0","90451","","","","","","","","","","","","","null","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_1_4.jpg","null","","","","","","22","","1","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_1_4.jpg",""
+"sv response","survey","49","33691857","0.0-49.0","90451","","","","","","","","","","","","","2196740","","{""prompt"":null,""ambiguous"":1,""objects"":3,""invisible"":2,""chaos"":1,""complex"":3}","","","","","","","","","","[]"
+"","html-button-response","50","33692787","0.0-50.0","90451","","","","","","","","","","","","","928","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","","",""
+"street view slide show","image-button-response","51","33693789","0.0-51.0","90451","","","","","","","","","","","","","null","./stim/Olongapo_Philippines_8_1_8/Olongapo___Philippines_4_5.jpg","null","","","","","","22","","4","./stim/Olongapo_Philippines_8_1_8/Olongapo___Philippines_4_5.jpg",""
+"street view slide show","image-button-response","52","33694791","0.0-52.0","90451","","","","","","","","","","","","","null","./stim/Olongapo_Philippines_8_1_8/Olongapo___Philippines_4_2.jpg","null","","","","","","22","","4","./stim/Olongapo_Philippines_8_1_8/Olongapo___Philippines_4_2.jpg",""
+"street view slide show","image-button-response","53","33695794","0.0-53.0","90451","","","","","","","","","","","","","null","./stim/Olongapo_Philippines_8_1_8/Olongapo___Philippines_4_4.jpg","null","","","","","","22","","4","./stim/Olongapo_Philippines_8_1_8/Olongapo___Philippines_4_4.jpg",""
+"street view slide show","image-button-response","54","33696796","0.0-54.0","90451","","","","","","","","","","","","","null","./stim/Olongapo_Philippines_8_1_8/Olongapo___Philippines_4_3.jpg","null","","","","","","22","","4","./stim/Olongapo_Philippines_8_1_8/Olongapo___Philippines_4_3.jpg",""
+"street view slide show","image-button-response","55","33697799","0.0-55.0","90451","","","","","","","","","","","","","null","./stim/Olongapo_Philippines_8_1_8/Olongapo___Philippines_4_1.jpg","null","","","","","","22","","4","./stim/Olongapo_Philippines_8_1_8/Olongapo___Philippines_4_1.jpg",""
+"sv response","survey","56","33710588","0.0-56.0","90451","","","","","","","","","","","","","12770","","{""prompt"":null,""ambiguous"":2,""objects"":5,""invisible"":4,""chaos"":4,""complex"":4}","","","","","","","","","","[]"
+"","html-button-response","57","33711881","0.0-57.0","90451","","","","","","","","","","","","","1293","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","","",""
+"street view slide show","image-button-response","58","33712883","0.0-58.0","90451","","","","","","","","","","","","","null","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_3_5.jpg","null","","","","","","22","","3","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_3_5.jpg",""
+"street view slide show","image-button-response","59","33713886","0.0-59.0","90451","","","","","","","","","","","","","null","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_3_3.jpg","null","","","","","","22","","3","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_3_3.jpg",""
+"street view slide show","image-button-response","60","33714887","0.0-60.0","90451","","","","","","","","","","","","","null","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_3_1.jpg","null","","","","","","22","","3","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_3_1.jpg",""
+"street view slide show","image-button-response","61","33715889","0.0-61.0","90451","","","","","","","","","","","","","null","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_3_4.jpg","null","","","","","","22","","3","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_3_4.jpg",""
+"street view slide show","image-button-response","62","33716890","0.0-62.0","90451","","","","","","","","","","","","","null","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_3_2.jpg","null","","","","","","22","","3","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_3_2.jpg",""
+"sv response","survey","63","33724779","0.0-63.0","90451","","","","","","","","","","","","","7885","","{""prompt"":null,""ambiguous"":1,""objects"":2,""invisible"":3,""chaos"":1,""complex"":3}","","","","","","","","","","[]"
+"","html-button-response","64","33725685","0.0-64.0","90451","","","","","","","","","","","","","906","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","","",""
+"street view slide show","image-button-response","65","33726688","0.0-65.0","90451","","","","","","","","","","","","","null","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_8_5.jpg","null","","","","","","22","","8","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_8_5.jpg",""
+"street view slide show","image-button-response","66","33727690","0.0-66.0","90451","","","","","","","","","","","","","null","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_8_2.jpg","null","","","","","","22","","8","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_8_2.jpg",""
+"street view slide show","image-button-response","67","33728693","0.0-67.0","90451","","","","","","","","","","","","","null","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_8_6.jpg","null","","","","","","22","","8","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_8_6.jpg",""
+"street view slide show","image-button-response","68","33729695","0.0-68.0","90451","","","","","","","","","","","","","null","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_8_3.jpg","null","","","","","","22","","8","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_8_3.jpg",""
+"street view slide show","image-button-response","69","33730697","0.0-69.0","90451","","","","","","","","","","","","","null","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_8_1.jpg","null","","","","","","22","","8","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_8_1.jpg",""
+"sv response","survey","70","33743275","0.0-70.0","90451","","","","","","","","","","","","","12568","","{""prompt"":null,""ambiguous"":2,""objects"":3,""invisible"":2,""chaos"":3,""complex"":2}","","","","","","","","","","[]"
+"","html-button-response","71","33744133","0.0-71.0","90451","","","","","","","","","","","","","858","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","","",""
+"street view slide show","image-button-response","72","33745136","0.0-72.0","90451","","","","","","","","","","","","","null","./stim/Olongapo_Philippines_8_1_8/Olongapo___Philippines_3_3.jpg","null","","","","","","22","","3","./stim/Olongapo_Philippines_8_1_8/Olongapo___Philippines_3_3.jpg",""
+"street view slide show","image-button-response","73","33746138","0.0-73.0","90451","","","","","","","","","","","","","null","./stim/Olongapo_Philippines_8_1_8/Olongapo___Philippines_3_2.jpg","null","","","","","","22","","3","./stim/Olongapo_Philippines_8_1_8/Olongapo___Philippines_3_2.jpg",""
+"street view slide show","image-button-response","74","33747140","0.0-74.0","90451","","","","","","","","","","","","","null","./stim/Olongapo_Philippines_8_1_8/Olongapo___Philippines_3_5.jpg","null","","","","","","22","","3","./stim/Olongapo_Philippines_8_1_8/Olongapo___Philippines_3_5.jpg",""
+"street view slide show","image-button-response","75","33748142","0.0-75.0","90451","","","","","","","","","","","","","null","./stim/Olongapo_Philippines_8_1_8/Olongapo___Philippines_3_4.jpg","null","","","","","","22","","3","./stim/Olongapo_Philippines_8_1_8/Olongapo___Philippines_3_4.jpg",""
+"street view slide show","image-button-response","76","33749144","0.0-76.0","90451","","","","","","","","","","","","","null","./stim/Olongapo_Philippines_8_1_8/Olongapo___Philippines_3_1.jpg","null","","","","","","22","","3","./stim/Olongapo_Philippines_8_1_8/Olongapo___Philippines_3_1.jpg",""
+"sv response","survey","77","33764223","0.0-77.0","90451","","","","","","","","","","","","","15069","","{""prompt"":null,""ambiguous"":4,""objects"":4,""invisible"":4,""chaos"":4,""complex"":4}","","","","","","","","","","[]"
+"","html-button-response","78","33765363","0.0-78.0","90451","","","","","","","","","","","","","1139","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","","",""
+"street view slide show","image-button-response","79","33766365","0.0-79.0","90451","","","","","","","","","","","","","null","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_4_4.jpg","null","","","","","","7","","4","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_4_4.jpg",""
+"street view slide show","image-button-response","80","33767367","0.0-80.0","90451","","","","","","","","","","","","","null","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_4_5.jpg","null","","","","","","7","","4","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_4_5.jpg",""
+"street view slide show","image-button-response","81","33768369","0.0-81.0","90451","","","","","","","","","","","","","null","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_4_1.jpg","null","","","","","","7","","4","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_4_1.jpg",""
+"street view slide show","image-button-response","82","33769371","0.0-82.0","90451","","","","","","","","","","","","","null","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_4_3.jpg","null","","","","","","7","","4","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_4_3.jpg",""
+"street view slide show","image-button-response","83","33770374","0.0-83.0","90451","","","","","","","","","","","","","null","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_4_2.jpg","null","","","","","","7","","4","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_4_2.jpg",""
+"sv response","survey","84","33778811","0.0-84.0","90451","","","","","","","","","","","","","8428","","{""prompt"":null,""ambiguous"":1,""objects"":5,""invisible"":2,""chaos"":1,""complex"":4}","","","","","","","","","","[]"
+"","html-button-response","85","33896373","0.0-85.0","90451","","","","","","","","","","","","","117563","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","","",""
+"street view slide show","image-button-response","86","33897375","0.0-86.0","90451","","","","","","","","","","","","","null","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_6_1.jpg","null","","","","","","7","","6","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_6_1.jpg",""
+"street view slide show","image-button-response","87","33898377","0.0-87.0","90451","","","","","","","","","","","","","null","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_6_4.jpg","null","","","","","","7","","6","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_6_4.jpg",""
+"street view slide show","image-button-response","88","33899380","0.0-88.0","90451","","","","","","","","","","","","","null","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_6_3.jpg","null","","","","","","7","","6","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_6_3.jpg",""
+"street view slide show","image-button-response","89","33900382","0.0-89.0","90451","","","","","","","","","","","","","null","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_6_5.jpg","null","","","","","","7","","6","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_6_5.jpg",""
+"street view slide show","image-button-response","90","33901385","0.0-90.0","90451","","","","","","","","","","","","","null","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_6_2.jpg","null","","","","","","7","","6","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_6_2.jpg",""
+"sv response","survey","91","33914764","0.0-91.0","90451","","","","","","","","","","","","","13370","","{""prompt"":null,""ambiguous"":2,""objects"":5,""invisible"":2,""chaos"":4,""complex"":4}","","","","","","","","","","[]"
+"","html-button-response","92","33915823","0.0-92.0","90451","","","","","","","","","","","","","1059","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","","",""
+"street view slide show","image-button-response","93","33916825","0.0-93.0","90451","","","","","","","","","","","","","null","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_5_7.jpg","null","","","","","","7","","5","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_5_7.jpg",""
+"street view slide show","image-button-response","94","33917827","0.0-94.0","90451","","","","","","","","","","","","","null","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_5_3.jpg","null","","","","","","7","","5","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_5_3.jpg",""
+"street view slide show","image-button-response","95","33918830","0.0-95.0","90451","","","","","","","","","","","","","null","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_5_4.jpg","null","","","","","","7","","5","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_5_4.jpg",""
+"street view slide show","image-button-response","96","33919832","0.0-96.0","90451","","","","","","","","","","","","","null","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_5_1.jpg","null","","","","","","7","","5","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_5_1.jpg",""
+"street view slide show","image-button-response","97","33920834","0.0-97.0","90451","","","","","","","","","","","","","null","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_5_6.jpg","null","","","","","","7","","5","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_5_6.jpg",""
+"sv response","survey","98","34105859","0.0-98.0","90451","","","","","","","","","","","","","185016","","{""prompt"":null,""ambiguous"":1,""objects"":3,""invisible"":2,""chaos"":2,""complex"":3}","","","","","","","","","","[]"
+"","html-button-response","99","34106814","0.0-99.0","90451","","","","","","","","","","","","","954","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","","",""
+"street view slide show","image-button-response","100","34107816","0.0-100.0","90451","","","","","","","","","","","","","null","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_2_1.jpg","null","","","","","","7","","2","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_2_1.jpg",""
+"street view slide show","image-button-response","101","34108818","0.0-101.0","90451","","","","","","","","","","","","","null","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_2_3.jpg","null","","","","","","7","","2","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_2_3.jpg",""
+"street view slide show","image-button-response","102","34109820","0.0-102.0","90451","","","","","","","","","","","","","null","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_2_5.jpg","null","","","","","","7","","2","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_2_5.jpg",""
+"street view slide show","image-button-response","103","34110823","0.0-103.0","90451","","","","","","","","","","","","","null","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_2_4.jpg","null","","","","","","7","","2","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_2_4.jpg",""
+"street view slide show","image-button-response","104","34111826","0.0-104.0","90451","","","","","","","","","","","","","null","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_2_2.jpg","null","","","","","","7","","2","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_2_2.jpg",""
+"sv response","survey","105","34296035","0.0-105.0","90451","","","","","","","","","","","","","184200","","{""prompt"":null,""ambiguous"":2,""objects"":2,""invisible"":2,""chaos"":4,""complex"":3}","","","","","","","","","","[]"
+"","html-button-response","106","34297384","0.0-106.0","90451","","","","","","","","","","","","","1349","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","","",""
+"street view slide show","image-button-response","107","34298387","0.0-107.0","90451","","","","","","","","","","","","","null","./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_8_1.jpg","null","","","","","","22","","8","./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_8_1.jpg",""
+"street view slide show","image-button-response","108","34299388","0.0-108.0","90451","","","","","","","","","","","","","null","./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_8_5.jpg","null","","","","","","22","","8","./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_8_5.jpg",""
+"street view slide show","image-button-response","109","34300391","0.0-109.0","90451","","","","","","","","","","","","","null","./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_8_3.jpg","null","","","","","","22","","8","./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_8_3.jpg",""
+"street view slide show","image-button-response","110","34301392","0.0-110.0","90451","","","","","","","","","","","","","null","./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_8_4.jpg","null","","","","","","22","","8","./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_8_4.jpg",""
+"street view slide show","image-button-response","111","34302394","0.0-111.0","90451","","","","","","","","","","","","","null","./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_8_2.jpg","null","","","","","","22","","8","./stim/MiyazakiShi_Japan_8_1_8/Miyazaki_Shi___Japan_8_2.jpg",""
+"sv response","survey","112","34329228","0.0-112.0","90451","","","","","","","","","","","","","26820","","{""prompt"":null,""ambiguous"":4,""objects"":2,""invisible"":4,""chaos"":2,""complex"":4}","","","","","","","","","","[]"
+"","html-button-response","113","34330117","0.0-113.0","90451","","","","","","","","","","","","","889","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","","",""
+"street view slide show","image-button-response","114","34331118","0.0-114.0","90451","","","","","","","","","","","","","null","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_1_1.jpg","null","","","","","","22","","1","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_1_1.jpg",""
+"street view slide show","image-button-response","115","34332119","0.0-115.0","90451","","","","","","","","","","","","","null","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_1_3.jpg","null","","","","","","22","","1","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_1_3.jpg",""
+"street view slide show","image-button-response","116","34333120","0.0-116.0","90451","","","","","","","","","","","","","null","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_1_2.jpg","null","","","","","","22","","1","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_1_2.jpg",""
+"street view slide show","image-button-response","117","34334122","0.0-117.0","90451","","","","","","","","","","","","","null","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_1_6.jpg","null","","","","","","22","","1","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_1_6.jpg",""
+"street view slide show","image-button-response","118","34335124","0.0-118.0","90451","","","","","","","","","","","","","null","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_1_7.jpg","null","","","","","","22","","1","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_1_7.jpg",""
+"sv response","survey","119","34346393","0.0-119.0","90451","","","","","","","","","","","","","11259","","{""prompt"":null,""ambiguous"":3,""objects"":3,""invisible"":3,""chaos"":3,""complex"":3}","","","","","","","","","","[]"
+"","html-button-response","120","34347927","0.0-120.0","90451","","","","","","","","","","","","","1533","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","","",""
+"street view slide show","image-button-response","121","34348929","0.0-121.0","90451","","","","","","","","","","","","","null","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_2_2.jpg","null","","","","","","22","","2","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_2_2.jpg",""
+"street view slide show","image-button-response","122","34349932","0.0-122.0","90451","","","","","","","","","","","","","null","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_2_1.jpg","null","","","","","","22","","2","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_2_1.jpg",""
+"street view slide show","image-button-response","123","34350934","0.0-123.0","90451","","","","","","","","","","","","","null","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_2_3.jpg","null","","","","","","22","","2","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_2_3.jpg",""
+"street view slide show","image-button-response","124","34351936","0.0-124.0","90451","","","","","","","","","","","","","null","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_2_7.jpg","null","","","","","","22","","2","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_2_7.jpg",""
+"street view slide show","image-button-response","125","34352938","0.0-125.0","90451","","","","","","","","","","","","","null","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_2_4.jpg","null","","","","","","22","","2","./stim/VirginiaBeach_Virginia_8_1_8/Virginia_Beach___Virginia_2_4.jpg",""
+"sv response","survey","126","34371138","0.0-126.0","90451","","","","","","","","","","","","","18190","","{""prompt"":null,""ambiguous"":2,""objects"":4,""invisible"":3,""chaos"":3,""complex"":2}","","","","","","","","","","[]"
+"","html-button-response","127","34371795","0.0-127.0","90451","","","","","","","","","","","","","656","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","","",""
+"street view slide show","image-button-response","128","34372797","0.0-128.0","90451","","","","","","","","","","","","","null","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_6_5.jpg","null","","","","","","7","","6","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_6_5.jpg",""
+"street view slide show","image-button-response","129","34373798","0.0-129.0","90451","","","","","","","","","","","","","null","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_6_4.jpg","null","","","","","","7","","6","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_6_4.jpg",""
+"street view slide show","image-button-response","130","34374800","0.0-130.0","90451","","","","","","","","","","","","","null","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_6_1.jpg","null","","","","","","7","","6","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_6_1.jpg",""
+"street view slide show","image-button-response","131","34375802","0.0-131.0","90451","","","","","","","","","","","","","null","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_6_3.jpg","null","","","","","","7","","6","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_6_3.jpg",""
+"street view slide show","image-button-response","132","34376803","0.0-132.0","90451","","","","","","","","","","","","","null","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_6_2.jpg","null","","","","","","7","","6","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_6_2.jpg",""
+"sv response","survey","133","34397510","0.0-133.0","90451","","","","","","","","","","","","","20697","","{""prompt"":null,""ambiguous"":5,""objects"":2,""invisible"":4,""chaos"":2,""complex"":3}","","","","","","","","","","[]"
+"","html-button-response","134","34398408","0.0-134.0","90451","","","","","","","","","","","","","898","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","","",""
+"street view slide show","image-button-response","135","34399410","0.0-135.0","90451","","","","","","","","","","","","","null","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_7_4.jpg","null","","","","","","7","","7","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_7_4.jpg",""
+"street view slide show","image-button-response","136","34400411","0.0-136.0","90451","","","","","","","","","","","","","null","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_7_1.jpg","null","","","","","","7","","7","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_7_1.jpg",""
+"street view slide show","image-button-response","137","34401413","0.0-137.0","90451","","","","","","","","","","","","","null","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_7_2.jpg","null","","","","","","7","","7","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_7_2.jpg",""
+"street view slide show","image-button-response","138","34402416","0.0-138.0","90451","","","","","","","","","","","","","null","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_7_3.jpg","null","","","","","","7","","7","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_7_3.jpg",""
+"street view slide show","image-button-response","139","34403418","0.0-139.0","90451","","","","","","","","","","","","","null","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_7_5.jpg","null","","","","","","7","","7","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_7_5.jpg",""
+"sv response","survey","140","34505630","0.0-140.0","90451","","","","","","","","","","","","","102209","","{""prompt"":null,""ambiguous"":3,""objects"":2,""invisible"":1,""chaos"":3,""complex"":3}","","","","","","","","","","[]"
+"","html-button-response","141","34506408","0.0-141.0","90451","","","","","","","","","","","","","777","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","","",""
+"street view slide show","image-button-response","142","34507410","0.0-142.0","90451","","","","","","","","","","","","","null","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_2_3.jpg","null","","","","","","22","","2","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_2_3.jpg",""
+"street view slide show","image-button-response","143","34508411","0.0-143.0","90451","","","","","","","","","","","","","null","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_2_5.jpg","null","","","","","","22","","2","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_2_5.jpg",""
+"street view slide show","image-button-response","144","34509414","0.0-144.0","90451","","","","","","","","","","","","","null","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_2_1.jpg","null","","","","","","22","","2","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_2_1.jpg",""
+"street view slide show","image-button-response","145","34510417","0.0-145.0","90451","","","","","","","","","","","","","null","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_2_2.jpg","null","","","","","","22","","2","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_2_2.jpg",""
+"street view slide show","image-button-response","146","34511418","0.0-146.0","90451","","","","","","","","","","","","","null","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_2_4.jpg","null","","","","","","22","","2","./stim/Waukegan_UnitedStates_8_1_8/Waukegan___United_States_2_4.jpg",""
+"sv response","survey","147","34722260","0.0-147.0","90451","","","","","","","","","","","","","210833","","{""prompt"":null,""ambiguous"":2,""objects"":3,""invisible"":2,""chaos"":3,""complex"":2}","","","","","","","","","","[]"
+"","html-button-response","148","34723262","0.0-148.0","90451","","","","","","","","","","","","","1002","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","","",""
+"street view slide show","image-button-response","149","34724265","0.0-149.0","90451","","","","","","","","","","","","","null","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_1_8.jpg","null","","","","","","7","","1","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_1_8.jpg",""
+"street view slide show","image-button-response","150","34725266","0.0-150.0","90451","","","","","","","","","","","","","null","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_1_3.jpg","null","","","","","","7","","1","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_1_3.jpg",""
+"street view slide show","image-button-response","151","34726268","0.0-151.0","90451","","","","","","","","","","","","","null","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_1_4.jpg","null","","","","","","7","","1","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_1_4.jpg",""
+"street view slide show","image-button-response","152","34727270","0.0-152.0","90451","","","","","","","","","","","","","null","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_1_6.jpg","null","","","","","","7","","1","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_1_6.jpg",""
+"street view slide show","image-button-response","153","34728273","0.0-153.0","90451","","","","","","","","","","","","","null","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_1_1.jpg","null","","","","","","7","","1","./stim/Hiroshima_Japan_8_1_8/Hiroshima___Japan_1_1.jpg",""
+"sv response","survey","154","34739087","0.0-154.0","90451","","","","","","","","","","","","","10804","","{""prompt"":null,""ambiguous"":2,""objects"":4,""invisible"":2,""chaos"":4,""complex"":2}","","","","","","","","","","[]"
+"","html-button-response","155","34739993","0.0-155.0","90451","","","","","","","","","","","","","906","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","","",""
+"street view slide show","image-button-response","156","34740995","0.0-156.0","90451","","","","","","","","","","","","","null","./stim/Manila_Philippines_8_1_8/Manila___Philippines_8_1.jpg","null","","","","","","7","","8","./stim/Manila_Philippines_8_1_8/Manila___Philippines_8_1.jpg",""
+"street view slide show","image-button-response","157","34741998","0.0-157.0","90451","","","","","","","","","","","","","null","./stim/Manila_Philippines_8_1_8/Manila___Philippines_8_5.jpg","null","","","","","","7","","8","./stim/Manila_Philippines_8_1_8/Manila___Philippines_8_5.jpg",""
+"street view slide show","image-button-response","158","34743001","0.0-158.0","90451","","","","","","","","","","","","","null","./stim/Manila_Philippines_8_1_8/Manila___Philippines_8_2.jpg","null","","","","","","7","","8","./stim/Manila_Philippines_8_1_8/Manila___Philippines_8_2.jpg",""
+"street view slide show","image-button-response","159","34744004","0.0-159.0","90451","","","","","","","","","","","","","null","./stim/Manila_Philippines_8_1_8/Manila___Philippines_8_3.jpg","null","","","","","","7","","8","./stim/Manila_Philippines_8_1_8/Manila___Philippines_8_3.jpg",""
+"street view slide show","image-button-response","160","34745007","0.0-160.0","90451","","","","","","","","","","","","","null","./stim/Manila_Philippines_8_1_8/Manila___Philippines_8_4.jpg","null","","","","","","7","","8","./stim/Manila_Philippines_8_1_8/Manila___Philippines_8_4.jpg",""
+"sv response","survey","161","34769787","0.0-161.0","90451","","","","","","","","","","","","","24772","","{""prompt"":null,""ambiguous"":4,""objects"":2,""invisible"":4,""chaos"":2,""complex"":4}","","","","","","","","","","[]"
+"","html-button-response","162","34770710","0.0-162.0","90451","","","","","","","","","","","","","922","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","","",""
+"street view slide show","image-button-response","163","34771712","0.0-163.0","90451","","","","","","","","","","","","","null","./stim/Manila_Philippines_8_1_8/Manila___Philippines_6_1.jpg","null","","","","","","7","","6","./stim/Manila_Philippines_8_1_8/Manila___Philippines_6_1.jpg",""
+"street view slide show","image-button-response","164","34772713","0.0-164.0","90451","","","","","","","","","","","","","null","./stim/Manila_Philippines_8_1_8/Manila___Philippines_6_4.jpg","null","","","","","","7","","6","./stim/Manila_Philippines_8_1_8/Manila___Philippines_6_4.jpg",""
+"street view slide show","image-button-response","165","34773715","0.0-165.0","90451","","","","","","","","","","","","","null","./stim/Manila_Philippines_8_1_8/Manila___Philippines_6_2.jpg","null","","","","","","7","","6","./stim/Manila_Philippines_8_1_8/Manila___Philippines_6_2.jpg",""
+"street view slide show","image-button-response","166","34774716","0.0-166.0","90451","","","","","","","","","","","","","null","./stim/Manila_Philippines_8_1_8/Manila___Philippines_6_5.jpg","null","","","","","","7","","6","./stim/Manila_Philippines_8_1_8/Manila___Philippines_6_5.jpg",""
+"street view slide show","image-button-response","167","34775718","0.0-167.0","90451","","","","","","","","","","","","","null","./stim/Manila_Philippines_8_1_8/Manila___Philippines_6_3.jpg","null","","","","","","7","","6","./stim/Manila_Philippines_8_1_8/Manila___Philippines_6_3.jpg",""
+"sv response","survey","168","34780270","0.0-168.0","90451","","","","","","","","","","","","","4541","","{""prompt"":null,""ambiguous"":4,""objects"":2,""invisible"":4,""chaos"":2,""complex"":4}","","","","","","","","","","[]"
+"","html-button-response","169","34781087","0.0-169.0","90451","","","","","","","","","","","","","817","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","","",""
+"street view slide show","image-button-response","170","34782088","0.0-170.0","90451","","","","","","","","","","","","","null","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_3_4.jpg","null","","","","","","7","","3","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_3_4.jpg",""
+"street view slide show","image-button-response","171","34783091","0.0-171.0","90451","","","","","","","","","","","","","null","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_3_2.jpg","null","","","","","","7","","3","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_3_2.jpg",""
+"street view slide show","image-button-response","172","34784093","0.0-172.0","90451","","","","","","","","","","","","","null","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_3_1.jpg","null","","","","","","7","","3","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_3_1.jpg",""
+"street view slide show","image-button-response","173","34785096","0.0-173.0","90451","","","","","","","","","","","","","null","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_3_5.jpg","null","","","","","","7","","3","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_3_5.jpg",""
+"street view slide show","image-button-response","174","34786099","0.0-174.0","90451","","","","","","","","","","","","","null","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_3_3.jpg","null","","","","","","7","","3","./stim/Volgograd_Russia_8_1_8/Volgograd___Russia_3_3.jpg",""
+"sv response","survey","175","34791401","0.0-175.0","90451","","","","","","","","","","","","","5299","","{""prompt"":null,""ambiguous"":4,""objects"":2,""invisible"":4,""chaos"":2,""complex"":4}","","","","","","","","","","[]"
+"half-way","html-button-response","176","34797069","0.0-176.0","90451","","","","","","","","","","","","","5668","
+<h3>You are now half way through the study.</h3>
+<p>Please take a quick, 15-second break before you continue.</p>
+<img src='assets/img/countdown-15.gif'>
+<p>The study will automatically advance forward after the countdown is complete. However, you may click ""Next"" to advance forward now if you wish.</p>
+","0","","","","","","","","","",""
+"","html-button-response","177","34798074","0.0-177.0","90451","","","","","","","","","","","","","1004","<div class=""text-container""><h3>Click next to see the next neighborhood.</h3></div><br>","0","","","","","","","","","",""
+"street view slide show","image-button-response","178","34799075","0.0-178.0","90451","","","","","","","","","","","","","null","./stim/Olongapo_Philippines_8_1_8/Olongapo___Philippines_2_1.jpg","null","","","","","","22","","2","./stim/Olongapo_Philippines_8_1_8/Olongapo___Philippines_2_1.jpg",""
+"street view slide show","image-button-response","179","34800076","0.0-179.0","90451","","","","","","","","","","","","","null","./stim/Olongapo_Philippines_8_1_8/Olongapo___Philippines_2_5.jpg","null","","","","","","22","","2","./stim/Olongapo_Philippines_8_1_8/Olongapo___Philippines_2_5.jpg",""
+"street view slide show","image-button-response","180","34801078","0.0-180.0","90451","","","","","","","","","","","","","null","./stim/Olongapo_Philippines_8_1_8/Olongapo___Philippines_2_7.jpg","null","","","","","","22","","2","./stim/Olongapo_Philippines_8_1_8/Olongapo___Philippines_2_7.jpg",""
+"street view slide show","image-button-response","181","34803024","0.0-181.0","90451","","","","","","","","","","","","","null","./stim/Olongapo_Philippines_8_1_8/Olongapo___Philippines_2_6.jpg","null","","","","","","22","","2","./stim/Olongapo_Philippines_8_1_8/Olongapo___Philippines_2_6.jpg",""
