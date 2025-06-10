@@ -1,3 +1,5 @@
-# perceptual-affordance-sister-city-families: thesis experiment repo
+**Master's Thesis**: Streetscapes at Scale: Replicating and Expanding the Scope of Cultural Differences in Perceptual Affordances
 
-- Notion: [Miyamoto Replication-3 (Sister cities of US-JP, and more… William’s Thesis)](https://www.notion.so/mindinsocietylab/Miyamoto-Replication-3-Sister-cities-of-US-JP-and-more-William-s-Thesis-11ab0f4e67138085b839f59ed8232ad0?pvs=4)
+**Advisors** Nicholas P. Camp & Shinobu Kitayama
+
+**Overview**: Psychological responses vary not only across individuals but also across cultural contexts and environments. Socioecological psychology has demonstrated that built environments influence cognition. One influential theory, originally proposed to explain cross-cultural differences between the United States and Japan, examined how physical space shapes perception. Miyamoto et al. (2006) found that Japanese streetscapes tend to be more visually complex than American ones, highlighting cultural variation in environmental complexity and its cognitive implications. This project replicates the findings of Miyamoto et al. (2006) and extends the investigation of cultural variation in physical surroundings and perception to a broader global context. Using methods adapted from Camp et al. (in prep), we employed Application Programming Interfaces (APIs) and Google Street View imagery to explore cross-cultural differences in perceptual affordances across multiple countries.
